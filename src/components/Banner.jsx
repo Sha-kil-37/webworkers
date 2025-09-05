@@ -1,7 +1,7 @@
 export default function Banner() {
   //
   return (
-    <section>
+    <section id="banner">
       <div className="max-w-7xl mx-auto px-6 py-26">
         <h1 className="text-6xl font-bold mb-6 max-w-[570px] mx-auto text-center">
           We Build Creative Digital Solutions

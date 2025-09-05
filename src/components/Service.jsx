@@ -2,7 +2,7 @@ import React from "react";
 //
 export default function Service() {
   return (
-    <section>
+    <section id="service">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 items-start gap-8">
           {/* Left card */}

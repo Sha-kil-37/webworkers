@@ -16,27 +16,27 @@ export default function Footer() {
             <h4 className="font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-2 text-sm text-slate-200">
               <li>
-                <a className="hover:underline" href="#">
+                <a className="hover:underline" href="#banner">
                   Home
                 </a>
               </li>
               <li>
-                <a className="hover:underline" href="#">
+                <a className="hover:underline" href="#about">
                   About
                 </a>
               </li>
               <li>
-                <a className="hover:underline" href="#">
+                <a className="hover:underline" href="#service">
                   Services
                 </a>
               </li>
               <li>
-                <a className="hover:underline" href="#">
+                <a className="hover:underline" href="#projects">
                   Portfolio
                 </a>
               </li>
               <li>
-                <a className="hover:underline" href="#">
+                <a className="hover:underline" href="#contact">
                   Contact
                 </a>
               </li>
@@ -55,12 +55,14 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-3">Contact Info</h4>
             <div className="text-sm text-slate-200 space-y-2">
-              <div>Address: Dhaka, Bangladesh</div>
-              <div>Phone: +880-1234-567890</div>
               <div>
-                Email:{" "}
-                <a className="underline" href="mailto:info@duwagency.com">
-                  info@duwagency.com
+                address: Dhaka , <mark> Bangladesh</mark>
+              </div>
+              <div>Phone: +880-1581049601</div>
+              <div>
+                Email: {""}
+                <a target="_blank" rel="noopener noreferrer" className="underline" href="mailto:sakildevmern@gmail.com">
+                  sakildevmern@gmail.com
                 </a>
               </div>
             </div>
@@ -70,7 +72,9 @@ export default function Footer() {
             <h4 className="font-semibold mb-3">Follow Us</h4>
             <div className="flex items-center gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/shak.sakil.96"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="facebook"
                 className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20"
               >
@@ -85,38 +89,10 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
-                aria-label="instagram"
-                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20"
-              >
-                <svg
-                  className="w-4 h-4 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-3a1 1 0 100 2 1 1 0 000-2z" />
-                </svg>
-              </a>
-
-              <a
-                href="#"
-                aria-label="behance"
-                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20"
-              >
-                <svg
-                  className="w-4 h-4 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path d="M5 8h4a3 3 0 010 6H5V8zm0-2v2H2V6h3zM13 8h4v1h-4V8zm6 0h3v1h-3V8zM13 11h4a3 3 0 010 6h-4v-6zM2 20h7v-2H2v2zM13 16h4a3 3 0 100-6h-4v6z" />
-                </svg>
-              </a>
-
-              <a
-                href="#"
+                href="https://www.linkedin.com/in/shakil-ahmed-aba241317/"
                 aria-label="linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20"
               >
                 <svg
@@ -125,7 +101,24 @@ export default function Footer() {
                   fill="currentColor"
                   aria-hidden
                 >
-                  <path d="M19 3A2 2 0 0121 5v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 17V10.5H6v6.5h2.34zM7.17 9.4a1.34 1.34 0 110-2.68 1.34 1.34 0 010 2.68zM18 17v-3.5c0-2.08-1.12-3-2.6-3-1.2 0-1.74.66-2.04 1.13V10.5h-2.34V17H11v-5.5c0-1.07.2-2.13 1.46-2.13 1.22 0 1.4 1.08 1.4 2.06V17H18z" />
+                  <path d="M21.6 0H2.4A2.4 2.4 0 000 2.4v19.2A2.4 2.4 0 002.4 24h19.2a2.4 2.4 0 002.4-2.4V2.4A2.4 2.4 0 0021.6 0zM7.2 20.4H3.6V9h3.6v11.4zM5.4 7.8a2.1 2.1 0 110-4.2 2.1 2.1 0 010 4.2zm15 12.6h-3.6v-5.4c0-1.3-.5-2.2-1.7-2.2-1 0-1.6.7-1.9 1.4-.1.3-.1.7-.1 1.1v5.1H9V9h3.6v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 2.5 0 4.4 1.6 4.4 5v6.6z" />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.youtube.com/@shakil-o4y"
+                aria-label="youtube"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20"
+              >
+                <svg
+                  className="w-4 h-4 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden
+                >
+                  <path d="M23.5 6.2a2.8 2.8 0 00-2-2C19.7 3.8 12 3.8 12 3.8s-7.7 0-9.5.4a2.8 2.8 0 00-2 2A29.9 29.9 0 000 12a29.9 29.9 0 00.5 5.8 2.8 2.8 0 002 2c1.8.4 9.5.4 9.5.4s7.7 0 9.5-.4a2.8 2.8 0 002-2 29.9 29.9 0 00.5-5.8 29.9 29.9 0 00-.5-5.8zM9.5 15.6V8.4l6.4 3.6-6.4 3.6z" />
                 </svg>
               </a>
             </div>

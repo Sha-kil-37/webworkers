@@ -6,7 +6,7 @@ export default function About() {
  
   // 
   return (
-    <section>
+    <section id="about">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <h2 className="text-3xl lg:text-4xl font-extrabold text-center">
           About Us

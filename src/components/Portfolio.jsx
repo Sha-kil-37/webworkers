@@ -20,7 +20,7 @@ export default function Portfolio() {
       : sampleProjects.filter((p) => p.category === active);
 
   return (
-    <section aria-labelledby="portfolio-heading" >
+    <section id="projects" aria-labelledby="portfolio-heading" >
       <div className="max-w-7xl mx-auto px-6 py-12">
         <h2
          
