@@ -88,6 +88,7 @@ const ReviewCard = ({ avatar, name, rating, review }) => (
 
 // Demo Component
 export default function Carousel() {
+  // 
   const reviews = [
     {
       id: 1,
@@ -124,7 +125,7 @@ export default function Carousel() {
   ];
 
   return (
-    <div className="flex justify-center">
+    <section className="flex justify-center">
       <div className="w-full max-w-3xl space-y-8">
         <div className="space-y-2">
           <Marquee direction="left" className="py-4" speed={30}>
@@ -140,6 +141,6 @@ export default function Carousel() {
           </Marquee>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

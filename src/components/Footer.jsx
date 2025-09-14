@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 export default function Footer() {
   return (
@@ -14,33 +15,27 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <h4 className="font-semibold mb-3">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-slate-200">
-              <li>
-                <a className="hover:underline" href="#banner">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a className="hover:underline" href="#about">
-                  About
-                </a>
-              </li>
-              <li>
-                <a className="hover:underline" href="#service">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a className="hover:underline" href="#projects">
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a className="hover:underline" href="#contact">
-                  Contact
-                </a>
-              </li>
-            </ul>
+            {[
+              { name: "Home", href: "/" },
+              { name: "About", href: "/about" },
+              { name: "Projects", href: "/projects" },
+              { name: "Services", href: "/services" },
+              { name: "Contact", href: "/contact" },
+            ].map((item, i) => {
+              return (
+                <NavLink
+                  key={i}
+                  to={item.href}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-red-500 font-semibold block"
+                      : "inactive-link font-semibold block"
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              );
+            })}
           </div>
 
           <div>
@@ -61,7 +56,12 @@ export default function Footer() {
               <div>Phone: +880-1581049601</div>
               <div>
                 Email: {""}
-                <a target="_blank" rel="noopener noreferrer" className="underline" href="mailto:sakildevmern@gmail.com">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                  href="mailto:sakildevmern@gmail.com"
+                >
                   sakildevmern@gmail.com
                 </a>
               </div>

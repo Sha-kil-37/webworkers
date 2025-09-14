@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import Button from "./Button";
+import { NavLink } from "react-router";
 //
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -6,13 +8,7 @@ export default function Nav() {
   const [hidden, setHidden] = useState(false);
   const lastY = useRef(0);
   //
-  const links = [
-    { name: "Home", href: "banner" },
-    { name: "About", href: "about" },
-    { name: "Projects", href: "projects" },
-    { name: "Service", href: "service" },
-    { name: "Contact", href: "contact" },
-  ];
+
   //
   useEffect(() => {
     function onScroll() {
@@ -50,29 +46,44 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a className="text-xl font-semibold text-gray-900" href="#banner">
-              WebWorkers
-            </a>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-red-500 font-bold" : "inactive-link font-bold"
+              }
+            >
+              webworkers
+            </NavLink>
           </div>
 
           {/* Desktop links */}
           <div className="hidden md:flex md:items-center md:space-x-6">
-            {links.map((l) => (
-              <a
-                key={l.name}
-                href={"#" + l.href}
-                className="text-gray-700 hover:text-gray-900 px-2 py-1 rounded-md text-md font-medium"
-              >
-                {l.name}
-              </a>
-            ))}
+            {[
+              { name: "Home", href: "/" },
+              { name: "About", href: "/about" },
+              { name: "Projects", href: "/projects" },
+              { name: "Services", href: "/services" },
+              { name: "Contact", href: "/contact" },
+            ].map((item, i) => {
+              return (
+                <NavLink
+                  key={i}
+                  to={item.href}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-red-500 font-semibold"
+                      : "inactive-link font-semibold"
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              );
+            })}
           </div>
 
           {/* Desktop action button */}
           <div className="hidden md:flex md:items-center md:ml-4">
-            <a className="inline-flex items-center px-3 py-2 border border-transparent text-sm font-medium rounded-2xl shadow-sm text-white bg-[#1E3A8A] hover:bg-white">
-              Start a Project
-            </a>
+            <Button onClick={() => alert("Clicked!")}>Get Start</Button>
           </div>
 
           {/* Mobile hamburger */}
@@ -121,21 +132,28 @@ export default function Nav() {
 
       {/* Mobile menu, shown when open */}
       <div className={`${open ? "block" : "hidden"} md:hidden`}>
-        <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/5">
-          {links.map((l) => (
-            <a
-              key={l.name}
-              href={"#" + l.href}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
-              onClick={() => setOpen(false)}
-            >
-              {l.name}
-            </a>
-          ))}
-          <button>
-            <a href="/signup">Get Started</a>
-          </button>
-        </ul>
+         {[
+              { name: "Home", href: "/" },
+              { name: "About", href: "/about" },
+              { name: "Projects", href: "/projects" },
+              { name: "Services", href: "/services" },
+              { name: "Contact", href: "/contact" },
+            ].map((item, i) => {
+              return (
+                <NavLink
+                  key={i}
+                  to={item.href}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-red-500 font-semibold block"
+                      : "inactive-link font-semibold block"
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              );
+            })}
+        <Button onClick={() => alert("Clicked!")}>Get Start</Button>
       </div>
     </nav>
   );

@@ -14,3 +14,6 @@ If you are developing a production application, we recommend using TypeScript wi
 
 <!-- ui figma design -->
 <!-- https://www.figma.com/design/WlaUfZtD9ydR6LE0DmqAZH/agency-web?node-id=0-1&p=f&t=kYWviITattQgm7hP-0 -->
+
+
+<!-- This is my business portfolio website | Where I will sell my digital services including digitalization, marketing and visualisation for small businesses | Where I will sell web design and development and digital marketing and UI/UX design services | You can add an animation to my banner that explains the services and purpose of my website -->

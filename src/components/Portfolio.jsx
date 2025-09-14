@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-// 
+import { Link } from "react-router";
+
+//
 export default function Portfolio() {
   const categories = [
     "All",
@@ -20,16 +22,14 @@ export default function Portfolio() {
       : sampleProjects.filter((p) => p.category === active);
 
   return (
-    <section id="projects" aria-labelledby="portfolio-heading" >
+    <section  aria-labelledby="portfolio-heading">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <h2
-         
-          className="text-3xl lg:text-4xl font-extrabold text-center"
-        >
+        <h2 className="text-3xl lg:text-4xl font-extrabold text-center">
           Our Portfolio
         </h2>
         <p className="mt-5 max-w-[700px] mx-auto text-center text-lg font-normal">
-          From startups to established brands, we’ve helped businesses grow with our creative digital solutions. Explore some of our recent work.
+          From startups to established brands, we’ve helped businesses grow with
+          our creative digital solutions. Explore some of our recent work.
         </p>
 
         {/* layout: left column for categories on md+, mobile shows pill row above grid */}
@@ -78,7 +78,8 @@ export default function Portfolio() {
 
             {/* Responsive grid: 1 / 2 / 3 columns */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-              {filtered.map((p) => (
+              {filtered.map((p) =>
+              
                 <article
                   key={p.id}
                   className="group bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
@@ -95,19 +96,10 @@ export default function Portfolio() {
                       </h3>
                       <p className="text-xs text-gray-500 mt-1">{p.category}</p>
                     </div>
-
-                    <a
-                      href="#"
-                      className="inline-flex items-center text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                    >
-                      View Project
-                      <span className="ml-2" aria-hidden>
-                        →
-                      </span>
-                    </a>
+                    <Link to={`project/:${p.id}`}>view project</Link>
                   </div>
                 </article>
-              ))}
+              )}
             </div>
           </div>
         </div>
