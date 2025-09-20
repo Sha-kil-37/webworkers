@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+:root {
+  /* light theme colors */
+  --bg: #ffffff;
+  --text: #0f172a; /* slate-900 */
+  --muted: #64748b; /* slate-500 */
+  --primary: #19a7ce;
+  --button-text: #ffffff;
+}
+
+.dark {
+  --bg: #000000; /* deep background */
+  --text: #fff; /* light text */
+  --muted: #94a3b8; /* muted light */
+  --primary: #0ea5a5; /* teal-ish */
+  /* --button-text: #091014; */
+}
+
+/* Apply theme variables */
+html,
+body,
+#root {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* .inactive-link {
+  color: var(--muted);
+} */
+/*  */
+

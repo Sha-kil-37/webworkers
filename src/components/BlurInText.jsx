@@ -11,7 +11,7 @@ import * as React from "react";
       initial={{ filter: "blur(20px)", opacity: 0 }}
       animate={isInView ? { filter: "blur(0px)", opacity: 1 } : {}}
       transition={{ duration: 1.2 }}
-      className="text-xl text-center sm:text-4xl font-bold tracking-tighter md:text-6xl md:leading-[4rem] max-w-[570px] mx-auto" 
+      className="text-xl text-center sm:text-4xl font-bold tracking-tighter md:text-6xl md:leading-[4rem] max-w-[570px] mx-auto text-black" 
     >
       {children}
     </motion.h2>

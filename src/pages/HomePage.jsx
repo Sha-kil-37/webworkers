@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 import Banner from "../components/Banner";
+import SmoothScroll from "../lib/utils/SmoothScroll";
 
 //
 export default function HomePage() {
@@ -14,7 +15,9 @@ export default function HomePage() {
       }
     >
       <MainLayout>
-        <Banner />
+        <SmoothScroll>
+          <Banner />
+        </SmoothScroll>
       </MainLayout>
     </Suspense>
   );
