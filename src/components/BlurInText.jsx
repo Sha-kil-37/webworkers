@@ -1,8 +1,7 @@
-
 import { motion, useInView } from "framer-motion";
 import * as React from "react";
-// 
- const BlurInText = ({ children }) => {
+//
+const BlurInText = ({ children }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
@@ -11,7 +10,7 @@ import * as React from "react";
       initial={{ filter: "blur(20px)", opacity: 0 }}
       animate={isInView ? { filter: "blur(0px)", opacity: 1 } : {}}
       transition={{ duration: 1.2 }}
-      className="text-xl text-center sm:text-4xl font-bold tracking-tighter md:text-6xl md:leading-[4rem] max-w-[570px] mx-auto text-black" 
+      className="text-6xl font-bold mb-6 max-w-[570px] mx-auto bg-clip-text text-transparent bg-gradient-to-r from-[#FFBBE1] via-[#FF0B55] to-[#AA60C8] text-center"
     >
       {children}
     </motion.h2>

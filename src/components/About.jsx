@@ -12,10 +12,7 @@ export default function About() {
           About Us
         </h2>
         <p className="mt-5 max-w-[700px] mx-auto text-center text-lg font-normal">
-          WebWorkers Digital Agency is your trusted partner for digital growth.
-          We are a team of creative professionals delivering innovative web
-          development, user-focused design, and result-driven marketing
-          solutions.
+          We are a full-service digital agency focused on helping businesses grow in the online world. From modern websites to complete branding and marketing strategies, we provide digital solutions that turn ideas into measurable results. Whether you’re a startup or an established business, we help you build a strong digital presence that attracts customers and drives revenue.
         </p>
         <Team />
       </div>
