@@ -10,7 +10,7 @@ const BlurInText = ({ children }) => {
       initial={{ filter: "blur(20px)", opacity: 0 }}
       animate={isInView ? { filter: "blur(0px)", opacity: 1 } : {}}
       transition={{ duration: 1.2 }}
-      className="text-6xl font-bold mb-6 max-w-[570px] mx-auto bg-clip-text text-transparent bg-gradient-to-r from-[#FFBBE1] via-[#FF0B55] to-[#AA60C8] text-center"
+      className="text-6xl font-bold max-w-[570px] mx-auto bg-clip-text text-transparent bg-[#102E50] text-center"
     >
       {children}
     </motion.h2>

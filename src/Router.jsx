@@ -7,7 +7,6 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import Banner from "./components/Banner";
 //
 function App() {
   //

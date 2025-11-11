@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#002f4993] text-white">
+    <footer className="bg-[#102E50] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
      
 

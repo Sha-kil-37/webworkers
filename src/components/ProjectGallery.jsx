@@ -1,7 +1,8 @@
+import { Link } from "react-router";
 import { ThreeDMarquee } from "./ThreeDMarquee";
 // A gallery component that uses the ThreeDMarquee component
 
-export function ThreeDMarqueeGallery() {
+export function ProjectGallery() {
   // Array of image URLs for the 3D marquee
   const images = [
     "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1752229203/portfolio-blog/3491172.png.png",
@@ -40,7 +41,7 @@ export function ThreeDMarqueeGallery() {
   return (
     <section className="relative z-0">
       <div className="absolute top-[50%] left-[50%] z-2 transform -translate-x-[50%] -translate-y-[50%] text-center">
-        <button className="py-2 px-4 bg-yellow-400 text-white">View project</button>
+        <Link to={"/projects"} className="px-4 py-2 bg-blue-500 text-white rounded-4xl  inline-block font-medium hover:bg-blue-600 transition text-center">Our Project</Link>
       </div>
       <ThreeDMarquee images={images} />
     </section>

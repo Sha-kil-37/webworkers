@@ -1,9 +1,8 @@
 import { Fragment, lazy, Suspense } from "react";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 import Banner from "../components/Banner";
-import Feature from "../components/Feature";
 import SmoothScroll from "../lib/utils/SmoothScroll";
-import { ThreeDMarqueeGallery } from "../components/ThreeDMarqueeGallery";
+import { ProjectGallery } from "../components/ProjectGallery";
 
 //
 export default function HomePage() {
@@ -22,8 +21,8 @@ export default function HomePage() {
         <SmoothScroll>
           <Fragment>
             <Banner />
-            <Feature />
-            <ThreeDMarqueeGallery />
+           
+            <ProjectGallery />
           </Fragment>
         </SmoothScroll>
       </MainLayout>
