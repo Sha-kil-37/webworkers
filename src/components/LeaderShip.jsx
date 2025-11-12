@@ -5,7 +5,6 @@ export default function LeaderShip() {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 gap-20 md:grid-cols-2">
-     
         <div>
           <h3>Meet Our Leadership</h3>
           <p>

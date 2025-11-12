@@ -2,7 +2,7 @@ import React from "react";
 
 export default function OurGoal() {
   return (
-    <section>
+    <section className="py-10">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl lg:text-4xl font-extrabold text-center">
           Our Goal

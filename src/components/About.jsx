@@ -12,7 +12,13 @@ export default function About() {
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum
           recusandae vitae quasi deleniti blanditiis voluptate est aut minima
-          dolorem.
+          dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ullam harum recusandae vitae quasi deleniti blanditiis voluptate est
+          aut minima dolorem. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Ullam harum recusandae vitae quasi deleniti blanditiis voluptate
+          est aut minima dolorem. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Ullam harum recusandae vitae quasi deleniti
+          blanditiis voluptate est aut minima dolorem.
         </p>
       </div>
     </section>

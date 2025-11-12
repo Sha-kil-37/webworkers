@@ -11,7 +11,7 @@ export default function Banner() {
           We're building the future of human connection through innovative
           technology and design.
         </p>
-        <div className="flex gap-x-2 justify-center mt-10">
+        <div className="flex gap-x-5 justify-center mt-10">
           <Link
           className="px-4 py-2 bg-blue-500 text-white rounded-4xl  inline-block font-medium hover:bg-blue-600 transition text-center"
           to={"/about"}
