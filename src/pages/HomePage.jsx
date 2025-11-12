@@ -24,7 +24,7 @@ export default function HomePage() {
       <MainLayout>
         {/* <SmoothScroll> */}
         <Fragment>
-          <Banner />
+         <Banner/>
           <OurGoal />
           <WorkingProcss />
           <Services />

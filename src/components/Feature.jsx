@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import BackgroundAnimation from "./BackgroundAnimation";
+import BackgroundAnimation from "../lib/utils/BackgroundAnimation";
 //
 
 export default function Feature() {
