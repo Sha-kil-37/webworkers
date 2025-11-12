@@ -1,12 +1,11 @@
 import { Fragment, lazy, Suspense } from "react";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 import Banner from "../components/Banner";
-// import SmoothScroll from "../lib/utils/SmoothScroll";
-import { ProjectGallery } from "../components/ProjectGallery";
 import WorkingProcss from "../components/WorkingProcss";
 import OurGoal from "../components/OurGoal";
 import Services from "../components/Services";
 import ContactButton from "../components/ContactButton";
+import ProjectGallery from "./ProjectGallery";
 
 //
 export default function HomePage() {
