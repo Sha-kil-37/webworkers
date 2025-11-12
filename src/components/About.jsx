@@ -1,5 +1,3 @@
-import Team from "./Team";
-import Feature from "./Feature";
 //
 export default function About() {
   //
@@ -11,9 +9,11 @@ export default function About() {
         <h2 className="text-3xl lg:text-4xl font-extrabold text-center">
           About Us
         </h2>
-        <Feature />
-        <h2 className="font-bold text-center text-4xl">Our Experts</h2>
-        <Team />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum
+          recusandae vitae quasi deleniti blanditiis voluptate est aut minima
+          dolorem.
+        </p>
       </div>
     </section>
   );

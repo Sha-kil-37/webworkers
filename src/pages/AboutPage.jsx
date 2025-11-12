@@ -1,7 +1,9 @@
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 import About from "../components/About";
-
+import LeaderShip from "../components/LeaderShip";
+import Team from "../components/Team";
+import Feature from "../components/Feature";
 //
 export default function AboutPage() {
   //
@@ -15,6 +17,9 @@ export default function AboutPage() {
     >
       <MainLayout>
         <About />
+        <Feature />
+        <LeaderShip />
+        <Team />
       </MainLayout>
     </Suspense>
   );
