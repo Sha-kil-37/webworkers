@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import BackgroundAnimation from "../lib/utils/BackgroundAnimation";
 //
 
 export default function Feature() {
@@ -19,20 +18,19 @@ export default function Feature() {
   return (
     <section className="py-20">
       <div className="relative max-w-7xl mx-auto">
-        <BackgroundAnimation active={highlight} />
         <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
           <div>
             <h2
               ref={titleRef}
               className={`text-2xl font-bold transition-all duration-500 ${
-                highlight ? "text-cyan-400 drop-shadow-[0_0_15px_#00eaff] " : ""
+                highlight ? "text-cyan-300 drop-shadow-[0_0_15px_#00eaff] " : ""
               }`}
             >
               Our Goal
             </h2>
             <p>
               Our mission is simple —
-              <span className="text-cyan-400 font-bold">
+              <span className="text-cyan-300 font-bold">
                 solve digital problems and help businesses grow confidently
               </span>
               . We deliver modern, scalable, and result-driven solutions
@@ -44,7 +42,7 @@ export default function Feature() {
             <h2
               ref={titleRef}
               className={`text-2xl font-bold transition-all duration-500 ${
-                highlight ? "text-cyan-400 drop-shadow-[0_0_15px_#00eaff] " : ""
+                highlight ? "text-cyan-300 drop-shadow-[0_0_15px_#00eaff] " : ""
               }`}
             >
               What We Do
@@ -63,7 +61,7 @@ export default function Feature() {
             <h2
               ref={titleRef}
               className={`text-2xl font-bold transition-all duration-500 ${
-                highlight ? "text-cyan-400 drop-shadow-[0_0_15px_#00eaff] " : ""
+                highlight ? "text-cyan-300 drop-shadow-[0_0_15px_#00eaff] " : ""
               }`}
             >
               Why Choose Us?
