@@ -9,7 +9,9 @@ export default function ContactPage() {
     <Suspense
       fallback={
         <div className="flex justify-center items-center h-screen">
-          <h1 className="text-2xl font-bold text-center">Loading...</h1>
+         <h1 className="text-3xl font-bold text-center text-[##102E50] ">
+            Loading...
+          </h1>
         </div>
       }
     >

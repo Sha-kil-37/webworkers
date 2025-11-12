@@ -5,7 +5,7 @@ import WorkingProcss from "../components/WorkingProcss";
 import OurGoal from "../components/OurGoal";
 import Services from "../components/Services";
 import ContactButton from "../components/ContactButton";
-import ProjectGallery from "./ProjectGallery";
+import ProjectGallery from "../components/ProjectGallery";
 
 //
 export default function HomePage() {
@@ -14,7 +14,7 @@ export default function HomePage() {
     <Suspense
       fallback={
         <div className="flex justify-center items-center h-screen">
-          <h1 className="text-5xl font-bold text-center text-emerald-400">
+         <h1 className="text-3xl font-bold text-center text-[##102E50] ">
             Loading...
           </h1>
         </div>
