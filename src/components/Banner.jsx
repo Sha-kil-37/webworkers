@@ -17,7 +17,7 @@ export default function Banner() {
             className="px-4 py-2 bg-blue-500 text-white rounded-4xl  inline-block font-medium hover:bg-blue-600 transition text-center absolute left-[50%] transform -translate-x-[50%] mt-15"
             to={"/about"}
           >
-            Our Mission
+            ABOUT US
           </Link>
         </div>
       </section>

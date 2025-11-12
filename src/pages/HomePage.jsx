@@ -3,6 +3,10 @@ const MainLayout = lazy(() => import("../layout/MainLayout"));
 import Banner from "../components/Banner";
 // import SmoothScroll from "../lib/utils/SmoothScroll";
 import { ProjectGallery } from "../components/ProjectGallery";
+import WorkingProcss from "../components/WorkingProcss";
+import OurGoal from "../components/OurGoal";
+import Services from "../components/Services";
+import ContactButton from "../components/ContactButton";
 
 //
 export default function HomePage() {
@@ -19,11 +23,14 @@ export default function HomePage() {
     >
       <MainLayout>
         {/* <SmoothScroll> */}
-          <Fragment>
-            <Banner />
-           
-            <ProjectGallery />
-          </Fragment>
+        <Fragment>
+          <Banner />
+          <OurGoal />
+          <WorkingProcss />
+          <Services />
+          <ProjectGallery />
+          <ContactButton />
+        </Fragment>
         {/* </SmoothScroll> */}
       </MainLayout>
     </Suspense>
