@@ -16,7 +16,7 @@ export default function Banner() {
           className="px-4 py-2 bg-blue-500 text-white rounded-4xl  inline-block font-medium hover:bg-blue-600 transition text-center"
           to={"/about"}
         >
-          ABOUT US
+          About Us
         </Link>
         <Link
           className="px-4 py-2 bg-blue-500 text-white rounded-4xl  inline-block font-medium hover:bg-blue-600 transition text-center"
