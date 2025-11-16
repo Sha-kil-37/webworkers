@@ -1,27 +1,14 @@
 import { lazy, Suspense } from "react";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 import About from "../components/About";
-import LeaderShip from "../components/LeaderShip";
-// import Team from "../components/Team";
-import Feature from "../components/Feature";
+import Loading from "../components/Loading";
 //
 export default function AboutPage() {
   //
   return (
-    <Suspense
-      fallback={
-        <div className="flex justify-center items-center h-screen">
-          <h1 className="text-3xl font-bold text-center text-[##102E50] ">
-            Loading...
-          </h1>
-        </div>
-      }
-    >
+    <Suspense fallback={<Loading />}>
       <MainLayout>
         <About />
-        <Feature />
-        <LeaderShip />
-        {/* <Team /> */}
       </MainLayout>
     </Suspense>
   );

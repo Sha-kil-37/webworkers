@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 import Contact from "../components/Contact";
+import Loading from "../components/Loading";
 
 //
 export default function ContactPage() {
@@ -8,11 +9,7 @@ export default function ContactPage() {
   return (
     <Suspense
       fallback={
-        <div className="flex justify-center items-center h-screen">
-         <h1 className="text-3xl font-bold text-center text-[##102E50] ">
-            Loading...
-          </h1>
-        </div>
+        <Loading />
       }
     >
       <MainLayout>

@@ -1,20 +1,13 @@
 import React, { lazy, Suspense } from "react";
 import Services from "../components/Services";
+import Loading from "../components/Loading";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 
 //
 export default function ServicesPage() {
   //
   return (
-    <Suspense
-      fallback={
-        <div className="flex justify-center items-center h-screen">
-          <h1 className="text-3xl font-bold text-center text-[##102E50] ">
-            Loading...
-          </h1>
-        </div>
-      }
-    >
+    <Suspense fallback={<Loading />}>
       <MainLayout>
         <Services />
       </MainLayout>

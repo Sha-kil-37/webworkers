@@ -1,11 +1,13 @@
 import { Fragment, lazy, Suspense } from "react";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 import Banner from "../components/Banner";
-import WorkingProcss from "../components/WorkingProcss";
-import OurGoal from "../components/OurGoal";
+
 import Services from "../components/Services";
-import ContactButton from "../components/ContactButton";
-import ProjectGallery from "../components/ProjectGallery";
+import Credibility from "../components/Credibility";
+
+import Testimonials from "../components/Testimonials";
+import LetsTalk from "../components/LetsTalk";
+import Loading from "../components/Loading";
 
 //
 export default function HomePage() {
@@ -13,22 +15,17 @@ export default function HomePage() {
   return (
     <Suspense
       fallback={
-        <div className="flex justify-center items-center h-screen">
-         <h1 className="text-3xl font-bold text-center text-[##102E50] ">
-            Loading...
-          </h1>
-        </div>
+       <Loading />
       }
     >
       <MainLayout>
         {/* <SmoothScroll> */}
         <Fragment>
-         <Banner/>
-          <OurGoal />
-          <WorkingProcss />
+          <Banner />
           <Services />
-          <ProjectGallery />
-          <ContactButton />
+          <Credibility />
+          <Testimonials />
+          <LetsTalk />
         </Fragment>
         {/* </SmoothScroll> */}
       </MainLayout>
