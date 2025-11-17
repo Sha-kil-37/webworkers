@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { IoClose, IoMenu } from "react-icons/io5";
 
 export default function Nav() {
@@ -31,21 +31,27 @@ export default function Nav() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8 items-center">
             {navLinks.map((link) => (
-              <Link
+              <NavLink
                 key={link.path}
                 to={link.path}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 relative group"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-blue-600 font-medium"
+                    : "text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium"
+                }
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-              </Link>
+              </NavLink>
             ))}
           </div>
 
           {/* CTA Button */}
-          <button className="hidden md:block px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium">
+          <Link
+            to={"/contact"}
+            className="hidden md:block px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium"
+          >
             Get Started
-          </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -61,18 +67,24 @@ export default function Nav() {
           <div className="md:hidden pb-4 animate-in fade-in slide-in-from-top-2 duration-300">
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <Link
+                <NavLink
                   key={link.path}
                   to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-300 font-medium"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-blue-600 font-medium"
+                      : "text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium"
+                  }
                 >
                   {link.label}
-                </Link>
+                </NavLink>
               ))}
-              <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium mt-2 w-full">
+              <Link
+                to={"/contact"}
+                className="hidden md:block px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium"
+              >
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         )}

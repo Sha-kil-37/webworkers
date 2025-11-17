@@ -6,26 +6,23 @@ import Credibility from "../components/Credibility";
 import Testimonials from "../components/Testimonials";
 import LetsTalk from "../components/LetsTalk";
 import Loading from "../components/Loading";
+import SmoothScroll from "../lib/utils/SmoothScroll";
 
 //
 export default function HomePage() {
   //
   return (
-    <Suspense
-      fallback={
-       <Loading />
-      }
-    >
+    <Suspense fallback={<Loading />}>
       <MainLayout>
-        {/* <SmoothScroll> */}
-        <Fragment>
-          <Banner />
-          <Services />
-          <Credibility />
-          <Testimonials />
-          <LetsTalk />
-        </Fragment>
-        {/* </SmoothScroll> */}
+        <SmoothScroll>
+          <Fragment>
+            <Banner />
+            <Services />
+            <Credibility />
+            <Testimonials />
+            <LetsTalk />
+          </Fragment>
+        </SmoothScroll>
       </MainLayout>
     </Suspense>
   );
