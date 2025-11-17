@@ -1,9 +1,10 @@
 import { Link } from "react-router";
 import BlurInText from "./BlurInText";
+import Paragraph from "./Paragraph";
 
 export default function Banner() {
   return (
-    <section className="relative py-10 flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <section className="relative py-10 flex items-center justify-center bg-gradient-to-br overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -21,10 +22,10 @@ export default function Banner() {
         </BlurInText>
 
         {/* Subtitle */}
-        <p className="mt-8 sm:mt-10 text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed font-light">
+        <Paragraph>
           We're building the future of human connection through innovative
           technology and design.
-        </p>
+        </Paragraph>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mt-12 sm:mt-14">

@@ -1,14 +1,11 @@
 import { Fragment, lazy, Suspense } from "react";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
-import Banner from "../components/Banner";
-import Services from "../components/Services";
-import Credibility from "../components/Credibility";
-import Testimonials from "../components/Testimonials";
-import LetsTalk from "../components/LetsTalk";
+
 import Loading from "../components/Loading";
+import Blog from "../components/Blog";
 
 //
-export default function HomePage() {
+export default function BlogPage() {
   //
   return (
     <Suspense
@@ -19,11 +16,7 @@ export default function HomePage() {
       <MainLayout>
         {/* <SmoothScroll> */}
         <Fragment>
-          <Banner />
-          <Services />
-          <Credibility />
-          <Testimonials />
-          <LetsTalk />
+          <Blog/>
         </Fragment>
         {/* </SmoothScroll> */}
       </MainLayout>

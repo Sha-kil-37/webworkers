@@ -13,6 +13,7 @@ export default function Nav() {
     { path: "/services", label: "Services" },
     { path: "/projects", label: "Projects" },
     { path: "/contact", label: "Contact" },
+    { path: "/blog", label: "Blog" },
   ];
 
   return (

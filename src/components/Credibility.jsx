@@ -1,5 +1,6 @@
 import React from "react";
 import { FaAward, FaTrophy, FaCheckCircle, FaStar } from "react-icons/fa";
+import Paragraph from "./Paragraph";
 
 export default function Credibility() {
   const credentials = [
@@ -44,14 +45,14 @@ export default function Credibility() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Why Trust
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              {" "}
               Us
             </span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-            Our proven track record, certifications, and client testimonials
-            demonstrate our commitment to excellence and reliability.
-          </p>
+
+          <Paragraph>
+            We are committed to delivering excellence and building lasting
+            relationships with our clients through trust and transparency.
+          </Paragraph>
         </div>
 
         {/* Credentials Grid */}

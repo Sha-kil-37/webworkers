@@ -1,4 +1,5 @@
 import React from "react";
+import Paragraph from "./Paragraph";
 
 export default function Footer() {
   const links = [
@@ -16,10 +17,7 @@ export default function Footer() {
           <a href="/" className="text-2xl font-semibold text-white">
             WebWorkers
           </a>
-          <p className="mt-3 text-sm text-slate-300 max-w-sm">
-            Building fast, accessible web experiences. We design and ship
-            performant apps and components that users love.
-          </p>
+         <Paragraph>Building modern web solutions for your business.</Paragraph>
           <p className="mt-4 text-xs text-slate-400">
             Made with ❤️ by WebWorkers
           </p>

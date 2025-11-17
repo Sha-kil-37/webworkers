@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
+import Paragraph from "../components/Paragraph";
 
+// Components
 export default function Projects() {
   const categories = [
     "All",
@@ -74,10 +76,10 @@ export default function Projects() {
           Selected Projects
         </h2>
 
-        <p className="mt-4 max-w-2xl mx-auto text-center text-slate-500">
+        <Paragraph>
           A curated selection of recent work — product design, marketing
           experiments, and full-stack builds. Click a project to learn more.
-        </p>
+        </Paragraph>
 
         <div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
           {categories.map((cat) => (
@@ -111,7 +113,7 @@ export default function Projects() {
                   {p.title}
                 </h3>
 
-                <p className="text-sm text-slate-500 mt-2">{p.summary}</p>
+                <Paragraph>{p.summary}</Paragraph>
 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {p.tech.map((t) => (

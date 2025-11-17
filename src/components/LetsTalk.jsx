@@ -7,6 +7,7 @@ import {
   FaTwitter,
   FaGithub,
 } from "react-icons/fa";
+import Paragraph from "./Paragraph";
 
 export default function LetsTalk() {
   const [formData, setFormData] = useState({
@@ -79,11 +80,11 @@ export default function LetsTalk() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
             Let's Talk
           </h2>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <Paragraph>
             Have a project in mind? Want to discuss an idea? Or simply want to
             say hello? We'd love to hear from you. Let's create something
             amazing together.
-          </p>
+          </Paragraph>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

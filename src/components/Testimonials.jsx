@@ -2,6 +2,7 @@ import React from "react";
 import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
+import Paragraph from "./Paragraph";
 
 const testimonials = [
   {
@@ -68,10 +69,10 @@ export default function Testimonials({ autoplay = true }) {
           <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-4">
             Client Testimonials
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Hear from our satisfied clients about their experience working with
-            WebWorkers
-          </p>
+          <Paragraph>
+            Hear what our satisfied clients have to say about their experience
+            working with WebWorkers.
+          </Paragraph>
         </div>
 
         {/* Testimonials Container */}
@@ -109,9 +110,7 @@ export default function Testimonials({ autoplay = true }) {
                     </div>
 
                     {/* Quote */}
-                    <p className="text-gray-700 dark:text-gray-300 text-lg italic font-light leading-relaxed flex-grow">
-                      "{testimonial.quote}"
-                    </p>
+                    <Paragraph> {testimonial.quote}</Paragraph>
 
                     {/* Client Info */}
                     <div className="pt-6 border-t border-gray-200 dark:border-slate-700">
