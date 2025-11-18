@@ -2,6 +2,7 @@ import React from "react";
 import { FaAward, FaTrophy, FaCheckCircle, FaStar } from "react-icons/fa";
 import Paragraph from "./Paragraph";
 import CountUp from "./CountUp";
+import TrustedBy from "./TrustedBy";
 
 export default function Credibility() {
   //
@@ -34,10 +35,12 @@ export default function Credibility() {
   //
   const stats = [
     { value: "500+", label: "Happy Clients" },
-    { value: "1000+", label: "Projects Completed" },
-    { value: "10+", label: "Years Experience" },
-    { value: "99.8%", label: "Uptime Guarantee" },
+    { value: "700+", label: "Projects Completed" },
+    { value: "5+", label: "Years Experience" },
+    { value: "96.8%", label: "Uptime Guarantee" },
   ];
+ 
+  //
 
   return (
     <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
@@ -115,47 +118,20 @@ export default function Credibility() {
                 <div key={i}>
                   <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-flex items-baseline justify-center gap-1">
                     <CountUp to={to} className="leading-none" separator="," />
-                    {suffix && <span className="text-lg">{suffix}</span>}
+                    {suffix && (
+                      <span className="font-bold text-3xl">{suffix}</span>
+                    )}
                   </div>
-                  <p className="text-blue-100 text-sm font-medium">{stat.label}</p>
+                  <p className="text-blue-100 text-sm font-medium">
+                    {stat.label}
+                  </p>
                 </div>
               );
             })}
           </div>
         </div>
 
-        {/* Trust Badges Section */}
-        <div className="mt-16 bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
-          <h3 className="text-center text-lg font-semibold text-gray-900 mb-8">
-            Trusted by industry leaders
-          </h3>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center mb-2">
-                <span className="text-2xl font-bold text-blue-600">SOC</span>
-              </div>
-              <p className="text-sm text-gray-600">SOC 2 Compliant</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center mb-2">
-                <span className="text-2xl font-bold text-green-600">ISO</span>
-              </div>
-              <p className="text-sm text-gray-600">ISO 27001</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center mb-2">
-                <span className="text-2xl font-bold text-orange-600">GDPR</span>
-              </div>
-              <p className="text-sm text-gray-600">GDPR Ready</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-pink-100 to-red-100 flex items-center justify-center mb-2">
-                <span className="text-2xl font-bold text-red-600">SSL</span>
-              </div>
-              <p className="text-sm text-gray-600">256-bit SSL</p>
-            </div>
-          </div>
-        </div>
+        <TrustedBy/>
       </div>
     </section>
   );
