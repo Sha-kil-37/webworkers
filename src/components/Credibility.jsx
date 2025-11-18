@@ -1,8 +1,10 @@
 import React from "react";
 import { FaAward, FaTrophy, FaCheckCircle, FaStar } from "react-icons/fa";
 import Paragraph from "./Paragraph";
+import CountUp from "./CountUp";
 
 export default function Credibility() {
+  //
   const credentials = [
     {
       icon: FaAward,
@@ -29,7 +31,7 @@ export default function Credibility() {
       color: "from-purple-500 to-pink-500",
     },
   ];
-
+  //
   const stats = [
     { value: "500+", label: "Happy Clients" },
     { value: "1000+", label: "Projects Completed" },
@@ -88,16 +90,37 @@ export default function Credibility() {
         {/* Stats Section */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center">
-            {stats.map((stat, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {stat.value}
+            {stats.map((stat, i) => {
+              const parseStat = (val) => {
+                const str = String(val);
+                let suffix = "";
+                let numStr = str;
+
+                if (str.endsWith("+")) {
+                  suffix = "+";
+                  numStr = str.slice(0, -1);
+                } else if (str.endsWith("%")) {
+                  suffix = "%";
+                  numStr = str.slice(0, -1);
+                }
+
+                const to = parseFloat(numStr.replace(/,/g, "")) || 0;
+
+                return { to, suffix };
+              };
+
+              const { to, suffix } = parseStat(stat.value);
+
+              return (
+                <div key={i}>
+                  <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-flex items-baseline justify-center gap-1">
+                    <CountUp to={to} className="leading-none" separator="," />
+                    {suffix && <span className="text-lg">{suffix}</span>}
+                  </div>
+                  <p className="text-blue-100 text-sm font-medium">{stat.label}</p>
                 </div>
-                <p className="text-blue-100 text-sm font-medium">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

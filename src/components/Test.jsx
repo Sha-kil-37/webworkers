@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Test() {
-  return (
-    <div>Test</div>
-  )
+  const text = "500+";
+  const number = parseInt(text); 
+  console.log(number)
+  return <div>Test</div>;
 }
+
