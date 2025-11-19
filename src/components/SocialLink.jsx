@@ -1,4 +1,4 @@
-import { FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaGithub, FaDiscord } from "react-icons/fa";
 import { Link } from "react-router";
 
 export default function SocialLink() {
@@ -19,17 +19,21 @@ export default function SocialLink() {
       label: "GitHub",
       href: "https://github.com/Sha-kil-37",
     },
+    {
+      icon: FaDiscord,
+      label: "Discord ",
+      href: "https://discord.com/users/1420788964641603706",
+    },
   ];
 
   return (
-    <div className="pt-8 border-t border-slate-700">
-      <h3 className="text-sm font-semibold text-slate-200 mb-4">Follow Us</h3>
-
+    <div>
       <div className="flex gap-3">
         {socialLinks.map((social, idx) => {
           const Icon = social.icon;
           return (
             <Link
+              title={social.label}
               key={idx}
               to={social.href}
               target="_blank"

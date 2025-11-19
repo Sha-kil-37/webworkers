@@ -33,12 +33,12 @@ export default function Credibility() {
   ];
   //
   const stats = [
-    { value: "500+", label: "Happy Clients" },
-    { value: "700+", label: "Projects Completed" },
+    { value: "300+", label: "Happy Clients" },
+    { value: "400+", label: "Projects Completed" },
     { value: "5+", label: "Years Experience" },
     { value: "96.8%", label: "Uptime Guarantee" },
   ];
- 
+
   //
 
   return (
@@ -128,8 +128,6 @@ export default function Credibility() {
             })}
           </div>
         </div>
-
-       
       </div>
     </section>
   );

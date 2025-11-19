@@ -15,7 +15,7 @@ const ContactList = ({ contactInfo }) => {
         return (
           <div
             key={idx}
-            className="group flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-all duration-300"
+            className="group flex items-start gap-4 rounded-lg hover:bg-white/5 transition-all duration-300"
           >
             <div className="flex-shrink-0">
               <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500">

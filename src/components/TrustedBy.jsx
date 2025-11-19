@@ -41,11 +41,11 @@ export default function TrustedBy() {
 
   //
   return (
-    <section className="">
+    <section className="py-10">
       <div className="max-w-7xl mx-auto">
-        <h3 className="text-center text-lg font-semibold text-gray-900 mb-8">
-          Trusted by industry leaders
-        </h3>
+        <h2 className="text-center font-bold text-2xl mb-8">
+          Trusted By Industry Leaders
+        </h2>
         <Paragraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in
           amet, cumque alias debitis vel qui dolor quidem cum ratione doloremque
@@ -58,7 +58,7 @@ export default function TrustedBy() {
             {trustedBy.map((Item, i) => {
               return (
                 <div key={i}>
-                  <div className="max-w-[200px] overflow-hidden max-h-[200px] object-center">
+                  <div className="max-w-[100px] overflow-hidden max-h-[100px] object-center">
                     <img
                       className="h-full w-full inline-block"
                       src={Item.organaization}

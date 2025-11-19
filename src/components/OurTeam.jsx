@@ -6,28 +6,28 @@ export default function OurTeam() {
 
   const team = [
     {
-      name: "Sarah Johnson",
+      name: "Shakil Ahmed",
       role: "Founder & CEO",
-      description: "10+ years in digital strategy and business development",
-      image: "👩‍💼",
+      description: "5+ years in web development and business development",
+      image: "👨‍💻",
     },
     {
       name: "Mike Chen",
       role: "Lead Developer",
       description: "Expert in full-stack development and cloud architecture",
-      image: "👨‍💻",
+      image: "👩‍💼",
     },
     {
-      name: "Emma Rodriguez",
-      role: "Design Director",
-      description: "Award-winning designer with passion for user experience",
-      image: "👩‍🎨",
+      name: "Rakibul Islam",
+      role: "Marketing Director",
+      description: "Award-winning marketing with passion for user experience",
+      image: "👨",
     },
     {
       name: "Alex Thompson",
       role: "Project Manager",
       description: "Specializes in agile methodologies and team leadership",
-      image: "👨‍💼",
+      image: "👩‍💼",
     },
   ];
   //
@@ -51,7 +51,7 @@ export default function OurTeam() {
           {team.map((member, i) => (
             <div
               key={i}
-              className="group rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="group overflow-hidden transition-all duration-300 hover:-translate-y-2"
             >
               {/* Avatar */}
               <div className="bg-gradient-to-br from-blue-100 to-purple-100 p-12 text-center">

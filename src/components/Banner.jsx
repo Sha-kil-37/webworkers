@@ -25,6 +25,7 @@ export default function Banner() {
         <Paragraph>
           We're building the future of human connection through innovative
           technology and design.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia nulla voluptatibus iste voluptatum aliquam aspernatur doloribus tenetur? Deleniti possimus, magni cupiditate ipsam nobis vitae, soluta nam dolorum, obcaecati quis provident.
         </Paragraph>
 
         {/* CTA Buttons */}
