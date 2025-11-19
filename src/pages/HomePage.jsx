@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials";
 import LetsTalk from "../components/LetsTalk";
 import Loading from "../components/Loading";
 import SmoothScroll from "../lib/utils/SmoothScroll";
+import TrustedBy from "../components/TrustedBy";
 
 //
 export default function HomePage() {
@@ -20,6 +21,7 @@ export default function HomePage() {
             <Services />
             <Credibility />
             <Testimonials />
+             <TrustedBy/>
             <LetsTalk />
           </Fragment>
         </SmoothScroll>

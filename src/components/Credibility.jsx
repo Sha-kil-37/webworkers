@@ -2,7 +2,6 @@ import React from "react";
 import { FaAward, FaTrophy, FaCheckCircle, FaStar } from "react-icons/fa";
 import Paragraph from "./Paragraph";
 import CountUp from "./CountUp";
-import TrustedBy from "./TrustedBy";
 
 export default function Credibility() {
   //
@@ -44,7 +43,7 @@ export default function Credibility() {
 
   return (
     <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -59,7 +58,6 @@ export default function Credibility() {
             relationships with our clients through trust and transparency.
           </Paragraph>
         </div>
-
         {/* Credentials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {credentials.map((cred, i) => {
@@ -91,7 +89,7 @@ export default function Credibility() {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 shadow-lg">
+        <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl shadow-lg p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center">
             {stats.map((stat, i) => {
               const parseStat = (val) => {
@@ -131,7 +129,7 @@ export default function Credibility() {
           </div>
         </div>
 
-        <TrustedBy/>
+       
       </div>
     </section>
   );

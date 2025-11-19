@@ -25,7 +25,7 @@ export default function ChooseUs() {
 
   return (
     <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Why Choose{" "}
@@ -43,7 +43,7 @@ export default function ChooseUs() {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="group rounded-xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 p-4"
+              className="group overflow-hidden bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-2 p-4"
             >
               <h3 className="text-2xl font-semibold mb-4 text-blue-600">
                 {reason.title}

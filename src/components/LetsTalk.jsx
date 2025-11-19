@@ -1,14 +1,9 @@
-import React, { useState } from "react";
-import {
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaLinkedin,
-  FaTwitter,
-  FaGithub,
-} from "react-icons/fa";
+import { useState } from "react";
 import Paragraph from "./Paragraph";
-
+import ContactList from "./ContactList";
+import SocialLink from "./SocialLink";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+//
 export default function LetsTalk() {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,9 +12,9 @@ export default function LetsTalk() {
     subject: "",
     message: "",
   });
-
+  //
   const [submitted, setSubmitted] = useState(false);
-
+  //
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -43,29 +38,24 @@ export default function LetsTalk() {
     {
       icon: FaEnvelope,
       label: "Email",
-      value: "hello@webworkers.com",
-      link: "mailto:hello@webworkers.com",
+      value: "sakildevmern@gmail.com",
+      link: "sakildevmern@gmail.com",
     },
     {
       icon: FaPhone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+8801581049601",
+      link: "+8801581049601",
     },
     {
       icon: FaMapMarkerAlt,
       label: "Location",
-      value: "San Francisco, CA",
-      link: "#",
+      value: "Gazipur, Dhaka, Bangladesh",
+      link: "https://maps.app.goo.gl/eLBZq6TG2sxMCke78",
     },
   ];
 
-  const socialLinks = [
-    { icon: FaLinkedin, label: "LinkedIn", href: "#" },
-    { icon: FaTwitter, label: "Twitter", href: "#" },
-    { icon: FaGithub, label: "GitHub", href: "#" },
-  ];
-
+  //
   return (
     <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Animated background elements */}
@@ -91,52 +81,8 @@ export default function LetsTalk() {
           {/* Contact Information */}
           <div className="lg:col-span-1">
             <div className="space-y-8">
-              {contactInfo.map((info, idx) => {
-                const Icon = info.icon;
-                return (
-                  <a
-                    key={idx}
-                    href={info.link}
-                    className="group flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-all duration-300 cursor-pointer"
-                  >
-                    <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 group-hover:shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300 group-hover:scale-110">
-                        <Icon className="h-6 w-6 text-white" />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-sm font-semibold text-slate-200 group-hover:text-white transition-colors">
-                        {info.label}
-                      </h3>
-                      <p className="text-slate-400 group-hover:text-slate-300 transition-colors text-sm mt-1">
-                        {info.value}
-                      </p>
-                    </div>
-                  </a>
-                );
-              })}
-
-              {/* Social Links */}
-              <div className="pt-8 border-t border-slate-700">
-                <h3 className="text-sm font-semibold text-slate-200 mb-4">
-                  Follow Us
-                </h3>
-                <div className="flex gap-3">
-                  {socialLinks.map((social, idx) => {
-                    const Icon = social.icon;
-                    return (
-                      <a
-                        key={idx}
-                        href={social.href}
-                        aria-label={social.label}
-                        className="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-gradient-to-br from-slate-700 to-slate-600 hover:from-blue-500 hover:to-cyan-500 text-slate-300 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/30"
-                      >
-                        <Icon className="h-5 w-5" />
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
+              <ContactList contactInfo={contactInfo} />
+              <SocialLink />
             </div>
           </div>
 
