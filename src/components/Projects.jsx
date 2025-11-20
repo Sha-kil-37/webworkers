@@ -4,6 +4,7 @@ import Paragraph from "../components/Paragraph";
 
 // Components
 export default function Projects() {
+  //
   const categories = [
     "All",
     "Web Development",
@@ -98,13 +99,13 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5">
           {filtered.map((p) => (
             <article
               key={p.id}
-              className="group bg-white rounded-lg shadow-sm overflow-hidden border hover:shadow-md transition-shadow"
+              className="group bg-white overflow-hidden  hover:shadow-md transition-shadow"
             >
-              <div className="bg-slate-100 aspect-video flex items-center justify-center">
+              <div className="bg-[#F9F8F6] aspect-video flex items-center justify-center">
                 <span className="text-sm text-slate-400">Preview</span>
               </div>
 

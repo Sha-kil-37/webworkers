@@ -40,8 +40,8 @@ const testimonials = [
 ];
 
 export default function Testimonials({ autoplay = true }) {
+  // 
   const [active, setActive] = useState(0);
-
   const handleNext = () => {
     setActive((prev) => (prev + 1) % testimonials.length);
   };
@@ -70,8 +70,7 @@ export default function Testimonials({ autoplay = true }) {
             Client Testimonials
           </h2>
           <Paragraph>
-            Hear what our satisfied clients have to say about their experience
-            working with WebWorkers.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium incidunt, adipisci non pariatur quae, est, nulla possimus veniam dicta commodi iure unde explicabo libero beatae itaque! Quod maxime obcaecati, dolorum facere sapiente consectetur praesentium! Fugit accusantium iste quod reiciendis maiores?cidunt, adipisci non pariatur quae, est, nulla possimus veniam dicta commodi iure unde explicabo libero beatae itaque! Quod maxime obcaecati, dolorum facere sapiente consectetur praesentium! Fugit accusantium iste quod reiciendis maiores?
           </Paragraph>
         </div>
 

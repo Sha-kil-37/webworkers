@@ -14,11 +14,11 @@ export default function Nav() {
     { path: "/contact", label: "Contact" },
     { path: "/blog", label: "Blog" },
   ];
-
+// 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm py-5">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center">
           {/* Logo */}
           <Link
             to="/"
@@ -43,14 +43,6 @@ export default function Nav() {
               </NavLink>
             ))}
           </div>
-
-          {/* CTA Button */}
-          <Link
-            to={"/contact"}
-            className="hidden md:block px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium"
-          >
-            Get Started
-          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -78,13 +70,6 @@ export default function Nav() {
                   {link.label}
                 </NavLink>
               ))}
-
-              <Link
-                to={"/contact"}
-                className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium"
-              >
-                Get Started
-              </Link>
             </div>
           </div>
         )}
