@@ -18,10 +18,10 @@ export default function HomePage() {
         <SmoothScroll>
           <Fragment>
             <Banner />
+            <TrustedBy />
             <Services />
             <Credibility />
             <Testimonials />
-             <TrustedBy/>
             <LetsTalk />
           </Fragment>
         </SmoothScroll>

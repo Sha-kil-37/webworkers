@@ -29,7 +29,6 @@ export default function Footer() {
             Made with ❤️ by WebWorkers
           </p>
         </div>
-
         <div>
           <h3 className="font-bold">Quick Links</h3>
           {navLinks.map((link) => (

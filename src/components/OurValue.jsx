@@ -1,10 +1,10 @@
 import React from "react";
 import Paragraph from "./Paragraph";
 import { FaLightbulb, FaUsers, FaRocket, FaShieldAlt } from "react-icons/fa";
-// 
+//
 export default function OurValue() {
-    // 
-    const values = [
+  //
+  const values = [
     {
       icon: FaLightbulb,
       title: "Innovation",
@@ -34,23 +34,23 @@ export default function OurValue() {
       color: "from-green-500 to-emerald-500",
     },
   ];
-    // 
+  //
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-10">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our Core {""}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Values
-            </span>
-          </h2>
-          <Paragraph>
-            Principles that guide our actions and decisions every day.
-          </Paragraph>
-        </div>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          Our Core {""}
+          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Values
+          </span>
+        </h2>
+        <Paragraph>
+          Principles that guide our actions and decisions every day. Principles
+          that guide our actions and decisions every day. Principles that guide
+          our actions and decisions every day.
+        </Paragraph>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((value, i) => {
             const Icon = value.icon;
             return (

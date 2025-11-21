@@ -40,7 +40,7 @@ const testimonials = [
 ];
 
 export default function Testimonials({ autoplay = true }) {
-  // 
+  //
   const [active, setActive] = useState(0);
   const handleNext = () => {
     setActive((prev) => (prev + 1) % testimonials.length);
@@ -62,20 +62,28 @@ export default function Testimonials({ autoplay = true }) {
   }, [autoplay]);
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-4">
-            Client Testimonials
-          </h2>
-          <Paragraph>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium incidunt, adipisci non pariatur quae, est, nulla possimus veniam dicta commodi iure unde explicabo libero beatae itaque! Quod maxime obcaecati, dolorum facere sapiente consectetur praesentium! Fugit accusantium iste quod reiciendis maiores?cidunt, adipisci non pariatur quae, est, nulla possimus veniam dicta commodi iure unde explicabo libero beatae itaque! Quod maxime obcaecati, dolorum facere sapiente consectetur praesentium! Fugit accusantium iste quod reiciendis maiores?
-          </Paragraph>
-        </div>
-
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          Our {""}
+          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Testimonials
+          </span>
+        </h2>
+        <Paragraph>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          incidunt, adipisci non pariatur quae, est, nulla possimus veniam dicta
+          commodi iure unde explicabo libero beatae itaque! Quod maxime
+          obcaecati, dolorum facere sapiente consectetur praesentium! Fugit
+          accusantium iste quod reiciendis maiores?cidunt, adipisci non pariatur
+          quae, est, nulla possimus veniam dicta commodi iure unde explicabo
+          libero beatae itaque! Quod maxime obcaecati, dolorum facere sapiente
+          consectetur praesentium! Fugit accusantium iste quod reiciendis
+          maiores?
+        </Paragraph>
         {/* Testimonials Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-5">
           {/* Left Side - Testimonial Card */}
           <div className="relative h-96">
             <AnimatePresence mode="wait">

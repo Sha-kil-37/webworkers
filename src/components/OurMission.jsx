@@ -23,6 +23,20 @@ export default function OurMission() {
               perspiciatis placeat minus provident ad facilis facere, pariatur
               molestias voluptatum harum a incidunt, illo earum, reiciendis
               voluptas.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Suscipit, debitis? Fuga, optio hic rerum at ullam dolor molestiae.
+              Fugiat sit id exercitationem placeat quibusdam dignissimos
+              temporibus! Optio amet inventore unde excepturi ab odit
+              perspiciatis placeat minus provident ad facilis facere, pariatur
+              molestias voluptatum harum a incidunt, illo earum, reiciendis
+              voluptas.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Suscipit, debitis? Fuga, optio hic rerum at ullam dolor molestiae.
+              Fugiat sit id exercitationem placeat quibusdam dignissimos
+              temporibus! Optio amet inventore unde excepturi ab odit
+              perspiciatis placeat minus provident ad facilis facere, pariatur
+              molestias voluptatum harum a incidunt, illo earum, reiciendis
+              voluptas.
             </Paragraph>
             
           </div>

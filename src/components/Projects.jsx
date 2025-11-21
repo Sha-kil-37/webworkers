@@ -68,17 +68,85 @@ export default function Projects() {
       : sampleProjects.filter((p) => p.category === active);
 
   return (
-    <section aria-labelledby="projects-heading">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <section className="py-10">
+      <div className="max-w-7xl mx-auto">
         <h2
           id="projects-heading"
           className="text-3xl lg:text-4xl font-extrabold text-center text-slate-900"
         >
-          Selected Projects
+          Meet Our Projects
         </h2>
 
         <Paragraph>
           A curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more.
+          A curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more.
+          A curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more.
+          A curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more.
+          A curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more.
+          A curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more.
+          A curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
+          experiments, and full-stack builds. Click a project to learn more. A
+          curated selection of recent work — product design, marketing
           experiments, and full-stack builds. Click a project to learn more.
         </Paragraph>
 

@@ -24,11 +24,12 @@ export default function Banner() {
         </BlurInText>
 
         {/* Subtitle */}
-        <Paragraph>
+        {/* <Paragraph>
           We're building the future of human connection through innovative
           technology and design. Lorem ips
           ipsam nobis vitae, soluta nam dolorum, obcaecati quis provident.
-        </Paragraph>
+        </Paragraph> */}
+        <p className="max-w-[600px] mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque delectus maiores recusandae animi rerum labore, nihil magnam illum omnis, quisquam beatae veritatis expedita eveniet iusto nostrum id quis! Beatae voluptas eos non delectus quod repellendus maxime ab ratione amet suscipit.</p>
 
         <Link
           to={"/about"}

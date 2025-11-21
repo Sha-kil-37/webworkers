@@ -1,6 +1,8 @@
-import React from "react";
 import Paragraph from "./Paragraph";
-
+import shakil from "../assets/shakil.png";
+import rakibul from "../assets/rakibul.png";
+import one from "../assets/one.png";
+import two from "../assets/two.png";
 export default function OurTeam() {
   //
 
@@ -9,57 +11,61 @@ export default function OurTeam() {
       name: "Shakil Ahmed",
       role: "Founder & CEO",
       description: "5+ years in web development and business development",
-      image: "👨‍💻",
-    },
-    {
-      name: "Mike Chen",
-      role: "Lead Developer",
-      description: "Expert in full-stack development and cloud architecture",
-      image: "👩‍💼",
+      image: shakil,
     },
     {
       name: "Rakibul Islam",
-      role: "Marketing Director",
+      role: "Digital Marketor",
+      description: "Expert in full-stack development and cloud architecture",
+      image: rakibul,
+    },
+    {
+      name: "Mickel Jonson",
+      role: "UIUX Designer",
       description: "Award-winning marketing with passion for user experience",
-      image: "👨",
+      image: one,
     },
     {
       name: "Alex Thompson",
       role: "Project Manager",
       description: "Specializes in agile methodologies and team leadership",
-      image: "👩‍💼",
+      image: two,
     },
   ];
   //
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Meet Our{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Team
-            </span>
-          </h2>
-          <Paragraph>
-            Our diverse team of experts is dedicated to delivering innovative
-            solutions and exceptional service.
-          </Paragraph>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          Meet Our{" "}
+          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Dynamic Team
+          </span>
+        </h2>
+        <Paragraph>
+          Our diverse team of experts is dedicated to delivering innovative
+          solutions and exceptional service. Our diverse team of experts is
+          dedicated to delivering innovative solutions and exceptional service.
+          Our diverse team of experts is dedicated to delivering innovative
+          solutions and exceptional service.
+        </Paragraph>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-5">
           {team.map((member, i) => (
             <div
               key={i}
               className="group overflow-hidden transition-all duration-300 hover:-translate-y-2"
             >
               {/* Avatar */}
-              <div className="bg-gradient-to-br from-blue-100 to-purple-100 p-12 text-center">
-                <div className="text-7xl">{member.image}</div>
+              <div className="overflow-hidden h-40 w-full bg-[#F9F8F6]">
+                <img
+                  className="h-full w-full object-fit"
+                  src={member.image}
+                  alt={member.role}
+                />
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="mt-4">
                 <h3 className="text-xl font-semibold text-gray-900 mb-1">
                   {member.name}
                 </h3>
