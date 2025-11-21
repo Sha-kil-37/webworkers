@@ -69,11 +69,11 @@ export default function Services() {
 
             const leftBorder = col !== 0 ? "border-l-2" : "";
             const topBorder = row !== 0 ? "border-t-2 " : "";
-
+            //
             return (
               <div
                 key={idx}
-                className={`${leftBorder} ${topBorder} p-6 flex flex-col justify-center group`}
+                className={`${leftBorder} ${topBorder} p-6 flex flex-col justify-center group bg-[#F5F7F8]`}
               >
                 <h3 className="text-xl font-bold text-slate-800 mb-2">
                   {item.title}

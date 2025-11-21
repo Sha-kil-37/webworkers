@@ -6,19 +6,22 @@ import OurMission from "../components/OurMission";
 import OurTeam from "../components/OurTeam";
 import ChooseUs from "../components/ChooseUs";
 import TrustedBy from "../components/TrustedBy";
+import SmoothScroll from "../lib/utils/SmoothScroll";
 //
 export default function AboutPage() {
   //
   return (
     <Suspense fallback={<Loading />}>
       <MainLayout>
-        <Fragment>
-          <About />
-          <OurMission />
-          <OurTeam />
-          <ChooseUs />
-          <TrustedBy />
-        </Fragment>
+        <SmoothScroll>
+          <Fragment>
+            <About />
+            <OurMission />
+            <OurTeam />
+            <ChooseUs />
+            <TrustedBy />
+          </Fragment>
+        </SmoothScroll>
       </MainLayout>
     </Suspense>
   );
