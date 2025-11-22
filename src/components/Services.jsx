@@ -73,7 +73,7 @@ export default function Services() {
             return (
               <div
                 key={idx}
-                className={`${leftBorder} ${topBorder} p-6 flex flex-col justify-center group bg-[#F5F7F8]`}
+                className={`${leftBorder} ${topBorder} p-6 flex flex-col justify-center group `}
               >
                 <h3 className="text-xl font-bold text-slate-800 mb-2">
                   {item.title}

@@ -9,6 +9,7 @@ import {
 import { motion } from "framer-motion";
 
 export default function ChooseUs() {
+  //
   const features = [
     {
       title: "Fast Delivery",
@@ -53,7 +54,7 @@ export default function ChooseUs() {
             </div>
 
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-slate-900">
-              We build digital experiences that people love
+              We Build Digital Experiences That People Love
             </h2>
 
             <p className="text-slate-600 max-w-xl">

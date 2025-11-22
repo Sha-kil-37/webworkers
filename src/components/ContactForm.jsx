@@ -31,7 +31,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="font-bold text-4xl">Contact Us</h2>
-      <div className="grid grid-cols-2 mt-5 gap-4">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-5 gap-4">
         {/* Name */}
         <div>
           <label htmlFor="name" className="font-semibold">
@@ -102,7 +102,7 @@ export default function ContactForm() {
         </div>
       </div>
       {/*  */}
-      <div className="flex justify-between mt-2">
+      <div className="flex justify-between mt-5">
         {/* Submit button */}
         <div>
           <button

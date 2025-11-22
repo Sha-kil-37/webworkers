@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import { Fragment, useState } from "react";
 import { Link } from "react-router";
 import Paragraph from "../components/Paragraph";
-
-// Components
+import ProjectSlider from "./ProjectSlider";
+import one from "../assets/one.jpg";
+import two from "../assets/two.jpg";
+import three from "../assets/three.jpg";
+//
 export default function Projects() {
   //
   const categories = [
@@ -12,7 +15,7 @@ export default function Projects() {
     "E-commerce",
     "Marketing",
   ];
-
+  // all project data array bellow
   const sampleProjects = [
     {
       id: 1,
@@ -60,105 +63,50 @@ export default function Projects() {
       tech: ["Research", "Recommendations"],
     },
   ];
-
+  // slider project data array bellow
+  const sliderProjects = [
+    {
+      title: "E-Commerce Website",
+      description: "A modern eCommerce web app built with MERN stack.",
+      img: one,
+    },
+    {
+      title: "Digital Agency Website",
+      description: "A stylish website designed for creative agencies.",
+      img: two,
+    },
+    {
+      title: "Portfolio Website",
+      description: "A personal portfolio with animations and modern UI.",
+      img: three,
+    },
+  ];
+  //
   const [active, setActive] = useState("All");
   const filtered =
     active === "All"
       ? sampleProjects
       : sampleProjects.filter((p) => p.category === active);
-
+  //
   return (
     <section className="py-10">
-      <div className="max-w-7xl mx-auto">
-        <h2
-          id="projects-heading"
-          className="text-3xl lg:text-4xl font-extrabold text-center text-slate-900"
-        >
-          Meet Our Projects
-        </h2>
-
-        <Paragraph>
-          A curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more.
-          A curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more.
-          A curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more.
-          A curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more.
-          A curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more.
-          A curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more.
-          A curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more. A
-          curated selection of recent work — product design, marketing
-          experiments, and full-stack builds. Click a project to learn more.
-        </Paragraph>
-
+      <div className="max-w-7xl mx-auto relative">
+        <div className="rounded-3xl overflow-hidden min-h-80 flex justify-center items-center">
+          <div>
+            <p className="font-semibold text-2xl  text-center">Hello</p>
+            <h2 className="max-w-100 font-bold text-center text-4xl mt-5">
+              Meet Our Project
+            </h2>
+          </div>
+        </div>
+        <ProjectSlider projects={sliderProjects} />
         <div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors duration-150 ${
-                active === cat
-                  ? "bg-slate-900 text-white"
-                  : "bg-slate-100 text-slate-700"
+              className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-colors duration-150 ${
+                active === cat ? "bg-black text-white" : "bg-[#F5F7F8]"
               }`}
               aria-pressed={active === cat}
             >
@@ -166,24 +114,21 @@ export default function Projects() {
             </button>
           ))}
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5">
+        {/*  */}
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-5">
           {filtered.map((p) => (
             <article
               key={p.id}
-              className="group bg-white overflow-hidden  hover:shadow-md transition-shadow"
+              className="group h-full rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
             >
-              <div className="bg-[#F9F8F6] aspect-video flex items-center justify-center">
+              <div className=" aspect-video flex items-center justify-center">
                 <span className="text-sm text-slate-400">Preview</span>
               </div>
-
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-slate-900">
                   {p.title}
                 </h3>
-
                 <Paragraph>{p.summary}</Paragraph>
-
                 <div className="mt-3 flex flex-wrap gap-2">
                   {p.tech.map((t) => (
                     <span

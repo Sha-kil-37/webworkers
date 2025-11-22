@@ -8,13 +8,7 @@ export default function OurMission() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Mission
-              </span>
-            </h2>
-
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Mission</h2>
             <Paragraph>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Suscipit, debitis? Fuga, optio hic rerum at ullam dolor molestiae.
@@ -22,23 +16,20 @@ export default function OurMission() {
               temporibus! Optio amet inventore unde excepturi ab odit
               perspiciatis placeat minus provident ad facilis facere, pariatur
               molestias voluptatum harum a incidunt, illo earum, reiciendis
-              voluptas.
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Suscipit, debitis? Fuga, optio hic rerum at ullam dolor molestiae.
-              Fugiat sit id exercitationem placeat quibusdam dignissimos
-              temporibus! Optio amet inventore unde excepturi ab odit
-              perspiciatis placeat minus provident ad facilis facere, pariatur
-              molestias voluptatum harum a incidunt, illo earum, reiciendis
-              voluptas.
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Suscipit, debitis? Fuga, optio hic rerum at ullam dolor molestiae.
-              Fugiat sit id exercitationem placeat quibusdam dignissimos
-              temporibus! Optio amet inventore unde excepturi ab odit
-              perspiciatis placeat minus provident ad facilis facere, pariatur
-              molestias voluptatum harum a incidunt, illo earum, reiciendis
-              voluptas.
+              voluptas. Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Suscipit, debitis? Fuga, optio hic rerum at ullam dolor
+              molestiae. Fugiat sit id exercitationem placeat quibusdam
+              dignissimos temporibus! Optio amet inventore unde excepturi ab
+              odit perspiciatis placeat minus provident ad facilis facere,
+              pariatur molestias voluptatum harum a incidunt, illo earum,
+              reiciendis voluptas. Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Suscipit, debitis? Fuga, optio hic rerum at
+              ullam dolor molestiae. Fugiat sit id exercitationem placeat
+              quibusdam dignissimos temporibus! Optio amet inventore unde
+              excepturi ab odit perspiciatis placeat minus provident ad facilis
+              facere, pariatur molestias voluptatum harum a incidunt, illo
+              earum, reiciendis voluptas.
             </Paragraph>
-            
           </div>
 
           {/* Right Stats */}

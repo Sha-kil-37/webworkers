@@ -4,9 +4,7 @@ import Paragraph from "./Paragraph";
 //
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  function handleShowMoreProject() {
-    console.log(selectedCategory);
-  }
+ 
   // Sample blog data
   const blogPosts = [
     {
@@ -90,13 +88,12 @@ export default function Blog() {
   ];
   //
   const categories = ["All", "Technology", "Design", "Marketing"];
-
   // Filter posts based on selected category
   const filteredPosts =
     selectedCategory === "All"
       ? blogPosts
       : blogPosts.filter((post) => post.category === selectedCategory);
-
+  //
   const featuredPost = blogPosts.find((post) => post.featured);
   const regularPosts = filteredPosts.filter((post) => !post.featured);
   //
@@ -134,72 +131,18 @@ export default function Blog() {
           ))}
         </div>
 
-        {/* Featured Post */}
-        {featuredPost && (
-          <div className="mb-16 group cursor-pointer">
-            <div className="grid md:grid-cols-2 gap-8 items-center bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300">
-              {/* Featured Image */}
-              <div className="relative h-96 md:h-full overflow-hidden">
-                <img
-                  src={featuredPost.image}
-                  alt={featuredPost.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-
-              {/* Featured Content */}
-              <div className="p-8 md:p-10">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium rounded-full">
-                    Featured
-                  </span>
-                  <span className="text-sm text-gray-500 font-medium">
-                    {featuredPost.category}
-                  </span>
-                </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
-                  {featuredPost.title}
-                </h3>
-                <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                  {featuredPost.excerpt}
-                </p>
-
-                {/* Meta Info */}
-                <div className="flex flex-wrap gap-4 md:gap-6 mb-8 text-sm text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <FaUser className="text-blue-500" />
-                    <span>{featuredPost.author}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <FaClock className="text-blue-500" />
-                    <span>{featuredPost.readTime}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <FaTag className="text-blue-500" />
-                    <span>{featuredPost.date}</span>
-                  </div>
-                </div>
-
-                {/* CTA Button */}
-                <button className="group/btn inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95">
-                  Read More
-                  <FaArrowRight className="group-hover/btn:translate-x-1 transition-transform duration-300" />
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+        
+      
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {regularPosts.map((post) => (
             <div
               key={post.id}
-              className="group h-full bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+              className="group h-full rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
             >
               {/* Post Image */}
-              <div className="relative h-48 overflow-hidden bg-gray-100">
+              <div className="relative h-48 overflow-hidden">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -253,21 +196,12 @@ export default function Blog() {
           ))}
         </div>
 
-        {/* Empty State */}
-        {regularPosts.length === 0 && !featuredPost && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
-              No posts found in this category.
-            </p>
-          </div>
-        )}
-
         {/* Load More Button */}
         <div
-          className="mt-16 flex justify-center"
-          onClick={handleShowMoreProject}
+          className="mt-16 flex justify-center cursor-pointer"
+          onClick={()=>alert("please wait some day for update this site")}
         >
-          <button className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2">
+          <button className="group px-8 py-4  rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2">
             Load More Articles
             <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
           </button>

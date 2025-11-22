@@ -36,12 +36,7 @@ export default function OurTeam() {
   return (
     <section className="py-10">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          Meet Our{" "}
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Dynamic Team
-          </span>
-        </h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">Meet Our Team</h2>
         <Paragraph>
           Our diverse team of experts is dedicated to delivering innovative
           solutions and exceptional service. Our diverse team of experts is
@@ -53,12 +48,12 @@ export default function OurTeam() {
           {team.map((member, i) => (
             <div
               key={i}
-              className="group overflow-hidden transition-all duration-300 hover:-translate-y-2"
+              className="group duration-300 hover:-translate-y-2 border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all rounded"
             >
               {/* Avatar */}
-              <div className="overflow-hidden h-40 w-full bg-[#F9F8F6]">
+              <div className="overflow-hidden h-40 w-full">
                 <img
-                  className="h-full w-full object-fit"
+                  className="h-full w-full object-cover"
                   src={member.image}
                   alt={member.role}
                 />

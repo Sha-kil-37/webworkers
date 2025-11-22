@@ -66,10 +66,7 @@ export default function Testimonials({ autoplay = true }) {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          Our {""}
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Testimonials
-          </span>
+          Our Testimonials
         </h2>
         <Paragraph>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium

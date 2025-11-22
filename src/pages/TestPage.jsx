@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import one from "../assets/one.png";
 import two from "../assets/two.png";
@@ -121,7 +121,7 @@ export default function TestPage() {
                   )}
                 </AnimatePresence>
                 {/* controls */}
-                {/* <button
+                <button
                   aria-label="Previous"
                   onClick={() => {
                     stopTimer();
@@ -166,7 +166,7 @@ export default function TestPage() {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                </button> */}
+                </button>
               </div>
             </div>
           </div>

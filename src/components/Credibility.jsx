@@ -46,12 +46,7 @@ export default function Credibility() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why Trust
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Us
-            </span>
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Trust Us</h2>
 
           <Paragraph>
             We are committed to delivering excellence and building lasting
@@ -89,8 +84,8 @@ export default function Credibility() {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl shadow-lg p-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center">
+        <div className="p-8 bg-[#F5F7F8] rounded-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  text-center">
             {stats.map((stat, i) => {
               const parseStat = (val) => {
                 const str = String(val);
@@ -120,7 +115,7 @@ export default function Credibility() {
                       <span className="font-bold text-3xl">{suffix}</span>
                     )}
                   </div>
-                  <p className="text-blue-100 text-sm font-medium">
+                  <p className="text-sm font-medium">
                     {stat.label}
                   </p>
                 </div>
