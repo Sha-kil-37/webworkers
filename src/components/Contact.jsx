@@ -8,6 +8,8 @@ import ContactForm from "./ContactForm";
 // { onSubmit, showMap = false, className = "" }
 export default function Contact() {
   //
+  const [showMap, setShowMap] = useState(false);
+  //
   const contactInfo = [
     {
       label: "Phone",
@@ -20,69 +22,16 @@ export default function Contact() {
       icon: FaEnvelope,
     },
   ];
-  const [showMap, setshowMap] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState("idle"); // idle, sending, success, error
-  //
-  function validate() {
-    const e = {};
-    if (!form.name.trim()) e.name = "Please enter your name.";
-    if (!form.email.trim()) e.email = "Please enter your email.";
-    else if (!/^\S+@\S+\.\S+$/.test(form.email))
-      e.email = "Enter a valid email.";
-    if (!form.message.trim()) e.message = "Say hi — leave a short message.";
-    return e;
-  }
-  function onSubmit(form) {
-    console.log(form);
-  }
-  async function handleSubmit(ev) {
-    ev.preventDefault();
-    const e = validate();
-    setErrors(e);
-    if (Object.keys(e).length) return;
 
-    setStatus("sending");
-
-    try {
-      // If user provided an onSubmit prop, call it (allows integration with your API)
-      if (typeof onSubmit === "function") {
-        await onSubmit(form);
-      } else {
-        // Simulate a network request (replace this with your API call)
-        await new Promise((r) => setTimeout(r, 900));
-      }
-
-      setStatus("success");
-      setForm({ name: "", email: "", subject: "", message: "" });
-
-      setTimeout(() => setStatus("idle"), 2500);
-    } catch (err) {
-      console.error(err);
-      setStatus("error");
-      setTimeout(() => setStatus("idle"), 2500);
-    }
-  }
-
-  function handleChange(e) {
-    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
-    setErrors((prev) => ({ ...prev, [e.target.name]: undefined }));
-  }
   //
   return (
-    <section>
+    <section className="py-10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="grid gap-8 lg:grid-cols-2 items-start"
+          className="grid gap-8 lg:grid-cols-2"
         >
           <ContactForm />
 

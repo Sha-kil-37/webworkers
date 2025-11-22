@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaArrowRight, FaClock, FaUser, FaTag } from "react-icons/fa";
 import Paragraph from "./Paragraph";
-
+//
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-
+  function handleShowMoreProject() {
+    console.log(selectedCategory);
+  }
   // Sample blog data
   const blogPosts = [
     {
@@ -86,7 +88,7 @@ export default function Blog() {
       featured: false,
     },
   ];
-
+  //
   const categories = ["All", "Technology", "Design", "Marketing"];
 
   // Filter posts based on selected category
@@ -97,7 +99,7 @@ export default function Blog() {
 
   const featuredPost = blogPosts.find((post) => post.featured);
   const regularPosts = filteredPosts.filter((post) => !post.featured);
-
+  //
   return (
     <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -117,9 +119,9 @@ export default function Blog() {
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
+          {categories.map((category, i) => (
             <button
-              key={category}
+              key={i}
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category
@@ -261,7 +263,10 @@ export default function Blog() {
         )}
 
         {/* Load More Button */}
-        <div className="mt-16 flex justify-center">
+        <div
+          className="mt-16 flex justify-center"
+          onClick={handleShowMoreProject}
+        >
           <button className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2">
             Load More Articles
             <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
