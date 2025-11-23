@@ -7,7 +7,7 @@ import {
   FaHeadset,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+//
 export default function ChooseUs() {
   //
   const features = [
@@ -53,7 +53,7 @@ export default function ChooseUs() {
               <div className="h-1 w-1 rounded-full bg-white/80" />
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-slate-900">
+            <h2 className="text-4xl font-bold">
               We Build Digital Experiences That People Love
             </h2>
 
@@ -66,8 +66,7 @@ export default function ChooseUs() {
             <div className="flex items-center gap-4">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-3 bg-indigo-600 text-white font-medium px-5 py-3 rounded-lg shadow hover:shadow-lg transition-all"
-                aria-label="Contact us"
+                className="group px-4 mt-5 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-full inline-flex items-center justify-center hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95"
               >
                 Get a free quote
                 <svg

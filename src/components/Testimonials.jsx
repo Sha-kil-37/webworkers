@@ -3,7 +3,7 @@ import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import Paragraph from "./Paragraph";
-
+//
 const testimonials = [
   {
     name: "John Smith",
@@ -38,7 +38,7 @@ const testimonials = [
     src: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emma",
   },
 ];
-
+//
 export default function Testimonials({ autoplay = true }) {
   //
   const [active, setActive] = useState(0);
@@ -60,12 +60,12 @@ export default function Testimonials({ autoplay = true }) {
       return () => clearInterval(interval);
     }
   }, [autoplay]);
-
+  //
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <h2 className="text-4xl font-bold mb-4">
           Our Testimonials
         </h2>
         <Paragraph>

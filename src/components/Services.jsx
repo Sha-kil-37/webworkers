@@ -54,7 +54,7 @@ export default function Services() {
     <section className="py-20">
       {/* outer container with bold blue border like your sketch */}
       <div className="mx-auto max-w-7xl">
-        <h2 className="font-bold text-5xl mb-4">Meet our Services</h2>
+        <h2 className="font-bold text-4xl mb-4">Meet Our Services</h2>
         <Paragraph>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
           nostrum et dolor neque! Placeat, rem! Eius architecto dolorem

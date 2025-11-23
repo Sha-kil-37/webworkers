@@ -18,18 +18,9 @@ export default function Banner() {
             </span>
           </BlurInText>
 
-          {/* Subtitle */}
-          {/* <Paragraph>
-          We're building the future of human connection through innovative
-          technology and design. Lorem ips
-          ipsam nobis vitae, soluta nam dolorum, obcaecati quis provident.
-        </Paragraph> */}
+         
           <p className="max-w-[600px] mt-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque
-            delectus maiores recusandae animi rerum labore, nihil magnam illum
-            omnis, quisquam beatae veritatis expedita eveniet iusto nostrum id
-            quis! Beatae voluptas eos non delectus quod repellendus maxime ab
-            ratione amet suscipit.
+            In today’s fast-moving digital world, Every business needs a strong online presence to thrive in the digital world. With “We Build Creative Digital Solutions,” we deliver innovative, user-friendly Web Development, Digital Marketing, and UI/UX Design that help businesses attract customers, strengthen their brand, and grow online
           </p>
 
           <Link

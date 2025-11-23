@@ -8,7 +8,7 @@ export default function OurMission() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Mission</h2>
+            <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
             <Paragraph>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Suscipit, debitis? Fuga, optio hic rerum at ullam dolor molestiae.

@@ -14,4 +14,6 @@ If you are developing a production application, we recommend using TypeScript wi
 <!-- ui figma design -->
 <!-- https://www.figma.com/design/WlaUfZtD9ydR6LE0DmqAZH/agency-web?node-id=0-1&p=f&t=kYWviITattQgm7hP-0 -->
 
-আমি একটি রিয়্যাক্ট স্লাইডার কম্পনেন্ট চাচ্ছি যা দিয়ে আমি আমার ডিজিটাল ওয়েব এজেন্সি পোর্টফোলিও ওয়েবসাইটে আমার প্রজেক্ট স্লাইড করবে 
+<!--  -->
+এই ভিডিওটির মত আমি একটি স্লাইডার চাই যাতে আমি আমার পোর্টফলি ওয়েবসাইটে  আমার প্রজেক্ট গুলো প্রদর্শিত করব এটা আমি react and inline tailwind css ব্যবহার করে করতে চাই তুমি কি এটা করতে আমাকে সাহায্য করতে পারো
+<!--  -->

@@ -1,10 +1,7 @@
 import { Fragment, useState } from "react";
 import { Link } from "react-router";
 import Paragraph from "../components/Paragraph";
-import ProjectSlider from "./ProjectSlider";
-import one from "../assets/one.jpg";
-import two from "../assets/two.jpg";
-import three from "../assets/three.jpg";
+//
 //
 export default function Projects() {
   //
@@ -63,24 +60,6 @@ export default function Projects() {
       tech: ["Research", "Recommendations"],
     },
   ];
-  // slider project data array bellow
-  const sliderProjects = [
-    {
-      title: "E-Commerce Website",
-      description: "A modern eCommerce web app built with MERN stack.",
-      img: one,
-    },
-    {
-      title: "Digital Agency Website",
-      description: "A stylish website designed for creative agencies.",
-      img: two,
-    },
-    {
-      title: "Portfolio Website",
-      description: "A personal portfolio with animations and modern UI.",
-      img: three,
-    },
-  ];
   //
   const [active, setActive] = useState("All");
   const filtered =
@@ -89,18 +68,15 @@ export default function Projects() {
       : sampleProjects.filter((p) => p.category === active);
   //
   return (
-    <section className="py-10">
+    <section className="">
       <div className="max-w-7xl mx-auto relative">
-        <div className="rounded-3xl overflow-hidden min-h-80 flex justify-center items-center">
-          <div>
-            <p className="font-semibold text-2xl  text-center">Hello</p>
-            <h2 className="max-w-100 font-bold text-center text-4xl mt-5">
-              Meet Our Project
-            </h2>
-          </div>
+        <div className="rounded-3xl overflow-hidden min-h-40 flex justify-center items-center">
+          <h2 className="max-w-100 font-bold text-center text-4xl">
+            Meet Our Projects
+          </h2>
         </div>
-        <ProjectSlider projects={sliderProjects} />
-        <div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
+        {/*  */}
+        <div className="flex items-center justify-center gap-3 flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat}

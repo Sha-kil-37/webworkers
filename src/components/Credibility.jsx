@@ -46,7 +46,7 @@ export default function Credibility() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Trust Us</h2>
+          <h2 className="text-4xl font-bold mb-4">Why Trust Us</h2>
 
           <Paragraph>
             We are committed to delivering excellence and building lasting

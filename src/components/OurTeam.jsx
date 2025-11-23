@@ -3,6 +3,7 @@ import shakil from "../assets/shakil.png";
 import rakibul from "../assets/rakibul.png";
 import one from "../assets/one.png";
 import two from "../assets/two.png";
+import { Link } from "react-router";
 export default function OurTeam() {
   //
 
@@ -36,7 +37,7 @@ export default function OurTeam() {
   return (
     <section className="py-10">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">Meet Our Team</h2>
+        <h2 className="text-4xl font-bold mb-4">Meet Our Team</h2>
         <Paragraph>
           Our diverse team of experts is dedicated to delivering innovative
           solutions and exceptional service. Our diverse team of experts is
@@ -44,12 +45,9 @@ export default function OurTeam() {
           Our diverse team of experts is dedicated to delivering innovative
           solutions and exceptional service.
         </Paragraph>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
           {team.map((member, i) => (
-            <div
-              key={i}
-              className="group duration-300 hover:-translate-y-2 border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all rounded"
-            >
+            <div key={i} className="">
               {/* Avatar */}
               <div className="overflow-hidden h-40 w-full">
                 <img
@@ -61,13 +59,10 @@ export default function OurTeam() {
 
               {/* Content */}
               <div className="mt-4">
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                <Link className="text-xl font-semibold mb-1">
                   {member.name}
-                </h3>
-                <h5 className="text-blue-600 font-medium text-sm mb-3">
-                  {member.role}
-                </h5>
-                <Paragraph>{member.description}</Paragraph>
+                </Link>
+                <h5 className="mb-3">{member.role}</h5>
               </div>
             </div>
           ))}

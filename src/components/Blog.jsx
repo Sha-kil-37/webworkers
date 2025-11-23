@@ -1,12 +1,9 @@
-import { useState } from "react";
 import { FaArrowRight, FaClock, FaUser, FaTag } from "react-icons/fa";
-import Paragraph from "./Paragraph";
+import BlogSlider from "./BlogSlider";
 //
 export default function Blog() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
- 
   // Sample blog data
-  const blogPosts = [
+  const blogData = [
     {
       id: 1,
       title: "The Future of Web Development in 2024",
@@ -87,56 +84,21 @@ export default function Blog() {
     },
   ];
   //
-  const categories = ["All", "Technology", "Design", "Marketing"];
-  // Filter posts based on selected category
-  const filteredPosts =
-    selectedCategory === "All"
-      ? blogPosts
-      : blogPosts.filter((post) => post.category === selectedCategory);
-  //
-  const featuredPost = blogPosts.find((post) => post.featured);
-  const regularPosts = filteredPosts.filter((post) => !post.featured);
+
   //
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Insights &
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Stories
-            </span>
-          </h2>
-          <Paragraph>
-            Discover the latest insights, tips, and industry trends to help you
-            stay ahead in the digital world.
-          </Paragraph>
+    <section className="py-20 relative">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-center">
+          <h2 className="font-bold text-4xl">Our Recent Blogs</h2>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category, i) => (
-            <button
-              key={i}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/50"
-                  : "bg-white text-gray-700 border border-gray-200 hover:border-blue-400 hover:text-blue-600"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        
-      
+        <BlogSlider blogs={blogData} />
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {regularPosts.map((post) => (
+       <h2 className="font-bold text-4xl">Our Blogs</h2>
+        <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogData.map((post) => (
             <div
               key={post.id}
               className="group h-full rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
@@ -199,7 +161,7 @@ export default function Blog() {
         {/* Load More Button */}
         <div
           className="mt-16 flex justify-center cursor-pointer"
-          onClick={()=>alert("please wait some day for update this site")}
+          onClick={() => alert("please wait some day for update this site")}
         >
           <button className="group px-8 py-4  rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2">
             Load More Articles
