@@ -12,9 +12,7 @@ export default function BlogPage() {
     <Suspense fallback={<Loading />}>
       <MainLayout>
         <SmoothScroll>
-          <Fragment>
-            <Blog />
-          </Fragment>
+          <Blog />
         </SmoothScroll>
       </MainLayout>
     </Suspense>

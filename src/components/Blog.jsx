@@ -40,7 +40,7 @@ export default function Blog() {
       date: "Dec 8, 2024",
       readTime: "6 min read",
       image:
-        "https://images.unsplash.com/photo-1516534775068-bb57ad1a928f?w=500&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
       featured: false,
     },
     {
@@ -53,7 +53,7 @@ export default function Blog() {
       date: "Dec 5, 2024",
       readTime: "4 min read",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab6c3c537?w=500&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop",
       featured: false,
     },
     {
@@ -66,7 +66,7 @@ export default function Blog() {
       date: "Dec 1, 2024",
       readTime: "8 min read",
       image:
-        "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
       featured: false,
     },
     {
@@ -79,7 +79,7 @@ export default function Blog() {
       date: "Nov 28, 2024",
       readTime: "5 min read",
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
       featured: false,
     },
   ];
@@ -89,15 +89,15 @@ export default function Blog() {
   return (
     <section className="py-20 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center">
-          <h2 className="font-bold text-4xl">Our Recent Blogs</h2>
+        <div className="flex justify-between items-center mb-10">
+          <h2 className="font-bold text-4xl">Newest Blogs</h2>
         </div>
 
         <BlogSlider blogs={blogData} />
 
         {/* Blog Grid */}
-       <h2 className="font-bold text-4xl">Our Blogs</h2>
-        <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+       <h2 className="font-bold text-4xl mt-10">All Blogs</h2>
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogData.map((post) => (
             <div
               key={post.id}
