@@ -1,197 +1,90 @@
-import React from "react";
-import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
-import { motion, AnimatePresence } from "motion/react";
-import { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
 import Paragraph from "./Paragraph";
+import shakil from "../assets/shakil.png";
+import rakibul from "../assets/rakibul.png";
+import one from "../assets/one.png";
+import two from "../assets/two.png";
 //
-const testimonials = [
-  {
-    name: "John Smith",
-    designation: "Founder, TechStart Inc.",
-    quote:
-      "WebWorkers completely transformed our digital presence. Their team's attention to detail and creative approach exceeded our expectations. We saw a 300% increase in user engagement within the first month.",
-    rating: 5,
-    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=John",
-  },
-  {
-    name: "Sarah Johnson",
-    designation: "Marketing Manager, Digital Ventures",
-    quote:
-      "Working with WebWorkers was seamless from start to finish. They understood our brand voice and delivered a website that truly represents our vision. Their support team is outstanding.",
-    rating: 5,
-    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
-  },
-  {
-    name: "Michael Chen",
-    designation: "CEO, Creative Solutions LLC",
-    quote:
-      "The professionalism and expertise of the WebWorkers team is unmatched. They delivered ahead of schedule and the quality of work is exceptional. Highly recommended for anyone looking for top-tier web development.",
-    rating: 5,
-    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
-  },
-  {
-    name: "Emma Davis",
-    designation: "Product Director, InnovateTech",
-    quote:
-      "WebWorkers brought our app idea to life in ways we hadn't imagined. Their innovative approach to UX design made our platform intuitive and beautiful. Best investment we made for our company.",
-    rating: 5,
-    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emma",
-  },
-];
-//
-export default function Testimonials({ autoplay = true }) {
+export default function Testimonials() {
   //
-  const [active, setActive] = useState(0);
-  const handleNext = () => {
-    setActive((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const handlePrev = () => {
-    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const isActive = (index) => {
-    return index === active;
-  };
-
-  useEffect(() => {
-    if (autoplay) {
-      const interval = setInterval(handleNext, 6000);
-      return () => clearInterval(interval);
-    }
-  }, [autoplay]);
+  const testimonialsData = [
+    {
+      id: 1,
+      name: "John Carter",
+      role: "CEO, NovaTech Solutions",
+      review:
+        "Working with this team was an outstanding experience. They delivered our website ahead of schedule with beautiful UI and perfect responsiveness. Highly recommended!",
+      image: one,
+      rating: 5,
+    },
+    {
+      id: 2,
+      name: "Emily Johnson",
+      role: "Founder, Craftsy Studio",
+      review:
+        "Very professional and easy to work with. They understood our requirements and delivered a fast, clean, modern web app for our small business.",
+      image: two,
+      rating: 4.5,
+    },
+    {
+      id: 3,
+      name: "Michael Smith",
+      role: "Marketing Manager, BrightWave Agency",
+      review:
+        "Amazing work! The animations, performance, and overall user experience exceeded our expectations. Perfect for growing our digital presence.",
+      image: shakil,
+      rating: 5,
+    },
+    {
+      id: 4,
+      name: "Sophia Martinez",
+      role: "Owner, Bloom Boutique",
+      review:
+        "I loved the smooth communication and quick revisions. The final website looks premium and loads very fast. Great job!",
+      image: rakibul,
+      rating: 4.8,
+    },
+    {
+      id: 5,
+      name: "Daniel Green",
+      role: "Product Lead, PixelDrive",
+      review:
+        "Top-notch development! They built a stunning dashboard for us using MERN stack. Clean code and superb attention to detail.",
+      image: one,
+      rating: 5,
+    },
+  ];
   //
   return (
-    <section className="py-20">
+    <section className="py-20 ">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <h2 className="text-4xl font-bold mb-4">
-          Our Testimonials
-        </h2>
+        <div className=" text-center">
+          <h2 className="text-2xl font-bold ">Our Clients Say !</h2>
         <Paragraph>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          incidunt, adipisci non pariatur quae, est, nulla possimus veniam dicta
-          commodi iure unde explicabo libero beatae itaque! Quod maxime
-          obcaecati, dolorum facere sapiente consectetur praesentium! Fugit
-          accusantium iste quod reiciendis maiores?cidunt, adipisci non pariatur
-          quae, est, nulla possimus veniam dicta commodi iure unde explicabo
-          libero beatae itaque! Quod maxime obcaecati, dolorum facere sapiente
-          consectetur praesentium! Fugit accusantium iste quod reiciendis
-          maiores?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum earum
+          consectetur consequuntur illum voluptatem nobis quod perspiciatis
+          expedita quisquam corporis.
         </Paragraph>
-        {/* Testimonials Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-5">
-          {/* Left Side - Testimonial Card */}
-          <div className="relative h-96">
-            <AnimatePresence mode="wait">
-              {testimonials?.map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.name}
-                  initial={{
-                    opacity: 0,
-                    x: -100,
-                  }}
-                  animate={{
-                    opacity: isActive(index) ? 1 : 0,
-                    x: isActive(index) ? 0 : -100,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    x: 100,
-                  }}
-                  transition={{
-                    duration: 0.4,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute inset-0"
-                >
-                  <div className="h-full bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-slate-900/50 p-8 flex flex-col justify-between border border-gray-200 dark:border-slate-700">
-                    {/* Stars */}
-                    <div className="flex gap-1">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <FaStar key={i} className="w-5 h-5 text-yellow-400" />
-                      ))}
-                    </div>
-
-                    {/* Quote */}
-                    <Paragraph> {testimonial.quote}</Paragraph>
-
-                    {/* Client Info */}
-                    <div className="pt-6 border-t border-gray-200 dark:border-slate-700">
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                        {testimonial.name}
-                      </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                        {testimonial.designation}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
-
-          {/* Right Side - Client Image and Controls */}
-          <div className="flex flex-col items-center">
-            {/* Avatar */}
-            <motion.div
-              key={active}
-              initial={{
-                scale: 0.8,
-                opacity: 0,
-              }}
-              animate={{
-                scale: 1,
-                opacity: 1,
-              }}
-              transition={{
-                duration: 0.3,
-              }}
-              className="mb-8"
-            >
-              <img
-                src={testimonials[active].src}
-                alt={testimonials[active].name}
-                className="w-48 h-48 rounded-full border-4 border-blue-500 shadow-2xl object-cover"
-              />
-            </motion.div>
-
-            {/* Navigation Buttons */}
-            <div className="flex gap-4 mb-8">
-              <button
-                onClick={handlePrev}
-                className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-lg"
-              >
-                <FaChevronLeft className="h-5 w-5 transition-transform duration-300 group-hover/button:rotate-12" />
-              </button>
-              <button
-                onClick={handleNext}
-                className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-lg"
-              >
-                <FaChevronRight className="h-5 w-5 transition-transform duration-300 group-hover/button:-rotate-12" />
-              </button>
-            </div>
-
-            {/* Indicator Dots */}
-            <div className="flex gap-2">
-              {testimonials.map((_, index) => (
-                <motion.button
-                  key={index}
-                  onClick={() => setActive(index)}
-                  initial={false}
-                  animate={{
-                    scale: isActive(index) ? 1.2 : 1,
-                    backgroundColor: isActive(index) ? "#3b82f6" : "#d1d5db",
-                  }}
-                  transition={{
-                    duration: 0.2,
-                  }}
-                  className="h-3 w-3 rounded-full transition-all duration-300 dark:bg-slate-700"
-                />
-              ))}
-            </div>
-          </div>
         </div>
+        <Marquee pauseOnHover={true} direction="left">
+          <div className="flex justify-between items-center gap-x-4 mt-5">
+            {testimonialsData.map((item, i) => {
+              return (
+                <div
+                  key={i}
+                  className="h-60 w-100 overflow-hidden rounded-2xl p-8 bg-[#F5F7F8] cursor-pointer relative"
+                >
+                 
+                    <Paragraph>{item.review}</Paragraph>
+                    <Paragraph>{item.name}</Paragraph>
+                    <Paragraph>{item.role}</Paragraph>
+                
+                  
+                </div>
+              );
+            })}
+          </div>
+        </Marquee>
       </div>
     </section>
   );

@@ -123,30 +123,6 @@ export default function ChooseUs() {
                     </div>
                   </div>
 
-                  {/* subtle decorative element */}
-                  <div className="pointer-events-none absolute -right-8 -bottom-8 opacity-10 transform rotate-12">
-                    <svg
-                      width="140"
-                      height="140"
-                      viewBox="0 0 100 100"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="40"
-                        stroke="url(#g)"
-                        strokeWidth="6"
-                      />
-                      <defs>
-                        <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-                          <stop offset="0%" stopColor="#7C3AED" />
-                          <stop offset="100%" stopColor="#EC4899" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
                 </motion.article>
               );
             })}

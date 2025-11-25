@@ -3,12 +3,12 @@ const MainLayout = lazy(() => import("../layout/MainLayout"));
 import Banner from "../components/Banner";
 import Services from "../components/Services";
 import Credibility from "../components/Credibility";
-import Testimonials from "../components/Testimonials";
-// import LetsTalk from "../components/LetsTalk";
 import Loading from "../components/Loading";
 import SmoothScroll from "../lib/utils/SmoothScroll";
 import TrustedBy from "../components/TrustedBy";
 import LetsTalk from "../components/LetsTalk";
+import Testimonials from "../components/Testimonials";
+import FAQ from "../components/FAQ";
 
 //
 export default function HomePage() {
@@ -22,6 +22,7 @@ export default function HomePage() {
             <TrustedBy />
             <Services />
             <Credibility />
+            <FAQ />
             <Testimonials />
             <LetsTalk />
           </Fragment>

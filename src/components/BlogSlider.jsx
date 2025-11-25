@@ -18,7 +18,7 @@ export default function BlogSlider({ blogs }) {
   };
   //
   return (
-    <div className="relative w-full py-15">
+    <section className="relative w-full py-15">
       <Swiper
         // pagination={{
         //   clickable: true,
@@ -41,14 +41,37 @@ export default function BlogSlider({ blogs }) {
             onMouseEnter={() => swiperRef?.autoplay?.stop()}
             onMouseLeave={() => swiperRef?.autoplay?.start()}
             key={i}
-            className="cursor-pointer"
+            className="cursor-pointer group"
           >
-            <div className="h-full w-full">
+            <div className="relative h-full w-full overflow-hidden">
+              {/* IMAGE */}
               <img
-                className="h-full w-full"
+                className="h-full w-full object-cover"
                 src={blog.image}
                 alt={blog.image}
               />
+
+              {/* OVERLAY + TEXT + BUTTON */}
+              <div className=" absolute inset-0 bg-[#F5F7F8] opacity-0  group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Content that slides up */}
+              <div
+                className="
+        absolute bottom-0 left-0 w-full
+        translate-y-full
+        group-hover:translate-y-0
+        transition-transform
+        duration-500
+        px-4 pb-4
+        text-white
+      "
+              >
+                <h3 className="text-lg font-semibold">{blog.title}</h3>
+
+                <button className="mt-2 px-4 py-2 rounded-lg bg-white  text-blue-500 font-medium hover:bg-gray-200 transition">
+                  View Project
+                </button>
+              </div>
             </div>
           </SwiperSlide>
         ))}
@@ -72,6 +95,6 @@ export default function BlogSlider({ blogs }) {
           className="text-sm font-semibold text-black"
         ></span>
       </div>
-    </div>
+    </section>
   );
 }

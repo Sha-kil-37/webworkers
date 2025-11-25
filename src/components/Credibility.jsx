@@ -45,7 +45,7 @@ export default function Credibility() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-16">
           <h2 className="text-4xl font-bold mb-4">Why Trust Us</h2>
 
           <Paragraph>
@@ -115,9 +115,7 @@ export default function Credibility() {
                       <span className="font-bold text-3xl">{suffix}</span>
                     )}
                   </div>
-                  <p className="text-sm font-medium">
-                    {stat.label}
-                  </p>
+                  <p className="text-sm font-medium">{stat.label}</p>
                 </div>
               );
             })}
