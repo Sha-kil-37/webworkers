@@ -12,11 +12,11 @@ export default function Banner() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div>
           {/* Main heading */}
-          <BlurInText className="font-bold text-6xl max-w-[650px]">
+          <BlurInText className="font-bold text-6xl max-w-[600px]">
             <span>We Build Creative Digital Solutions</span>
           </BlurInText>
 
-          <BlurInText className="max-w-[700px] mt-7">
+          <BlurInText className="max-w-[600px] mt-7">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sint
               ex eligendi molestiae ea, illo ducimus culpa obcaecati accusantium
