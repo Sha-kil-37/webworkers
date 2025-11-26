@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router";
 import { IoClose, IoMenu } from "react-icons/io5";
+import logo from "../assets/logo.png";
 //
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,17 +15,14 @@ export default function Nav() {
     { path: "/contact", label: "Contact" },
     { path: "/blog", label: "Blog" },
   ];
-// 
+  //
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm py-5">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link
-            to="/"
-            className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
-          >
-            WebWorkers
+          <Link to="/" className="block h-10 w-10 overflow-hidden">
+            <img className="h-full w-full" src={logo} alt={logo} />
           </Link>
 
           {/* Desktop Navigation */}

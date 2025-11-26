@@ -17,9 +17,9 @@ export default function TrustedBy() {
  
   //
   return (
-    <section className="py-5">
+    <section className="py-10">
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-bold text-4xl">Trusted By</h2>
+        <h2 className="text-4xl mb-5">Trusted By</h2>
         <Marquee pauseOnHover={true} direction="left">
           <div className="flex justify-between items-center gap-x-4">
             {trustedBy.map((item, i) => {

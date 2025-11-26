@@ -1,62 +1,81 @@
-// import { useEffect, useState } from "react";
-// //
-// export default function FAQ(props) {
-//   //
-//   const [searchTerm, setSearchTerm] = useState("");
-//   const [searchResults, setSearchResults] = useState([]);
-//   const handleSearchChange = (e) => {
-//     setSearchTerm(e.target.value);
-//   };
-//   //
-//   useEffect(() => {
-//     const results = props.data.filter((item) =>
-//       item.question.toLowerCase().includes(searchTerm)
-//     );
-//     setSearchResults(results);
-//   }, [searchTerm]);
-//   //
-//   return (
-//     <section className="container">
-//       <h2 className="heading">How can we help you?</h2>
-//       <Searchbar onSearchChange={handleSearchChange} />
-//       <section className="faq">
-//         {searchResults.map((item) => (
-//           <Question question={item.question} answer={item.answer} />
-//         ))}
-//       </section>
-//     </section>
-//   );
-// }
-
-// const Question = (props) => {
-//   const [isActive, setActive] = useState(false);
-//   const handleClick = (id) => {
-//     console.log(id)
-//     setActive(!isActive);
-//   };
-//   //
-//   return (
-//     <div className="question-wrapper">
-//       <div className="question" id={props.id}>
-//         <h3>{props.question}</h3>
-//         <button onClick={() => handleClick(props.id)}>
-//           <svg
-//             className={isActive ? "active" : ""}
-//             viewBox="0 0 320 512"
-//             width="100"
-//             title="angle-down"
-//           >
-//             <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
-//           </svg>
-//         </button>
-//       </div>
-//       <div className={isActive ? "answer active" : "answer"}>
-//         {props.answer}
-//       </div>
-//     </div>
-//   );
-// };
-
+//
+import { useState } from "react";
+import { MdKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
+//
+const faqs = [
+  {
+    question: "What services does your agency offer?",
+    answer:
+      "We provide full-stack web development, UI/UX design, backend development, SEO optimization, and custom web solutions.",
+  },
+  {
+    question: "How long does it take to build a website?",
+    answer:
+      "Most projects take 1–4 weeks depending on the complexity, features, and revisions required.",
+  },
+  {
+    question: "Do you provide website maintenance?",
+    answer:
+      "Yes! We offer monthly support, security updates, performance optimization, and bug fixing.",
+  },
+  {
+    question: "Do you work with international clients?",
+    answer:
+      "Absolutely! We work with clients worldwide through Zoom, WhatsApp, and Google Meet.",
+  },
+];
+//
 export default function FAQ() {
-  return <div>FAQ</div>;
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+  //
+  return (
+    <section className="max-w-7xl mx-auto py-20">
+      <h2 className="text-4xl font-bold mb-10">
+        Frequently Asked <span className="text-blue-600">Questions</span>
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi,
+        magnam vitae quidem dolorum adipisci. Accusantium, deleniti officiis
+        iure magnam nobis et unde assumenda odit sapiente temporibus quisquam,
+        cumque dolorem.
+      </p>
+      {/*  */}
+      <div className="gap-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2  mt-5">
+        {faqs.map((faq, index) => (
+          <div
+            key={index}
+            className="border border-gray-200 rounded-xl p-5 bg-white shadow-sm hover:shadow-md transition"
+          >
+            {/* Question */}
+            <button
+              onClick={() => toggleFAQ(index)}
+              className="w-full text-left flex justify-between items-center"
+            >
+              <h3 className="text-lg font-medium">{faq.question}</h3>
+              <span className="text-xl transition-all">
+                {openIndex === index ? (
+                  <MdOutlineKeyboardArrowUp className="text-lg cursor-pointer" />
+                ) : (
+                  <MdKeyboardArrowDown className="text-lg cursor-pointer" />
+                )}
+              </span>
+            </button>
+
+            {/* Answer */}
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                openIndex === index ? "max-h-40 mt-3" : "max-h-0"
+              }`}
+            >
+              <p className="text-gray-600">{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

@@ -7,7 +7,6 @@ export default function Banner() {
   return (
     <section className="relative py-10 overflow-hidden">
       {/* Animated background elements */}
-
       {/* Main content */}
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div>
