@@ -42,7 +42,7 @@ export default function Services() {
   ];
   //
   return (
-    <section className="py-10 bg-[var(--white-color)]">
+    <section className="py-10">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

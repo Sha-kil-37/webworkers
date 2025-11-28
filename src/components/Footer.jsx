@@ -1,4 +1,3 @@
-import React from "react";
 import Paragraph from "./Paragraph";
 import CopyRight from "./CopyRight";
 import SocialLink from "./SocialLink";
@@ -14,9 +13,10 @@ export default function Footer() {
     { path: "/contact", label: "Contact" },
     { path: "/blog", label: "Blog" },
   ];
+
   //
   return (
-    <footer className="bg-[#F5F7F8] py-5">
+    <footer className="bg-[#F5F7F8]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
         <div>
           <Link to={"/"} className="text-2xl font-semibold ">
@@ -58,7 +58,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-
       <CopyRight />
     </footer>
   );

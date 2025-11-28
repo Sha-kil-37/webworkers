@@ -4,6 +4,7 @@ import SmoothScroll from "../lib/utils/SmoothScroll";
 import BlurInText from "../components/BlurInText";
 import { Fragment, lazy, Suspense } from "react";
 import Paragraph from "../components/Paragraph";
+import LetsTalk from "../components/LetsTalk";
 // Lazy load MainLayout
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 //
@@ -69,6 +70,7 @@ export default function ProjectsPage() {
               Minima eveniet temporibus veniam qui, a repellendus molestias.
             </Paragraph>
             <Projects />
+            <LetsTalk />
           </Fragment>
         </SmoothScroll>
       </MainLayout>

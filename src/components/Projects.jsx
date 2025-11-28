@@ -1,6 +1,5 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
-import Paragraph from "../components/Paragraph";
 //
 //
 export default function Projects() {
@@ -68,7 +67,7 @@ export default function Projects() {
       : sampleProjects.filter((p) => p.category === active);
   //
   return (
-    <section className="">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto relative">
         <div className="rounded-3xl overflow-hidden min-h-40 flex justify-center items-center">
           <h2 className="max-w-100 font-bold text-center text-4xl">
@@ -92,41 +91,23 @@ export default function Projects() {
         </div>
         {/*  */}
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-5">
-          {filtered.map((p) => (
-            <article
-              key={p.id}
-              className="group h-full rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+          {filtered.map((project, i) => (
+            <Link
+              to={`/projectdetails/${i}`}
+              key={i}
+              className="p-6 bg-[#F5F7F8] cursor-pointer"
             >
-              <div className=" aspect-video flex items-center justify-center">
-                <span className="text-sm text-slate-400">Preview</span>
-              </div>
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-slate-900">
-                  {p.title}
-                </h3>
-                <Paragraph>{p.summary}</Paragraph>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {p.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded"
-                    >
-                      {t}
+              <p>{project.summary}</p>
+              <div className="mt-5 flex gap-x-2 flex-wrap">
+                {project.tech.map((item, i) => {
+                  return (
+                    <span key={i} className="block bg-blue-400">
+                      {item}
                     </span>
-                  ))}
-                </div>
-
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-xs text-slate-400">{p.category}</span>
-                  <Link
-                    to={`/projects/${p.id}`}
-                    className="text-sm text-slate-900 font-medium hover:underline"
-                  >
-                    View project
-                  </Link>
-                </div>
+                  );
+                })}
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

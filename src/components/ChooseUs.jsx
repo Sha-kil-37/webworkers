@@ -48,16 +48,13 @@ export default function ChooseUs() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-indigo-400 text-white px-3 py-1 rounded-full shadow-md">
-              <span className="text-sm font-semibold">Why choose us</span>
-              <div className="h-1 w-1 rounded-full bg-white/80" />
-            </div>
+            
 
             <h2 className="text-4xl font-bold">
               We Build Digital Experiences That People Love
             </h2>
 
-            <p className="text-slate-600 max-w-xl">
+            <p className="max-w-xl">
               Web Workers is a full-service digital web agency — we craft
               beautiful websites, build fast web apps, and create meaningful
               brand experiences that help businesses grow.

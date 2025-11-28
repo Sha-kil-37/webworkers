@@ -1,4 +1,4 @@
-//
+
 import { useState } from "react";
 import { MdKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
 //
@@ -27,7 +27,7 @@ const faqs = [
 //
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
-
+  //
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -37,44 +37,50 @@ export default function FAQ() {
       <h2 className="text-4xl font-bold mb-10">
         Frequently Asked <span className="text-blue-600">Questions</span>
       </h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi,
-        magnam vitae quidem dolorum adipisci. Accusantium, deleniti officiis
-        iure magnam nobis et unde assumenda odit sapiente temporibus quisquam,
-        cumque dolorem.
-      </p>
+    
       {/*  */}
-      <div className="gap-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2  mt-5">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="border border-gray-200 rounded-xl p-5 bg-white shadow-sm hover:shadow-md transition"
-          >
-            {/* Question */}
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="w-full text-left flex justify-between items-center"
-            >
-              <h3 className="text-lg font-medium">{faq.question}</h3>
-              <span className="text-xl transition-all">
-                {openIndex === index ? (
-                  <MdOutlineKeyboardArrowUp className="text-lg cursor-pointer" />
-                ) : (
-                  <MdKeyboardArrowDown className="text-lg cursor-pointer" />
-                )}
-              </span>
-            </button>
-
-            {/* Answer */}
+      <div className="flex justify-between">
+        <div className="bg-red-400">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ut
+            laborum quod quis tenetur, aut nisi possimus qui. Similique iusto
+            repellat ab accusamus assumenda officia, pariatur unde, dolorem ut,
+            dolore odit dignissimos quod nam voluptatum voluptatem accusantium
+            doloribus voluptatibus dolor!
+          </p>
+        </div>
+        <div className="">
+          {faqs.map((faq, index) => (
             <div
-              className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index ? "max-h-40 mt-3" : "max-h-0"
-              }`}
+              key={index}
+              className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition"
             >
-              <p className="text-gray-600">{faq.answer}</p>
+              {/* Question */}
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full text-left flex justify-between items-center"
+              >
+                <h3 className="text-lg font-medium">{faq.question}</h3>
+                <span className="text-xl transition-all">
+                  {openIndex === index ? (
+                    <MdOutlineKeyboardArrowUp className="text-lg cursor-pointer" />
+                  ) : (
+                    <MdKeyboardArrowDown className="text-lg cursor-pointer" />
+                  )}
+                </span>
+              </button>
+
+              {/* Answer */}
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  openIndex === index ? "max-h-40 mt-3" : "max-h-0"
+                }`}
+              >
+                <p className="text-gray-600">{faq.answer}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -15,11 +15,7 @@ export default function NotFound() {
   //
   return (
     <section className="py-30 bg-green-200">
-      <h1 className="font-bold text-5xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        quasi culpa itaque. Quaerat sint, voluptas optio sit aperiam adipisci
-        nobis.
-      </h1>
+      <h1 className="font-bold text-5xl">not found page</h1>
       {navLinks.map((link) => (
         <NavLink
           key={link.path}

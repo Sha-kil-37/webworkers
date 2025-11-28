@@ -1,21 +1,15 @@
 import { lazy, Suspense } from "react";
-const MainLayout = lazy(() => import("../layout/MainLayout"));
-import Contact from "../components/Contact";
 import Loading from "../components/Loading";
+import ProjectDetails from "../components/ProjectDetails";
 import SmoothScroll from "../lib/utils/SmoothScroll";
-import TrustedBy from "../components/TrustedBy";
-import FAQ from "../components/FAQ";
-
-//
-export default function ContactPage() {
+const MainLayout = lazy(() => import("../layout/MainLayout"));
+export default function ProjectDetailsPage() {
   //
   return (
     <Suspense fallback={<Loading />}>
       <MainLayout>
         <SmoothScroll>
-          <TrustedBy />
-          <FAQ />
-          <Contact />
+          <ProjectDetails />
         </SmoothScroll>
       </MainLayout>
     </Suspense>
