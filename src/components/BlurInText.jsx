@@ -10,7 +10,7 @@ const BlurInText = ({ children, className }) => {
       ref={ref}
       initial={{ filter: "blur(10px)", opacity: 0 }}
       animate={isInView ? { filter: "blur(0px)", opacity: 1 } : {}}
-      transition={{ duration: 5 }}
+      transition={{ duration: 3 }}
       className={`bg-clip-text text-transparent bg-black ${className}`}
     >
       {children}

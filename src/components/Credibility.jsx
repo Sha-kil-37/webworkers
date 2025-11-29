@@ -1,7 +1,6 @@
 import React from "react";
 import { FaAward, FaTrophy, FaCheckCircle, FaStar } from "react-icons/fa";
 import Paragraph from "./Paragraph";
-import CountUp from "./CountUp";
 
 export default function Credibility() {
   //

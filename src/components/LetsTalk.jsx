@@ -4,7 +4,7 @@ import { FiMail } from "react-icons/fi";
 export default function LetsTalk() {
   //
   return (
-    <section className="w-full py-20 bg-[#F5F7F8]">
+    <section className="w-full py-20">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

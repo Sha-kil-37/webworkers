@@ -1,11 +1,9 @@
 import { Fragment, lazy, Suspense } from "react";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
-
 import Loading from "../components/Loading";
 import Blog from "../components/Blog";
 import SmoothScroll from "../lib/utils/SmoothScroll";
-import LetsTalk from "../components/LetsTalk";
-
+import Contact from "../components/Contact";
 //
 export default function BlogPage() {
   //
@@ -14,7 +12,7 @@ export default function BlogPage() {
       <MainLayout>
         <SmoothScroll>
           <Blog />
-          <LetsTalk />
+          <Contact />
         </SmoothScroll>
       </MainLayout>
     </Suspense>

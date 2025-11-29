@@ -1,60 +1,79 @@
-import React, { useState } from "react";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { motion } from "framer-motion";
+import Button from "./Button";
 import Paragraph from "./Paragraph";
-import ContactForm from "./ContactForm";
-import BlurInText from "./BlurInText";
+import { HiOutlineMail } from "react-icons/hi";
+import { IoCallOutline } from "react-icons/io5";
+import { CiLocationOn } from "react-icons/ci";
+
 //
-// { onSubmit, showMap = false, className = "" }
 export default function Contact() {
   //
-  const [showMap, setShowMap] = useState(false);
-  //
-  const contactInfo = [
-    {
-      label: "Phone",
-      platform: "+880 1581 049 601",
-      icon: FaPhoneAlt,
-    },
-    {
-      label: "Email",
-      platform: "sakildevmern@gmail.com",
-      icon: FaEnvelope,
-    },
-  ];
+  function handleClick(e) {
+    // e.preventDefault();
+    console.log(e);
+  }
 
   //
   return (
     <section className="py-10">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className=""
-        >
-          <BlurInText>About WebWorkers</BlurInText>
+      <div className="max-w-7xl mx-auto block md:block lg:flex xl:flex gap-x-8 justify-between sm:block">
+        <div className="">
+          <h2 className="font-bold text-xl">Contact Us</h2>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            in ipsum Illum maiores quas, libero aperiam culpa ab. Tempore error
-            max nesciunt tenetur nostrum enim facilis delectus voluptates minima
-            cumque, dolor officiis vero. Alias necessitatibus deserunt amet qui
-            provident temporibus non saepe minima quas dolores, explicabo earum
-            illum laboriosam maxime harum, animi eaque officia, eum assumenda
-            nostrum nam ab in nesciunt quidem. Aperiam quae tempora blanditiis,
-            nihil debitis non pariatur nulla mollitia id aut earum enim deleniti
-            in ipsa dignissimos dicta velit animi excepturi, similique corporis
-            sapiente cupiditate corrupti? Quo exercitationem, earum officia nam,
-            cumque perspiciatis a accusamus quibusdam, ipsum assumenda est!
-            Temporibus nesciunt deleniti, numquam adipisci fugit delectus,
-            aperiam quisquam eius ex, eveniet nobis? Omnis quos minima quaerat
-            quia consequuntur porro nihil hic quis, nulla laudantium qui earum
-            distinctio in vitae eaque accusamus explicabo debitis esse quas,
-            sequi unde molestiae sapiente recusandae. Minima eveniet temporibus
-            veniam qui, a repellendus molestias.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
+            saepe cum culpa, earum quo dicta praesentium quam voluptates quae
+            eum quibusdam et a sequi eaque alias itaque animi, beatae vel.
           </Paragraph>
-          <ContactForm />
-        </motion.div>
+          <div className="flex gap-x-4 mt-3 items-center">
+            <HiOutlineMail />
+            <span>sakildevmern@gmail.com</span>
+          </div>
+          <div className="flex gap-x-4 mt-3">
+            <IoCallOutline />
+            <span>+8801581049601</span>
+          </div>
+          <div className="flex gap-x-4 mt-3">
+            <CiLocationOn />
+            <span>Gazipur, Dhaka, Bangladesh</span>
+          </div>
+        </div>
+        <form className="w-full">
+          <div className="block">
+            <label htmlFor="name">Name</label>
+            <input
+              required
+              className="block w-full outline-none border rounded mt-3"
+              type="text"
+              name="name"
+              id="name"
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Email</label>
+            <input
+              required
+              className="block w-full outline-none border rounded mt-3"
+              type="email"
+              name="email"
+              id="email"
+            />
+          </div>
+          <div>
+            <label htmlFor="message">Message</label>
+            <textarea
+              required
+              className="block w-full outline-none border rounded mt-3"
+              name="message"
+              id="message"
+            ></textarea>
+          </div>
+          <Button
+            type="submit"
+            onClick={(e) => handleClick(e)}
+            className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-200 mt-5"
+          >
+            Contact Us
+          </Button>
+        </form>
       </div>
     </section>
   );

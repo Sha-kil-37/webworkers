@@ -1,4 +1,4 @@
-import React from "react";
+import Button from "./Button";
 import {
   FaRocket,
   FaMobileAlt,
@@ -7,9 +7,15 @@ import {
   FaHeadset,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router";
 //
 export default function ChooseUs() {
   //
+  const navigate = useNavigate();
+  //
+  function handleClick() {
+    navigate("/projects");
+  }
   const features = [
     {
       title: "Fast Delivery",
@@ -48,11 +54,7 @@ export default function ChooseUs() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            
-
-            <h2 className="text-4xl font-bold">
-              We Build Digital Experiences That People Love
-            </h2>
+            <h2 className="text-4xl font-bold">Why people love us</h2>
 
             <p className="max-w-xl">
               Web Workers is a full-service digital web agency — we craft
@@ -60,34 +62,12 @@ export default function ChooseUs() {
               brand experiences that help businesses grow.
             </p>
 
-            <div className="flex items-center gap-4">
-              <a
-                href="#contact"
-                className="group px-4 mt-5 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-full inline-flex items-center justify-center hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95"
-              >
-                Get a free quote
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </a>
-
-              <a
-                href="#portfolio"
-                className="text-sm font-medium text-slate-700 hover:underline"
-              >
-                See our work
-              </a>
-            </div>
+            <Button
+              onClick={handleClick}
+              className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-200"
+            >
+              Our Works
+            </Button>
           </motion.div>
 
           <motion.div
@@ -100,14 +80,14 @@ export default function ChooseUs() {
               const Icon = f.icon;
               return (
                 <motion.article
-                  key={f.title}
+                  key={idx}
                   whileHover={{ scale: 1.03, y: -6 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   className={`relative group overflow-hidden p-5 rounded-2xl bg-white/60 backdrop-blur-sm border border-slate-100 shadow-sm`}
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className="p-3 rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 text-white shadow-md">
+                      <div className="p-3 rounded-lg bg-[#F5F7F8] shadow-md">
                         <Icon className="w-5 h-5" />
                       </div>
                     </div>
@@ -119,7 +99,6 @@ export default function ChooseUs() {
                       <p className="text-sm text-slate-600 mt-1">{f.desc}</p>
                     </div>
                   </div>
-
                 </motion.article>
               );
             })}

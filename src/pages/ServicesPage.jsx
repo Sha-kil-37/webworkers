@@ -5,8 +5,8 @@ import OurValue from "../components/OurValue";
 import SmoothScroll from "../lib/utils/SmoothScroll";
 import BlurInText from "../components/BlurInText";
 import Paragraph from "../components/Paragraph";
-import LetsTalk from "../components/LetsTalk";
-
+import Contact from "../components/Contact";
+// 
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 
 //
@@ -74,7 +74,7 @@ export default function ServicesPage() {
           </Paragraph>
           <OurValue />
           <Services />
-          <LetsTalk/>
+          <Contact/>
         </SmoothScroll>
       </MainLayout>
     </Suspense>

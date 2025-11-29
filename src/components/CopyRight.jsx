@@ -31,16 +31,15 @@ export default function CopyRight() {
   }, []);
   //
   return (
-    <div ref={copyRightRef} className="relative py-5">
+    <div ref={copyRightRef} className="relative">
       <div className="relative top-0 left-0 w-full h-[3px] z-40">
         <div
           className="h-full bg-white transition-all duration-1000 ease-in-out"
           style={{ width: `${progress}%` }}
         ></div>
       </div>
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <p>All Right </p>
-        <p> Web Workers</p>
+      <div className="max-w-7xl mx-auto flex justify-center items-center">
+        <p className="mt-4 font-medium">&copy;2025 Web Workers LLC | All Rights Reserved.</p>
       </div>
     </div>
   );

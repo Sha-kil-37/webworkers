@@ -7,8 +7,7 @@ import OurTeam from "../components/OurTeam";
 import ChooseUs from "../components/ChooseUs";
 import TrustedBy from "../components/TrustedBy";
 import SmoothScroll from "../lib/utils/SmoothScroll";
-import LetsTalk from "../components/LetsTalk";
-import ContactForm from "../components/ContactForm";
+import Contact from "../components/Contact";
 //
 export default function AboutPage() {
   //
@@ -22,7 +21,7 @@ export default function AboutPage() {
             <OurTeam />
             <ChooseUs />
             <TrustedBy />
-            <ContactForm />
+            <Contact/>
           </Fragment>
         </SmoothScroll>
       </MainLayout>

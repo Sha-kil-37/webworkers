@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { MdKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
 //
@@ -33,14 +32,13 @@ export default function FAQ() {
   };
   //
   return (
-    <section className="max-w-7xl mx-auto py-20">
-      <h2 className="text-4xl font-bold mb-10">
+    <section className="max-w-7xl mx-auto py-10">
+      <h2 className="text-4xl font-bold">
         Frequently Asked <span className="text-blue-600">Questions</span>
       </h2>
-    
-      {/*  */}
-      <div className="flex justify-between">
-        <div className="bg-red-400">
+
+      <div className="block md:block lg:flex xl:flex justify-between mt-5 gap-x-7">
+        <div className="max-w-xl">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ut
             laborum quod quis tenetur, aut nisi possimus qui. Similique iusto
@@ -53,7 +51,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition"
+              className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition p-2 mt-3 cursor-pointer"
             >
               {/* Question */}
               <button
