@@ -1,9 +1,13 @@
-import { FaArrowRight, FaClock, FaUser, FaTag } from "react-icons/fa";
+import { FaArrowRight, FaClock } from "react-icons/fa";
 import BlogSlider from "./BlogSlider";
+import { useState } from "react";
+import Button from "./Button";
 //
 export default function Blog() {
+  // How many blogs to show at first
+  const [visibleCount, setVisibleCount] = useState(3);
   // Sample blog data
-  const blogData = [
+  const blogs = [
     {
       id: 1,
       title: "The Future of Web Development in 2024",
@@ -82,9 +86,28 @@ export default function Blog() {
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
       featured: false,
     },
+    {
+      id: 7,
+      title: "Pharmacy digital solution",
+      excerpt:
+        "Create compelling content that drives engagement and conversions.",
+      category: "Marketing",
+      author: "Lisa Anderson",
+      date: "Nov 28, 2024",
+      readTime: "5 min read",
+      image:
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
+      featured: false,
+    },
   ];
   //
-
+  // Slice array to show only visible items
+  const visibleBlogs = blogs.slice(0, visibleCount);
+  //
+  const handleLoadMoreBlogs = () => {
+    setVisibleCount((prev) => prev + 3); // Load 3 more each click
+  };
+  //
   //
   return (
     <section className="py-20 relative">
@@ -92,81 +115,28 @@ export default function Blog() {
         <div className="flex justify-between items-center mb-10">
           <h2 className="font-bold text-4xl">Newest Blogs</h2>
         </div>
-
-        <BlogSlider blogs={blogData} />
+        <BlogSlider blogs={blogs} />
 
         {/* Blog Grid */}
-       <h2 className="font-bold text-4xl mt-10">All Blogs</h2>
+        <h2 className="font-bold text-4xl mt-10">All Blogs</h2>
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogData.map((post) => (
+          {visibleBlogs.map((blog, i) => (
             <div
-              key={post.id}
-              className="group h-full rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+              key={i}
+              className="group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer"
             >
-              {/* Post Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-
-              {/* Post Content */}
-              <div className="p-6">
-                {/* Category Badge */}
-                <div className="mb-3">
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-xs font-semibold rounded-full">
-                    {post.category}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
-                  {post.title}
-                </h3>
-
-                {/* Excerpt */}
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed">
-                  {post.excerpt}
-                </p>
-
-                {/* Divider */}
-                <div className="w-12 h-1 bg-gradient-to-r from-gray-300 to-transparent mb-4 group-hover:from-blue-500 transition-colors duration-300"></div>
-
-                {/* Meta Info */}
-                <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
-                  <div className="flex items-center gap-1">
-                    <FaClock className="text-blue-500" />
-                    <span>{post.readTime}</span>
-                  </div>
-                  <span>{post.date}</span>
-                </div>
-
-                {/* Author */}
-                <div className="flex items-center gap-2 pt-4 border-t border-gray-100">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white text-xs font-semibold">
-                    {post.author.charAt(0)}
-                  </div>
-                  <span className="text-sm text-gray-700 font-medium">
-                    {post.author}
-                  </span>
-                </div>
-              </div>
+              <h2>{blog.title}</h2>
             </div>
           ))}
         </div>
 
-        {/* Load More Button */}
-        <div
-          className="mt-16 flex justify-center cursor-pointer"
-          onClick={() => alert("please wait some day for update this site")}
-        >
-          <button className="group px-8 py-4  rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2">
-            Load More Articles
-            <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+        <div className="flex justify-center mt-10">
+          <Button
+            onClick={handleLoadMoreBlogs}
+            className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-200 mt-5"
+          >
+            More Blogs
+          </Button>
         </div>
       </div>
     </section>

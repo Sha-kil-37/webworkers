@@ -64,7 +64,7 @@ export default function ChooseUs() {
 
             <Button
               onClick={handleClick}
-              className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-200"
+              className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-300"
             >
               Our Works
             </Button>

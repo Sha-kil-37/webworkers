@@ -57,14 +57,14 @@ export default function Testimonials() {
   //
   return (
     <section className="py-20 ">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className=" text-center">
-          <h2 className="text-2xl font-bold ">Our Clients Say !</h2>
-        <Paragraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum earum
-          consectetur consequuntur illum voluptatem nobis quod perspiciatis
-          expedita quisquam corporis.
-        </Paragraph>
+          <h2 className="text-4xl font-bold">What Our Clients Say !</h2>
+          <Paragraph className="mt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+            earum consectetur consequuntur illum voluptatem nobis quod
+            perspiciatis expedita quisquam corporis.
+          </Paragraph>
         </div>
         <Marquee pauseOnHover={true} direction="left">
           <div className="flex justify-between items-center gap-x-4 mt-5">
@@ -74,12 +74,9 @@ export default function Testimonials() {
                   key={i}
                   className="h-60 w-100 overflow-hidden rounded-2xl p-8 bg-[#F5F7F8] cursor-pointer relative"
                 >
-                 
-                    <Paragraph>{item.review}</Paragraph>
-                    <Paragraph>{item.name}</Paragraph>
-                    <Paragraph>{item.role}</Paragraph>
-                
-                  
+                  <Paragraph>{item.review}</Paragraph>
+                  <Paragraph>{item.name}</Paragraph>
+                  <Paragraph>{item.role}</Paragraph>
                 </div>
               );
             })}

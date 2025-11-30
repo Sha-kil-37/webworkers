@@ -32,16 +32,15 @@ export default function Credibility() {
   ];
   //
 
-
   //
 
   return (
     <section className="py-20">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-16">
-          <h2 className="text-4xl font-bold mb-4">Why Trust Us</h2>
-          <Paragraph>
+          <h2 className="text-4xl font-bold mb-4 text-center">Why Trust Us</h2>
+          <Paragraph className="text-center">
             We are committed to delivering excellence and building lasting
             relationships with our clients through trust and transparency.
           </Paragraph>
@@ -75,8 +74,6 @@ export default function Credibility() {
             );
           })}
         </div>
-
-       
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ export default function Footer() {
   //
   return (
     <footer className="bg-[#F5F7F8] py-5">
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-between">
+      <div className="max-w-6xl mx-auto flex flex-wrap justify-between">
         <div>
           <Link to="/" className="block h-10 w-10 overflow-hidden">
             <img className="h-full w-full inline-block" src={logo} alt={logo} />

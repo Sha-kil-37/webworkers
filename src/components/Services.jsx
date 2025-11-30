@@ -7,7 +7,6 @@ import { IoIosRocket } from "react-icons/io";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { AiOutlineSound } from "react-icons/ai";
 import { IoIosApps } from "react-icons/io";
-
 //
 export default function Services() {
   //
@@ -56,16 +55,27 @@ export default function Services() {
   //
   return (
     <section className="py-10">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-14"
+          className="text-4xl font-bold text-center mb-14 text-center"
         >
           Our Services
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mb-14"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+          maiores eum repellendus unde voluptatem possimus magni? Cupiditate,
+          recusandae obcaecati. Soluta.
+        </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, index) => (
@@ -75,7 +85,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="p-8 rounded-2xl hover:bg-[#F5F7F8] transition shadow-lg border border-gray-100"
+              className="p-8  hover:bg-[#F5F7F8] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
             >
               <div className="mb-6 text-blue-400">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>

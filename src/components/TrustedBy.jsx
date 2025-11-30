@@ -23,9 +23,8 @@ export default function TrustedBy() {
   //
   return (
     <section className="py-10">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl text-center font-bold">Trusted By</h2>
-      
         <div className="max-w-5xl mx-auto flex justify-between flex-wrap mt-5">
           {[one, two, three, four, five].map((item, i) => {
             return (
@@ -35,7 +34,7 @@ export default function TrustedBy() {
             );
           })}
         </div>
-        <div className="max-w-7xl mx-auto flex justify-between flex-wrap mt-5">
+        <div className="max-w-6xl mx-auto flex justify-between flex-wrap mt-5">
           {[six, seven, eight, nine, ten].map((item, i) => {
             return (
               <div key={i} className="overflow-hidden w-25 h-25 ">

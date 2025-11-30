@@ -12,18 +12,18 @@ export default function Banner() {
   }
   //
   return (
-    <section className="relative py-10 overflow-hidden">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div>
+    <section className="relative py-8 overflow-hidden">
+      <div className="max-w-6xl mx-auto flex justify-between items-center gap-x-5">
+        <div className="max-w-2xl">
           {/* Main heading */}
-          <BlurInText className="font-bold text-7xl max-w-2xl">
-            <span>We Build Creative Digital Solutions</span>
+          <BlurInText className="font-bold text-6xl">
+            <span>We Build <span className="text-[#FF6363]">Creative</span> Digital Solutions</span>
           </BlurInText>
-          <BlurInText className="max-w-[600px] mt-7">
-            <Paragraph style={"font-medium capitalize"}>
+          <BlurInText className="mt-7">
+            <Paragraph className="max-w-xl">
               In today’s fast-moving digital world, Every business needs a
               strong online presence to thrive in the digital world. With
-              <bold className="font-bold capitalize">
+              <bold className="font-bold capitalize text-[#FF6363]">
                 “We Build Creative Digital Solutions,”
               </bold>
               we deliver innovative, user-friendly Web Development, Digital
@@ -34,12 +34,13 @@ export default function Banner() {
           <BlurInText className="mt-7">
             <Button
               onClick={handleClick}
-              className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-200"
+              className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-300 hover:text-black"
             >
               About Me
             </Button>
           </BlurInText>
         </div>
+
         <BlurInText>
           <img
             className="inline-block h-full w-full object-cover"
