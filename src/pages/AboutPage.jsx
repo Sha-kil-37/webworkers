@@ -21,7 +21,7 @@ export default function AboutPage() {
             <OurTeam />
             <ChooseUs />
             <TrustedBy />
-            <Contact/>
+            <Contact />
           </Fragment>
         </SmoothScroll>
       </MainLayout>

@@ -5,7 +5,7 @@ import Blog from "../components/Blog";
 import SmoothScroll from "../lib/utils/SmoothScroll";
 import Contact from "../components/Contact";
 //
-export default function BlogPage() {
+export default function BlogsPage() {
   //
   return (
     <Suspense fallback={<Loading />}>

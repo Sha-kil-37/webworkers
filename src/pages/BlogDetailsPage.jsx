@@ -1,27 +1,15 @@
 import { lazy, Suspense } from "react";
-import Services from "../components/Services";
 import Loading from "../components/Loading";
-import OurValue from "../components/OurValue";
 import SmoothScroll from "../lib/utils/SmoothScroll";
-import BlurInText from "../components/BlurInText";
-import Paragraph from "../components/Paragraph";
-import Contact from "../components/Contact";
-//
+import BlogDetails from "../components/BlogDetails";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
-
-//
-export default function ServicesPage() {
+export default function BlogDetailsPage() {
   //
-
-  //
-
   return (
     <Suspense fallback={<Loading />}>
       <MainLayout>
         <SmoothScroll>
-          <Services />
-          <OurValue />
-          <Contact />
+          <BlogDetails />
         </SmoothScroll>
       </MainLayout>
     </Suspense>

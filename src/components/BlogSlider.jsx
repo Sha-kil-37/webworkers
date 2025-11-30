@@ -51,7 +51,7 @@ export default function BlogSlider({ blogs }) {
               />
 
               {/* OVERLAY + TEXT + BUTTON */}
-              <div className=" absolute inset-0 bg-[#F5F7F8] opacity-0  group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className=" absolute inset-0 bg-[#F5F7F8] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               {/* Content that slides up */}
               <div
@@ -62,13 +62,12 @@ export default function BlogSlider({ blogs }) {
         transition-transform
         duration-500
         px-4 pb-4
-        text-white
+        text-black
       "
               >
                 <h3 className="text-lg font-semibold">{blog.title}</h3>
-
-                <button className="mt-2 px-4 py-2 rounded-lg bg-white  text-blue-500 font-medium hover:bg-gray-200 transition">
-                  View Project
+                <button className="mt-2 px-4 py-2 rounded-lg bg-[#F5F7F8] font-medium transition cursor-pointer">
+                  Read Blog
                 </button>
               </div>
             </div>
@@ -80,7 +79,7 @@ export default function BlogSlider({ blogs }) {
       <div className="absolute right-4 bottom-[1rem] z-20 h-7 w-7 flex justify-center items-center text-black">
         <svg
           className="absolute inset-0 w-full h-full stroke-[2px] fill-none 
-          stroke-red-500 [stroke-dasharray:125.6]
+          stroke-[#FF6363] [stroke-dasharray:125.6]
           [stroke-dashoffset:calc(125.6px*(1-var(--progress)))]
           -rotate-90"
           viewBox="0 0 48 48"

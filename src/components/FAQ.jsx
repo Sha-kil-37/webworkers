@@ -32,7 +32,7 @@ export default function FAQ() {
   };
   //
   return (
-    <section className="max-w-7xl mx-auto py-10">
+    <section className="max-w-6xl mx-auto py-10">
       <h2 className="text-4xl font-bold">
         Frequently Asked <span className="text-blue-600">Questions</span>
       </h2>

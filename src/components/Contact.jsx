@@ -15,9 +15,9 @@ export default function Contact() {
   //
   return (
     <section className="py-10">
-      <div className="max-w-7xl mx-auto block md:block lg:flex xl:flex gap-x-8 justify-between sm:block">
+      <div className="max-w-6xl mx-auto block md:block lg:flex xl:flex gap-x-8 justify-between sm:block">
         <div className="">
-          <h2 className="font-bold text-xl">Contact Us</h2>
+          <h2 className="font-bold text-4xl">Contact Us</h2>
           <Paragraph>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
             saepe cum culpa, earum quo dicta praesentium quam voluptates quae

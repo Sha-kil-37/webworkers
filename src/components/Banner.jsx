@@ -17,7 +17,10 @@ export default function Banner() {
         <div className="max-w-2xl">
           {/* Main heading */}
           <BlurInText className="font-bold text-6xl">
-            <span>We Build <span className="text-[#FF6363]">Creative</span> Digital Solutions</span>
+            <span>
+              We Build <span className="text-[#FF6363]">Creative</span> Digital
+              Solutions
+            </span>
           </BlurInText>
           <BlurInText className="mt-7">
             <Paragraph className="max-w-xl">
@@ -40,8 +43,7 @@ export default function Banner() {
             </Button>
           </BlurInText>
         </div>
-
-        <BlurInText>
+        <BlurInText className="hidden sm:hidden md:hidden lg:block xl:block 2xl:block">
           <img
             className="inline-block h-full w-full object-cover"
             src={banner}

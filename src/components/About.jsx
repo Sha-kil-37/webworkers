@@ -5,8 +5,10 @@ export default function About() {
   //
   return (
     <section className="py-20">
-      <div className="relative max-w-7xl mx-auto ">
-        <BlurInText>About WebWorkers</BlurInText>
+      <div className="relative max-w-6xl mx-auto">
+        <BlurInText className="text-6xl font-bold">
+          About Web Workers
+        </BlurInText>
         <Paragraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio in
           ipsum perferendis quas enim quae esse asperiores tempora sequi

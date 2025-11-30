@@ -16,10 +16,8 @@ export default function Blog() {
       category: "Technology",
       author: "Sarah Johnson",
       date: "Dec 15, 2024",
-      readTime: "5 min read",
       image:
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-      featured: true,
     },
     {
       id: 2,
@@ -29,7 +27,6 @@ export default function Blog() {
       category: "Design",
       author: "Mike Chen",
       date: "Dec 10, 2024",
-      readTime: "7 min read",
       image:
         "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop",
       featured: false,
@@ -42,10 +39,8 @@ export default function Blog() {
       category: "Technology",
       author: "Alex Rivera",
       date: "Dec 8, 2024",
-      readTime: "6 min read",
       image:
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-      featured: false,
     },
     {
       id: 4,
@@ -55,10 +50,8 @@ export default function Blog() {
       category: "Marketing",
       author: "Emily Watson",
       date: "Dec 5, 2024",
-      readTime: "4 min read",
       image:
         "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop",
-      featured: false,
     },
     {
       id: 5,
@@ -68,10 +61,8 @@ export default function Blog() {
       category: "Technology",
       author: "James Park",
       date: "Dec 1, 2024",
-      readTime: "8 min read",
       image:
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-      featured: false,
     },
     {
       id: 6,
@@ -81,10 +72,8 @@ export default function Blog() {
       category: "Marketing",
       author: "Lisa Anderson",
       date: "Nov 28, 2024",
-      readTime: "5 min read",
       image:
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-      featured: false,
     },
     {
       id: 7,
@@ -94,10 +83,8 @@ export default function Blog() {
       category: "Marketing",
       author: "Lisa Anderson",
       date: "Nov 28, 2024",
-      readTime: "5 min read",
       image:
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-      featured: false,
     },
   ];
   //
@@ -108,12 +95,16 @@ export default function Blog() {
     setVisibleCount((prev) => prev + 3); // Load 3 more each click
   };
   //
+  function handleReadBlog(id) {
+    console.log(id);
+    // navigate(`/blogDetails/${id}`);
+  }
   //
   return (
     <section className="py-20 relative">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center mb-10">
-          <h2 className="font-bold text-4xl">Newest Blogs</h2>
+          <h2 className="font-bold text-4xl">New Blogs</h2>
         </div>
         <BlogSlider blogs={blogs} />
 
@@ -123,9 +114,19 @@ export default function Blog() {
           {visibleBlogs.map((blog, i) => (
             <div
               key={i}
-              className="group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+              className="group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer p-6 hover:bg-[#F5F7F8]"
             >
-              <h2>{blog.title}</h2>
+              <h2 className="font-bold">{blog.title}</h2>
+              <p className="mt-2">{blog.excerpt}</p>
+              <p className="mt-2">
+                Write by : <span className="text-[#FF6363]">{blog.author}</span>
+              </p>
+              <Button
+                onClick={(i) => handleReadBlog(i)}
+                className="cursor-pointer px-3 py-1 bg rounded font-medium transition-all duration-300 bg-[#F5F7F8] mt-5"
+              >
+                Read Blog
+              </Button>
             </div>
           ))}
         </div>

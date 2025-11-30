@@ -37,9 +37,9 @@ export default function OurValue() {
   //
   return (
     <section className="py-10">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4">Our Core Values</h2>
-        <Paragraph>
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold mb-4 text-center">Our Core Values</h2>
+        <Paragraph className='text-center'>
           Principles that guide our actions and decisions every day. Principles
           that guide our actions and decisions every day. Principles that guide
           our actions and decisions every day.
