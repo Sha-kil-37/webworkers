@@ -1,34 +1,26 @@
-import React from "react";
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 
 export default function NotFound() {
   //
-  // navlinks data array
-  const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/services", label: "Services" },
-    { path: "/projects", label: "Projects" },
-    { path: "/contact", label: "Contact" },
-    { path: "/blog", label: "Blog" },
-  ];
-  //
   return (
-    <section className="py-30 bg-green-200">
-      <h1 className="font-bold text-5xl">not found page</h1>
-      {navLinks.map((link) => (
-        <NavLink
-          key={link.path}
-          to={link.path}
-          className={({ isActive }) =>
-            isActive
-              ? "text-blue-600 font-medium block"
-              : "text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium block"
-          }
-        >
-          {link.label}
-        </NavLink>
-      ))}
-    </section>
+    <main class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div class="text-center">
+        <p class="text-6xl font-bold">404</p>
+        <h1 class="mt-4 text-5xl">
+          Page not found
+        </h1>
+        <p class="mt-6 text-lg font-medium sm:text-xl/8">
+          Sorry, we couldn’t find the page you’re looking for.
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <Link to={"/"} class="rounded-xl bg-blue-500 px-3 py-2  text-white font-medium">
+            Go back home
+          </Link>
+          <a href="#" class="text-sm font-semibold text-gray-900">
+            Contact support <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </main>
   );
 }

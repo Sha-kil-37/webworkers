@@ -3,8 +3,10 @@ import BlogSlider from "./BlogSlider";
 import { useState } from "react";
 import Button from "./Button";
 import Paragraph from "./Paragraph";
+import { useNavigate } from "react-router";
 //
-export default function Blog() {
+export default function Blogs() {
+  const navigate = useNavigate();
   // How many blogs to show at first
   const [visibleCount, setVisibleCount] = useState(3);
   // Sample blog data
@@ -91,14 +93,13 @@ export default function Blog() {
   //
   // Slice array to show only visible items
   const visibleBlogs = blogs.slice(0, visibleCount);
-  //
+  // handle load more blogs
   const handleLoadMoreBlogs = () => {
     setVisibleCount((prev) => prev + 3); // Load 3 more each click
   };
-  //
-  function handleReadBlog(id) {
-    console.log(id);
-    // navigate(`/blogDetails/${id}`);
+  // handle read blog
+  function handleReadBlog(i) {
+    navigate(`/blogDetails/${i}`);
   }
   //
   return (
@@ -129,12 +130,12 @@ export default function Blog() {
               className="group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer p-6 hover:bg-[#F5F7F8]"
             >
               <h2 className="font-bold">{blog.title}</h2>
-              <p className="mt-2">{blog.excerpt}</p>
-              <p className="mt-2">
+              <Paragraph className="mt-2">{blog.excerpt}</Paragraph>
+              <Paragraph className="mt-2">
                 Write by : <span className="text-[#FF6363]">{blog.author}</span>
-              </p>
+              </Paragraph>
               <Button
-                onClick={(i) => handleReadBlog(i)}
+                onClick={() => handleReadBlog(i)}
                 className="cursor-pointer px-3 py-1 bg rounded font-medium transition-all duration-300 bg-[#F5F7F8] mt-5"
               >
                 Read Blog

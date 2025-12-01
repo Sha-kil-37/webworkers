@@ -31,7 +31,7 @@ export default function CopyRight() {
   }, []);
   //
   return (
-    <div ref={copyRightRef} className="relative">
+    <div ref={copyRightRef} className="relative mt-5">
       <div className="relative top-0 left-0 w-full h-[3px] z-40">
         <div
           className="h-full bg-white transition-all duration-1000 ease-in-out"

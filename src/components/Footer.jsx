@@ -12,7 +12,7 @@ export default function Footer() {
     { path: "/services", label: "Services" },
     { path: "/projects", label: "Projects" },
     { path: "/contact", label: "Contact" },
-    { path: "/blog", label: "Blog" },
+    { path: "/blogs", label: "Blogs" },
   ];
 
   //
@@ -24,8 +24,11 @@ export default function Footer() {
             <img className="h-full w-full inline-block" src={logo} alt={logo} />
           </Link>
           <Paragraph className="font-bold mt-2">Web Workers</Paragraph>
+          <Paragraph className="mt-2 font-medium">
+            Digital Web Service Agency
+          </Paragraph>
         </div>
-        <div className="">
+        <div>
           <h3 className="font-bold">Quick Links</h3>
           {navLinks.map((link) => (
             <NavLink
@@ -33,8 +36,8 @@ export default function Footer() {
               to={link.path}
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-600 block"
-                  : "text-gray-700 hover:text-blue-600 transition-colors duration-300 block"
+                  ? "text-blue-500 block font-semibold"
+                  : " hover:text-blue-500 transition-colors duration-300 block font-medium"
               }
             >
               {link.label}
@@ -44,9 +47,15 @@ export default function Footer() {
         <div>
           <h3 className="font-bold">Legal Resources</h3>
           <ul>
-            <li>Privacy Policy</li>
-            <li>Term of Service</li>
-            <li>cookie Policy</li>
+            {["Privacy Policy", "Term of Service", "cookie Policy"].map(
+              (item, i) => {
+                return (
+                  <Link to={`/${item}`} key={i} className="block font-medium">
+                    {item}
+                  </Link>
+                );
+              }
+            )}
           </ul>
         </div>
         <div>

@@ -14,11 +14,10 @@ export default function Nav() {
     { path: "/services", label: "Services" },
     { path: "/projects", label: "Projects" },
     { path: "/contact", label: "Contact" },
-    { path: "/blog", label: "Blog" },
+    { path: "/blogs", label: "Blogs" },
   ];
   //
   return (
-    
       <nav className="sticky top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm py-5">
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center">

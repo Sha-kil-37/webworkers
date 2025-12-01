@@ -3,8 +3,6 @@ import Services from "../components/Services";
 import Loading from "../components/Loading";
 import OurValue from "../components/OurValue";
 import SmoothScroll from "../lib/utils/SmoothScroll";
-import BlurInText from "../components/BlurInText";
-import Paragraph from "../components/Paragraph";
 import Contact from "../components/Contact";
 //
 const MainLayout = lazy(() => import("../layout/MainLayout"));

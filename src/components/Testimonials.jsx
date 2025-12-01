@@ -1,10 +1,10 @@
 import Marquee from "react-fast-marquee";
 import Paragraph from "./Paragraph";
-import shakil from "../assets/shakil.png";
-import rakibul from "../assets/rakibul.png";
-import one from "../assets/one.png";
-import two from "../assets/two.png";
-//
+import reviewOne from "../assets/reviewOne.png";
+import reviewTwo from "../assets/reviewTwo.png";
+import reviewThree from "../assets/reviewThree.png";
+import reviewFour from "../assets/reviewFour.png";
+import reviewFive from "../assets/reviewFive.png";
 export default function Testimonials() {
   //
   const testimonialsData = [
@@ -14,7 +14,7 @@ export default function Testimonials() {
       role: "CEO, NovaTech Solutions",
       review:
         "Working with this team was an outstanding experience. They delivered our website ahead of schedule with beautiful UI and perfect responsiveness. Highly recommended!",
-      image: one,
+      image: reviewOne,
       rating: 5,
     },
     {
@@ -23,7 +23,7 @@ export default function Testimonials() {
       role: "Founder, Craftsy Studio",
       review:
         "Very professional and easy to work with. They understood our requirements and delivered a fast, clean, modern web app for our small business.",
-      image: two,
+      image: reviewTwo,
       rating: 4.5,
     },
     {
@@ -32,7 +32,7 @@ export default function Testimonials() {
       role: "Marketing Manager, BrightWave Agency",
       review:
         "Amazing work! The animations, performance, and overall user experience exceeded our expectations. Perfect for growing our digital presence.",
-      image: shakil,
+      image: reviewThree,
       rating: 5,
     },
     {
@@ -41,7 +41,7 @@ export default function Testimonials() {
       role: "Owner, Bloom Boutique",
       review:
         "I loved the smooth communication and quick revisions. The final website looks premium and loads very fast. Great job!",
-      image: rakibul,
+      image: reviewFour,
       rating: 4.8,
     },
     {
@@ -50,7 +50,7 @@ export default function Testimonials() {
       role: "Product Lead, PixelDrive",
       review:
         "Top-notch development! They built a stunning dashboard for us using MERN stack. Clean code and superb attention to detail.",
-      image: one,
+      image: reviewFive,
       rating: 5,
     },
   ];
@@ -72,11 +72,27 @@ export default function Testimonials() {
               return (
                 <div
                   key={i}
-                  className="h-60 w-100 overflow-hidden rounded-2xl p-8 bg-[#F5F7F8] cursor-pointer relative"
+                  className="rounded-xl p-8 bg-[#F5F7F8] cursor-pointer relative max-w-100"
                 >
-                  <Paragraph>{item.review}</Paragraph>
-                  <Paragraph>{item.name}</Paragraph>
-                  <Paragraph>{item.role}</Paragraph>
+                  <div className="max-h-20 max-w-20 overflow-hidden rounded-full mx-auto">
+                    <img
+                      className="h-full w-full object-cover"
+                      src={item.image}
+                      alt={item.image}
+                    />
+                  </div>
+                  <Paragraph className="mt-5 font-semibold">
+                    {item.review}
+                  </Paragraph>
+                  <div className="flex justify-between ">
+                    <div>
+                      <Paragraph className="mt-5 font-medium text-[#FF6363]">
+                        {item.name}
+                      </Paragraph>
+                      <Paragraph className="">{item.role}</Paragraph>
+                    </div>
+                    <Paragraph className="font-bold text-[#FF6363]">{item.rating}</Paragraph>
+                  </div>
                 </div>
               );
             })}
