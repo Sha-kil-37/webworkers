@@ -58,9 +58,9 @@ export default function Testimonials() {
   return (
     <section className="py-20 ">
       <div className="max-w-6xl mx-auto">
-        <div className=" text-center">
-          <h2 className="text-4xl font-bold">What Our Clients Say !</h2>
-          <Paragraph className="mt-3">
+        <div className="">
+          <h2 className="text-4xl font-bold">What Our Clients Say ?</h2>
+          <Paragraph className="max-w-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
             earum consectetur consequuntur illum voluptatem nobis quod
             perspiciatis expedita quisquam corporis.

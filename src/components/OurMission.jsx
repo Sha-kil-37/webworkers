@@ -8,27 +8,13 @@ export default function OurMission() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Content */}
           <div>
-            <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
-            <Paragraph>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Suscipit, debitis? Fuga, optio hic rerum at ullam dolor molestiae.
-              Fugiat sit id exercitationem placeat quibusdam dignissimos
-              temporibus! Optio amet inventore unde excepturi ab odit
-              perspiciatis placeat minus provident ad facilis facere, pariatur
-              molestias voluptatum harum a incidunt, illo earum, reiciendis
-              voluptas. Lorem ipsum dolor sit, amet consectetur adipisicing
-              elit. Suscipit, debitis? Fuga, optio hic rerum at ullam dolor
-              molestiae. Fugiat sit id exercitationem placeat quibusdam
-              dignissimos temporibus! Optio amet inventore unde excepturi ab
-              odit perspiciatis placeat minus provident ad facilis facere,
-              pariatur molestias voluptatum harum a incidunt, illo earum,
-              reiciendis voluptas. Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Suscipit, debitis? Fuga, optio hic rerum at
-              ullam dolor molestiae. Fugiat sit id exercitationem placeat
-              quibusdam dignissimos temporibus! Optio amet inventore unde
-              excepturi ab odit perspiciatis placeat minus provident ad facilis
-              facere, pariatur molestias voluptatum harum a incidunt, illo
-              earum, reiciendis voluptas.
+            <h2 className="text-4xl font-bold">Our Mission</h2>
+            <Paragraph className="max-w-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis optio quam fugiat velit eligendi eaque ad mollitia totam dolorem excepturi?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+              consectetur dignissimos quasi adipisci. Illo ea ducimus optio
+              officiis dolor possimus sed ipsum error, eaque voluptate, dolorem
+              ipsam, adipisci accusantium nemo.
             </Paragraph>
           </div>
 

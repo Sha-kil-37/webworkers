@@ -2,6 +2,7 @@ import { FaArrowRight, FaClock } from "react-icons/fa";
 import BlogSlider from "./BlogSlider";
 import { useState } from "react";
 import Button from "./Button";
+import Paragraph from "./Paragraph";
 //
 export default function Blog() {
   // How many blogs to show at first
@@ -103,13 +104,24 @@ export default function Blog() {
   return (
     <section className="py-20 relative">
       <div className="max-w-6xl mx-auto">
-        <div className="flex justify-between items-center mb-10">
-          <h2 className="font-bold text-4xl">New Blogs</h2>
-        </div>
+        <h2 className="font-bold text-4xl">New Blogs</h2>
+        <Paragraph className="max-w-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+          consequatur amet. Quis fugiat accusamus, dolor esse odit expedita
+          dolorem soluta fuga rem eius qui alias. Neque ipsum recusandae illo
+          totam.
+        </Paragraph>
+
         <BlogSlider blogs={blogs} />
 
         {/* Blog Grid */}
         <h2 className="font-bold text-4xl mt-10">All Blogs</h2>
+        <Paragraph className="max-w-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+          consequatur amet. Quis fugiat accusamus, dolor esse odit expedita
+          dolorem soluta fuga rem eius qui alias. Neque ipsum recusandae illo
+          totam.
+        </Paragraph>
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {visibleBlogs.map((blog, i) => (
             <div

@@ -18,7 +18,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto block md:block lg:flex xl:flex gap-x-8 justify-between sm:block">
         <div className="">
           <h2 className="font-bold text-4xl">Contact Us</h2>
-          <Paragraph>
+          <Paragraph className="max-w-xl">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
             saepe cum culpa, earum quo dicta praesentium quam voluptates quae
             eum quibusdam et a sequi eaque alias itaque animi, beatae vel.

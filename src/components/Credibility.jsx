@@ -39,10 +39,9 @@ export default function Credibility() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-center">Why Trust Us</h2>
-          <Paragraph className="text-center">
-            We are committed to delivering excellence and building lasting
-            relationships with our clients through trust and transparency.
+          <h2 className="text-4xl font-bold">Why Trust Us</h2>
+          <Paragraph className="max-w-xl">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ea, perferendis iure, vel incidunt, deleniti soluta expedita impedit ex quo quaerat non est harum laudantium pariatur molestiae iusto? Dicta, fugiat.
           </Paragraph>
         </div>
         {/* Credentials Grid */}

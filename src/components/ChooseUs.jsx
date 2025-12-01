@@ -6,8 +6,8 @@ import {
   FaChartLine,
   FaHeadset,
 } from "react-icons/fa";
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
+import Paragraph from "./Paragraph";
 //
 export default function ChooseUs() {
   //
@@ -43,47 +43,34 @@ export default function ChooseUs() {
       icon: FaHeadset,
     },
   ];
-
+  //
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-          >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
             <h2 className="text-4xl font-bold">Why people love us</h2>
-
-            <p className="max-w-xl">
+            <Paragraph className="max-w-xl">
               Web Workers is a full-service digital web agency — we craft
               beautiful websites, build fast web apps, and create meaningful
               brand experiences that help businesses grow.
-            </p>
+            </Paragraph>
 
             <Button
               onClick={handleClick}
-              className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-300"
+              className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-300 mt-5"
             >
               Our Works
             </Button>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {features.map((f, idx) => {
               const Icon = f.icon;
               return (
-                <motion.article
+                <div
                   key={idx}
-                  whileHover={{ scale: 1.03, y: -6 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className={`relative group overflow-hidden p-5 rounded-2xl bg-white/60 backdrop-blur-sm border border-slate-100 shadow-sm`}
+                  className="relative group overflow-hidden p-5 rounded-xl"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
@@ -99,10 +86,10 @@ export default function ChooseUs() {
                       <p className="text-sm text-slate-600 mt-1">{f.desc}</p>
                     </div>
                   </div>
-                </motion.article>
+                </div>
               );
             })}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

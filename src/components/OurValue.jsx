@@ -38,8 +38,8 @@ export default function OurValue() {
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4 text-center">Our Core Values</h2>
-        <Paragraph className='text-center'>
+        <h2 className="text-4xl font-bold">Our Core Values</h2>
+        <Paragraph className='max-w-xl'>
           Principles that guide our actions and decisions every day. Principles
           that guide our actions and decisions every day. Principles that guide
           our actions and decisions every day.

@@ -37,8 +37,8 @@ export default function OurTeam() {
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4 text-center">Meet Our Team</h2>
-        <Paragraph className="text-center">
+        <h2 className="text-4xl font-bold">Meet Our Team</h2>
+        <Paragraph className="max-w-xl">
           Our diverse team of experts is dedicated to delivering innovative
           solutions and exceptional service. Our diverse team of experts is
           dedicated to delivering innovative solutions and exceptional service.
