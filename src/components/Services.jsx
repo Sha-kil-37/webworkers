@@ -7,6 +7,7 @@ import { AiOutlineLineChart } from "react-icons/ai";
 import { AiOutlineSound } from "react-icons/ai";
 import { IoIosApps } from "react-icons/io";
 import Paragraph from "./Paragraph";
+import { GiArtificialIntelligence } from "react-icons/gi";
 
 //
 export default function Services() {
@@ -52,24 +53,29 @@ export default function Services() {
       desc: "We build custom software tailored to your business needs, streamline operations, improve efficiency, and deliver scalable, high-performance solutions that support growth and enhance overall productivity",
       icon: <IoIosApps className="w-10 h-10" />,
     },
+    {
+      title: "Artificial Intelligence Integration",
+      desc: "We help businesses harness the power of AI through intelligent automation, predictive analytics, recommendation systems, chatbots, and workflow optimization. Our AI integrations enhance efficiency, improve decision-making, and create next-level digital experiences",
+      icon: <GiArtificialIntelligence className="w-10 h-10" />,
+    },
   ];
   //
   return (
-    <section className="py-10">
+    <section className="py-10 bg-[var(--white-color)]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold">Our Services</h2>
-        <Paragraph className="max-w-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolorum debitis earum provident unde tenetur obcaecati accusamus, laboriosam, accusantium porro quos totam inventore, corporis consectetur eos hic vero. Perspiciatis, tempora!
+        <h2 className="text-4xl font-bold text-[var(--black-color)]">Our Services</h2>
+        <Paragraph className="max-w-xl text-[var(--black-color)]">
+          At our Digital Web Agency, we deliver high-value, results-driven solutions designed to strengthen your digital presence, accelerate growth, and enhance your brand experience. Our team blends creativity, technology, and strategic thinking to build products and strategies that solve real business challenges. Explore our core services
         </Paragraph>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-8  hover:bg-[#F5F7F8] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+              className="p-8 hover:bg-[var(--primary-color)] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="mb-6 text-blue-400">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-sm leading-relaxed">{service.desc}</p>
+              <div className="mb-6 text-[var(--secondary-color)]">{service.icon}</div>
+              <h3 className="text-xl font-semibold mb-3 text-[var(--black-color)]">{service.title}</h3>
+              <p className="text-[var(--black-color)]">{service.desc}</p>
             </div>
           ))}
         </div>

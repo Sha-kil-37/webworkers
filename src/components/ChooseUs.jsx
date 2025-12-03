@@ -1,13 +1,11 @@
 import Button from "./Button";
-import {
-  FaRocket,
-  FaMobileAlt,
-  FaPaintBrush,
-  FaChartLine,
-  FaHeadset,
-} from "react-icons/fa";
+import {  FaMobileAlt, FaHeadset } from "react-icons/fa";
+import { RiEmotionHappyLine } from "react-icons/ri";
 import { useNavigate } from "react-router";
 import Paragraph from "./Paragraph";
+import { PiStrategy } from "react-icons/pi";
+import { IoIosTimer } from "react-icons/io";
+import agency from "../assets/agency.mp4"
 //
 export default function ChooseUs() {
   //
@@ -18,29 +16,29 @@ export default function ChooseUs() {
   }
   const features = [
     {
-      title: "Fast Delivery",
-      desc: "Speedy project delivery with clear milestones and on-time launches.",
-      icon: FaRocket,
+      title: "On-Time Delivery, Every Time",
+      desc: "We value deadlines. Our team consistently delivers high-quality work within agreed timelines, without compromising standards",
+      icon: IoIosTimer,
     },
     {
-      title: "Responsive Design",
-      desc: "Pixel-perfect responsive UI for every device and screen size.",
+      title: "We Deliver Modern, High-Quality Digital Solutions",
+      desc: "From websites to mobile apps and software systems, our work is built with clean architecture, smooth performance, and exceptional user experience.",
       icon: FaMobileAlt,
     },
     {
-      title: "Creative UI/UX",
-      desc: "User-first design: research-driven flows, delightful interfaces.",
-      icon: FaPaintBrush,
+      title: "Strategy-Driven, Not Just Service-Driven",
+      desc: "Every project begins with understanding your goals. We design digital solutions that support growth, conversions, and long-term brand success.",
+      icon: PiStrategy,
     },
     {
-      title: "Growth Focused",
-      desc: "Designs and frontends optimized for conversions and growth.",
-      icon: FaChartLine,
-    },
-    {
-      title: "Reliable Support",
-      desc: "Post-launch support and quick iteration when you need it.",
+      title: "Transparent Communication & Seamless Collaboration",
+      desc: "We keep our clients informed at every step. No confusing jargon, no hidden steps—just clear updates and smooth teamwork.",
       icon: FaHeadset,
+    },
+    {
+      title: "Results That Speak for Themselves",
+      desc: "From improved conversions to increased traffic and enhanced user engagement, our projects create measurable impact that clients love.",
+      icon: RiEmotionHappyLine,
     },
   ];
   //
@@ -51,45 +49,46 @@ export default function ChooseUs() {
           <div>
             <h2 className="text-4xl font-bold">Why people love us</h2>
             <Paragraph className="max-w-xl">
-              Web Workers is a full-service digital web agency — we craft
-              beautiful websites, build fast web apps, and create meaningful
-              brand experiences that help businesses grow.
+              People love us because we deliver high-quality work with honesty,
+              creativity, and care. We listen to our clients, understand their
+              goals, and provide smart digital solutions that truly make a
+              difference. Our team works with passion, delivers fast support,
+              and is committed to excellence—making every project smooth,
+              successful, and results-driven.
             </Paragraph>
+            <video className="mt-10" controls src={agency}>
+              my video
+            </video>
 
             <Button
               onClick={handleClick}
-              className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-300 mt-5"
+               className="cursor-pointer px-4 py-2 bg-[var(--secondary-color)] text-[var(--white-color)] rounded-xl font-medium hover:bg-[var(--primary-color)] transition-colors duration-300 hover:text-[var(--secondary-color)] shadow-sm hover:shadow-md mt-10" 
             >
               Our Works
             </Button>
           </div>
-
+          {/*  */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {features.map((f, idx) => {
+            {features.map((f, i) => {
               const Icon = f.icon;
               return (
-                <div
-                  key={idx}
-                  className="relative group overflow-hidden p-5 rounded-xl"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="p-3 rounded-lg bg-[#F5F7F8] shadow-md">
-                        <Icon className="w-5 h-5" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg font-semibold text-slate-900">
-                        {f.title}
-                      </h3>
-                      <p className="text-sm text-slate-600 mt-1">{f.desc}</p>
-                    </div>
+                //
+                <div key={i} className="p-4 rounded-xl">
+                  <div>
+                    <Icon className="w-10 h-10" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900">
+                      {f.title}
+                    </h3>
+                    <p className="text-sm text-slate-600 mt-1">{f.desc}</p>
                   </div>
                 </div>
+                //
               );
             })}
           </div>
+          {/*  */}
         </div>
       </div>
     </section>

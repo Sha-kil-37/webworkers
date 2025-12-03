@@ -6,7 +6,7 @@ const BlurInText = ({ children, className }) => {
   const isInView = useInView(ref, { once: true });
   //
   return (
-    <motion.h2
+    <motion.div
       ref={ref}
       initial={{ filter: "blur(10px)", opacity: 0 }}
       animate={isInView ? { filter: "blur(0px)", opacity: 1 } : {}}
@@ -14,7 +14,7 @@ const BlurInText = ({ children, className }) => {
       className={`${className}`}
     >
       {children}
-    </motion.h2>
+    </motion.div>
   );
 };
 

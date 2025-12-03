@@ -12,32 +12,32 @@ export default function Banner() {
   }
   //
   return (
-    <section className="relative py-8 overflow-hidden">
+    <section className="relative py-8 overflow-hidden bg-[var(--white-color)]">
       <div className="max-w-6xl mx-auto flex justify-between items-center gap-x-5">
         <div className="max-w-2xl">
           {/* Main heading */}
           <BlurInText className="font-bold text-6xl">
-            <span>
-              We Build <span className="text-[#FF6363]">Creative</span> Digital
+            <h1 className="text-[var(--black-color)]">
+              We Build Creative Digital
               Solutions
-            </span>
+            </h1>
           </BlurInText>
           <BlurInText className="mt-7">
-            <Paragraph className="max-w-xl">
+            <Paragraph className="max-w-xl text-[var(--black-color)]">
               In today’s fast-moving digital world, Every business needs a
               strong online presence to thrive in the digital world. With
-              <bold className="font-bold capitalize text-[#FF6363]">
+              <strong className="text-[var(--red-color)]">
                 “We Build Creative Digital Solutions,”
-              </bold>
+              </strong>
               we deliver innovative, user-friendly Web Development, Digital
               Marketing, and UI/UX Design that help businesses attract
               customers, strengthen their brand, and grow online.
             </Paragraph>
           </BlurInText>
-          <BlurInText className="mt-7">
+          <BlurInText className="mt-10">
             <Button
               onClick={handleClick}
-              className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-300 hover:text-black"
+              className="cursor-pointer px-4 py-2 bg-[var(--secondary-color)] text-[var(--white-color)] rounded-xl font-medium hover:bg-[var(--primary-color)] transition-colors duration-300 hover:text-[var(--secondary-color)] shadow-sm hover:shadow-md"
             >
               About Me
             </Button>

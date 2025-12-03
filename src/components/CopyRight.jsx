@@ -32,14 +32,16 @@ export default function CopyRight() {
   //
   return (
     <div ref={copyRightRef} className="relative mt-5">
-      <div className="relative top-0 left-0 w-full h-[3px] z-40">
+      <div className="relative top-0 left-0 w-full h-[2px] z-40">
         <div
-          className="h-full bg-white transition-all duration-1000 ease-in-out"
+          className="h-full bg-[var(--black-color)] transition-all duration-1000 ease-in-out"
           style={{ width: `${progress}%` }}
         ></div>
       </div>
       <div className="max-w-7xl mx-auto flex justify-center items-center">
-        <p className="mt-4 font-medium">&copy;2025 Web Workers LLC | All Rights Reserved.</p>
+        <p className="mt-4 font-medium text-[var(--black-color)]">
+          &copy;2025 Web Workers LLC | All Rights Reserved.
+        </p>
       </div>
     </div>
   );

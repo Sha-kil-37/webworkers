@@ -105,23 +105,33 @@ export default function Blogs() {
   return (
     <section className="py-20 relative">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-bold text-4xl">New Blogs</h2>
+        <h2 className="font-bold text-4xl">Stay Ahead with Our Insights</h2>
         <Paragraph className="max-w-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-          consequatur amet. Quis fugiat accusamus, dolor esse odit expedita
-          dolorem soluta fuga rem eius qui alias. Neque ipsum recusandae illo
-          totam.
+          Discover the latest trends, tips, and strategies in digital innovation
+          through our expert-written blogs. From Web Development and App Design
+          to Social Media Marketing, SEO, and AI Integration, our blogs are
+          designed to keep you informed, inspired, and empowered to grow your
+          business in the digital world. Stay updated, explore new ideas, and
+          unlock actionable insights with every read.
         </Paragraph>
-
         <BlogSlider blogs={blogs} />
-
         {/* Blog Grid */}
-        <h2 className="font-bold text-4xl mt-10">All Blogs</h2>
-        <Paragraph className="max-w-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-          consequatur amet. Quis fugiat accusamus, dolor esse odit expedita
-          dolorem soluta fuga rem eius qui alias. Neque ipsum recusandae illo
-          totam.
+        <h2 className="font-bold text-4xl mt-10">Our Insights & Stories</h2>
+        <Paragraph className="">
+          Welcome to our blog—your destination for expert insights, practical
+          strategies, and the latest trends in the digital world. Here, we share
+          knowledge that empowers businesses, creators, and innovators to stay
+          ahead in a fast-evolving digital landscape. Whether you’re exploring
+          modern Web Development practices, UI/UX design principles, App
+          Development insights, or the newest techniques in Digital Marketing
+          and SEO, our articles are designed to guide you with clarity and
+          actionable value. We also dive into topics like Social Media
+          Marketing, Business Consultation, Custom Software Development, and
+          Artificial Intelligence Integration to help you understand how these
+          solutions can transform your brand. Our goal is simple: to educate,
+          inspire, and elevate your digital journey. Dive into our blogs and
+          discover fresh ideas, expert opinions, and strategies that help you
+          make smarter decisions and build a stronger digital presence.
         </Paragraph>
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {visibleBlogs.map((blog, i) => (
@@ -147,7 +157,7 @@ export default function Blogs() {
         <div className="flex justify-center mt-10">
           <Button
             onClick={handleLoadMoreBlogs}
-            className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-200 mt-5"
+             className="cursor-pointer px-4 py-2 bg-[var(--secondary-color)] text-[var(--white-color)] rounded-xl font-medium hover:bg-[var(--primary-color)] transition-colors duration-300 hover:text-[var(--secondary-color)] shadow-sm hover:shadow-md mt-5"
           >
             More Blogs
           </Button>

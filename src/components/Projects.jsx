@@ -72,13 +72,26 @@ export default function Projects() {
     <section className="py-20">
       <div className="max-w-6xl mx-auto relative">
         <h2 className="font-bold text-4xl">Our Projects</h2>
-        <Paragraph className="max-w-xl">
-          voluptatum nam fuga magni, nisi nostrum, saepe ducimus temporibus
-          soluta possimus! Repellat eos, praesentium maiores ad officia
-          distinctio quaerat qui suscipit, sint quis similique inventore
-          perspiciatis dignissimos, aut harum nemo illum.
+        <Paragraph className="">
+          Explore the work that defines who we are. Each project represents our
+          commitment to quality, innovation, and digital excellence. From modern
+          websites and intuitive user interfaces to custom software solutions
+          and advanced AI integrations, we build digital products that solve
+          real problems and create meaningful impact. Our portfolio showcases a
+          diverse range of projects across Web Development, UI/UX Design, App
+          Development, Digital Marketing, Social Media Marketing, SEO, Business
+          Consultation, and Custom Software Development. Every solution is
+          crafted with care, backed by research, powered by modern technologies,
+          and aligned with our clients’ business goals. We believe great digital
+          products are built through collaboration, creativity, and a deep
+          understanding of user needs. That is why we approach every project
+          with a strategic mindset—focusing on usability, performance,
+          scalability, and long-term growth. Browse through our work and
+          discover how we help brands elevate their digital presence, streamline
+          operations, and unlock new opportunities through tailored digital
+          solutions.
         </Paragraph>
-       
+
         {/*  */}
         <div className="flex mt-30 items-center justify-center gap-3 flex-wrap">
           {categories.map((cat) => (

@@ -9,28 +9,28 @@ export default function OurValue() {
       icon: FaLightbulb,
       title: "Innovation",
       description:
-        "We push boundaries and embrace new technologies to deliver cutting-edge solutions.",
+        "We embrace creativity and continuously seek better solutions.",
       color: "from-yellow-500 to-orange-500",
     },
     {
       icon: FaUsers,
       title: "Collaboration",
       description:
-        "We believe in strong partnerships and open communication with our clients.",
+        "We value teamwork and open communication.",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: FaRocket,
       title: "Excellence",
       description:
-        "We're committed to delivering exceptional quality in every project we undertake.",
+        "We deliver high-quality work that exceeds expectations",
       color: "from-purple-500 to-pink-500",
     },
     {
       icon: FaShieldAlt,
       title: "Integrity",
       description:
-        "We operate with transparency and uphold the highest standards of professionalism.",
+        "We act with honesty and transparency in everything we do.",
       color: "from-green-500 to-emerald-500",
     },
   ];

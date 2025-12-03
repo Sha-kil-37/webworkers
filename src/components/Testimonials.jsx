@@ -1,98 +1,94 @@
 import Marquee from "react-fast-marquee";
 import Paragraph from "./Paragraph";
-import reviewOne from "../assets/reviewOne.png";
-import reviewTwo from "../assets/reviewTwo.png";
-import reviewThree from "../assets/reviewThree.png";
-import reviewFour from "../assets/reviewFour.png";
-import reviewFive from "../assets/reviewFive.png";
+import { RxAvatar } from "react-icons/rx";
+
 export default function Testimonials() {
   //
   const testimonialsData = [
     {
-      id: 1,
       name: "John Carter",
       role: "CEO, NovaTech Solutions",
       review:
-        "Working with this team was an outstanding experience. They delivered our website ahead of schedule with beautiful UI and perfect responsiveness. Highly recommended!",
-      image: reviewOne,
+        "Working with this agency completely transformed our online presence. The website they delivered is fast, modern, and highly engaging. Their attention to detail and commitment to quality truly set them apart.",
       rating: 5,
     },
     {
-      id: 2,
       name: "Emily Johnson",
       role: "Founder, Craftsy Studio",
       review:
-        "Very professional and easy to work with. They understood our requirements and delivered a fast, clean, modern web app for our small business.",
-      image: reviewTwo,
+        "The UI/UX design exceeded our expectations. Every interaction feels smooth and user-friendly. Our customers are already noticing the improvement, and our conversion rate has increased significantly.",
+
       rating: 4.5,
     },
     {
-      id: 3,
       name: "Michael Smith",
-      role: "Marketing Manager, BrightWave Agency",
+      role: "Marketing Manager",
       review:
-        "Amazing work! The animations, performance, and overall user experience exceeded our expectations. Perfect for growing our digital presence.",
-      image: reviewThree,
+        "The team handled our digital marketing campaigns with absolute professionalism. Within weeks, we saw a measurable boost in traffic, leads, and brand visibility. Their strategy was well-planned and results-driven.",
+
       rating: 5,
     },
     {
-      id: 4,
       name: "Sophia Martinez",
       role: "Owner, Bloom Boutique",
       review:
-        "I loved the smooth communication and quick revisions. The final website looks premium and loads very fast. Great job!",
-      image: reviewFour,
+        "Our mobile app was built exactly how we envisioned it—clean design, strong performance, and seamless functionality. The development process was transparent and efficient from start to finish.",
+
       rating: 4.8,
     },
     {
-      id: 5,
       name: "Daniel Green",
       role: "Product Lead, PixelDrive",
       review:
-        "Top-notch development! They built a stunning dashboard for us using MERN stack. Clean code and superb attention to detail.",
-      image: reviewFive,
+        "They helped us implement AI features into our platform, and the results were extraordinary. Automation and intelligent recommendations improved our efficiency and customer engagement drastically.",
+
       rating: 5,
     },
   ];
   //
   return (
-    <section className="py-20 ">
+    <section className="py-20 bg-[var(--white-color)]">
       <div className="max-w-6xl mx-auto">
-        <div className="">
-          <h2 className="text-4xl font-bold">What Our Clients Say ?</h2>
-          <Paragraph className="max-w-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            earum consectetur consequuntur illum voluptatem nobis quod
-            perspiciatis expedita quisquam corporis.
+        <div>
+          <h2 className="text-4xl font-bold text-[var(--black-color)]">
+            What Our Clients Say ?
+          </h2>
+          <Paragraph className="max-w-xl text-[var(--black-color)]">
+            Our clients trust us to transform their ideas into high-performing
+            digital experiences. From modern websites and intuitive user
+            interfaces to effective marketing strategies and advanced AI-powered
+            solutions, we consistently deliver results that align with our
+            clients’ goals. Explore what our partners say about working with us
+            and how our services have helped them grow, scale, and succeed in
+            the digital space
           </Paragraph>
         </div>
-        <Marquee pauseOnHover={true} direction="left">
-          <div className="flex justify-between items-center gap-x-4 mt-5">
+        <Marquee speed={25} delay={0} pauseOnHover={true} direction="left">
+          <div className="flex justify-between items-center gap-x-6 mt-5">
             {testimonialsData.map((item, i) => {
               return (
                 <div
                   key={i}
-                  className="rounded-xl p-8 bg-[#F5F7F8] cursor-pointer relative max-w-100"
+                  className="rounded-xl bg-[var(--primary-color)] cursor-pointer relative max-w-80 p-6"
                 >
-                  <div className="max-h-20 max-w-20 overflow-hidden rounded-full mx-auto">
-                    <img
-                      className="h-full w-full object-cover"
-                      src={item.image}
-                      alt={item.image}
-                    />
-                  </div>
-                  <Paragraph className="mt-5 font-semibold">
-                    {item.review}
-                  </Paragraph>
-                  <div className="flex justify-between ">
+                  <div className="flex justify-between">
+                    <div className="overflow-hidden rounded-full min-h-18 min-w-18">
+                      <RxAvatar className="h-full w-full text-[var(--black-color)]" />
+                    </div>
                     <div>
-                      <Paragraph className="mt-5 font-medium text-[#FF6363]">
+                      <Paragraph className="text-[var(--black-color)]">
                         {item.name}
                       </Paragraph>
                       <Paragraph className="">{item.role}</Paragraph>
+                      <Paragraph className="text-[var(--black-color)]">
+                         Ratting : <span>{item.rating}</span>
+                      </Paragraph>
                     </div>
-                    <Paragraph className="font-bold text-[#FF6363]">{item.rating}</Paragraph>
                   </div>
+
+                  <Paragraph className="text-[var(--black-color)] mt-3">
+                    {item.review}
+                  </Paragraph>
                 </div>
               );
             })}

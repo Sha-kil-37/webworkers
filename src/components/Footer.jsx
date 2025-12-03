@@ -17,27 +17,29 @@ export default function Footer() {
 
   //
   return (
-    <footer className="bg-[#F5F7F8] py-5">
+    <footer className="bg-[var(--primary-color)] py-10">
       <div className="max-w-6xl mx-auto flex flex-wrap justify-between">
         <div>
           <Link to="/" className="block h-10 w-10 overflow-hidden">
             <img className="h-full w-full inline-block" src={logo} alt={logo} />
           </Link>
-          <Paragraph className="font-bold mt-2">Web Workers</Paragraph>
-          <Paragraph className="mt-2 font-medium">
+          <Paragraph className="font-bold mt-2 text-[var(--black-color)]">
+            Web Workers
+          </Paragraph>
+          <Paragraph className="mt-2 font-medium text-[var(--black-color)]">
             Digital Web Service Agency
           </Paragraph>
         </div>
         <div>
-          <h3 className="font-bold">Quick Links</h3>
+          <h3 className="font-bold text-[var(--black-color)]">Quick Links</h3>
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-500 block font-semibold"
-                  : " hover:text-blue-500 transition-colors duration-300 block font-medium"
+                  ? "text-[var(--secondary-color)] block font-medium transition-colors duration-300"
+                  : "text-[var(--black-color)] hover:text-blue-500 transition-colors duration-300 block font-medium"
               }
             >
               {link.label}
@@ -45,12 +47,18 @@ export default function Footer() {
           ))}
         </div>
         <div>
-          <h3 className="font-bold">Legal Resources</h3>
+          <h3 className="font-bold text-[var(--black-color)]">
+            Legal Resources
+          </h3>
           <ul>
             {["Privacy Policy", "Term of Service", "cookie Policy"].map(
               (item, i) => {
                 return (
-                  <Link to={`/${item}`} key={i} className="block font-medium">
+                  <Link
+                    to={`/${item}`}
+                    key={i}
+                    className="block font-medium text-[var(--black-color)]"
+                  >
                     {item}
                   </Link>
                 );
@@ -59,7 +67,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="font-bold">Follow Us</h3>
+          <h3 className="font-bold mb-3 text-[var(--black-color)]">Follow Us</h3>
           <SocialLink />
         </div>
       </div>

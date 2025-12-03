@@ -1,26 +1,27 @@
 import { useState } from "react";
 import { MdKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
+import Paragraph from "./Paragraph";
 //
 const faqs = [
   {
     question: "What services does your agency offer?",
     answer:
-      "We provide full-stack web development, UI/UX design, backend development, SEO optimization, and custom web solutions.",
+      "We provide a full range of digital services, including website design and development, UI/UX design, app development, branding, SEO, digital marketing, custom software development, and ongoing website maintenance.",
   },
   {
     question: "How long does it take to build a website?",
     answer:
-      "Most projects take 1–4 weeks depending on the complexity, features, and revisions required.",
+      "The timeline depends on project size and features. A basic website typically takes 1–2 weeks, while larger or custom websites take 3–6 weeks. We provide a clear timeline after discussing your requirements.",
   },
   {
     question: "Do you provide website maintenance?",
     answer:
-      "Yes! We offer monthly support, security updates, performance optimization, and bug fixing.",
+      "Yes, we offer monthly and yearly maintenance plans that include updates, security checks, backups, performance optimization, and technical support to keep your site running smoothly.",
   },
   {
     question: "Do you work with international clients?",
     answer:
-      "Absolutely! We work with clients worldwide through Zoom, WhatsApp, and Google Meet.",
+      "Absolutely. We collaborate with clients worldwide using online communication tools, ensuring smooth project management, clear communication, and timely delivery.",
   },
 ];
 //
@@ -37,17 +38,18 @@ export default function FAQ() {
         Frequently Asked <span className="text-blue-600">Questions</span>
       </h2>
 
-      <div className="block md:block lg:flex xl:flex justify-between mt-5 gap-x-7">
-        <div className="max-w-xl">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ut
-            laborum quod quis tenetur, aut nisi possimus qui. Similique iusto
-            repellat ab accusamus assumenda officia, pariatur unde, dolorem ut,
-            dolore odit dignissimos quod nam voluptatum voluptatem accusantium
-            doloribus voluptatibus dolor!
-          </p>
+      <div className="block md:block lg:flex xl:flex justify-between mt-5 gap-x-8">
+        <div>
+          <Paragraph className="max-w-xl">
+            Frequently Asked Questions (FAQ) provide quick answers to common
+            queries customers may have about a service, product, or business.
+            They help clarify important information, reduce confusion, and
+            improve user experience by offering clear, concise explanations.
+            FAQs save time for both clients and businesses, ensuring smooth
+            communication and faster decision-making.
+          </Paragraph>
         </div>
-        <div className="">
+        <div className="max-w-xl">
           {faqs.map((faq, index) => (
             <div
               key={index}

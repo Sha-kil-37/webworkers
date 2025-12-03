@@ -19,9 +19,10 @@ export default function Contact() {
         <div className="">
           <h2 className="font-bold text-4xl">Contact Us</h2>
           <Paragraph className="max-w-xl">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
-            saepe cum culpa, earum quo dicta praesentium quam voluptates quae
-            eum quibusdam et a sequi eaque alias itaque animi, beatae vel.
+            We’d love to hear from you! Whether you have questions, need
+            support, or want to start a project, our team is ready to help.
+            Reach out to us via email, phone, or our online form, and we’ll
+            respond promptly to discuss how we can bring your ideas to life.
           </Paragraph>
           <div className="flex gap-x-4 mt-3 items-center">
             <HiOutlineMail />
@@ -36,7 +37,7 @@ export default function Contact() {
             <span>Gazipur, Dhaka, Bangladesh</span>
           </div>
         </div>
-        <form className="w-full">
+        <form className="w-xl">
           <div className="block">
             <label htmlFor="name">Name</label>
             <input
@@ -69,7 +70,7 @@ export default function Contact() {
           <Button
             type="submit"
             onClick={(e) => handleClick(e)}
-            className="cursor-pointer px-3 py-1 bg-blue-500 text-white rounded font-medium hover:bg-blue-400 transition-all duration-300 mt-5"
+             className="cursor-pointer px-4 py-2 bg-[var(--secondary-color)] text-[var(--white-color)] rounded-xl font-medium hover:bg-[var(--primary-color)] transition-colors duration-300 hover:text-[var(--secondary-color)] shadow-sm hover:shadow-md mt-10"
           >
             Contact Us
           </Button>

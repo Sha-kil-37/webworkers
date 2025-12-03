@@ -1,17 +1,18 @@
 import CountUp from "./CountUp";
-
+//
 const stats = [
   { value: "300+", label: "Happy Clients" },
   { value: "400+", label: "Projects Completed" },
   { value: "5+", label: "Years Experience" },
-  { value: "96.8%", label: "Uptime Guarantee" },
+  { value: "97.8%", label: "Uptime Guarantee" },
 ];
+//
 export default function Score() {
   //
   return (
-    <section>
+    <section className="py-10 bg-[var(--white-color)]">
       <div className="max-w-6xl mx-auto">
-        <div className="p-8 bg-[#F5F7F8] rounded-xl">
+        <div className="p-8 bg-[var(--primary-color)] rounded-xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  text-center">
             {stats.map((stat, i) => {
               const parseStat = (val) => {
@@ -37,12 +38,12 @@ export default function Score() {
               return (
                 <div key={i}>
                   <div className="text-4xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 inline-flex items-baseline justify-center gap-1">
-                    <CountUp to={to} className="leading-none" separator="," />
+                    <CountUp to={to} className="text-[var(--black-color)]" separator="," />
                     {suffix && (
-                      <span className="font-bold text-3xl">{suffix}</span>
+                      <span className="font-bold text-3xl text-[var(--black-color)]">{suffix}</span>
                     )}
                   </div>
-                  <p className="text-sm font-medium">{stat.label}</p>
+                  <p className="text-sm font-medium text-[var(--secondary-color)]">{stat.label}</p>
                 </div>
               );
             })}

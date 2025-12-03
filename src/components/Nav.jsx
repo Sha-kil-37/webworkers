@@ -18,10 +18,10 @@ export default function Nav() {
   ];
   //
   return (
-      <nav className="sticky top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm py-5">
+      <nav className="sticky top-0 left-0 z-50 bg-[var(--primary-color)] backdrop-blur-sm shadow-sm py-5">
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center">
-            {/* Logo */}
+            
             <Link to="/" className="block h-10 w-10 overflow-hidden">
               <img className="h-full w-full" src={logo} alt={logo} />
             </Link>
@@ -34,8 +34,8 @@ export default function Nav() {
                   to={link.path}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-blue-600 font-medium"
-                      : "text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium"
+                      ? "text-[var(--secondary-color)] font-medium"
+                      : "text-[var(--black-color)] transition-colors duration-300 font-medium"
                   }
                 >
                   {link.label}

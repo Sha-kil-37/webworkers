@@ -22,9 +22,9 @@ export default function TrustedBy() {
 
   //
   return (
-    <section className="py-10">
+    <section className="py-10 bg-[var(--white-color)]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl text-center font-bold">Trusted By</h2>
+        <h2 className="text-4xl text-[var(--black-color)] text-center font-bold">Trusted By</h2>
         <div className="max-w-5xl mx-auto flex justify-between flex-wrap mt-5">
           {[one, two, three, four, five].map((item, i) => {
             return (
