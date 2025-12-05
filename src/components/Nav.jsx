@@ -2,7 +2,6 @@ import  { useState } from "react";
 import { Link, NavLink } from "react-router";
 import { IoClose, IoMenu } from "react-icons/io5";
 import logo from "../assets/logo.png";
-import BlurInText from "./BlurInText";
 //
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +33,7 @@ export default function Nav() {
                   to={link.path}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[var(--secondary-color)] font-medium"
+                      ? "text-[var(--secondary-color)] font-medium px-3 py-1 rounded-md bg-[var(--white-color)]"
                       : "text-[var(--black-color)] transition-colors duration-300 font-medium"
                   }
                 >
