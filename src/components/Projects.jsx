@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import BlurInText from "./BlurInText";
 import Paragraph from "./Paragraph";
+import audit from "../assets/audit.png";
+import branding from "../assets/branding.png";
+import landing from "../assets/landing.png";
+import chatting from "../assets/chatting.png";
+import ecommers from "../assets/ecommers.png";
+import redesign from "../assets/redesign.png";
+//
 //
 //
 export default function Projects() {
@@ -22,6 +28,7 @@ export default function Projects() {
       summary:
         "A fast, accessible marketing site built with a focus on performance and conversions.",
       tech: ["React", "Tailwind", "Vite"],
+      image: redesign,
     },
     {
       id: 2,
@@ -30,6 +37,7 @@ export default function Projects() {
       summary:
         "Streamlined checkout with improved UX and fewer abandoned carts.",
       tech: ["React", "Stripe", "Node"],
+      image: ecommers,
     },
     {
       id: 3,
@@ -37,6 +45,7 @@ export default function Projects() {
       category: "UI/UX Design",
       summary: "Design system and UI kit for consistent product experiences.",
       tech: ["Figma", "Design Tokens"],
+      image: branding,
     },
     {
       id: 4,
@@ -45,13 +54,15 @@ export default function Projects() {
       summary:
         "A/B testing framework to validate messaging and increase signups.",
       tech: ["Optimizely", "Analytics"],
+      image: landing,
     },
     {
       id: 5,
       title: "SaaS Dashboard",
       category: "Web Development",
       summary: "Responsive admin dashboard with charts and real-time updates.",
-      tech: ["React", "Chart.js", "WebSocket"],
+      tech: ["React", "Firebase", "WebSocket"],
+      image: chatting,
     },
     {
       id: 6,
@@ -59,6 +70,7 @@ export default function Projects() {
       category: "Marketing",
       summary: "Research-led recommendations for improving conversion funnels.",
       tech: ["Research", "Recommendations"],
+      image: audit,
     },
   ];
   //
@@ -69,10 +81,12 @@ export default function Projects() {
       : sampleProjects.filter((p) => p.category === active);
   //
   return (
-    <section className="py-20">
+    <section className="py-20 bg-[var(--white-color)]">
       <div className="max-w-6xl mx-auto relative">
-        <h2 className="font-bold text-4xl">Our Projects</h2>
-        <Paragraph className="">
+        <h2 className="font-bold text-4xl text-[var(--black-color)]">
+          Our Projects
+        </h2>
+        <Paragraph className="text-[var(--black-color)]">
           Explore the work that defines who we are. Each project represents our
           commitment to quality, innovation, and digital excellence. From modern
           websites and intuitive user interfaces to custom software solutions
@@ -98,8 +112,10 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-colors duration-150 ${
-                active === cat ? "bg-black text-white" : "bg-[#F5F7F8]"
+              className={`whitespace-nowrap px-4 py-2 rounded-full  cursor-pointer transition-colors duration-300 font-medium border border-[var(--black-color)] ${
+                active === cat
+                  ? "bg-[var(--secondary-color)] text-[var(--white-color)] border-[var(--secondary-color)]"
+                  : "bg-[var(--primary-color)]"
               }`}
               aria-pressed={active === cat}
             >
@@ -108,23 +124,14 @@ export default function Projects() {
           ))}
         </div>
         {/*  */}
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-5">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 mt-10">
           {filtered.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}
               key={i}
-              className="p-6 bg-[#F5F7F8] cursor-pointer"
+              className="cursor-pointer rounded-xl overflow-hidden"
             >
-              <p>{project.summary}</p>
-              <div className="mt-5 flex gap-x-2 flex-wrap">
-                {project.tech.map((item, i) => {
-                  return (
-                    <span key={i} className="block bg-blue-400">
-                      {item}
-                    </span>
-                  );
-                })}
-              </div>
+              <img src={project.image} alt={project.title} />
             </Link>
           ))}
         </div>

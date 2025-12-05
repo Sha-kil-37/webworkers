@@ -10,9 +10,6 @@ const MainLayout = lazy(() => import("../layout/MainLayout"));
 //
 export default function ServicesPage() {
   //
-
-  //
-
   return (
     <Suspense fallback={<Loading />}>
       <MainLayout>

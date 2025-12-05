@@ -3,7 +3,6 @@ import Paragraph from "./Paragraph";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoCallOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
-
 //
 export default function Contact() {
   //
@@ -17,52 +16,52 @@ export default function Contact() {
     <section className="py-10">
       <div className="max-w-6xl mx-auto block md:block lg:flex xl:flex gap-x-8 justify-between sm:block">
         <div className="">
-          <h2 className="font-bold text-4xl">Contact Us</h2>
-          <Paragraph className="max-w-xl">
+          <h2 className="font-bold text-4xl text-[var(--black-color)]">Contact Us</h2>
+          <Paragraph className="max-w-xl text-[var(--black-color)]">
             We’d love to hear from you! Whether you have questions, need
             support, or want to start a project, our team is ready to help.
             Reach out to us via email, phone, or our online form, and we’ll
             respond promptly to discuss how we can bring your ideas to life.
           </Paragraph>
           <div className="flex gap-x-4 mt-3 items-center">
-            <HiOutlineMail />
-            <span>sakildevmern@gmail.com</span>
+            <HiOutlineMail className="text-[var(--black-color)]" />
+            <span className="text-[var(--black-color)]">sakildevmern@gmail.com</span>
           </div>
           <div className="flex gap-x-4 mt-3">
-            <IoCallOutline />
-            <span>+8801581049601</span>
+            <IoCallOutline className="text-[var(--black-color)]" />
+            <span className="text-[var(--black-color)]" >+8801581049601</span>
           </div>
           <div className="flex gap-x-4 mt-3">
-            <CiLocationOn />
-            <span>Gazipur, Dhaka, Bangladesh</span>
+            <CiLocationOn className="text-[var(--black-color)]" />
+            <span className="text-[var(--black-color)]" >Gazipur, Dhaka, Bangladesh</span>
           </div>
         </div>
         <form className="w-xl">
           <div className="block">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name" className="text-[var(--black-color)]">Name</label>
             <input
               required
-              className="block w-full outline-none border rounded mt-3"
+              className="block w-full outline-none border rounded mt-3 text-[var(--black-color)]"
               type="text"
               name="name"
               id="name"
             />
           </div>
           <div>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className="text-[var(--black-color)]">Email</label>
             <input
               required
-              className="block w-full outline-none border rounded mt-3"
+              className="block w-full outline-none border rounded mt-3 text-[var(--black-color)]"
               type="email"
               name="email"
               id="email"
             />
           </div>
           <div>
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message" className="text-[var(--black-color)]">Message</label>
             <textarea
               required
-              className="block w-full outline-none border rounded mt-3"
+              className="block w-full outline-none border rounded mt-3 text-[var(--black-color)]"
               name="message"
               id="message"
             ></textarea>

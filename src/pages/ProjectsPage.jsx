@@ -1,7 +1,6 @@
 import Projects from "../components/Projects";
 import Loading from "../components/Loading";
 import SmoothScroll from "../lib/utils/SmoothScroll";
-import BlurInText from "../components/BlurInText";
 import { Fragment, lazy, Suspense } from "react";
 import Contact from "../components/Contact";
 // 
@@ -14,7 +13,6 @@ export default function ProjectsPage() {
       <MainLayout>
         <SmoothScroll>
           <Fragment>
-           
             <Projects />
             <Contact />
           </Fragment>

@@ -15,31 +15,30 @@ export default function OurValue() {
     {
       icon: FaUsers,
       title: "Collaboration",
-      description:
-        "We value teamwork and open communication.",
+      description: "We value teamwork and open communication.",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: FaRocket,
       title: "Excellence",
-      description:
-        "We deliver high-quality work that exceeds expectations",
+      description: "We deliver high-quality work that exceeds expectations",
       color: "from-purple-500 to-pink-500",
     },
     {
       icon: FaShieldAlt,
       title: "Integrity",
-      description:
-        "We act with honesty and transparency in everything we do.",
+      description: "We act with honesty and transparency in everything we do.",
       color: "from-green-500 to-emerald-500",
     },
   ];
   //
   return (
-    <section className="py-10">
+    <section className="py-10 bg-[var(--white-color)]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold">Our Core Values</h2>
-        <Paragraph className='max-w-xl'>
+        <h2 className="text-4xl font-bold text-[var(--black-color)]">
+          Our Core Values
+        </h2>
+        <Paragraph className="max-w-xl text-[var(--black-color)]">
           Principles that guide our actions and decisions every day. Principles
           that guide our actions and decisions every day. Principles that guide
           our actions and decisions every day.
@@ -51,20 +50,22 @@ export default function OurValue() {
             return (
               <div
                 key={i}
-                className="group h-full rounded-xl bg-white border border-gray-200 p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                className="group h-full rounded-xl bg-[var(--primary-color)] p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-2"
               >
                 <div
                   className={`bg-gradient-to-br ${value.color} w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  <Icon className="text-white" size={32} />
+                  <Icon className="text-[var(--white-color)]" size={32} />
                 </div>
 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
+                <h3 className="text-xl font-semibold text-[var(--black-color)] mb-3">
                   {value.title}
                 </h3>
 
-                <div className="w-12 h-1 bg-gradient-to-r from-gray-300 to-transparent mb-3 group-hover:from-blue-500 transition-colors duration-300"></div>
-                <Paragraph>{value.description}</Paragraph>
+                <div className="w-12 h-1 bg-gradient-to-r from-[var(--primary-color)] to-transparent mb-1 group-hover:from-[var(--secondary-color)] transition-colors duration-300"></div>
+                <Paragraph className="text-[var(--black-color)]">
+                  {value.description}
+                </Paragraph>
               </div>
             );
           })}

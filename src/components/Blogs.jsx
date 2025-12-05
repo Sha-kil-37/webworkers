@@ -1,12 +1,10 @@
-import { FaArrowRight, FaClock } from "react-icons/fa";
 import BlogSlider from "./BlogSlider";
 import { useState } from "react";
 import Button from "./Button";
 import Paragraph from "./Paragraph";
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 //
 export default function Blogs() {
-  const navigate = useNavigate();
   // How many blogs to show at first
   const [visibleCount, setVisibleCount] = useState(3);
   // Sample blog data
@@ -97,10 +95,7 @@ export default function Blogs() {
   const handleLoadMoreBlogs = () => {
     setVisibleCount((prev) => prev + 3); // Load 3 more each click
   };
-  // handle read blog
-  function handleReadBlog(i) {
-    navigate(`/blogDetails/${i}`);
-  }
+
   //
   return (
     <section className="py-20 relative">
@@ -133,23 +128,31 @@ export default function Blogs() {
           discover fresh ideas, expert opinions, and strategies that help you
           make smarter decisions and build a stronger digital presence.
         </Paragraph>
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {visibleBlogs.map((blog, i) => (
             <div
               key={i}
-              className="group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer p-6 hover:bg-[#F5F7F8]"
+              className="group overflow-hidden transition-all duration-300 group cursor-pointer"
             >
-              <h2 className="font-bold">{blog.title}</h2>
-              <Paragraph className="mt-2">{blog.excerpt}</Paragraph>
-              <Paragraph className="mt-2">
-                Write by : <span className="text-[#FF6363]">{blog.author}</span>
-              </Paragraph>
-              <Button
-                onClick={() => handleReadBlog(i)}
-                className="cursor-pointer px-3 py-1 bg rounded font-medium transition-all duration-300 bg-[#F5F7F8] mt-5"
-              >
-                Read Blog
-              </Button>
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="w-full max-h-100 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="p-6 bg-[var(--primary-color)]  duration-300">
+                <h2 className="text-[var(--black-color)]  font-semibold">
+                  {blog.title}
+                </h2>
+                <Paragraph className="text-[var(--black-color)]">
+                  {blog.date}
+                </Paragraph>
+                <Link
+                  to={`/blogdetails/${blog.id}`}
+                  className="mt-5 inline-block text-[var(--black-color)]"
+                >
+                  VIEW THESE RESOURCES
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -157,7 +160,7 @@ export default function Blogs() {
         <div className="flex justify-center mt-10">
           <Button
             onClick={handleLoadMoreBlogs}
-             className="cursor-pointer px-4 py-2 bg-[var(--secondary-color)] text-[var(--white-color)] rounded-xl font-medium hover:bg-[var(--primary-color)] transition-colors duration-300 hover:text-[var(--secondary-color)] shadow-sm hover:shadow-md mt-5"
+            className="cursor-pointer px-4 py-2 bg-[var(--secondary-color)] text-[var(--white-color)] rounded-xl font-medium hover:bg-[var(--primary-color)] transition-colors duration-300 hover:text-[var(--secondary-color)] shadow-sm hover:shadow-md mt-5"
           >
             More Blogs
           </Button>

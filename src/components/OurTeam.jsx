@@ -38,10 +38,12 @@ export default function OurTeam() {
   ];
   //
   return (
-    <section className="py-10">
+    <section className="py-10 bg-[var(--white-color)]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold">Meet Our Team</h2>
-        <Paragraph className="max-w-xl">
+        <h2 className="text-4xl font-bold text-[var(--black-color)]">
+          Meet Our Team
+        </h2>
+        <Paragraph className="max-w-xl text-[var(--black-color)]">
           We are a passionate and skilled team dedicated to creating innovative
           digital solutions. Rakibul Islam leads with strong digital expertise
           and strategic thinking, while Shakil Ahmed brings technical excellence
@@ -51,7 +53,7 @@ export default function OurTeam() {
         </Paragraph>
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 mt-10">
           {team.map((member, i) => (
-            <div key={i} className="">
+            <div key={i}>
               {/* Avatar */}
               <div className="overflow-hidden max-w-70 max-h-50 bg-[#F5F7F8]">
                 <img
@@ -63,9 +65,11 @@ export default function OurTeam() {
 
               {/* Content */}
               <div className="mt-4">
-                <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                <h3 className="font-bold">{member.role}</h3>
-                <p className="mb-3">{member.description}</p>
+                <h3 className="text-xl text-[var(--black-color)] font-semibold mb-1">
+                  {member.name}
+                </h3>
+                <h3 className="text-[var(--black-color)] font-medium">{member.role}</h3>
+                <p className="mb-3 text-[var(--black-color)]">{member.description}</p>
               </div>
             </div>
           ))}

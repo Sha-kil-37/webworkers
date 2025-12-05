@@ -1,4 +1,3 @@
-import BlurInText from "./BlurInText";
 import Paragraph from "./Paragraph";
 // About Page for WebWorkers
 export default function About() {
@@ -6,8 +5,10 @@ export default function About() {
   return (
     <section className="py-20">
       <div className="relative max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold">About Web Workers</h2>
-        <Paragraph>
+        <h1 className="text-4xl font-bold text-[var(--black-color)]">
+          About Web Workers
+        </h1>
+        <Paragraph className="text-[--black-color]">
           We are a modern digital web agency dedicated to building powerful,
           innovative, and human-centered digital solutions that help businesses
           grow and stand out in a competitive world. Our mission is to combine
