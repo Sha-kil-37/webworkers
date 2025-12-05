@@ -3,6 +3,14 @@ import { useState } from "react";
 import Button from "./Button";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
+import blogone from "../assets/blogone.jpg";
+import blogtwo from "../assets/blogtwo.jpg";
+import blogthree from "../assets/blogthree.jpg";
+import blogfour from "../assets/blogfour.jpg";
+import blogfive from "../assets/blogfive.jpg";
+import blogsix from "../assets/blogsix.jpg";
+import blogseven from "../assets/blogseven.jpg";
+//
 //
 export default function Blogs() {
   // How many blogs to show at first
@@ -17,8 +25,7 @@ export default function Blogs() {
       category: "Technology",
       author: "Sarah Johnson",
       date: "Dec 15, 2024",
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
+      image: blogfour,
     },
     {
       id: 2,
@@ -28,9 +35,7 @@ export default function Blogs() {
       category: "Design",
       author: "Mike Chen",
       date: "Dec 10, 2024",
-      image:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop",
-      featured: false,
+      image: blogone,
     },
     {
       id: 3,
@@ -40,8 +45,7 @@ export default function Blogs() {
       category: "Technology",
       author: "Alex Rivera",
       date: "Dec 8, 2024",
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
+      image: blogtwo,
     },
     {
       id: 4,
@@ -51,8 +55,7 @@ export default function Blogs() {
       category: "Marketing",
       author: "Emily Watson",
       date: "Dec 5, 2024",
-      image:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop",
+      image: blogthree,
     },
     {
       id: 5,
@@ -62,8 +65,7 @@ export default function Blogs() {
       category: "Technology",
       author: "James Park",
       date: "Dec 1, 2024",
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
+      image: blogfive,
     },
     {
       id: 6,
@@ -73,8 +75,7 @@ export default function Blogs() {
       category: "Marketing",
       author: "Lisa Anderson",
       date: "Nov 28, 2024",
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
+      image: blogsix,
     },
     {
       id: 7,
@@ -84,8 +85,7 @@ export default function Blogs() {
       category: "Marketing",
       author: "Lisa Anderson",
       date: "Nov 28, 2024",
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
+      image: blogseven,
     },
   ];
   //
@@ -132,13 +132,15 @@ export default function Blogs() {
           {visibleBlogs.map((blog, i) => (
             <div
               key={i}
-              className="group overflow-hidden transition-all duration-300 group cursor-pointer"
+              className="group transition-all duration-300 group cursor-pointer"
             >
-              <img
-                src={blog.image}
-                alt={blog.title}
-                className="w-full max-h-100 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+              <div className="overflow-hidden w-full h-100">
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="p-6 bg-[var(--primary-color)]  duration-300">
                 <h2 className="text-[var(--black-color)]  font-semibold">
                   {blog.title}
@@ -150,7 +152,7 @@ export default function Blogs() {
                   to={`/blogdetails/${blog.id}`}
                   className="mt-5 inline-block text-[var(--black-color)]"
                 >
-                  VIEW THESE RESOURCES
+                  click for view
                 </Link>
               </div>
             </div>

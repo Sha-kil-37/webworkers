@@ -129,9 +129,9 @@ export default function Projects() {
             <Link
               to={`/projectdetails/${i}`}
               key={i}
-              className="cursor-pointer rounded-xl overflow-hidden"
+              className="cursor-pointer overflow-hidden group"
             >
-              <img src={project.image} alt={project.title} />
+              <img className="group-hover:scale-105 transition-transform duration-300" src={project.image} alt={project.title} />
             </Link>
           ))}
         </div>

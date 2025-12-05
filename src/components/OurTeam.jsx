@@ -3,7 +3,6 @@ import shakil from "../assets/shakil.png";
 import rakibul from "../assets/rakibul.png";
 import one from "../assets/one.png";
 import two from "../assets/two.png";
-import { Link } from "react-router";
 export default function OurTeam() {
   //
   const team = [
@@ -22,10 +21,10 @@ export default function OurTeam() {
       image: rakibul,
     },
     {
-      name: "Mickel Jonson",
+      name: "Inni Akter",
       role: "UI/UX Designer",
       description:
-        "Mickel Jonson is a creative UI/UX Designer who focuses on building clean, modern, and user-friendly interfaces. He designs intuitive user experiences that improve engagement and make digital products easy to use. With strong attention to detail and a passion for design, he brings ideas to life through thoughtful and effective visuals.",
+        "Inni Akter is a creative UI/UX Designer who focuses on building clean, modern, and user-friendly interfaces. He designs intuitive user experiences that improve engagement and make digital products easy to use. With strong attention to detail and a passion for design, he brings ideas to life through thoughtful and effective visuals.",
       image: one,
     },
     {
@@ -55,7 +54,7 @@ export default function OurTeam() {
           {team.map((member, i) => (
             <div key={i}>
               {/* Avatar */}
-              <div className="overflow-hidden max-w-70 max-h-50 bg-[#F5F7F8]">
+              <div className="overflow-hidden max-h-100 w-full bg-[#F5F7F8]">
                 <img
                   className="h-full w-full object-center"
                   src={member.image}
@@ -68,8 +67,12 @@ export default function OurTeam() {
                 <h3 className="text-xl text-[var(--black-color)] font-semibold mb-1">
                   {member.name}
                 </h3>
-                <h3 className="text-[var(--black-color)] font-medium">{member.role}</h3>
-                <p className="mb-3 text-[var(--black-color)]">{member.description}</p>
+                <h3 className="text-[var(--black-color)] font-medium">
+                  {member.role}
+                </h3>
+                <p className="mb-3 text-[var(--black-color)]">
+                  {member.description}
+                </p>
               </div>
             </div>
           ))}
