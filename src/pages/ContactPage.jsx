@@ -5,7 +5,7 @@ import Loading from "../components/Loading";
 import SmoothScroll from "../lib/utils/SmoothScroll";
 import TrustedBy from "../components/TrustedBy";
 import FAQ from "../components/FAQ";
-
+//
 //
 export default function ContactPage() {
   //

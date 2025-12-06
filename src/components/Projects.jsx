@@ -115,7 +115,7 @@ export default function Projects() {
               className={`whitespace-nowrap px-4 py-2 rounded-full  cursor-pointer transition-colors duration-300 font-medium border border-[var(--black-color)] ${
                 active === cat
                   ? "bg-[var(--secondary-color)] text-[var(--white-color)] border-[var(--secondary-color)]"
-                  : "bg-[var(--primary-color)]"
+                  : "bg-[var(--white-color)]"
               }`}
               aria-pressed={active === cat}
             >
@@ -131,7 +131,11 @@ export default function Projects() {
               key={i}
               className="cursor-pointer overflow-hidden group"
             >
-              <img className="group-hover:scale-105 transition-transform duration-300" src={project.image} alt={project.title} />
+              <img
+                className="group-hover:scale-105 transition-transform duration-300"
+                src={project.image}
+                alt={project.title}
+              />
             </Link>
           ))}
         </div>

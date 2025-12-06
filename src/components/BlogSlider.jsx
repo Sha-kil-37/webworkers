@@ -12,7 +12,7 @@ export default function BlogSlider({ blogs }) {
   const onAutoplayTimeLeft = (s, time, progress) => {
     // Prevent null error
     if (!progressCircle.current || !progressContent.current) return;
-
+    //
     progressCircle.current.style.setProperty("--progress", 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
@@ -41,7 +41,7 @@ export default function BlogSlider({ blogs }) {
             onMouseEnter={() => swiperRef?.autoplay?.stop()}
             onMouseLeave={() => swiperRef?.autoplay?.start()}
             key={i}
-            className="cursor-pointer group"
+            className="group"
           >
             <div className="relative h-50 w-full overflow-hidden">
               {/* IMAGE */}
@@ -50,15 +50,21 @@ export default function BlogSlider({ blogs }) {
                 src={blog.image}
                 alt={blog.image}
               />
-
               {/* OVERLAY + TEXT + BUTTON */}
               <div className=" absolute inset-0 bg-[var(--primary-color)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* Content that slides up */}
               <div className="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <div className="px-4 pb-4">
-                  <h3 className="text-lg font-semibold">{blog.title}</h3>
-                  <Link to={`/blogdetails/${blog.id}`}>click for view</Link>
+                  <h3 className="text-lg font-semibold text-[var(--black-color)]">
+                    {blog.title}
+                  </h3>
+                  <Link
+                    to={`/blogdetails/${blog.id}`}
+                    className="text-[var(--secondary-color)] px-3 py-1 bg-[var(--white-color)] rounded-xl inline-block mt-3"
+                  >
+                    click for view
+                  </Link>
                 </div>
               </div>
             </div>

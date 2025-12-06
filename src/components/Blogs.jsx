@@ -150,7 +150,7 @@ export default function Blogs() {
                 </Paragraph>
                 <Link
                   to={`/blogdetails/${blog.id}`}
-                  className="mt-5 inline-block text-[var(--black-color)]"
+                  className="text-[var(--secondary-color)] px-3 py-1 bg-[var(--white-color)] rounded-xl inline-block mt-3"
                 >
                   click for view
                 </Link>
