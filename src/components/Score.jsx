@@ -10,9 +10,9 @@ const stats = [
 export default function Score() {
   //
   return (
-    <section className="py-10 bg-[var(--white-color)]">
+    <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <div className="p-8 bg-[var(--primary-color)] rounded-xl">
+        <div className="p-8 rounded-xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  text-center">
             {stats.map((stat, i) => {
               const parseStat = (val) => {

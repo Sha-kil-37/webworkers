@@ -47,10 +47,10 @@ export default function ChooseUs() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h2 className="text-4xl font-bold text-[var(--black-color)]">
+            <h2 className="text-4xl font-bold">
               Why people love us
             </h2>
-            <Paragraph className="max-w-xl text-[var(--black-color)]">
+            <Paragraph className="max-w-xl">
               People love us because we deliver high-quality work with honesty,
               creativity, and care. We listen to our clients, understand their
               goals, and provide smart digital solutions that truly make a
@@ -63,7 +63,7 @@ export default function ChooseUs() {
             </video>
             <Button
               onClick={handleClick}
-              className="cursor-pointer px-4 py-2 bg-[var(--secondary-color)] text-[var(--white-color)] rounded-xl font-medium hover:bg-[var(--primary-color)] transition-colors duration-300 hover:text-[var(--secondary-color)] shadow-sm hover:shadow-md mt-10"
+              className="cursor-pointer px-4 py-2 rounded-xl font-medium  transition-colors duration-300 shadow-sm hover:shadow-md mt-10"
             >
               Our Works
             </Button>
@@ -76,13 +76,13 @@ export default function ChooseUs() {
                 //
                 <div key={i} className="p-4 rounded-xl">
                   <div>
-                    <Icon className="w-10 h-10 text-[var(--black-color)]" />
+                    <Icon className="w-10 h-10" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-[var(--black-color)]">
+                    <h3 className="text-lg font-semibold">
                       {f.title}
                     </h3>
-                    <p className="text-sm text-[var(--black-color)] mt-1">{f.desc}</p>
+                    <p className="text-sm mt-1">{f.desc}</p>
                   </div>
                 </div>
                 //

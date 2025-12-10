@@ -39,9 +39,9 @@ export default function SocialLink() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.label}
-              className="inline-flex items-center justify-center h-10 w-10 rounded-xl bg-[var(--white-color)] transition-all duration-300 hover:scale-110 hover:shadow-md shadow-sm"
+              className="inline-flex items-center justify-center h-10 w-10 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-md shadow-sm"
             >
-              <Icon title={social.label} className="h-5 w-5 text-[var(--black-color)]" />
+              <Icon title={social.label} className="h-5 w-5" />
             </Link>
           );
         })}

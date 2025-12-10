@@ -1,4 +1,3 @@
-import React from "react";
 import Paragraph from "./Paragraph";
 import { FaLightbulb, FaUsers, FaRocket, FaShieldAlt } from "react-icons/fa";
 //
@@ -33,12 +32,12 @@ export default function OurValue() {
   ];
   //
   return (
-    <section className="py-10 bg-[var(--white-color)]">
+    <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-[var(--black-color)]">
+        <h2 className="text-4xl font-bold">
           Our Core Values
         </h2>
-        <Paragraph className="max-w-xl text-[var(--black-color)]">
+        <Paragraph className="max-w-xl">
           Principles that guide our actions and decisions every day. Principles
           that guide our actions and decisions every day. Principles that guide
           our actions and decisions every day.
@@ -50,7 +49,7 @@ export default function OurValue() {
             return (
               <div
                 key={i}
-                className="group h-full rounded-xl bg-[var(--primary-color)] p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-2"
+                className="group h-full rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-2"
               >
                 <div
                   className={`bg-gradient-to-br ${value.color} w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
@@ -58,12 +57,12 @@ export default function OurValue() {
                   <Icon className="text-[var(--white-color)]" size={32} />
                 </div>
 
-                <h3 className="text-xl font-semibold text-[var(--black-color)] mb-3">
+                <h3 className="text-xl font-semibold mb-3">
                   {value.title}
                 </h3>
 
-                <div className="w-12 h-1 bg-gradient-to-r from-[var(--primary-color)] to-transparent mb-1 group-hover:from-[var(--secondary-color)] transition-colors duration-300"></div>
-                <Paragraph className="text-[var(--black-color)]">
+                <div className="w-12 h-1 bg-gradient-to-r from-red-200 to-transparent mb-1 group-hover:from-blue-300 transition-colors duration-300"></div>
+                <Paragraph className="">
                   {value.description}
                 </Paragraph>
               </div>

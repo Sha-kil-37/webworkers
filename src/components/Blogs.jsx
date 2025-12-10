@@ -141,16 +141,16 @@ export default function Blogs() {
                   className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6 bg-[var(--primary-color)]  duration-300">
-                <h2 className="text-[var(--black-color)]  font-semibold">
+              <div className="p-6 duration-300">
+                <h2 className="font-semibold">
                   {blog.title}
                 </h2>
-                <Paragraph className="text-[var(--black-color)]">
+                <Paragraph className="">
                   {blog.date}
                 </Paragraph>
                 <Link
                   to={`/blogdetails/${blog.id}`}
-                  className="text-[var(--secondary-color)] px-3 py-1 bg-[var(--white-color)] rounded-xl inline-block mt-3"
+                  className="px-3 py-1 rounded-xl inline-block mt-3"
                 >
                   click for view
                 </Link>
@@ -162,7 +162,7 @@ export default function Blogs() {
         <div className="flex justify-center mt-10">
           <Button
             onClick={handleLoadMoreBlogs}
-            className="cursor-pointer px-4 py-2 bg-[var(--secondary-color)] text-[var(--white-color)] rounded-xl font-medium hover:bg-[var(--primary-color)] transition-colors duration-300 hover:text-[var(--secondary-color)] shadow-sm hover:shadow-md mt-5"
+            className="cursor-pointer px-4 py-2 rounded-xl font-medium  transition-colors duration-300 shadow-sm hover:shadow-md mt-5"
           >
             More Blogs
           </Button>

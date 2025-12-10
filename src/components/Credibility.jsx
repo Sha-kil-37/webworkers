@@ -35,14 +35,14 @@ export default function Credibility() {
   //
 
   return (
-    <section className="bg-[var(--white-color)] py-10">
+    <section className="py-10">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-16">
-          <h2 className="text-[var(--black-color)] text-4xl font-bold">
+          <h2 className="text-4xl font-bold">
             Why Trust Us
           </h2>
-          <Paragraph className="max-w-xl text-[var(--black-color)]">
+          <Paragraph className="max-w-xl">
             We deliver reliable, high-quality digital solutions through expert
             Web Development, Social Media Marketing, UI/UX Design, App
             Development, Digital Marketing, SEO, Business Consultation, and
@@ -59,20 +59,20 @@ export default function Credibility() {
             return (
               <div
                 key={i}
-                className="group hover:bg-[var(--primary-color)] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                className="group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Icon Container */}
                 <div
                   className={`bg-gradient-to-br ${cred.color} w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  <Icon className="text-[var(--white-color)]" size={28} />
+                  <Icon className="" size={28} />
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-[var(--black-color)] mb-2">
+                  <h3 className="text-lg font-semibold  mb-2">
                     {cred.title}
                   </h3>
-                  <Paragraph className="text-sm text-[var(--black-color)] leading-relaxed">
+                  <Paragraph className="text-sm leading-relaxed">
                     {cred.description}
                   </Paragraph>
                 </div>

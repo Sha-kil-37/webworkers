@@ -12,21 +12,21 @@ export default function Banner() {
   }
   //
   return (
-    <section className="relative py-8 overflow-hidden bg-[var(--white-color)]">
+    <section className="relative py-8 overflow-hidden">
       <div className="max-w-6xl mx-auto flex justify-between items-center gap-x-5">
         <div className="max-w-2xl">
           {/* Main heading */}
           <BlurInText className="font-bold text-6xl">
-            <h1 className="text-[var(--black-color)]">
+            <h1 className="">
               We Build Creative Digital
               Solutions
             </h1>
           </BlurInText>
           <BlurInText className="mt-7">
-            <Paragraph className="max-w-xl text-[var(--black-color)]">
+            <Paragraph className="max-w-xl">
               In today’s fast-moving digital world, Every business needs a
               strong online presence to thrive in the digital world. With
-              <strong className="text-[var(--red-color)]">
+              <strong className="">
                 “We Build Creative Digital Solutions,”
               </strong>
               we deliver innovative, user-friendly Web Development, Digital
@@ -37,7 +37,7 @@ export default function Banner() {
           <BlurInText className="mt-10">
             <Button
               onClick={handleClick}
-              className="cursor-pointer px-4 py-2 bg-[var(--secondary-color)] text-[var(--white-color)] rounded-xl font-medium hover:bg-[var(--primary-color)] transition-colors duration-300 hover:text-[var(--secondary-color)] shadow-sm hover:shadow-md"
+              className="cursor-pointer px-4 py-2 rounded-xl font-medium transition-colors duration-300 shadow-sm hover:shadow-md"
             >
               About Me
             </Button>

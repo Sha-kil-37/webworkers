@@ -51,12 +51,12 @@ export default function BlogSlider({ blogs }) {
                 alt={blog.image}
               />
               {/* OVERLAY + TEXT + BUTTON */}
-              <div className=" absolute inset-0 bg-[var(--primary-color)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-[var(--primary-color)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* Content that slides up */}
               <div className="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <div className="px-4 pb-4">
-                  <h3 className="text-lg font-semibold text-[var(--black-color)]">
+                  <h3 className="text-lg font-semibold">
                     {blog.title}
                   </h3>
                   <Link

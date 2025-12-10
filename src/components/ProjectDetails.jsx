@@ -1,13 +1,14 @@
 import { useParams } from "react-router";
+import Paragraph from "./Paragraph";
 
 export default function ProjectDetails() {
   const params = useParams();
   console.log(params);
   return (
-     <section className="py-20 bg-[var(--primary-color)]">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-bold text-center">{params.id}</h2>
-        <p>
+        <Paragraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in
           quibusdam et explicabo placeat voluptates atque. Architecto aliquid
           excepturi deleniti itaque ut officia molestiae ab atque. Totam at
@@ -67,7 +68,7 @@ export default function ProjectDetails() {
           nihil quod quam. Recusandae beatae nesciunt assumenda ex laborum
           minima dolor molestias quasi, perspiciatis eum magni deleniti quas
           exercitationem fugiat labore, aliquam in. Recusandae, veniam sequi.
-        </p>
+        </Paragraph>
       </div>
     </section>
   );

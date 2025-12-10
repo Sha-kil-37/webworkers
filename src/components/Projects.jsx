@@ -81,12 +81,12 @@ export default function Projects() {
       : sampleProjects.filter((p) => p.category === active);
   //
   return (
-    <section className="py-20 bg-[var(--white-color)]">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto relative">
-        <h2 className="font-bold text-4xl text-[var(--black-color)]">
+        <h2 className="font-bold text-4xl">
           Our Projects
         </h2>
-        <Paragraph className="text-[var(--black-color)]">
+        <Paragraph className="">
           Explore the work that defines who we are. Each project represents our
           commitment to quality, innovation, and digital excellence. From modern
           websites and intuitive user interfaces to custom software solutions
@@ -112,10 +112,10 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`whitespace-nowrap px-4 py-2 rounded-full  cursor-pointer transition-colors duration-300 font-medium border border-[var(--black-color)] ${
+              className={`whitespace-nowrap px-4 py-2 rounded-full  cursor-pointer transition-colors duration-300 font-medium border ${
                 active === cat
-                  ? "bg-[var(--secondary-color)] text-[var(--white-color)] border-[var(--secondary-color)]"
-                  : "bg-[var(--white-color)]"
+                  ? "text-[var(--white-color)] "
+                  : ""
               }`}
               aria-pressed={active === cat}
             >

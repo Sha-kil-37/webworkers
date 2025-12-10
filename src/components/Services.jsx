@@ -8,7 +8,7 @@ import { AiOutlineSound } from "react-icons/ai";
 import { IoIosApps } from "react-icons/io";
 import Paragraph from "./Paragraph";
 import { GiArtificialIntelligence } from "react-icons/gi";
-
+// 
 //
 export default function Services() {
   //
@@ -61,21 +61,21 @@ export default function Services() {
   ];
   //
   return (
-    <section className="py-10 bg-[var(--white-color)]">
+    <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-[var(--black-color)]">Our Services</h2>
-        <Paragraph className="max-w-xl text-[var(--black-color)]">
+        <h2 className="text-4xl font-bold">Our Services</h2>
+        <Paragraph className="max-w-xl">
           At our Digital Web Agency, we deliver high-value, results-driven solutions designed to strengthen your digital presence, accelerate growth, and enhance your brand experience. Our team blends creativity, technology, and strategic thinking to build products and strategies that solve real business challenges. Explore our core services
         </Paragraph>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-8 hover:bg-[var(--primary-color)] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+              className="p-8 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="mb-6 text-[var(--secondary-color)]">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3 text-[var(--black-color)]">{service.title}</h3>
-              <p className="text-[var(--black-color)]">{service.desc}</p>
+              <div className="mb-6">{service.icon}</div>
+              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+              <p className="">{service.desc}</p>
             </div>
           ))}
         </div>

@@ -47,13 +47,13 @@ export default function Testimonials() {
   ];
   //
   return (
-    <section className="py-20 bg-[var(--white-color)]">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto">
         <div>
-          <h2 className="text-4xl font-bold text-[var(--black-color)]">
+          <h2 className="text-4xl font-bold">
             What Our Clients Say ?
           </h2>
-          <Paragraph className="max-w-xl text-[var(--black-color)]">
+          <Paragraph className="max-w-xl">
             Our clients trust us to transform their ideas into high-performing
             digital experiences. From modern websites and intuitive user
             interfaces to effective marketing strategies and advanced AI-powered
@@ -69,24 +69,24 @@ export default function Testimonials() {
               return (
                 <div
                   key={i}
-                  className="rounded-xl bg-[var(--primary-color)] cursor-pointer relative max-w-80 p-6"
+                  className="rounded-xl cursor-pointer relative max-w-80 p-6"
                 >
                   <div className="flex justify-between">
                     <div className="overflow-hidden rounded-full min-h-18 min-w-18">
-                      <RxAvatar className="h-full w-full text-[var(--black-color)]" />
+                      <RxAvatar className="h-full w-full" />
                     </div>
                     <div>
-                      <Paragraph className="text-[var(--black-color)]">
+                      <Paragraph className="">
                         {item.name}
                       </Paragraph>
                       <Paragraph className="">{item.role}</Paragraph>
-                      <Paragraph className="text-[var(--black-color)]">
+                      <Paragraph className="">
                          Ratting : <span>{item.rating}</span>
                       </Paragraph>
                     </div>
                   </div>
 
-                  <Paragraph className="text-[var(--black-color)] mt-3">
+                  <Paragraph className="mt-3">
                     {item.review}
                   </Paragraph>
                 </div>

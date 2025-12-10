@@ -8,7 +8,7 @@ export default function BlogDetails() {
   console.log(params);
   //
   return (
-    <section className="py-20 bg-[var(--primary-color)]">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-bold text-center">{params.id}</h2>
         <p>

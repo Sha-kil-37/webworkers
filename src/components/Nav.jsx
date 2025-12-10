@@ -17,7 +17,7 @@ export default function Nav() {
   ];
   //
   return (
-      <nav className="sticky top-0 left-0 z-50 bg-[var(--primary-color)] backdrop-blur-sm shadow-sm py-5">
+      <nav className="sticky top-0 left-0 z-50 backdrop-blur-sm shadow-sm py-5">
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center">
             
@@ -33,8 +33,8 @@ export default function Nav() {
                   to={link.path}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[var(--secondary-color)] font-medium px-3 py-1 rounded-md bg-[var(--white-color)]"
-                      : "text-[var(--black-color)] transition-colors duration-300 font-medium"
+                      ? " font-medium px-3 py-1 rounded-md"
+                      : " transition-colors duration-300 font-medium"
                   }
                 >
                   {link.label}

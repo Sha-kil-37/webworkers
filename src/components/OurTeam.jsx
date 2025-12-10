@@ -37,12 +37,12 @@ export default function OurTeam() {
   ];
   //
   return (
-    <section className="py-10 bg-[var(--white-color)]">
+    <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-[var(--black-color)]">
+        <h2 className="text-4xl font-bold">
           Meet Our Team
         </h2>
-        <Paragraph className="max-w-xl text-[var(--black-color)]">
+        <Paragraph className="max-w-xl">
           We are a passionate and skilled team dedicated to creating innovative
           digital solutions. Rakibul Islam leads with strong digital expertise
           and strategic thinking, while Shakil Ahmed brings technical excellence
@@ -64,13 +64,13 @@ export default function OurTeam() {
 
               {/* Content */}
               <div className="mt-4">
-                <h3 className="text-xl text-[var(--black-color)] font-semibold mb-1">
+                <h3 className="text-xl font-semibold mb-1">
                   {member.name}
                 </h3>
-                <h3 className="text-[var(--black-color)] font-medium">
+                <h3 className="font-medium">
                   {member.role}
                 </h3>
-                <p className="mb-3 text-[var(--black-color)]">
+                <p className="mb-3">
                   {member.description}
                 </p>
               </div>
