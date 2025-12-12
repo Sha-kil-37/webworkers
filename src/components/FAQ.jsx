@@ -34,13 +34,13 @@ export default function FAQ() {
   //
   return (
     <section className="max-w-6xl mx-auto py-10">
-      <h2 className="text-4xl font-bold">
-        Frequently Asked <span className="text-blue-600">Questions</span>
+      <h2 className="text-4xl font-bold font-mono">
+        Frequently Asked <span className="text-blue-500">Questions</span>
       </h2>
 
       <div className="block md:block lg:flex xl:flex justify-between mt-5 gap-x-8">
         <div>
-          <Paragraph className="max-w-xl">
+          <Paragraph className="max-w-xl font-mono">
             Frequently Asked Questions (FAQ) provide quick answers to common
             queries customers may have about a service, product, or business.
             They help clarify important information, reduce confusion, and
@@ -50,22 +50,28 @@ export default function FAQ() {
           </Paragraph>
         </div>
         <div className="max-w-xl">
+          <Paragraph className="font-mono">
+            Here are some of the most common questions we receive from our
+            clients. If you have any other questions, feel free to reach out to
+            us directly!
+          </Paragraph>
+          <hr className="mt-2" />    
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition p-2 mt-3 cursor-pointer"
+              className="mt-3 cursor-pointer"
             >
               {/* Question */}
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left flex justify-between items-center"
               >
-                <h3 className="text-lg font-medium">{faq.question}</h3>
+                <h3 className="text-lg font-medium font-mono">{faq.question}</h3>
                 <span className="text-xl transition-all">
                   {openIndex === index ? (
-                    <MdOutlineKeyboardArrowUp className="text-lg cursor-pointer" />
+                    <MdOutlineKeyboardArrowUp className="text-3xl cursor-pointer" />
                   ) : (
-                    <MdKeyboardArrowDown className="text-lg cursor-pointer" />
+                    <MdKeyboardArrowDown className="text-3xl cursor-pointer" />
                   )}
                 </span>
               </button>

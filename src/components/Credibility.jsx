@@ -9,25 +9,21 @@ export default function Credibility() {
       icon: FaAward,
       title: "Industry Certified",
       description: "ISO 9001 certified quality management and best practices",
-      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: FaTrophy,
       title: "Award-Winning",
       description: "Multiple awards for design excellence and innovation",
-      color: "from-yellow-500 to-orange-500",
     },
     {
       icon: FaCheckCircle,
       title: "100% Verified",
       description: "All team members verified and background checked",
-      color: "from-green-500 to-emerald-500",
     },
     {
       icon: FaStar,
       title: "Top Rated",
       description: "Consistently 5-star rated by clients and partners",
-      color: "from-purple-500 to-pink-500",
     },
   ];
   //
@@ -35,47 +31,33 @@ export default function Credibility() {
   //
 
   return (
-    <section className="py-10">
+    <section className="">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold">
-            Why Trust Us
-          </h2>
-          <Paragraph className="max-w-xl">
-            We deliver reliable, high-quality digital solutions through expert
-            Web Development, Social Media Marketing, UI/UX Design, App
-            Development, Digital Marketing, SEO, Business Consultation, and
-            Custom Software Development. Our team focuses on innovation,
-            transparency, and measurable results. With a client-first mindset,
-            we ensure every project is built to grow your brand, boost
-            performance, and achieve long-term success.
-          </Paragraph>
-        </div>
+        <Paragraph className="font-mono mx-auto text-3xl font-bold">
+          We deliver reliable, high-quality digital solutions through expert Web
+          Development, Social Media Marketing, UI/UX Design, App Development,
+          Digital Marketing, SEO, Business Consultation, and Custom Software
+          Development. Our team focuses on innovation, transparency, and
+          measurable results. With a client-first mindset, we ensure every
+          project is built to grow your brand, boost performance, and achieve
+          long-term success.
+        </Paragraph>
         {/* Credentials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-10">
           {credentials.map((cred, i) => {
             const Icon = cred.icon;
             return (
-              <div
-                key={i}
-                className="group rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-              >
+              <div key={i} className="">
                 {/* Icon Container */}
-                <div
-                  className={`bg-gradient-to-br ${cred.color} w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <Icon className="" size={28} />
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold  mb-2">
-                    {cred.title}
-                  </h3>
-                  <Paragraph className="text-sm leading-relaxed">
-                    {cred.description}
-                  </Paragraph>
-                </div>
+               <div className="h-30 w-full">
+                 <Icon className="text-orange-200 h-full w-full" size={28} />
+               </div>
+                <h3 className="font-mono text-center text-4xl mt-3">
+                  {cred.title}
+                </h3>
+                <Paragraph className="text-center font-mono mt-2">
+                  {cred.description}
+                </Paragraph>
               </div>
             );
           })}

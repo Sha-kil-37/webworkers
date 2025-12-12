@@ -39,10 +39,11 @@ export default function OurTeam() {
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold">
+        <h2 className="text-4xl font-bold font-mono text-center">
           Meet Our Team
         </h2>
-        <Paragraph className="max-w-xl">
+        <hr className="mt-3" />
+        <Paragraph className="text-3xl font-bold mt-3 font-mono">
           We are a passionate and skilled team dedicated to creating innovative
           digital solutions. Rakibul Islam leads with strong digital expertise
           and strategic thinking, while Shakil Ahmed brings technical excellence
@@ -63,14 +64,14 @@ export default function OurTeam() {
               </div>
 
               {/* Content */}
-              <div className="mt-4">
-                <h3 className="text-xl font-semibold mb-1">
+              <div className="mt-5">
+                <h3 className="text-xl font-semibold font-mono">
                   {member.name}
                 </h3>
-                <h3 className="font-medium">
+                <h3 className="font-medium font-mono">
                   {member.role}
                 </h3>
-                <p className="mb-3">
+                <p className="font-mono mt-2">
                   {member.description}
                 </p>
               </div>

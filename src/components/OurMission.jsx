@@ -7,10 +7,10 @@ export default function OurMission() {
         <div className="grid grid-cols-2 md:grid-cols-2 gap-12">
           {/* Left Content */}
           <div>
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-4xl font-bold font-mono">
               Our Mission
             </h2>
-            <Paragraph className="max-w-xl">
+            <Paragraph className="max-w-xl font-mono mt-5">
               We create smart, creative, and impactful digital solutions that
               help businesses grow with confidence. We deliver high-quality Web
               Development, Digital Marketing, UI/UX Design, SEO, and innovative
@@ -20,31 +20,31 @@ export default function OurMission() {
           </div>
           {/*  */}
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl">
-            <p className="text-4xl font-bold mb-2">
+            <p className="text-4xl font-bold mb-2 font-mono">
               300+
             </p>
-            <p className="font-medium">
+            <p className="font-medium font-mono">
               Happy Clients
             </p>
-            <p className="mt-2">
+            <p className="mt-2 font-mono">
               Trusted by businesses globally
             </p>
           </div>
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl">
-            <p className="text-4xl font-bold mb-2">
+            <p className="text-4xl font-bold mb-2 font-mono">
               400+
             </p>
-            <p className="font-medium">
+            <p className="font-medium font-mono">
               Projects Delivered
             </p>
-            <p className="mt-2">
+            <p className="mt-2 font-mono">
               From startups to enterprises
             </p>
           </div>
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl">
-            <p className="text-4xl font-bold text-green-600 mb-2">5+</p>
-            <p className="font-medium">Years of Excellence</p>
-            <p className="mt-2">
+            <p className="text-4xl font-bold text-green-600 mb-2 font-mono">5+</p>
+            <p className="font-medium font-mono">Years of Excellence</p>
+            <p className="mt-2 font-mono">
               Continuous innovation
             </p>
           </div>

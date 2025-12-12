@@ -1,33 +1,52 @@
-import React from "react";
 import { Routes, Route } from "react-router";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ProjectsPage from "./pages/ProjectsPage";
-import ServicesPage from "./pages/ServicesPage";
-import ContactPage from "./pages/ContactPage";
-import NotFoundPage from "./pages/NotFoundPage";
-import BlogsPage from "./pages/BlogsPage";
-import TestPage from "./pages/TestPage";
-import ProjectDetailsPage from "./pages/ProjectDetailsPage";
-import BlogDetailsPage from "./pages/BlogDetailsPage";
+import NotFound from "./components/NotFound";
+import Test from "./components/Test";
+import { Fragment, Suspense } from "react";
+import Loading from "./components/Loading";
+import Banner from "./components/Banner";
+import TrustedBy from "./components/TrustedBy";
+import OurMission from "./components/OurMission";
+import Credibility from "./components/Credibility";
+import Services from "./components/Services";
+import ChooseUs from "./components/ChooseUs";
+import OurTeam from "./components/OurTeam";
+import Projects from "./components/Projects";
+import Testimonials from "./components/Testimonials";
+import FAQ from "./components/FAQ";
+import Contact from "./components/Contact";
+import Blogs from "./components/Blogs";
+const MainLayout = (await import("./layout/MainLayout")).default;
+
 //
 function App() {
   //
   return (
     <Routes>
-      <Route path="/" element={<HomePage />}></Route>
-      <Route path="/about" element={<AboutPage />}></Route>
-      <Route path="/projects" element={<ProjectsPage />}></Route>
       <Route
-        path="/projectdetails/:id"
-        element={<ProjectDetailsPage />}
+        path="/"
+        element={
+          <Suspense fallback={<Loading />}>
+            <MainLayout>
+              <Fragment>
+                <Banner />
+                <TrustedBy />
+                <OurMission />
+                <Credibility />
+                <Services />
+                <ChooseUs />
+                <OurTeam />
+                <Projects />
+                <Testimonials />
+                <Blogs />
+                <FAQ />
+                <Contact />
+              </Fragment>
+            </MainLayout>
+          </Suspense>
+        }
       ></Route>
-      <Route path="/blogs" element={<BlogsPage />}></Route>
-      <Route path="/blogdetails/:id" element={<BlogDetailsPage />}></Route>
-      <Route path="/services" element={<ServicesPage />}></Route>
-      <Route path="/contact" element={<ContactPage />}></Route>
-      <Route path="/test" element={<TestPage />}></Route>
-      <Route path="*" element={<NotFoundPage />} />
+      <Route path="/test" element={<Test />}></Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

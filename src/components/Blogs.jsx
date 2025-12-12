@@ -1,6 +1,5 @@
 import BlogSlider from "./BlogSlider";
 import { useState } from "react";
-import Button from "./Button";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
 import blogone from "../assets/blogone.jpg";
@@ -100,15 +99,6 @@ export default function Blogs() {
   return (
     <section className="py-20 relative">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-bold text-4xl">Stay Ahead with Our Insights</h2>
-        <Paragraph className="max-w-xl">
-          Discover the latest trends, tips, and strategies in digital innovation
-          through our expert-written blogs. From Web Development and App Design
-          to Social Media Marketing, SEO, and AI Integration, our blogs are
-          designed to keep you informed, inspired, and empowered to grow your
-          business in the digital world. Stay updated, explore new ideas, and
-          unlock actionable insights with every read.
-        </Paragraph>
         <BlogSlider blogs={blogs} />
         {/* Blog Grid */}
         <h2 className="font-bold text-4xl mt-10">Our Insights & Stories</h2>
@@ -160,12 +150,12 @@ export default function Blogs() {
         </div>
 
         <div className="flex justify-center mt-10">
-          <Button
+          <button
             onClick={handleLoadMoreBlogs}
             className="cursor-pointer px-4 py-2 rounded-xl font-medium  transition-colors duration-300 shadow-sm hover:shadow-md mt-5"
           >
             More Blogs
-          </Button>
+          </button>
         </div>
       </div>
     </section>

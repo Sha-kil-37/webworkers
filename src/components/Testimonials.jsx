@@ -1,7 +1,7 @@
 import Marquee from "react-fast-marquee";
 import Paragraph from "./Paragraph";
 import { RxAvatar } from "react-icons/rx";
-
+//
 export default function Testimonials() {
   //
   const testimonialsData = [
@@ -47,48 +47,20 @@ export default function Testimonials() {
   ];
   //
   return (
-    <section className="py-20">
+    <section className="">
       <div className="max-w-6xl mx-auto">
-        <div>
-          <h2 className="text-4xl font-bold">
-            What Our Clients Say ?
-          </h2>
-          <Paragraph className="max-w-xl">
-            Our clients trust us to transform their ideas into high-performing
-            digital experiences. From modern websites and intuitive user
-            interfaces to effective marketing strategies and advanced AI-powered
-            solutions, we consistently deliver results that align with our
-            clients’ goals. Explore what our partners say about working with us
-            and how our services have helped them grow, scale, and succeed in
-            the digital space
-          </Paragraph>
-        </div>
         <Marquee speed={25} delay={0} pauseOnHover={true} direction="left">
           <div className="flex justify-between items-center gap-x-6 mt-5">
             {testimonialsData.map((item, i) => {
               return (
-                <div
-                  key={i}
-                  className="rounded-xl cursor-pointer relative max-w-80 p-6"
-                >
-                  <div className="flex justify-between">
-                    <div className="overflow-hidden rounded-full min-h-18 min-w-18">
-                      <RxAvatar className="h-full w-full" />
-                    </div>
-                    <div>
-                      <Paragraph className="">
-                        {item.name}
-                      </Paragraph>
-                      <Paragraph className="">{item.role}</Paragraph>
-                      <Paragraph className="">
-                         Ratting : <span>{item.rating}</span>
-                      </Paragraph>
-                    </div>
-                  </div>
-
-                  <Paragraph className="mt-3">
+                <div key={i} className="max-w-80">
+                  <Paragraph className="mt-3 font-mono">
                     {item.review}
                   </Paragraph>
+                  <div className="flex justify-between mt-3">
+                    <span className="font-mono">⭐⭐⭐⭐⭐</span>
+                    <span className="font-mono">{item.name}</span>
+                  </div>
                 </div>
               );
             })}

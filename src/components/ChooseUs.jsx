@@ -1,7 +1,5 @@
-import Button from "./Button";
 import { FaMobileAlt, FaHeadset } from "react-icons/fa";
 import { RiEmotionHappyLine } from "react-icons/ri";
-import { useNavigate } from "react-router";
 import Paragraph from "./Paragraph";
 import { PiStrategy } from "react-icons/pi";
 import { IoIosTimer } from "react-icons/io";
@@ -9,11 +7,8 @@ import agency from "../assets/agency.mp4";
 //
 export default function ChooseUs() {
   //
-  const navigate = useNavigate();
-  //
-  function handleClick() {
-    navigate("/projects");
-  }
+
+ 
   const features = [
     {
       title: "On-Time Delivery, Every Time",
@@ -45,12 +40,12 @@ export default function ChooseUs() {
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-12">
           <div>
-            <h2 className="text-4xl font-bold">
+            <Paragraph className="text-4xl font-bold font-mono">
               Why people love us
-            </h2>
-            <Paragraph className="max-w-xl">
+            </Paragraph>
+            <Paragraph className="max-w-xl font-mono mt-3">
               People love us because we deliver high-quality work with honesty,
               creativity, and care. We listen to our clients, understand their
               goals, and provide smart digital solutions that truly make a
@@ -58,39 +53,31 @@ export default function ChooseUs() {
               and is committed to excellence—making every project smooth,
               successful, and results-driven.
             </Paragraph>
-            <video className="mt-10" controls src={agency}>
-              my video
-            </video>
-            <Button
-              onClick={handleClick}
-              className="cursor-pointer px-4 py-2 rounded-xl font-medium  transition-colors duration-300 shadow-sm hover:shadow-md mt-10"
-            >
-              Our Works
-            </Button>
           </div>
-          {/*  */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {features.map((f, i) => {
-              const Icon = f.icon;
-              return (
-                //
-                <div key={i} className="p-4 rounded-xl">
-                  <div>
-                    <Icon className="w-10 h-10" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">
-                      {f.title}
-                    </h3>
-                    <p className="text-sm mt-1">{f.desc}</p>
-                  </div>
-                </div>
-                //
-              );
-            })}
-          </div>
-          {/*  */}
+          <video className="mt-10" controls src={agency}>
+            my video
+          </video>
         </div>
+        {/*  */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mt-5">
+          {features.map((f, i) => {
+            const Icon = f.icon;
+            return (
+              //
+              <div key={i} className="p-4 rounded-xl">
+                <div>
+                  <Icon className="w-10 h-10" />
+                </div>
+                <div>
+                  <h3 className="font-mono mt-3 text-xl font-semibold">{f.title}</h3>
+                  <p className="text-sm mt-2 font-mono">{f.desc}</p>
+                </div>
+              </div>
+              //
+            );
+          })}
+        </div>
+        {/*  */}
       </div>
     </section>
   );

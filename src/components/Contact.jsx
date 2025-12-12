@@ -61,10 +61,10 @@ export default function Contact() {
     <section className="py-10 bg-[var(--white-color)]">
       <div className="max-w-6xl mx-auto block md:block lg:flex xl:flex gap-x-8 justify-between sm:block">
         <div>
-          <h2 className="font-bold text-4xl text-[var(--black-color)]">
+          <h2 className="font-bold text-4xl font-mono">
             Get in Touch
           </h2>
-          <Paragraph className="max-w-xl text-[var(--black-color)]">
+          <Paragraph className="max-w-xl font-mono mt-2">
             We’d love to hear from you! Whether you have questions, need
             support, or want to start a project, our team is ready to help.
             Reach out to us via email, phone, or our online form, and we’ll
@@ -87,7 +87,7 @@ export default function Contact() {
             </span>
           </div>
         </div>
-        <div className="w-xl mx-auto p-6 shadow-sm rounded-xl">
+        <div className="w-xl mx-auto ">
           <h2 className="text-2xl font-bold mb-6 text-[var(--black-color)] text-center">
             Send Us a Message
           </h2>

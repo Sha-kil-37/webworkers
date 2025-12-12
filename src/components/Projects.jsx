@@ -83,10 +83,7 @@ export default function Projects() {
   return (
     <section className="py-20">
       <div className="max-w-6xl mx-auto relative">
-        <h2 className="font-bold text-4xl">
-          Our Projects
-        </h2>
-        <Paragraph className="">
+        <Paragraph className="text-3xl font-bold font-mono text-center">
           Explore the work that defines who we are. Each project represents our
           commitment to quality, innovation, and digital excellence. From modern
           websites and intuitive user interfaces to custom software solutions
@@ -107,15 +104,15 @@ export default function Projects() {
         </Paragraph>
 
         {/*  */}
-        <div className="flex mt-30 items-center justify-center gap-3 flex-wrap">
+        <div className="flex mt-5 items-center justify-center gap-3 flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`whitespace-nowrap px-4 py-2 rounded-full  cursor-pointer transition-colors duration-300 font-medium border ${
+              className={`${
                 active === cat
-                  ? "text-[var(--white-color)] "
-                  : ""
+                  ? "px-4 py-1 bg-orange-300 text-white rounded-full font-medium font-mono cursor-pointer"
+                  : "px-4 py-1 bg-gray-800 text-white rounded-full font-medium font-mono cursor-pointer"
               }`}
               aria-pressed={active === cat}
             >
@@ -124,7 +121,7 @@ export default function Projects() {
           ))}
         </div>
         {/*  */}
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 mt-10">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-12 mt-10">
           {filtered.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}
