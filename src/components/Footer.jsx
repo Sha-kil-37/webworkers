@@ -6,14 +6,6 @@ import { NavLink, Link } from "react-router";
 //
 export default function Footer() {
   // navlinks data array
-  const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/services", label: "Services" },
-    { path: "/projects", label: "Projects" },
-    { path: "/contact", label: "Contact" },
-    { path: "/blogs", label: "Blogs" },
-  ];
 
   //
   return (
@@ -23,52 +15,15 @@ export default function Footer() {
           <Link to="/" className="block h-10 w-10 overflow-hidden">
             <img className="h-full w-full inline-block" src={logo} alt={logo} />
           </Link>
-          <Paragraph className="font-bold mt-2">
-            Web Workers
-          </Paragraph>
+          <Paragraph className="font-bold mt-2">Web Workers</Paragraph>
           <Paragraph className="mt-2 font-medium">
             Digital Web Service Agency
           </Paragraph>
         </div>
         <div>
-          <h3 className="font-bold">Quick Links</h3>
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.path}
-              to={link.path}
-              className={({ isActive }) =>
-                isActive
-                  ? "block font-medium transition-colors duration-300"
-                  : "hover:text-blue-500 transition-colors duration-300 block font-medium"
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </div>
-        <div>
-          <h3 className="font-bold text-[var(--black-color)]">
-            Legal Resources
-          </h3>
           <ul>
-            {["Privacy Policy", "Term of Service", "cookie Policy"].map(
-              (item, i) => {
-                return (
-                  <Link
-                    to={`/${item}`}
-                    key={i}
-                    className="block font-medium text-[var(--black-color)]"
-                  >
-                    {item}
-                  </Link>
-                );
-              }
-            )}
+            <li>Privacy Policy</li>
           </ul>
-        </div>
-        <div>
-          <h3 className="font-bold mb-3 text-[var(--black-color)]">Follow Us</h3>
-          <SocialLink />
         </div>
       </div>
       <CopyRight />

@@ -94,68 +94,66 @@ export default function Blogs() {
   const handleLoadMoreBlogs = () => {
     setVisibleCount((prev) => prev + 3); // Load 3 more each click
   };
-
   //
+  // Render component
   return (
-    <section className="py-20 relative">
+    <section className="">
       <div className="max-w-6xl mx-auto">
-        <BlogSlider blogs={blogs} />
-        {/* Blog Grid */}
-        <h2 className="font-bold text-4xl mt-10">Our Insights & Stories</h2>
-        <Paragraph className="">
-          Welcome to our blog—your destination for expert insights, practical
-          strategies, and the latest trends in the digital world. Here, we share
-          knowledge that empowers businesses, creators, and innovators to stay
-          ahead in a fast-evolving digital landscape. Whether you’re exploring
-          modern Web Development practices, UI/UX design principles, App
-          Development insights, or the newest techniques in Digital Marketing
-          and SEO, our articles are designed to guide you with clarity and
-          actionable value. We also dive into topics like Social Media
-          Marketing, Business Consultation, Custom Software Development, and
-          Artificial Intelligence Integration to help you understand how these
-          solutions can transform your brand. Our goal is simple: to educate,
-          inspire, and elevate your digital journey. Dive into our blogs and
-          discover fresh ideas, expert opinions, and strategies that help you
-          make smarter decisions and build a stronger digital presence.
-        </Paragraph>
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-          {visibleBlogs.map((blog, i) => (
-            <div
-              key={i}
-              className="group transition-all duration-300 group cursor-pointer"
-            >
-              <div className="overflow-hidden w-full h-100">
-                <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6 duration-300">
-                <h2 className="font-semibold">
-                  {blog.title}
-                </h2>
-                <Paragraph className="">
-                  {blog.date}
-                </Paragraph>
-                <Link
-                  to={`/blogdetails/${blog.id}`}
-                  className="px-3 py-1 rounded-xl inline-block mt-3"
-                >
-                  click for view
-                </Link>
-              </div>
+        {/* <BlogSlider blogs={blogs} /> */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left sticky column */}
+          <aside className="md:col-span-1">
+            <div className="sticky top-20">
+              <Paragraph className="mt-4 font-mono font-bold text-3xl">
+                Welcome to our blog—your destination for expert insights,
+                practical strategies, and the latest trends in the digital
+                world. Here, we share knowledge that empowers businesses,
+                creators, and innovators to stay ahead in a fast-evolving
+                digital landscape. Dive into our blogs and discover fresh ideas,
+                expert opinions, and strategies that help you make smarter
+                decisions and build a stronger digital presence.
+              </Paragraph>
             </div>
-          ))}
-        </div>
+          </aside>
 
-        <div className="flex justify-center mt-10">
-          <button
-            onClick={handleLoadMoreBlogs}
-            className="cursor-pointer px-4 py-2 rounded-xl font-medium  transition-colors duration-300 shadow-sm hover:shadow-md mt-5"
-          >
-            More Blogs
-          </button>
+          {/* Right scrollable column */}
+          <main className="md:col-span-1">
+           
+              {visibleBlogs.map((blog, i) => (
+                <div
+                  key={i}
+                  className="group transition-all duration-300 cursor-pointer mb-10"
+                >
+                  <div className="overflow-hidden w-full h-56">
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="duration-300 py-2">
+                    <h3 className="font-semibold">{blog.title}</h3>
+                    <Paragraph className="">{blog.date}</Paragraph>
+                    <Link
+                      to={`/blogdetails/${blog.id}`}
+                      className="px-3 py-1 rounded-xl inline-block mt-5 bg-blue-500 text-white font-mono"
+                    >
+                      click for view
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            
+
+            <div className="flex justify-center mt-6 mb-6">
+              <button
+                onClick={handleLoadMoreBlogs}
+                className="cursor-pointer px-4 py-2 rounded-xl font-medium transition-colors duration-300 shadow-sm hover:shadow-md"
+              >
+                More Blogs
+              </button>
+            </div>
+          </main>
         </div>
       </div>
     </section>
