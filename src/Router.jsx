@@ -17,6 +17,7 @@ import Contact from "./components/Contact";
 import Blogs from "./components/Blogs";
 import BlogDetails from "./components/BlogDetails";
 import ProjectDetails from "./components/ProjectDetails";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 const MainLayout = (await import("./layout/MainLayout")).default;
 
 //
@@ -24,6 +25,7 @@ function App() {
   //
   return (
     <Routes>
+      <AnalyticsTracker />
       <Route
         path="/"
         element={
@@ -57,7 +59,7 @@ function App() {
           </Suspense>
         }
       ></Route>
-       <Route
+      <Route
         path="/projectdetails/:id"
         element={
           <Suspense fallback={<Loading />}>
