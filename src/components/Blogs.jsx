@@ -102,7 +102,7 @@ export default function Blogs() {
         {/* <BlogSlider blogs={blogs} /> */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left sticky column */}
-          <aside className="md:col-span-1">
+          <aside className="md:col-span-1 border-r border-gray-200">
             <div className="sticky top-20">
               <Paragraph className="mt-4 font-mono font-bold text-3xl">
                 Welcome to our blog—your destination for expert insights,
@@ -118,32 +118,30 @@ export default function Blogs() {
 
           {/* Right scrollable column */}
           <main className="md:col-span-1">
-           
-              {visibleBlogs.map((blog, i) => (
-                <div
-                  key={i}
-                  className="group transition-all duration-300 cursor-pointer mb-10"
-                >
-                  <div className="overflow-hidden w-full h-56">
-                    <img
-                      src={blog.image}
-                      alt={blog.title}
-                      className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="duration-300 py-2">
-                    <h3 className="font-semibold">{blog.title}</h3>
-                    <Paragraph className="">{blog.date}</Paragraph>
-                    <Link
-                      to={`/blogdetails/${blog.id}`}
-                      className="px-3 py-1 rounded-xl inline-block mt-5 bg-blue-500 text-white font-mono"
-                    >
-                      click for view
-                    </Link>
-                  </div>
+            {visibleBlogs.map((blog, i) => (
+              <div
+                key={i}
+                className="group transition-all duration-300 cursor-pointer mb-10"
+              >
+                <div className="overflow-hidden w-full h-56">
+                  <img
+                    src={blog.image}
+                    alt={blog.title}
+                    className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-              ))}
-            
+                <div className="duration-300 py-2">
+                  <h3 className="font-semibold">{blog.title}</h3>
+                  <Paragraph className="">{blog.date}</Paragraph>
+                  <Link
+                    to={`/blogdetails/${blog.id}`}
+                    className="px-3 py-1 rounded-xl inline-block mt-5 bg-blue-500 text-white font-mono"
+                  >
+                    click for view
+                  </Link>
+                </div>
+              </div>
+            ))}
 
             <div className="flex justify-center mt-6 mb-6">
               <button

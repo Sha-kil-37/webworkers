@@ -28,7 +28,7 @@ export default function SocialLink() {
 
   return (
     <div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 mt-3">
         {socialLinks.map((social, idx) => {
           const Icon = social.icon;
           return (

@@ -40,7 +40,8 @@ export default function CopyRight() {
       </div>
       <div className="max-w-7xl mx-auto flex justify-center items-center">
         <p className="mt-4 font-medium">
-          &copy;2025 Web Workers LLC | All Rights Reserved.
+          &copy;{new Date().getFullYear()} Web Workers LLC | All Rights
+          Reserved.
         </p>
       </div>
     </div>

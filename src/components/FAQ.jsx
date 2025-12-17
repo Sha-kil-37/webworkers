@@ -66,7 +66,7 @@ export default function FAQ() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left flex justify-between items-center"
               >
-                <h3 className="text-lg font-medium font-mono">{faq.question}</h3>
+                <h3 className="text-lg font-bold font-mono">{faq.question}</h3>
                 <span className="text-xl transition-all">
                   {openIndex === index ? (
                     <MdOutlineKeyboardArrowUp className="text-3xl cursor-pointer" />
@@ -79,10 +79,10 @@ export default function FAQ() {
               {/* Answer */}
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? "max-h-40 mt-3" : "max-h-0"
+                  openIndex === index ? "max-h-40 mt-3 bg-gray-200 p-4" : "max-h-0"
                 }`}
               >
-                <p className="text-gray-600">{faq.answer}</p>
+                <p className="font-mono">{faq.answer}</p>
               </div>
             </div>
           ))}

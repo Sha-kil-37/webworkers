@@ -71,39 +71,39 @@ export default function Contact() {
             respond promptly to discuss how we can bring your ideas to life.
           </Paragraph>
           <div className="flex gap-x-4 mt-3 items-center">
-            <HiOutlineMail className="text-[var(--black-color)]" />
-            <span className="text-[var(--black-color)]">
+            <HiOutlineMail className="" />
+            <span className=" font-mono">
               sakildevmern@gmail.com
             </span>
           </div>
           <div className="flex gap-x-4 mt-3">
-            <IoCallOutline className="text-[var(--black-color)]" />
-            <span className="text-[var(--black-color)]">+8801581049601</span>
+            <IoCallOutline className="" />
+            <span className=" font-mono">+8801581049601</span>
           </div>
           <div className="flex gap-x-4 mt-3">
-            <CiLocationOn className="text-[var(--black-color)]" />
-            <span className="text-[var(--black-color)]">
+            <CiLocationOn className="" />
+            <span className="font-mono">
               Gazipur, Dhaka, Bangladesh
             </span>
           </div>
         </div>
         <div className="w-xl mx-auto ">
-          <h2 className="text-2xl font-bold mb-6 text-[var(--black-color)] text-center">
+          <h2 className="text-2xl font-bold mb-6 text-[var(--black-color)] text-center font-mono">
             Send Us a Message
           </h2>
 
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Name */}
             <div className="mb-5">
-              <label className="block font-medium mb-2">Full Name</label>
+              <label className="block font-medium mb-2 font-mono">Full Name</label>
               <input
                 type="text"
                 {...register("name")}
-                className="w-full p-3 border rounded focus:ring focus:ring-blue-300"
+                className="w-full p-3 border rounded focus:ring focus:ring-blue-300 font-mono"
                 placeholder="Enter your name"
               />
               {errors.name && (
-                <p className="text-red-600 text-sm mt-1">
+                <p className="text-red-600 text-sm mt-1 font-mono">
                   {errors.name.message}
                 </p>
               )}
@@ -111,15 +111,15 @@ export default function Contact() {
 
             {/* Email */}
             <div className="mb-5">
-              <label className="block font-medium mb-2">Email Address</label>
+              <label className="block font-medium mb-2 font-mono">Email Address</label>
               <input
                 type="email"
                 {...register("email")}
-                className="w-full p-3 border rounded focus:ring focus:ring-blue-300"
+                className="w-full p-3 border rounded focus:ring focus:ring-blue-300 font-mono"
                 placeholder="Enter your email"
               />
               {errors.email && (
-                <p className="text-red-600 text-sm mt-1">
+                <p className="text-red-600 text-sm mt-1 font-mono">
                   {errors.email.message}
                 </p>
               )}
@@ -127,14 +127,14 @@ export default function Contact() {
 
             {/* Message */}
             <div className="mb-5">
-              <label className="block font-medium mb-2">Message</label>
+              <label className="block font-medium mb-2 font-mono">Message</label>
               <textarea
                 {...register("message")}
-                className="w-full p-3 border rounded h-32 focus:ring focus:ring-blue-300"
+                className="w-full p-3 border rounded h-32 focus:ring focus:ring-blue-300 font-mono"
                 placeholder="Write your message..."
               ></textarea>
               {errors.message && (
-                <p className="text-red-600 text-sm mt-1">
+                <p className="text-red-600 text-sm mt-1 font-mono">
                   {errors.message.message}
                 </p>
               )}
@@ -144,7 +144,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition disabled:bg-blue-400"
+              className="w-full font-mono font-bold bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition disabled:bg-blue-400"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
@@ -152,13 +152,13 @@ export default function Contact() {
 
           {/* Status Messages */}
           {formStatus === "success" && (
-            <p className="text-green-600 mt-4 text-center font-medium">
+            <p className="text-green-600 mt-4 text-center font-medium font-mono">
               Message sent successfully!
             </p>
           )}
 
           {formStatus === "error" && (
-            <p className="text-red-600 mt-4 text-center font-medium">
+            <p className="text-red-600 mt-4 text-center font-medium font-mono">
               Something went wrong. Please try again.
             </p>
           )}

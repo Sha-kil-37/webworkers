@@ -15,6 +15,8 @@ import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Blogs from "./components/Blogs";
+import BlogDetails from "./components/BlogDetails";
+import ProjectDetails from "./components/ProjectDetails";
 const MainLayout = (await import("./layout/MainLayout")).default;
 
 //
@@ -41,6 +43,26 @@ function App() {
                 <FAQ />
                 <Contact />
               </Fragment>
+            </MainLayout>
+          </Suspense>
+        }
+      ></Route>
+      <Route
+        path="/blogdetails/:id"
+        element={
+          <Suspense fallback={<Loading />}>
+            <MainLayout>
+              <BlogDetails />
+            </MainLayout>
+          </Suspense>
+        }
+      ></Route>
+       <Route
+        path="/projectdetails/:id"
+        element={
+          <Suspense fallback={<Loading />}>
+            <MainLayout>
+              <ProjectDetails />
             </MainLayout>
           </Suspense>
         }
