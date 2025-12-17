@@ -24,54 +24,56 @@ const MainLayout = (await import("./layout/MainLayout")).default;
 function App() {
   //
   return (
-    <Routes>
+    <Fragment>
       <AnalyticsTracker />
-      <Route
-        path="/"
-        element={
-          <Suspense fallback={<Loading />}>
-            <MainLayout>
-              <Fragment>
-                <Banner />
-                <TrustedBy />
-                <OurMission />
-                <Credibility />
-                <Services />
-                <ChooseUs />
-                <OurTeam />
-                <Projects />
-                <Testimonials />
-                <Blogs />
-                <FAQ />
-                <Contact />
-              </Fragment>
-            </MainLayout>
-          </Suspense>
-        }
-      ></Route>
-      <Route
-        path="/blogdetails/:id"
-        element={
-          <Suspense fallback={<Loading />}>
-            <MainLayout>
-              <BlogDetails />
-            </MainLayout>
-          </Suspense>
-        }
-      ></Route>
-      <Route
-        path="/projectdetails/:id"
-        element={
-          <Suspense fallback={<Loading />}>
-            <MainLayout>
-              <ProjectDetails />
-            </MainLayout>
-          </Suspense>
-        }
-      ></Route>
-      <Route path="/test" element={<Test />}></Route>
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<Loading />}>
+              <MainLayout>
+                <Fragment>
+                  <Banner />
+                  <TrustedBy />
+                  <OurMission />
+                  <Credibility />
+                  <Services />
+                  <ChooseUs />
+                  <OurTeam />
+                  <Projects />
+                  <Testimonials />
+                  <Blogs />
+                  <FAQ />
+                  <Contact />
+                </Fragment>
+              </MainLayout>
+            </Suspense>
+          }
+        ></Route>
+        <Route
+          path="/blogdetails/:id"
+          element={
+            <Suspense fallback={<Loading />}>
+              <MainLayout>
+                <BlogDetails />
+              </MainLayout>
+            </Suspense>
+          }
+        ></Route>
+        <Route
+          path="/projectdetails/:id"
+          element={
+            <Suspense fallback={<Loading />}>
+              <MainLayout>
+                <ProjectDetails />
+              </MainLayout>
+            </Suspense>
+          }
+        ></Route>
+        <Route path="/test" element={<Test />}></Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Fragment>
   );
 }
 //
