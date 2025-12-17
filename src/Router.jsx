@@ -17,63 +17,58 @@ import Contact from "./components/Contact";
 import Blogs from "./components/Blogs";
 import BlogDetails from "./components/BlogDetails";
 import ProjectDetails from "./components/ProjectDetails";
-import AnalyticsTracker from "./lib/utils/AnalyticsTracker";
 const MainLayout = (await import("./layout/MainLayout")).default;
-
 //
 function App() {
   //
   return (
-    <Fragment>
-      <AnalyticsTracker />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Suspense fallback={<Loading />}>
-              <MainLayout>
-                <Fragment>
-                  <Banner />
-                  <TrustedBy />
-                  <OurMission />
-                  <Credibility />
-                  <Services />
-                  <ChooseUs />
-                  <OurTeam />
-                  <Projects />
-                  <Testimonials />
-                  <Blogs />
-                  <FAQ />
-                  <Contact />
-                </Fragment>
-              </MainLayout>
-            </Suspense>
-          }
-        ></Route>
-        <Route
-          path="/blogdetails/:id"
-          element={
-            <Suspense fallback={<Loading />}>
-              <MainLayout>
-                <BlogDetails />
-              </MainLayout>
-            </Suspense>
-          }
-        ></Route>
-        <Route
-          path="/projectdetails/:id"
-          element={
-            <Suspense fallback={<Loading />}>
-              <MainLayout>
-                <ProjectDetails />
-              </MainLayout>
-            </Suspense>
-          }
-        ></Route>
-        <Route path="/test" element={<Test />}></Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Fragment>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Suspense fallback={<Loading />}>
+            <MainLayout>
+              <Fragment>
+                <Banner />
+                <TrustedBy />
+                <OurMission />
+                <Credibility />
+                <Services />
+                <ChooseUs />
+                <OurTeam />
+                <Projects />
+                <Testimonials />
+                <Blogs />
+                <FAQ />
+                <Contact />
+              </Fragment>
+            </MainLayout>
+          </Suspense>
+        }
+      ></Route>
+      <Route
+        path="/blogdetails/:id"
+        element={
+          <Suspense fallback={<Loading />}>
+            <MainLayout>
+              <BlogDetails />
+            </MainLayout>
+          </Suspense>
+        }
+      ></Route>
+      <Route
+        path="/projectdetails/:id"
+        element={
+          <Suspense fallback={<Loading />}>
+            <MainLayout>
+              <ProjectDetails />
+            </MainLayout>
+          </Suspense>
+        }
+      ></Route>
+      <Route path="/test" element={<Test />}></Route>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 //
