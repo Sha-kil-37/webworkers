@@ -4,6 +4,7 @@ import "./index.css";
 import { BrowserRouter } from "react-router";
 //
 import Router from "./Router.jsx";
+import AnalyticsTracker from "./lib/utils/AnalyticsTracker.jsx";
 //
 createRoot(document.getElementById("root")).render(
   <StrictMode>
