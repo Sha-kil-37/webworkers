@@ -17,7 +17,7 @@ import Contact from "./components/Contact";
 import Blogs from "./components/Blogs";
 import BlogDetails from "./components/BlogDetails";
 import ProjectDetails from "./components/ProjectDetails";
-import AnalyticsTracker from "./components/AnalyticsTracker";
+import AnalyticsTracker from "./lib/utils/AnalyticsTracker";
 const MainLayout = (await import("./layout/MainLayout")).default;
 
 //
