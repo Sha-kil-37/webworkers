@@ -18,8 +18,10 @@ import Blogs from "./components/Blogs";
 import BlogDetails from "./components/BlogDetails";
 import ProjectDetails from "./components/ProjectDetails";
 const MainLayout = (await import("./layout/MainLayout")).default;
+import AnalyticsTracker from "./lib/utils/AnalyticsTracker";
 //
 function App() {
+  AnalyticsTracker();
   //
   return (
     <Routes>
