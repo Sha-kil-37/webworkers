@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 import Paragraph from "./Paragraph";
-import { RxAvatar } from "react-icons/rx";
+// import { RxAvatar } from "react-icons/rx";
 //
 export default function Testimonials() {
   //

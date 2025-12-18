@@ -34,12 +34,11 @@ export default function Contact() {
   // Submit Handler
   const onSubmit = async (data) => {
     setFormStatus("loading");
-
     const formData = new FormData();
     formData.append("name", data.name);
     formData.append("email", data.email);
     formData.append("message", data.message);
-
+    // Send form data to the API
     const response = await fetch(apiUrl, {
       method: "POST",
       body: formData,
@@ -61,9 +60,7 @@ export default function Contact() {
     <section className="py-10 bg-[var(--white-color)]">
       <div className="max-w-6xl mx-auto block md:block lg:flex xl:flex gap-x-8 justify-between sm:block">
         <div>
-          <h2 className="font-bold text-4xl font-mono">
-            Get in Touch
-          </h2>
+          <h2 className="font-bold text-4xl font-mono">Get in Touch</h2>
           <Paragraph className="max-w-xl font-mono mt-2">
             We’d love to hear from you! Whether you have questions, need
             support, or want to start a project, our team is ready to help.
@@ -72,9 +69,7 @@ export default function Contact() {
           </Paragraph>
           <div className="flex gap-x-4 mt-3 items-center">
             <HiOutlineMail className="" />
-            <span className=" font-mono">
-              sakildevmern@gmail.com
-            </span>
+            <span className=" font-mono">sakildevmern@gmail.com</span>
           </div>
           <div className="flex gap-x-4 mt-3">
             <IoCallOutline className="" />
@@ -82,9 +77,7 @@ export default function Contact() {
           </div>
           <div className="flex gap-x-4 mt-3">
             <CiLocationOn className="" />
-            <span className="font-mono">
-              Gazipur, Dhaka, Bangladesh
-            </span>
+            <span className="font-mono">Gazipur, Dhaka, Bangladesh</span>
           </div>
         </div>
         <div className="w-xl mx-auto ">
@@ -95,7 +88,9 @@ export default function Contact() {
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Name */}
             <div className="mb-5">
-              <label className="block font-medium mb-2 font-mono">Full Name</label>
+              <label className="block font-medium mb-2 font-mono">
+                Full Name
+              </label>
               <input
                 type="text"
                 {...register("name")}
@@ -111,7 +106,9 @@ export default function Contact() {
 
             {/* Email */}
             <div className="mb-5">
-              <label className="block font-medium mb-2 font-mono">Email Address</label>
+              <label className="block font-medium mb-2 font-mono">
+                Email Address
+              </label>
               <input
                 type="email"
                 {...register("email")}
@@ -127,7 +124,9 @@ export default function Contact() {
 
             {/* Message */}
             <div className="mb-5">
-              <label className="block font-medium mb-2 font-mono">Message</label>
+              <label className="block font-medium mb-2 font-mono">
+                Message
+              </label>
               <textarea
                 {...register("message")}
                 className="w-full p-3 border rounded h-32 focus:ring focus:ring-blue-300 font-mono"

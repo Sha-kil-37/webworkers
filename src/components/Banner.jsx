@@ -1,7 +1,6 @@
-import { useNavigate } from "react-router";
 import Paragraph from "./Paragraph";
 import royal from "../assets/royal.avif";
-import { IconBase } from "react-icons/lib";
+// import { IconBase } from "react-icons/lib";
 import { FaArrowDownLong } from "react-icons/fa6";
 
 //
