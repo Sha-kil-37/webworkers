@@ -5,7 +5,7 @@ import { useParams } from "react-router";
 export default function BlogDetails() {
   //
   const params = useParams();
-  console.log(params);
+  // console.log(params);
   //
   return (
     <section className="py-20">

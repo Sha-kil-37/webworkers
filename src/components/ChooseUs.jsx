@@ -3,7 +3,7 @@ import { RiEmotionHappyLine } from "react-icons/ri";
 import Paragraph from "./Paragraph";
 import { PiStrategy } from "react-icons/pi";
 import { IoIosTimer } from "react-icons/io";
-import agency from "../assets/agency.mp4";
+import agency from "../assets/video/agency.mp4";
 //
 export default function ChooseUs() {
   //
@@ -40,7 +40,7 @@ export default function ChooseUs() {
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 gap-12">
+        <div className="sm:grid sm:grid-cols-2 gap-12">
           <div>
             <Paragraph className="text-4xl font-bold font-mono">
               Why people love us

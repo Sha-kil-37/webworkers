@@ -84,23 +84,7 @@ export default function Projects() {
     <section className="py-20">
       <div className="max-w-6xl mx-auto relative">
         <Paragraph className="text-3xl font-bold font-mono text-center">
-          Explore the work that defines who we are. Each project represents our
-          commitment to quality, innovation, and digital excellence. From modern
-          websites and intuitive user interfaces to custom software solutions
-          and advanced AI integrations, we build digital products that solve
-          real problems and create meaningful impact. Our portfolio showcases a
-          diverse range of projects across Web Development, UI/UX Design, App
-          Development, Digital Marketing, Social Media Marketing, SEO, Business
-          Consultation, and Custom Software Development. Every solution is
-          crafted with care, backed by research, powered by modern technologies,
-          and aligned with our clients’ business goals. We believe great digital
-          products are built through collaboration, creativity, and a deep
-          understanding of user needs. That is why we approach every project
-          with a strategic mindset—focusing on usability, performance,
-          scalability, and long-term growth. Browse through our work and
-          discover how we help brands elevate their digital presence, streamline
-          operations, and unlock new opportunities through tailored digital
-          solutions.
+          Explore the work that defines us. Each project reflects our commitment to quality, innovation, and digital excellence—from modern websites and intuitive UI/UX to custom software and AI-driven solutions. Our portfolio spans web and app development, digital and social media marketing, SEO, business consultation, and custom software. Every solution is research-driven, built with modern technology, and aligned with our clients’ goals. Through collaboration and a strategic focus on usability, performance, and scalability, we help brands elevate their digital presence and achieve sustainable growth.
         </Paragraph>
 
         {/*  */}

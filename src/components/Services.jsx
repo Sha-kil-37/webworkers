@@ -64,11 +64,7 @@ export default function Services() {
     <section className="py-10">
       <div className="max-w-6xl mx-auto">
         <Paragraph className="font-mono mx-auto text-3xl font-bold">
-          At our Digital Web Agency, we deliver high-value, results-driven
-          solutions designed to strengthen your digital presence, accelerate
-          growth, and enhance your brand experience. Our team blends creativity,
-          technology, and strategic thinking to build products and strategies
-          that solve real business challenges. Explore our core services
+         At our Digital Web Agency, we deliver results-driven solutions that strengthen your digital presence, drive growth, and elevate your brand. By combining creativity, technology, and strategy, we build solutions that solve real business challenges. Explore our core services.
         </Paragraph>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 mt-10">
           {services.map((service, index) => (

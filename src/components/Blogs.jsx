@@ -105,13 +105,10 @@ export default function Blogs() {
           <aside className="md:col-span-1 border-r border-gray-200">
             <div className="sticky top-20">
               <Paragraph className="mt-4 font-mono font-bold text-3xl">
-                Welcome to our blog—your destination for expert insights,
-                practical strategies, and the latest trends in the digital
-                world. Here, we share knowledge that empowers businesses,
-                creators, and innovators to stay ahead in a fast-evolving
-                digital landscape. Dive into our blogs and discover fresh ideas,
-                expert opinions, and strategies that help you make smarter
-                decisions and build a stronger digital presence.
+                Welcome to our blog—your source for expert insights, practical
+                strategies, and the latest digital trends. We share valuable
+                knowledge to help businesses and creators stay ahead, make
+                smarter decisions, and build a stronger digital presence.
               </Paragraph>
             </div>
           </aside>

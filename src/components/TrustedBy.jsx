@@ -1,54 +1,43 @@
-// import Paragraph from "./Paragraph";
-import one from "../assets/one.svg";
-import two from "../assets/two.svg";
-import three from "../assets/three.svg";
-import four from "../assets/four.svg";
-import six from "../assets/six.svg";
-import five from "../assets/five.svg";
-import seven from "../assets/seven.svg";
-import eight from "../assets/eight.svg";
-import nine from "../assets/nine.svg";
-import ten from "../assets/ten.svg";
-import eleven from "../assets/eleven.svg";
-import twilve from "../assets/twilve.svg";
-import thirteen from "../assets/thirteen.svg";
-import fourteen from "../assets/fourteen.svg";
-import fifteen from "../assets/fifteen.svg";
-
+import british from "../assets/british.avif";
+import delair from "../assets/delair.avif";
+import healtcare from "../assets/healthcare.avif";
+import mapesa from "../assets/mapesa.avif";
+import narayana from "../assets/narayana.avif";
+import nsic from "../assets/nsic.avif";
+import sbg from "../assets/sbg.avif";
+import sprint from "../assets/sprint.avif";
 //
 export default function TrustedBy() {
-  //  // trusted by organaigation
-  const trustedBy = [one, two, three, four, five, six, seven, eight, nine, ten];
-
   //
   return (
-    <section className="py-10">
+    <section className="">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl text-center font-bold">Trusted By</h2>
-        <div className="max-w-5xl mx-auto flex justify-between flex-wrap mt-5">
-          {[one, two, three, four, five].map((item, i) => {
+        <h2 className="text-4xl text-center font-bold mb-5">Trusted By</h2>
+        <div className="grid grid-cols-4">
+          {[
+            british,
+            delair,
+            healtcare,
+            mapesa,
+            narayana,
+            nsic,
+            sbg,
+            sprint,
+          ].map((item, i) => {
             return (
-              <div key={i} className="overflow-hidden w-25 h-25 ">
-                <img className="h-full w-full object-center" src={item} alt={item} />
-              </div>
-            );
-          })}
-        </div>
-        <div className="max-w-6xl mx-auto flex justify-between flex-wrap mt-5">
-          {[six, seven, eight, nine, ten].map((item, i) => {
-            return (
-              <div key={i} className="overflow-hidden w-25 h-25 ">
-                <img className="h-full w-full object-center" src={item} alt={item} />
-              </div>
-            );
-          })}
-        </div>
-         <div className="max-w-5xl mx-auto flex justify-between flex-wrap mt-5">
-          {[eleven, twilve, thirteen, fourteen, fifteen].map((item, i) => {
-            return (
-              <div key={i} className="overflow-hidden w-25 h-25">
-                <img className="h-full w-full object-center" src={item} alt={item} />
-              </div>
+              <picture
+                key={i}
+                className="inline-block w-full max-h-30 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              >
+                <source srcSet={item} type="image/avif" />
+
+                <img
+                  src={item}
+                  alt="Trusted by company logo"
+                  loading="lazy"
+                  className="w-full h-full object-contain"
+                />
+              </picture>
             );
           })}
         </div>

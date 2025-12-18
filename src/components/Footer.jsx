@@ -15,9 +15,9 @@ export default function Footer() {
   //
   return (
     <footer className="py-10 bg-gray-100">
-      <div className="max-w-6xl mx-auto flex flex-wrap justify-between">
-        <div>
-          <Link to="/" className="block h-10 w-10 overflow-hidden">
+      <div className="max-w-6xl sm:grid sm:grid-cols-2 xl:grid xl:grid-cols-4 2xl:grid 2xl:grid-cols-4 mx-auto">
+        <div className="text-center">
+          <Link to="/" className="block h-10 w-10 overflow-hidden mx-auto">
             <img className="h-full w-full inline-block" src={logo} alt={logo} />
           </Link>
           <Paragraph className="font-bold mt-2">Web Workers</Paragraph>
@@ -25,19 +25,18 @@ export default function Footer() {
             Digital Web Service Agency
           </Paragraph>
         </div>
-        <div>
+        <div className="text-center">
           <h3 className="text-xl font-mono">Legal</h3>
           <Link className="block font-mono">Privacy & Policy</Link>
           <Link className="block font-mono">Terms & Conditions</Link>
         </div>
-
-        <div>
+        <div className="text-center">
           <h3 className="text-xl font-mono">Follow Us</h3>
           <SocialLink />
         </div>
-        <div>
+        <div className="text-center">
           <h3 className="text-xl font-mono">Payment By</h3>
-          <div className="grid grid-cols-2 mt-3 gap-4">
+          <div className="sm:grid sm:grid-cols-2 mt-3 gap-4">
             {[mastercard, nagad, biksh, visacard].map((item, index) => {
               return (
                 <div className="h-15 w-40 overflow-hidden" key={index}>

@@ -57,7 +57,7 @@ export default function Contact() {
   };
   //
   return (
-    <section className="py-10 bg-[var(--white-color)]">
+    <section className="py-10">
       <div className="max-w-6xl mx-auto block md:block lg:flex xl:flex gap-x-8 justify-between sm:block">
         <div>
           <h2 className="font-bold text-4xl font-mono">Get in Touch</h2>
@@ -80,8 +80,8 @@ export default function Contact() {
             <span className="font-mono">Gazipur, Dhaka, Bangladesh</span>
           </div>
         </div>
-        <div className="w-xl mx-auto ">
-          <h2 className="text-2xl font-bold mb-6 text-[var(--black-color)] text-center font-mono">
+        <div className="max-w-xl mx-auto ">
+          <h2 className="text-2xl font-bold mb-6 text-center font-mono">
             Send Us a Message
           </h2>
 

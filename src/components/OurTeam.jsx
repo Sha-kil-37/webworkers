@@ -1,8 +1,8 @@
 import Paragraph from "./Paragraph";
 import shakil from "../assets/shakil.png";
 import rakibul from "../assets/rakibul.png";
-import one from "../assets/one.png";
-import two from "../assets/two.png";
+import inni from "../assets/inni.png";
+import alex  from "../assets/alex.png";
 export default function OurTeam() {
   //
   const team = [
@@ -25,14 +25,14 @@ export default function OurTeam() {
       role: "UI/UX Designer",
       description:
         "Inni Akter is a creative UI/UX Designer who focuses on building clean, modern, and user-friendly interfaces. He designs intuitive user experiences that improve engagement and make digital products easy to use. With strong attention to detail and a passion for design, he brings ideas to life through thoughtful and effective visuals.",
-      image: one,
+      image: inni,
     },
     {
       name: "Alex Thompson",
       role: "Project Manager",
       description:
         "Alex Thompson is a dedicated Project Manager who ensures every project runs smoothly from start to finish. He coordinates tasks, manages timelines, and maintains clear communication with clients and team members. With strong leadership and organizational skills, he keeps projects on track and delivers results efficiently and precisely.",
-      image: two,
+      image: alex,
     },
   ];
   //
@@ -44,14 +44,9 @@ export default function OurTeam() {
         </h2>
         <hr className="mt-3" />
         <Paragraph className="text-3xl font-bold mt-3 font-mono">
-          We are a passionate and skilled team dedicated to creating innovative
-          digital solutions. Rakibul Islam leads with strong digital expertise
-          and strategic thinking, while Shakil Ahmed brings technical excellence
-          and creative development skills. Together, we work with commitment,
-          creativity, and teamwork to deliver meaningful results for every
-          project.
+          We are a passionate team delivering innovative digital solutions. Led by Rakibul Islam’s strategic digital expertise and Shakil Ahmed’s technical and creative skills, we work collaboratively to deliver impactful results on every project.
         </Paragraph>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 mt-10">
+        <div className="sm:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 mt-10">
           {team.map((member, i) => (
             <div key={i}>
               {/* Avatar */}

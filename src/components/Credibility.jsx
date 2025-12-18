@@ -34,13 +34,7 @@ export default function Credibility() {
     <section className="">
       <div className="max-w-6xl mx-auto">
         <Paragraph className="font-mono mx-auto text-3xl font-bold">
-          We deliver reliable, high-quality digital solutions through expert Web
-          Development, Social Media Marketing, UI/UX Design, App Development,
-          Digital Marketing, SEO, Business Consultation, and Custom Software
-          Development. Our team focuses on innovation, transparency, and
-          measurable results. With a client-first mindset, we ensure every
-          project is built to grow your brand, boost performance, and achieve
-          long-term success.
+          We deliver high-quality digital solutions across web development, UI/UX design, app development, digital marketing, SEO, business consultation, and custom software. Driven by innovation, transparency, and measurable results, we take a client-first approach to build solutions that strengthen your brand, improve performance, and support long-term growth
         </Paragraph>
         {/* Credentials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-10">

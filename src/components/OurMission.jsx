@@ -4,7 +4,7 @@ export default function OurMission() {
   return (
     <section className="py-20">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-12">
+        <div className="sm:grid sm:grid-cols-2 md:grid-cols-2 gap-12">
           {/* Left Content */}
           <div>
             <h2 className="text-4xl font-bold font-mono">
@@ -19,7 +19,7 @@ export default function OurMission() {
             </Paragraph>
           </div>
           {/*  */}
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl">
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl mt-3">
             <p className="text-4xl font-bold mb-2 font-mono">
               300+
             </p>
@@ -30,7 +30,7 @@ export default function OurMission() {
               Trusted by businesses globally
             </p>
           </div>
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl">
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl mt-3">
             <p className="text-4xl font-bold mb-2 font-mono">
               400+
             </p>
@@ -41,7 +41,7 @@ export default function OurMission() {
               From startups to enterprises
             </p>
           </div>
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl mt-3">
             <p className="text-4xl font-bold text-green-600 mb-2 font-mono">5+</p>
             <p className="font-medium font-mono">Years of Excellence</p>
             <p className="mt-2 font-mono">
