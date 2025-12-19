@@ -19,12 +19,12 @@ export default function Banner() {
       </div>
       {/* Content Overlay */}
       <div className="max-w-6xl mx-auto overflow-hidden relative z-10 text-center">
-        <h1 className="transition-colors duration-300 font-sens font-bold text-7xl mt-3 max-w-2xl mx-auto text-white bg-red-300 p-4 dark:text-blue-300">
+        <h1 className="transition-colors duration-300 font-sens font-bold text-7xl mt-3 max-w-2xl mx-auto text-white bg-red-300 p-4 dark:bg-black/70">
           We Build Creative Digital Solutions
         </h1>
         <button
           type="button"
-          className="animated-btn mt-10 block py-4 rounded-lg bg-black/90 w-100 mx-auto font-bold text-white"
+          className="animated-btn mt-10 block py-4 rounded-lg dark:bg-white dark:text-black bg-black  w-100 mx-auto font-bold text-white"
         >
           Scroll Down
         </button>
