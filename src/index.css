@@ -1,27 +1,42 @@
-/*  */
+/* Tailwind base import */
 @import "tailwindcss";
-/* From Uiverse.io by xXJollyHAKERXx */ 
-.spinner {
-  background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
-  width: 100%;
-  height: 100%;
-  animation: spinning82341 2s linear infinite;
-  text-align: center;
-  border-radius: 50px;
-  filter: blur(1px);
-  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+
+/* Keep custom dark variant for utilities (class-based dark mode) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* CSS variables for light / dark themes */
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --accent: #f59e0b;
 }
 
-.spinner1 {
-  background-color: rgb(36, 36, 36);
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  filter: blur(10px);
+.dark {
+  --bg: #0b1220;
+  --surface: #071026;
+  --text: #e6eef8;
+  --muted: #94a3b8;
+  --accent: #fbbf24;
 }
 
-@keyframes spinning82341 {
-  to {
-    transform: rotate(360deg);
-  }
+html,
+body,
+#root {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Lightweight utility classes for non-Tailwind elements to respect theme */
+.surface {
+  background-color: var(--surface);
+  color: var(--text);
+}
+.muted {
+  color: var(--muted);
+}
+.accent {
+  color: var(--accent);
 }

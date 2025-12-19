@@ -14,7 +14,7 @@ export default function Footer() {
 
   //
   return (
-    <footer className="py-10 bg-gray-100">
+    <footer className="py-10">
       <div className="max-w-6xl sm:grid sm:grid-cols-2 xl:grid xl:grid-cols-4 2xl:grid 2xl:grid-cols-4 mx-auto">
         <div className="text-center">
           <Link to="/" className="block h-10 w-10 overflow-hidden mx-auto">

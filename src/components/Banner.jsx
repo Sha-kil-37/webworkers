@@ -3,6 +3,7 @@ import agency from "../assets/video/agency.mp4";
 export default function Banner() {
   return (
     <section className="relative py-35">
+      {/* Video Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           autoPlay
@@ -16,9 +17,9 @@ export default function Banner() {
         </video>
         <div className="absolute inset-0 bg-black/40" />
       </div>
-
+      {/* Content Overlay */}
       <div className="max-w-6xl mx-auto overflow-hidden relative z-10 text-center">
-        <h1 className="font-sens font-bold text-7xl mt-3 max-w-2xl mx-auto text-white bg-red-300 p-4">
+        <h1 className="transition-colors duration-300 font-sens font-bold text-7xl mt-3 max-w-2xl mx-auto text-white bg-red-300 p-4 dark:text-blue-300">
           We Build Creative Digital Solutions
         </h1>
         <button
@@ -28,6 +29,7 @@ export default function Banner() {
           Scroll Down
         </button>
       </div>
+      {/*  */}
     </section>
   );
 }

@@ -1,11 +1,11 @@
-import logo from "../assets/logo.png";
 import { Link } from "react-router";
 import { useEffect, useState } from "react";
+import DarkModeToggle from "./DarkModeToggle";
 
 export default function Nav() {
   const [hidden, setHidden] = useState(false);
   const THRESHOLD = 150; // pixels scrolled before hiding the nav
-
+  //
   useEffect(() => {
     let ticking = false;
     function onScroll() {
@@ -23,10 +23,10 @@ export default function Nav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
+  //
   return (
     <nav
-      className={`bg-amber-50 py-5 sticky top-0 left-0 z-10 w-full transform transition-transform transition-opacity duration-300 ease-in-out ${
+      className={`bg-[#F9F8F6] py-5 sticky top-0 left-0 z-10 w-full transform transition-transform transition-opacity duration-300 ease-in-out ${
         hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
       }`}
     >
@@ -37,8 +37,9 @@ export default function Nav() {
         >
           Web Workers
         </Link>
-
-        <button>Dark mode</button>
+        <div className="flex items-center gap-3">
+          <DarkModeToggle />
+        </div>
       </div>
     </nav>
   );
