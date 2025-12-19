@@ -1,5 +1,5 @@
 import { ReactLenis } from "lenis/react";
-import { Fragment, useRef } from "react";
+import {  useRef } from "react";
 //
 const SmoothScroll = ({ children }) => {
   //
@@ -15,19 +15,17 @@ const SmoothScroll = ({ children }) => {
 
   //
   return (
-    <Fragment>
-      <ReactLenis
-        root
-        ref={lenisRef}
-        options={{
-          lerp: 0.05,
-          //   infinite: true,
-          syncTouch: true,
-        }}
-      >
-        {children}
-      </ReactLenis>
-    </Fragment>
+    <ReactLenis
+      root
+      ref={lenisRef}
+      options={{
+        lerp: 0.05,
+        //   infinite: true,
+        syncTouch: true,
+      }}
+    >
+      {children}
+    </ReactLenis>
   );
 };
 

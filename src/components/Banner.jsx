@@ -1,39 +1,32 @@
-import Paragraph from "./Paragraph";
-import royal from "../assets/royal.avif";
-import { FaArrowDownLong } from "react-icons/fa6";
+import agency from "../assets/video/agency.mp4";
 
-//
 export default function Banner() {
-  // const navigate = useNavigate();
-  //
-  // function handleClick() {
-  //   navigate("/about");
-  // }
-  //
- 
   return (
-    <section  className="py-10">
-      <div className="max-w-6xl mx-auto overflow-hidden">
-        <picture className="overflow-hidden h-20 w-50 mx-auto flex justify-center">
-          <source srcSet={royal} type="image/avif" />
-          <img className="object-cover h-full w-full" src={royal} alt="Royal" />
-        </picture>
-        <h1 className="font-sens font-bold text-center font-mono mt-3 text-xl">
-          WEB WORKERS
-        </h1>
-        <Paragraph className="font-sens font-bold text-center font-mono mt-3 mx-auto text-6xl">
+    <section className="relative py-35">
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={agency} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
+
+      <div className="max-w-6xl mx-auto overflow-hidden relative z-10 text-center">
+        <h1 className="font-sens font-bold text-7xl mt-3 max-w-2xl mx-auto text-white bg-red-300 p-4">
           We Build Creative Digital Solutions
-        </Paragraph>
-        <div className="flex justify-center mt-10 animate-bounce">
-          <FaArrowDownLong className="text-2xl" />
-        </div>
-        <Paragraph className="text-center mt-5 font-mono">
-          In today’s fast-moving digital world, Every business needs a strong
-          online presence to thrive in the digital world. With “We Build
-          Creative Digital Solutions,” we deliver innovative, user-friendly Web
-          Development, Digital Marketing, and UI/UX Design that help businesses
-          attract customers, strengthen their brand, and grow online.
-        </Paragraph>
+        </h1>
+        <button
+          type="button"
+          className="animated-btn mt-10 block py-4 rounded-lg bg-black/90 w-100 mx-auto font-bold text-white"
+        >
+          Scroll Down
+        </button>
       </div>
     </section>
   );

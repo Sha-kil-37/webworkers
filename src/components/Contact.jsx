@@ -80,14 +80,14 @@ export default function Contact() {
             <span className="font-mono">Gazipur, Dhaka, Bangladesh</span>
           </div>
         </div>
-        <div className="max-w-xl mx-auto ">
+        <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-center font-mono">
             Send Us a Message
           </h2>
 
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} className="w-full">
             {/* Name */}
-            <div className="mb-5">
+            <div className="mb-5 w-full">
               <label className="block font-medium mb-2 font-mono">
                 Full Name
               </label>
@@ -105,7 +105,7 @@ export default function Contact() {
             </div>
 
             {/* Email */}
-            <div className="mb-5">
+            <div className="mb-5 w-full">
               <label className="block font-medium mb-2 font-mono">
                 Email Address
               </label>
@@ -123,7 +123,7 @@ export default function Contact() {
             </div>
 
             {/* Message */}
-            <div className="mb-5">
+            <div className="mb-5 w-full">
               <label className="block font-medium mb-2 font-mono">
                 Message
               </label>
@@ -143,7 +143,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full font-mono font-bold bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition disabled:bg-blue-400"
+              className="ont-mono font-bold bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition disabled:bg-blue-400 w-full"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>

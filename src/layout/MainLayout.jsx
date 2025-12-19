@@ -1,17 +1,20 @@
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Nav from "../components/Nav";
 import WhatsAppButton from "../components/WhatsAppButton";
+import SmoothScroll from "../lib/utils/SmoothScroll";
 //
 export default function MainLayout({ children }) {
   //
 
   //
   return (
-    <div className="relative">
-      <Header />
-      <WhatsAppButton />
-      <main>{children}</main>
-      <Footer />
-    </div>
+    <SmoothScroll>
+      <div className="relative">
+        <Nav />
+        <WhatsAppButton />
+        <main>{children}</main>
+        <Footer />
+      </div>
+    </SmoothScroll>
   );
 }
