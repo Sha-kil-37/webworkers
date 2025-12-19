@@ -4,11 +4,11 @@ import Paragraph from "./Paragraph";
 import { PiStrategy } from "react-icons/pi";
 import { IoIosTimer } from "react-icons/io";
 import agency from "../assets/video/agency.mp4";
+import ScrollFloat from "./ScrollFloat";
 //
 export default function ChooseUs() {
   //
 
- 
   const features = [
     {
       title: "On-Time Delivery, Every Time",
@@ -42,10 +42,16 @@ export default function ChooseUs() {
       <div className="max-w-6xl mx-auto">
         <div className="sm:grid sm:grid-cols-2 gap-12">
           <div>
-            <Paragraph className="text-4xl font-bold font-mono">
+            <ScrollFloat
+              animationDuration={2}
+              ease="back.inOut(2)"
+              scrollStart="center bottom+=50%"
+              scrollEnd="bottom bottom-=40%"
+              stagger={0.03}
+            >
               Why people love us
-            </Paragraph>
-            <Paragraph className="max-w-xl font-mono mt-3">
+            </ScrollFloat>
+            <Paragraph className="max-w-xl mt-3">
               People love us because we deliver high-quality work with honesty,
               creativity, and care. We listen to our clients, understand their
               goals, and provide smart digital solutions that truly make a
@@ -69,7 +75,9 @@ export default function ChooseUs() {
                   <Icon className="w-10 h-10" />
                 </div>
                 <div>
-                  <h3 className="font-mono mt-3 text-xl font-semibold">{f.title}</h3>
+                  <h3 className="font-mono mt-3 text-xl font-semibold">
+                    {f.title}
+                  </h3>
                   <p className="text-sm mt-2 font-mono">{f.desc}</p>
                 </div>
               </div>

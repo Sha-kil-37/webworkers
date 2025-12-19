@@ -4,7 +4,8 @@
 /* Keep custom dark variant for utilities (class-based dark mode) */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* CSS variables for light / dark themes */
+
+
 
 
 

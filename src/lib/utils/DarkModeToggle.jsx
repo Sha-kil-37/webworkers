@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-// 
-export default function DarkModeToggle() {
+import { CiDark ,CiLight} from "react-icons/ci";
+//
+export default function DarkModeToggle({ className }) {
+  //
   const [theme, setTheme] = useState(() => {
     try {
       const stored = localStorage.getItem("theme");
@@ -34,9 +36,9 @@ export default function DarkModeToggle() {
       onClick={toggle}
       aria-label="Toggle dark mode"
       title={theme === "dark" ? "Switch to light" : "Switch to dark"}
-      className="p-2 transition-colors"
+      className={`${className}`}
     >
-      {theme === "dark" ? "🌙" : "☀️"}
+      {theme === "dark" ? <CiDark /> : <CiLight />}
     </button>
   );
 }

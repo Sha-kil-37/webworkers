@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 import { useEffect, useState } from "react";
-import DarkModeToggle from "./DarkModeToggle";
+import DarkModeToggle from "../lib/utils/DarkModeToggle";
 
 export default function Nav() {
   const [hidden, setHidden] = useState(false);
   const THRESHOLD = 150; // pixels scrolled before hiding the nav
-  //
+  // Scroll handler with requestAnimationFrame throttling
   useEffect(() => {
     let ticking = false;
     function onScroll() {
@@ -26,20 +26,18 @@ export default function Nav() {
   //
   return (
     <nav
-      className={`bg-[#F9F8F6] py-5 sticky top-0 left-0 z-10 w-full transform transition-transform transition-opacity duration-300 ease-in-out ${
+      className={`bg-[#F9F8F6] py-4 sticky top-0 left-0 z-10 w-full transform transition-transform transition-opacity duration-300 ease-in-out ${
         hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
       }`}
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="overflow-hidden block font-bold text-xl bg-red-300 px-2 text-white"
+          className="overflow-hidden block font-bold text-xl bg-red-300 px-2 text-white dark:bg-black transition-colors duration-300"
         >
           Web Workers
         </Link>
-        <div className="flex items-center gap-3">
-          <DarkModeToggle />
-        </div>
+        <DarkModeToggle  className="cursor-pointer text-2xl" />
       </div>
     </nav>
   );
