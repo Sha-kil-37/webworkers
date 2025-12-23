@@ -6,23 +6,13 @@ import narayana from "../assets/narayana.avif";
 import nsic from "../assets/nsic.avif";
 import sbg from "../assets/sbg.avif";
 import sprint from "../assets/sprint.avif";
-import ScrollFloat from "./ScrollFloat";
 //
-export default function TrustedBy() {
+export default function TrustedUs() {
   //
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <ScrollFloat
-          animationDuration={2}
-          ease="back.inOut(2)"
-          scrollStart="center bottom+=50%"
-          scrollEnd="bottom bottom-=40%"
-          stagger={0.03}
-        >
-          Trusted By
-        </ScrollFloat>
-
+        <h2 className="text-center text-3xl font-semibold text-[#082032]">Trusted US</h2>
         <div className="grid grid-cols-4">
           {[
             british,

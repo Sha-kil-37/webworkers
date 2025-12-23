@@ -6,6 +6,7 @@ export default function BlogDetails() {
   //
   const params = useParams();
   // console.log(params);
+ 
   //
   return (
     <section className="py-20">

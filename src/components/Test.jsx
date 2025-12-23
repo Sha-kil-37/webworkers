@@ -1,9 +1,16 @@
+import { motion } from "framer-motion";
 //
-export default function Test() {
-  //
+const Test = () => {
   return (
-    <section className="h-screen flex justify-center items-center">
-      <h1 className="text-4xl font-bold">This is Test Page</h1>
-    </section>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }} // Start state (initial load)
+      animate={{ opacity: 1, y: 0 }} // End state (after load)
+      transition={{ duration: 0.5 }} // Animation duration
+    >
+      <h1>Hello, World!</h1>
+      <p>This content fades and slides in after the component mounts.</p>
+    </motion.div>
   );
-}
+};
+
+export default Test;

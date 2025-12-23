@@ -1,9 +1,13 @@
 import Marquee from "react-fast-marquee";
 import { useEffect, useRef } from "react";
 import Paragraph from "./Paragraph";
+import { motion } from "framer-motion";
+
 //
 // Banner component with scroll-driven zoom effect
 export default function Banner() {
+  //
+
   //
   const bannerRef = useRef(null);
   const frameRef = useRef(null);
@@ -48,35 +52,45 @@ export default function Banner() {
   return (
     <section
       ref={bannerRef}
-      className="relative py-25 bg-amber-200 overflow-hidden"
+      className="relative py-30 bg-gradient-to-b from-[#FFFBDE] to-white  overflow-hidden"
     >
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 50 }} // Start state (initial load)
+        animate={{ opacity: 1, y: 0 }} // End state (after load)
+        transition={{ duration: 0.5 }}
         ref={frameRef}
         className="max-w-6xl mx-auto relative z-10 text-center transform-gpu"
         style={{ willChange: "transform" }}
       >
-        <h1 className="transition-colors duration-300 font-sens font-bold text-7xl mt-3 max-w-2xl mx-auto">
+        <h1 className="transition-colors duration-300 font-sens font-bold text-7xl mt-3 max-w-2xl mx-auto text-[#082032]">
           We Build Creative Digital Solutions
         </h1>
-        <Paragraph className="mt-10 max-w-4xl mx-auto">
+        <Paragraph className="mt-10 max-w-4xl mx-auto font-medium text-[#082032]">
           In today’s fast-moving digital world, Every business needs a strong
           online presence to thrive in the digital world. With{" "}
-          <em className="font-bold text-red-300">
+          <em className="font-bold text-[#082032]">
             “We Build Creative Digital Solutions,”
           </em>{" "}
           we deliver innovative, user-friendly Web Development, Digital
           Marketing, and UI/UX Design that help businesses attract customers,
           strengthen their brand, and grow online
         </Paragraph>
-        <button
-          type="button"
-          className="mt-10 block py-2 rounded-full dark:bg-white dark:text-black bg-black w-80 mx-auto font-bold text-white cursor-pointer"
+
+        <motion.button
+          initial={{ y: -80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.9,
+            type: "spring",
+            stiffness: 120,
+            damping: 12,
+          }}
+          className="py-2 rounded-2xl block mt-10 bg-[#082032] mx-auto w-sm text-white font-medium "
         >
-          <Marquee speed={50} delay={0} pauseOnHover={true} direction="left">
-            Scroll Down
-          </Marquee>
-        </button>
-      </div>
+          <Marquee>Scroll Down For See More About Me</Marquee>
+        </motion.button>
+      </motion.div>
     </section>
   );
 }

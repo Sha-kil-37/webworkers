@@ -1,5 +1,4 @@
 import Paragraph from "./Paragraph";
-import ScrollFloat from "./ScrollFloat";
 
 //
 export default function OurMission() {
@@ -9,15 +8,7 @@ export default function OurMission() {
         <div className="sm:grid sm:grid-cols-2 md:grid-cols-2 gap-12">
           {/* Left Content */}
           <div>
-            <ScrollFloat
-              animationDuration={2}
-              ease="back.inOut(2)"
-              scrollStart="center bottom+=50%"
-              scrollEnd="bottom bottom-=40%"
-              stagger={0.03}
-            >
-              Our Mission
-            </ScrollFloat>
+            <h2> Our Mission</h2>
 
             <Paragraph className="max-w-xl mt-5">
               We create smart, creative, and impactful digital solutions that

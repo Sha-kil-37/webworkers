@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router";
 import NotFound from "./components/NotFound";
 import Test from "./components/Test";
-import { Fragment, Suspense } from "react";
+import { Fragment, lazy, Suspense } from "react";
 import Loading from "./components/Loading";
 import Banner from "./components/Banner";
-import TrustedBy from "./components/TrustedBy";
+import TrustedUs from "./components/TrustedUs";
 import OurMission from "./components/OurMission";
 import Credibility from "./components/Credibility";
 import Services from "./components/Services";
@@ -17,11 +17,12 @@ import Contact from "./components/Contact";
 import Blogs from "./components/Blogs";
 import BlogDetails from "./components/BlogDetails";
 import ProjectDetails from "./components/ProjectDetails";
-const MainLayout = (await import("./layout/MainLayout")).default;
+const MainLayout = lazy(() => import("./layout/MainLayout"));
 import AnalyticsTracker from "./lib/utils/AnalyticsTracker";
 //
 function App() {
   AnalyticsTracker();
+ 
   //
   return (
     <Routes>
@@ -32,7 +33,7 @@ function App() {
             <MainLayout>
               <Fragment>
                 <Banner />
-                <TrustedBy />
+                <TrustedUs />
                 <OurMission />
                 <Credibility />
                 <Services />

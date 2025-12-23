@@ -1,8 +1,6 @@
-import React from "react";
 import { FaAward, FaTrophy, FaCheckCircle, FaStar } from "react-icons/fa";
 import Paragraph from "./Paragraph";
-import ScrollFloat from "./ScrollFloat";
-
+//
 export default function Credibility() {
   //
   const credentials = [
@@ -34,21 +32,14 @@ export default function Credibility() {
   return (
     <section>
       <div className="max-w-6xl mx-auto">
-        <ScrollFloat
-          animationDuration={2}
-          ease="back.inOut(2)"
-          scrollStart="center bottom+=50%"
-          scrollEnd="bottom bottom-=40%"
-          stagger={0.03}
-        >
+        <p>
           We deliver high-quality digital solutions across web development,
           UI/UX design, app development, digital marketing, SEO, business
           consultation, and custom software. Driven by innovation, transparency,
           and measurable results, we take a client-first approach to build
           solutions that strengthen your brand, improve performance, and support
           long-term growth
-        </ScrollFloat>
-
+        </p>
         {/* Credentials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-10 gap-y-6">
           {credentials.map((cred, i) => {
@@ -59,9 +50,7 @@ export default function Credibility() {
                 <div className="h-30 w-full">
                   <Icon className="text-orange-200 h-full w-full" size={28} />
                 </div>
-                <h3 className="text-center text-4xl mt-3">
-                  {cred.title}
-                </h3>
+                <h3 className="text-center text-4xl mt-3">{cred.title}</h3>
                 <Paragraph className="text-center mt-2">
                   {cred.description}
                 </Paragraph>

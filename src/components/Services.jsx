@@ -6,9 +6,7 @@ import { IoIosRocket } from "react-icons/io";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { AiOutlineSound } from "react-icons/ai";
 import { IoIosApps } from "react-icons/io";
-import Paragraph from "./Paragraph";
 import { GiArtificialIntelligence } from "react-icons/gi";
-import ScrollFloat from "./ScrollFloat";
 //
 //
 export default function Services() {
@@ -64,27 +62,19 @@ export default function Services() {
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <ScrollFloat
-          animationDuration={2}
-          ease="back.inOut(2)"
-          scrollStart="center bottom+=50%"
-          scrollEnd="bottom bottom-=40%"
-          stagger={0.03}
-        >
+        <h2>
           At our Digital Web Agency, we deliver results-driven solutions that
           strengthen your digital presence, drive growth, and elevate your
           brand. By combining creativity, technology, and strategy, we build
           solutions that solve real business challenges. Explore our core
           services.
-        </ScrollFloat>
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 mt-10">
           {services.map((service, index) => (
             <div key={index} className="py-2">
               <div className="mb-6">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">
-                {service.title}
-              </h3>
+              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
               <p className="">{service.desc}</p>
             </div>
           ))}

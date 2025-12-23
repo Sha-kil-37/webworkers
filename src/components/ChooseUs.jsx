@@ -4,7 +4,6 @@ import Paragraph from "./Paragraph";
 import { PiStrategy } from "react-icons/pi";
 import { IoIosTimer } from "react-icons/io";
 import agency from "../assets/video/agency.mp4";
-import ScrollFloat from "./ScrollFloat";
 //
 export default function ChooseUs() {
   //
@@ -42,15 +41,7 @@ export default function ChooseUs() {
       <div className="max-w-6xl mx-auto">
         <div className="sm:grid sm:grid-cols-2 gap-12">
           <div>
-            <ScrollFloat
-              animationDuration={2}
-              ease="back.inOut(2)"
-              scrollStart="center bottom+=50%"
-              scrollEnd="bottom bottom-=40%"
-              stagger={0.03}
-            >
-              Why people love us
-            </ScrollFloat>
+            <h2>Why people love us</h2>
             <Paragraph className="max-w-xl mt-3">
               People love us because we deliver high-quality work with honesty,
               creativity, and care. We listen to our clients, understand their
