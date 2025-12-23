@@ -1,30 +1,60 @@
-import agency from "../assets/video/agency.mp4";
 import Marquee from "react-fast-marquee";
-
-// Banner component with video background and overlay content
+import { useEffect, useRef } from "react";
+//
+// Banner component with scroll-driven zoom effect
 export default function Banner() {
   //
+  const bannerRef = useRef(null);
+  const frameRef = useRef(null);
+  //
+  useEffect(() => {
+    const el = bannerRef.current;
+    if (!el) return;
+
+    let rafId = null;
+
+    const onScroll = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const rect = el.getBoundingClientRect();
+        const windowH =
+          window.innerHeight || document.documentElement.clientHeight;
+
+        // progress grows as the user scrolls down and the banner moves up
+        const progress = Math.min(Math.max(-rect.top / windowH, 0), 1);
+
+        // scale between 1 and 1.15 (adjust factor to taste)
+        const scale = 1 + progress * 0.15;
+
+        if (frameRef.current) {
+          frameRef.current.style.transform = `scale(${scale})`;
+        }
+      });
+    };
+
+    // initialize and bind
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, []);
 
   return (
-    <section className="relative py-35">
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src={agency} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
-
-      {/* Content Overlay */}
-      <div className="max-w-6xl mx-auto overflow-hidden relative z-10 text-center">
-        <h1 className="transition-colors duration-300 font-sens font-bold text-7xl mt-3 max-w-2xl mx-auto text-white bg-red-300 p-4 dark:bg-black/70">
+    <section
+      ref={bannerRef}
+      className="relative py-40 bg-amber-200 overflow-hidden"
+    >
+      <div
+        ref={frameRef}
+        className="max-w-6xl mx-auto relative z-10 text-center transform-gpu"
+        style={{ willChange: "transform" }}
+      >
+        <h1 className="transition-colors duration-300 font-sens font-bold text-7xl mt-3 max-w-2xl mx-auto ">
           We Build Creative Digital Solutions
         </h1>
         <button
@@ -36,7 +66,6 @@ export default function Banner() {
           </Marquee>
         </button>
       </div>
-      {/*  */}
     </section>
   );
 }
