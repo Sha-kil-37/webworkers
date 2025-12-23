@@ -8,6 +8,7 @@ import sbg from "../assets/sbg.avif";
 import sprint from "../assets/sprint.avif";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import AnimatedSection from "../lib/utils/AnimatedSection";
 //
 export default function TrustedUs() {
   //
@@ -53,47 +54,45 @@ export default function TrustedUs() {
   }, []);
   //
   return (
-    <section ref={trustedUS} className="">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }} // Start state (initial load)
-        animate={{ opacity: 1, y: 0 }} // End state (after load)
-        transition={{ duration: 0.5 }}
-        ref={frameRef}
-        className="max-w-6xl mx-auto relative z-10 text-center transform-gpu"
-        style={{ willChange: "transform" }}
-      >
-        <h2 className="text-center text-3xl font-semibold text-[#082032]">
-          Trusted US
-        </h2>
-        <div className="grid grid-cols-4">
-          {[
-            british,
-            delair,
-            healtcare,
-            mapesa,
-            narayana,
-            nsic,
-            sbg,
-            sprint,
-          ].map((item, i) => {
-            return (
-              <picture
-                key={i}
-                className="inline-block w-full max-h-30 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-              >
-                <source srcSet={item} type="image/avif" />
+    <AnimatedSection>
+      <section ref={trustedUS} className="">
+        <motion.div
+          ref={frameRef}
+          className="max-w-6xl mx-auto relative z-10 text-center"
+        >
+          <h2 className="text-center text-5xl font-semibold text-[#082032]">
+            Trusted US
+          </h2>
+          <div className="grid grid-cols-4">
+            {[
+              british,
+              delair,
+              healtcare,
+              mapesa,
+              narayana,
+              nsic,
+              sbg,
+              sprint,
+            ].map((item, i) => {
+              return (
+                <picture
+                  key={i}
+                  className="inline-block w-full max-h-30 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                >
+                  <source srcSet={item} type="image/avif" />
 
-                <img
-                  src={item}
-                  alt="Trusted by company logo"
-                  loading="lazy"
-                  className="w-full h-full object-contain"
-                />
-              </picture>
-            );
-          })}
-        </div>
-      </motion.div>
-    </section>
+                  <img
+                    src={item}
+                    alt="Trusted by company logo"
+                    loading="lazy"
+                    className="w-full h-full object-contain"
+                  />
+                </picture>
+              );
+            })}
+          </div>
+        </motion.div>
+      </section>
+    </AnimatedSection>
   );
 }

@@ -2,12 +2,15 @@ import Marquee from "react-fast-marquee";
 import { useEffect, useRef } from "react";
 import Paragraph from "./Paragraph";
 import { motion } from "framer-motion";
+import SplitText from "./SplitText";
 
 //
 // Banner component with scroll-driven zoom effect
 export default function Banner() {
   //
-
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
+  };
   //
   const bannerRef = useRef(null);
   const frameRef = useRef(null);
@@ -48,49 +51,60 @@ export default function Banner() {
       if (rafId) cancelAnimationFrame(rafId);
     };
   }, []);
-
+  //
   return (
     <section
       ref={bannerRef}
-      className="relative py-30 bg-gradient-to-b from-[#FFFBDE] to-white  overflow-hidden"
+      className="relative py-30 bg-gradient-to-b from-[#FFFBDE] to-white overflow-hidden"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 50 }} // Start state (initial load)
-        animate={{ opacity: 1, y: 0 }} // End state (after load)
-        transition={{ duration: 0.5 }}
-        ref={frameRef}
-        className="max-w-6xl mx-auto relative z-10 text-center transform-gpu"
-        style={{ willChange: "transform" }}
-      >
-        <h1 className="transition-colors duration-300 font-sens font-bold text-7xl mt-3 max-w-2xl mx-auto text-[#082032]">
-          We Build Creative Digital Solutions
-        </h1>
-        <Paragraph className="mt-10 max-w-4xl mx-auto font-medium text-[#082032]">
-          In today’s fast-moving digital world, Every business needs a strong
-          online presence to thrive in the digital world. With{" "}
-          <em className="font-bold text-[#082032]">
-            “We Build Creative Digital Solutions,”
-          </em>{" "}
-          we deliver innovative, user-friendly Web Development, Digital
+      <div ref={frameRef} className="max-w-6xl mx-auto">
+        <SplitText
+          text="We Build Creative Digital Solutions"
+          className="text-center text-[#082032] font-bold text-7xl"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 10 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
+        <SplitText
+          text="In today’s fast-moving digital world, Every business needs a strong
+          online presence to thrive in the digital world. With “We Build Creative Digital Solutions,” we deliver innovative, user-friendly Web Development, Digital
           Marketing, and UI/UX Design that help businesses attract customers,
-          strengthen their brand, and grow online
-        </Paragraph>
+          strengthen their brand, and grow online"
+          className="text-[#082032] mt-3 w-4xl mx-auto font-medium"
+          delay={15}
+          duration={0.3}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 10 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
 
         <motion.button
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            delay: 0.3,
-            duration: 0.9,
+            delay: 0.2,
+            duration: 1.5,
             type: "spring",
             stiffness: 120,
             damping: 12,
           }}
           className="py-2 rounded-2xl block mt-10 bg-[#082032] mx-auto w-sm text-white font-medium "
         >
-          <Marquee>Scroll Down For See More About Me</Marquee>
+          <Marquee speed={25}>Scroll Down For See More About Me</Marquee>
         </motion.button>
-      </motion.div>
+      </div>
     </section>
   );
 }

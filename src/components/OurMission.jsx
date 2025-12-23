@@ -1,6 +1,9 @@
-import Paragraph from "./Paragraph";
 import { useEffect, useRef } from "react";
+import CounterItem from "./CounterItem";
+import Paragraph from "./Paragraph";
 import { motion } from "framer-motion";
+import AnimatedSection from "../lib/utils/AnimatedSection";
+
 //
 export default function OurMission() {
   //
@@ -36,7 +39,7 @@ export default function OurMission() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
-    //
+
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
@@ -46,49 +49,27 @@ export default function OurMission() {
 
   //
   return (
-    <section ref={ourMission} className="py-20">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }} // Start state (initial load)
-        animate={{ opacity: 1, y: 0 }} // End state (after load)
-        transition={{ duration: 0.5 }}
-        ref={frameRef}
-        className="max-w-6xl mx-auto relative z-10  transform-gpu"
-        style={{ willChange: "transform" }}
-      >
-        <div className="sm:grid sm:grid-cols-2 md:grid-cols-2 gap-8">
-          {/* Left Content */}
-          <div>
-            <h2 className="text-3xl font-semibold text-[#082032]">
-              Our Mission
-            </h2>
-
-            <Paragraph className="max-w-xl mt-5 font-medium text-[#082032]">
-              We create smart, creative, and impactful digital solutions that
-              help businesses grow with confidence. We deliver high-quality Web
-              Development, Digital Marketing, UI/UX Design, SEO, and innovative
-              software services. We empower clients, strengthen brands, and
-              build meaningful digital experiences that drive real results.
-            </Paragraph>
+    <AnimatedSection>
+      <section ref={ourMission} className="py-20 relative">
+        <div ref={frameRef} className="max-w-6xl mx-auto">
+          <h2 className="text-center text-5xl font-semibold text-[#082032]">
+            Our <span className="text-amber-200">Mission</span>
+          </h2>
+          <Paragraph className="max-w-4xl mx-auto font-medium text-[#082032] text-center mt-5">
+            We create smart, creative, and impactful digital solutions that help
+            businesses grow with confidence. We deliver high-quality Web
+            Development, Digital Marketing, UI/UX Design, SEO, and innovative
+            software services. We empower clients, strengthen brands, and build
+            meaningful digital experiences that drive real results.
+          </Paragraph>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+            <CounterItem end={120} label="Projects Completed" />
+            <CounterItem end={80} label="Happy Clients" />
+            <CounterItem end={5} label="Years Experience" />
+            <CounterItem end={12} label="Awards Won" />
           </div>
-          {/*  */}
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl mt-3">
-            <p className="text-4xl font-bold mb-2">300+</p>
-            <p className="font-medium">Happy Clients</p>
-            <p className="mt-2">Trusted by businesses globally</p>
-          </div>
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl mt-3">
-            <p className="text-4xl font-bold mb-2">400+</p>
-            <p className="font-medium">Projects Delivered</p>
-            <p className="mt-2">From startups to enterprises</p>
-          </div>
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl mt-3">
-            <p className="text-4xl font-bold text-green-600 mb-2">5+</p>
-            <p className="font-medium">Years of Excellence</p>
-            <p className="mt-2">Continuous innovation</p>
-          </div>
-          {/*  */}
         </div>
-      </motion.div>
-    </section>
+      </section>
+    </AnimatedSection>
   );
 }
