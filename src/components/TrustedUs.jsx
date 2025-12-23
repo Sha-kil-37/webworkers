@@ -6,13 +6,65 @@ import narayana from "../assets/narayana.avif";
 import nsic from "../assets/nsic.avif";
 import sbg from "../assets/sbg.avif";
 import sprint from "../assets/sprint.avif";
+import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 //
 export default function TrustedUs() {
   //
+
+  const trustedUS = useRef(null);
+  const frameRef = useRef(null);
+  //
+  useEffect(() => {
+    const el = trustedUS.current;
+    if (!el) return;
+
+    let rafId = null;
+    //
+    const onScroll = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const rect = el.getBoundingClientRect();
+        const windowH =
+          window.innerHeight || document.documentElement.clientHeight;
+
+        // progress grows as the user scrolls down and the banner moves up
+        const progress = Math.min(Math.max(-rect.top / windowH, 0), 1);
+
+        // scale between 1 and 1.15 (adjust factor to taste)
+        const scale = 1 + progress * 0.15;
+
+        if (frameRef.current) {
+          frameRef.current.style.transform = `scale(${scale})`;
+        }
+      });
+    };
+
+    // initialize and bind
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, []);
+  //
   return (
-    <section className="py-10">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-center text-3xl font-semibold text-[#082032]">Trusted US</h2>
+    <section ref={trustedUS} className="">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }} // Start state (initial load)
+        animate={{ opacity: 1, y: 0 }} // End state (after load)
+        transition={{ duration: 0.5 }}
+        ref={frameRef}
+        className="max-w-6xl mx-auto relative z-10 text-center transform-gpu"
+        style={{ willChange: "transform" }}
+      >
+        <h2 className="text-center text-3xl font-semibold text-[#082032]">
+          Trusted US
+        </h2>
         <div className="grid grid-cols-4">
           {[
             british,
@@ -41,7 +93,7 @@ export default function TrustedUs() {
             );
           })}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
