@@ -1,6 +1,5 @@
 import Marquee from "react-fast-marquee";
 import { useEffect, useRef } from "react";
-import Paragraph from "./Paragraph";
 import { motion } from "framer-motion";
 import SplitText from "./SplitText";
 
@@ -61,8 +60,8 @@ export default function Banner() {
         <SplitText
           text="We Build Creative Digital Solutions"
           className="text-center text-[#082032] font-bold text-7xl"
-          delay={100}
-          duration={0.6}
+          delay={50}
+          duration={0.5}
           ease="power3.out"
           splitType="chars"
           from={{ opacity: 0, y: 10 }}
@@ -78,8 +77,8 @@ export default function Banner() {
           Marketing, and UI/UX Design that help businesses attract customers,
           strengthen their brand, and grow online"
           className="text-[#082032] mt-3 w-4xl mx-auto font-medium"
-          delay={15}
-          duration={0.3}
+          delay={10}
+          duration={0.2}
           ease="power3.out"
           splitType="chars"
           from={{ opacity: 0, y: 10 }}
