@@ -6,7 +6,6 @@ import Loading from "./components/Loading";
 import Banner from "./components/Banner";
 import TrustedUs from "./components/TrustedUs";
 import OurMission from "./components/OurMission";
-import Credibility from "./components/Credibility";
 import Services from "./components/Services";
 import ChooseUs from "./components/ChooseUs";
 import OurTeam from "./components/OurTeam";
@@ -35,7 +34,6 @@ function App() {
                 <Banner />
                 <TrustedUs />
                 <OurMission />
-                <Credibility />
                 <Services />
                 <ChooseUs />
                 <OurTeam />

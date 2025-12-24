@@ -55,10 +55,10 @@ export default function TrustedUs() {
   //
   return (
     <AnimatedSection>
-      <section ref={trustedUS} className="">
+      <section ref={trustedUS} className="relative">
         <motion.div
           ref={frameRef}
-          className="max-w-6xl mx-auto relative z-10 text-center"
+          className="max-w-6xl mx-auto"
         >
           <h2 className="text-center text-5xl font-semibold text-[#082032]">
             Trusted US

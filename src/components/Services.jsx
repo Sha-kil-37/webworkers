@@ -1,16 +1,18 @@
+import { useEffect, useRef, useState } from "react";
 import { FaCode } from "react-icons/fa";
-import { LuBriefcaseBusiness } from "react-icons/lu";
+import { AiOutlineSound } from "react-icons/ai";
 import { LuMonitorSmartphone } from "react-icons/lu";
 import { LuSmartphone } from "react-icons/lu";
 import { IoIosRocket } from "react-icons/io";
 import { AiOutlineLineChart } from "react-icons/ai";
-import { AiOutlineSound } from "react-icons/ai";
+import { LuBriefcaseBusiness } from "react-icons/lu";
 import { IoIosApps } from "react-icons/io";
 import { GiArtificialIntelligence } from "react-icons/gi";
+import { motion } from "framer-motion";
+import Paragraph from "./Paragraph";
 //
-//
-export default function Services() {
-  //
+function Services() {
+  // services data array
   const services = [
     {
       title: "Web Development",
@@ -58,28 +60,107 @@ export default function Services() {
       icon: <GiArtificialIntelligence className="w-10 h-10" />,
     },
   ];
+  const sectionRef = useRef(null);
+  const frameRef = useRef(null);
+
+  const trackRef = useRef(null);
+  const [translateX, setTranslateX] = useState(0);
+  //
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current || !trackRef.current) return;
+
+      const section = sectionRef.current;
+      const track = trackRef.current;
+
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (
+        scrollY >= sectionTop - windowHeight &&
+        scrollY <= sectionTop + sectionHeight
+      ) {
+        const progress =
+          (scrollY - sectionTop) / (sectionHeight - windowHeight);
+        const maxTranslate = track.scrollWidth - window.innerWidth;
+        setTranslateX(-maxTranslate * progress);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  //
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    let rafId = null;
+    //
+    const onScroll = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const rect = el.getBoundingClientRect();
+        const windowH =
+          window.innerHeight || document.documentElement.clientHeight;
+
+        // progress grows as the user scrolls down and the banner moves up
+        const progress = Math.min(Math.max(-rect.top / windowH, 0), 1);
+
+        // scale between 1 and 1.15 (adjust factor to taste)
+        const scale = 1 + progress * 0.15;
+
+        if (frameRef.current) {
+          frameRef.current.style.transform = `scale(${scale})`;
+        }
+      });
+    };
+
+    // initialize and bind
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, []);
   //
   return (
-    <section className="py-10">
-      <div className="max-w-6xl mx-auto">
-        <h2>
-          At our Digital Web Agency, we deliver results-driven solutions that
-          strengthen your digital presence, drive growth, and elevate your
-          brand. By combining creativity, technology, and strategy, we build
-          solutions that solve real business challenges. Explore our core
-          services.
+    <section ref={sectionRef} className="relative py-10">
+      <motion.div ref={frameRef} className="max-w-6xl mx-auto overflow-hidden">
+        <h2 className="text-center text-5xl font-semibold text-[#082032]">
+          Our Services
         </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 mt-10">
-          {services.map((service, index) => (
-            <div key={index} className="py-2">
-              <div className="mb-6">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="">{service.desc}</p>
+        <Paragraph className="mx-auto max-w-4xl font-medium text-[#082032] text-center mt-5">
+          At our Digital Web Agency, we deliver high-value, results-driven
+          solutions designed to strengthen your digital presence, accelerate
+          growth, and enhance your brand experience. Our team blends creativity,
+          technology, and strategic thinking to build products and strategies
+          that solve real business challenges. Explore our core services
+        </Paragraph>
+        <div
+          ref={trackRef}
+          className="flex transition-transform duration-75 ease-out mt-10"
+          style={{ transform: `translateX(${translateX}px)` }}
+        >
+          {services.map((item, index) => (
+            <div
+              key={index}
+              className="min-w-[320px] md:min-w-[420px] h-[260px] border p-6 flex flex-col justify-between"
+            >
+              <h3 className="text-2xl">{item.title}</h3>
+              <p className="">{item.desc}</p>
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
+
+export default Services;

@@ -50,7 +50,7 @@ export default function OurMission() {
   //
   return (
     <AnimatedSection>
-      <section ref={ourMission} className="py-20 relative">
+      <section ref={ourMission} className="py-10 relative">
         <div ref={frameRef} className="max-w-6xl mx-auto">
           <h2 className="text-center text-5xl font-semibold text-[#082032]">
             Our <span className="text-amber-200">Mission</span>
