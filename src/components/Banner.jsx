@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import SplitText from "./SplitText";
 
-//
 // Banner component with scroll-driven zoom effect
 export default function Banner() {
   //
@@ -52,14 +51,18 @@ export default function Banner() {
   }, []);
   //
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
       ref={bannerRef}
       className="relative py-30 bg-gradient-to-b from-[#FFFBDE] to-white overflow-hidden"
     >
       <div ref={frameRef} className="max-w-6xl mx-auto">
         <SplitText
           text="We Build Creative Digital Solutions"
-          className="text-center text-[#082032] font-bold text-7xl"
+          className="text-center text-[#082032] font-bold text-7xl max-w-3xl tracking-wide mx-auto"
           delay={50}
           duration={0.5}
           ease="power3.out"
@@ -76,7 +79,7 @@ export default function Banner() {
           online presence to thrive in the digital world. With “We Build Creative Digital Solutions,” we deliver innovative, user-friendly Web Development, Digital
           Marketing, and UI/UX Design that help businesses attract customers,
           strengthen their brand, and grow online"
-          className="text-[#082032] mt-3 w-4xl mx-auto font-medium"
+          className="text-[#082032] mt-10 w-4xl mx-auto font-medium"
           delay={10}
           duration={0.2}
           ease="power3.out"
@@ -104,6 +107,6 @@ export default function Banner() {
           <Marquee speed={25}>Scroll Down For See More About Me</Marquee>
         </motion.button>
       </div>
-    </section>
+    </motion.section>
   );
 }

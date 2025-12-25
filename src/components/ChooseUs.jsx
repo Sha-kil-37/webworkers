@@ -1,13 +1,12 @@
-import { FaMobileAlt, FaHeadset } from "react-icons/fa";
-import { RiEmotionHappyLine } from "react-icons/ri";
 import Paragraph from "./Paragraph";
-import { PiStrategy } from "react-icons/pi";
 import { IoIosTimer } from "react-icons/io";
-import agency from "../assets/video/agency.mp4";
+import { FaMobileAlt } from "react-icons/fa";
+import { FaHeadset } from "react-icons/fa";
+import { RiEmotionHappyLine } from "react-icons/ri";
+
 //
 export default function ChooseUs() {
   //
-
   const features = [
     {
       title: "On-Time Delivery, Every Time",
@@ -15,15 +14,11 @@ export default function ChooseUs() {
       icon: IoIosTimer,
     },
     {
-      title: "We Deliver Modern, High-Quality Digital Solutions",
+      title: "Deliver Modern, High-Quality Digital Solutions",
       desc: "From websites to mobile apps and software systems, our work is built with clean architecture, smooth performance, and exceptional user experience.",
       icon: FaMobileAlt,
     },
-    {
-      title: "Strategy-Driven, Not Just Service-Driven",
-      desc: "Every project begins with understanding your goals. We design digital solutions that support growth, conversions, and long-term brand success.",
-      icon: PiStrategy,
-    },
+
     {
       title: "Transparent Communication & Seamless Collaboration",
       desc: "We keep our clients informed at every step. No confusing jargon, no hidden steps—just clear updates and smooth teamwork.",
@@ -36,47 +31,24 @@ export default function ChooseUs() {
     },
   ];
   //
+
   return (
-    <section className="py-10">
+    <section className="py-10 bg-[#F9F8F6]">
       <div className="max-w-6xl mx-auto">
-        <div className="sm:grid sm:grid-cols-2 gap-12">
-          <div>
-            <h2>Why people love us</h2>
-            <Paragraph className="max-w-xl mt-3">
-              People love us because we deliver high-quality work with honesty,
-              creativity, and care. We listen to our clients, understand their
-              goals, and provide smart digital solutions that truly make a
-              difference. Our team works with passion, delivers fast support,
-              and is committed to excellence—making every project smooth,
-              successful, and results-driven.
-            </Paragraph>
-          </div>
-          <video className="mt-10" controls src={agency}>
-            my video
-          </video>
-        </div>
-        {/*  */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mt-5">
-          {features.map((f, i) => {
-            const Icon = f.icon;
+        <h2 className="text-center tracking-wide text-6xl font-bold w-4xl mx-auto">All The Benefits You Will Get From Us</h2>
+        <div className="grid grid-cols-4 gap-6 mt-10">
+          {features.map((item, i) => {
+            const Icon = item.icon;
             return (
-              //
-              <div key={i} className="p-4 rounded-xl">
-                <div>
-                  <Icon className="w-10 h-10" />
-                </div>
-                <div>
-                  <h3 className="font-mono mt-3 text-xl font-semibold">
-                    {f.title}
-                  </h3>
-                  <p className="text-sm mt-2 font-mono">{f.desc}</p>
-                </div>
+              <div key={i} className="bg-white rounded-full p-10">
+                <Icon className="h-15 w-15 mx-auto text-[#082032]" />
+                <Paragraph className="mt-5 text-center text-[#082032] font-medium text-xl">
+                  {item.title}
+                </Paragraph>
               </div>
-              //
             );
           })}
         </div>
-        {/*  */}
       </div>
     </section>
   );

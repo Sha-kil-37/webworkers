@@ -21,7 +21,7 @@ import AnalyticsTracker from "./lib/utils/AnalyticsTracker";
 //
 function App() {
   AnalyticsTracker();
- 
+
   //
   return (
     <Routes>
