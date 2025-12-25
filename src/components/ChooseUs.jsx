@@ -33,9 +33,11 @@ export default function ChooseUs() {
   //
 
   return (
-    <section className="py-10 bg-[#F9F8F6]">
+    <section className="py-20 bg-[#F9F8F6]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-center tracking-wide text-6xl font-bold w-4xl mx-auto">All The Benefits You Will Get From Us</h2>
+        <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto">
+          All The Benefits You Will Get From Us
+        </h2>
         <div className="grid grid-cols-4 gap-6 mt-10">
           {features.map((item, i) => {
             const Icon = item.icon;

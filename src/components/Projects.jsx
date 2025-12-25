@@ -81,13 +81,9 @@ export default function Projects() {
       : sampleProjects.filter((p) => p.category === active);
   //
   return (
-    <section className="py-20">
+    <section className="py-20 dark:bg-[#0C2B4E]">
       <div className="max-w-6xl mx-auto relative">
-        <Paragraph className="text-3xl font-bold font-mono text-center">
-          Explore the work that defines us. Each project reflects our commitment to quality, innovation, and digital excellence—from modern websites and intuitive UI/UX to custom software and AI-driven solutions. Our portfolio spans web and app development, digital and social media marketing, SEO, business consultation, and custom software. Every solution is research-driven, built with modern technology, and aligned with our clients’ goals. Through collaboration and a strategic focus on usability, performance, and scalability, we help brands elevate their digital presence and achieve sustainable growth.
-        </Paragraph>
-
-        {/*  */}
+       
         <div className="flex mt-5 items-center justify-center gap-3 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -105,12 +101,12 @@ export default function Projects() {
           ))}
         </div>
         {/*  */}
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-12 mt-10">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 mt-10">
           {filtered.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}
               key={i}
-              className="cursor-pointer overflow-hidden group"
+              className="cursor-pointer group overflow-hidden rounded-xl"
             >
               <img
                 className="group-hover:scale-105 transition-transform duration-300"

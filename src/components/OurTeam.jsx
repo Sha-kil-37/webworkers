@@ -1,11 +1,11 @@
-import Paragraph from "./Paragraph";
 import shakil from "../assets/shakil.png";
 import rakibul from "../assets/rakibul.png";
 import inni from "../assets/inni.png";
-import alex  from "../assets/alex.png";
+import alex from "../assets/alex.png";
+import Paragraph from "./Paragraph";
 export default function OurTeam() {
   //
-  const team = [
+  const teams = [
     {
       name: "Shakil Ahmed",
       role: "Founder & CEO | Web Developer",
@@ -39,39 +39,35 @@ export default function OurTeam() {
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold font-mono text-center">
-          Meet Our Team
-        </h2>
-        <hr className="mt-3" />
-        <Paragraph className="text-3xl font-bold mt-3 font-mono">
-          We are a passionate team delivering innovative digital solutions. Led by Rakibul Islam’s strategic digital expertise and Shakil Ahmed’s technical and creative skills, we work collaboratively to deliver impactful results on every project.
-        </Paragraph>
-        <div className="sm:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 mt-10">
-          {team.map((member, i) => (
-            <div key={i}>
-              {/* Avatar */}
-              <div className="overflow-hidden max-h-100 w-full bg-[#F5F7F8]">
-                <img
-                  className="h-full w-full object-center"
-                  src={member.image}
-                  alt={member.role}
-                />
-              </div>
-
-              {/* Content */}
-              <div className="mt-5">
-                <h3 className="text-xl font-semibold font-mono">
-                  {member.name}
-                </h3>
-                <h3 className="font-medium font-mono">
-                  {member.role}
-                </h3>
-                <p className="font-mono mt-2">
-                  {member.description}
-                </p>
-              </div>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <aside className="md:col-span-1 border-r border-gray-200">
+            <div className="sticky top-0">
+              <h2 className="tracking-wide text-6xl font-bold w-xl">
+                Let's get to know our team members.
+              </h2>
             </div>
-          ))}
+          </aside>
+
+          {/* Right scrollable column */}
+          <main className="md:col-span-1">
+            {teams.map((team, i) => {
+              return (
+                <div key={i} className="">
+                  <div className="w-full max-h-70 overflow-hidden ">
+                    <img
+                      className="h-full w-full object-cover"
+                      src={team.image}
+                      alt={team.image}
+                    />
+                  </div>
+                  <div className="p-4">
+                    <Paragraph className="font-medium text-xl">{team.name}</Paragraph>
+                     <Paragraph className="text-lg">{team.role}</Paragraph>
+                  </div>
+                </div>
+              );
+            })}
+          </main>
         </div>
       </div>
     </section>
