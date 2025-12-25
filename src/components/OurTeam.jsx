@@ -1,38 +1,52 @@
 import shakil from "../assets/shakil.png";
 import rakibul from "../assets/rakibul.png";
-import inni from "../assets/inni.png";
-import alex from "../assets/alex.png";
-import Paragraph from "./Paragraph";
+import { FaDiscord } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+
+//
 export default function OurTeam() {
   //
-  const teams = [
+  const teamMembers = [
     {
       name: "Shakil Ahmed",
-      role: "Founder & CEO | Web Developer",
-      description:
-        "Shakil Ahmed leads our company with strong vision and dedication. As Founder & CEO, he focuses on building innovative digital solutions that help businesses grow. With expertise in Web Development, he creates fast, secure, and user-friendly websites that deliver real results and enhance the digital experience for every client.",
+      role: "Founder & Full-Stack Developer",
       image: shakil,
+      socials: {
+        linkedin: "#",
+        discord: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Sarah Khan",
+      role: "UI/UX Designer",
+      image: "https://i.pravatar.cc/300?img=32",
+      socials: {
+        linkedin: "#",
+        discord: "#",
+        twitter: "#",
+      },
     },
     {
       name: "Rakibul Islam",
-      role: "Digital Marketer",
-      description:
-        "Rakibul Islam is a skilled Digital Marketer who specializes in creating smart marketing strategies that drive growth. He focuses on Social Media Marketing, SEO, and content strategies that help businesses reach the right audience and achieve real results. His creative approach and data-driven mindset make every campaign more effective and impactful",
+      role: "digital marketer specialist",
       image: rakibul,
+      socials: {
+        linkedin: "#",
+        discord: "#",
+        twitter: "#",
+      },
     },
     {
       name: "Inni Akter",
-      role: "UI/UX Designer",
-      description:
-        "Inni Akter is a creative UI/UX Designer who focuses on building clean, modern, and user-friendly interfaces. He designs intuitive user experiences that improve engagement and make digital products easy to use. With strong attention to detail and a passion for design, he brings ideas to life through thoughtful and effective visuals.",
-      image: inni,
-    },
-    {
-      name: "Alex Thompson",
-      role: "Project Manager",
-      description:
-        "Alex Thompson is a dedicated Project Manager who ensures every project runs smoothly from start to finish. He coordinates tasks, manages timelines, and maintains clear communication with clients and team members. With strong leadership and organizational skills, he keeps projects on track and delivers results efficiently and precisely.",
-      image: alex,
+      role: "It Specalist",
+      image: "https://i.pravatar.cc/300?img=45",
+      socials: {
+        linkedin: "#",
+        discord: "#",
+        twitter: "#",
+      },
     },
   ];
   //
@@ -47,26 +61,53 @@ export default function OurTeam() {
               </h2>
             </div>
           </aside>
-
           {/* Right scrollable column */}
           <main className="md:col-span-1">
-            {teams.map((team, i) => {
-              return (
-                <div key={i} className="">
-                  <div className="w-full max-h-70 overflow-hidden ">
-                    <img
-                      className="h-full w-full object-cover"
-                      src={team.image}
-                      alt={team.image}
-                    />
-                  </div>
-                  <div className="p-4">
-                    <Paragraph className="font-medium text-xl">{team.name}</Paragraph>
-                     <Paragraph className="text-lg">{team.role}</Paragraph>
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-2xl  overflow-hidden  transition duration-300"
+              >
+                {/* Image */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-130 object-cover group-hover:scale-105 transition duration-500"
+                  />
+
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <a
+                      href={member.socials.linkedin}
+                      className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
+                    >
+                      <FaLinkedinIn />
+                    </a>
+                    <a
+                      href={member.socials.discord}
+                      className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
+                    >
+                      <FaDiscord />
+                    </a>
+                    <a
+                      href={member.socials.twitter}
+                      className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
+                    >
+                      <FaTwitter />
+                    </a>
                   </div>
                 </div>
-              );
-            })}
+
+                {/* Content */}
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm text-primary mt-1">{member.role}</p>
+                </div>
+              </div>
+            ))}
           </main>
         </div>
       </div>
