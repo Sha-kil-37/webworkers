@@ -24,7 +24,7 @@ export default function OurMission() {
           transition={{ duration: 1 }}
           className="border border-[#082032] rounded-xl p-6 bg-amber-100"
         >
-          <h2 className="text-center text-5xl font-semibold text-[#082032] bg-cyan-200">
+          <h2 className="text-center text-5xl font-semibold text-[#082032] bg-white py-1">
             Our Mission
           </h2>
           
