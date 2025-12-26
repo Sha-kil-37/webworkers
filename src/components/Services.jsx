@@ -72,7 +72,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto">
+          <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
           Meet Our Services
         </h2>
           <Paragraph className="max-w-4xl mx-auto font-medium text-[#082032] text-center mt-5">

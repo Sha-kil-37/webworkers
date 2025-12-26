@@ -3,6 +3,7 @@ import rakibul from "../assets/rakibul.png";
 import { FaDiscord } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 //
 export default function OurTeam() {
@@ -51,12 +52,18 @@ export default function OurTeam() {
   ];
   //
   return (
-    <section className="py-10">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="py-10"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           <aside className="md:col-span-1 border-r border-gray-200">
             <div className="sticky top-0">
-              <h2 className="tracking-wide text-6xl font-bold w-xl">
+              <h2 className="tracking-wide text-6xl font-bold w-xl text-[#082032]">
                 Let's get to know our team members.
               </h2>
             </div>
@@ -111,6 +118,6 @@ export default function OurTeam() {
           </main>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

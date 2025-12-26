@@ -3,7 +3,7 @@ import { IoIosTimer } from "react-icons/io";
 import { FaMobileAlt } from "react-icons/fa";
 import { FaHeadset } from "react-icons/fa";
 import { RiEmotionHappyLine } from "react-icons/ri";
-
+import { motion } from "framer-motion";
 //
 export default function ChooseUs() {
   //
@@ -33,9 +33,15 @@ export default function ChooseUs() {
   //
 
   return (
-    <section className="py-20 bg-[#F9F8F6]">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="py-20 bg-[#F9F8F6]"
+    >
       <div className="max-w-6xl mx-auto">
-        <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto">
+        <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
           All The Benefits You Will Get From Us
         </h2>
         <div className="grid grid-cols-4 gap-6 mt-20">
@@ -52,6 +58,6 @@ export default function ChooseUs() {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

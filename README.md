@@ -31,6 +31,8 @@ How can I manage the contact form on my static react digital web agency portfoli
 আমি আমার vite react tailwind css digital agency portfolio ওয়েবসাইটের আমাদের লক্ষ্য সেকশনটি প্রদর্শনের জন্য একটি এনিমেশন সেট করতে চাই |অ্যানিমেশনটির কাজ হবে আমাদের লক্ষ্য সেকশনের কন্টেনগুলো কার্ড আকারে বাম থেকে ডানে স্লাইড করে ছড়িয়ে পড়বে এবং একটি  অপরটির z index দাঁড়া আবৃত থাকবে
 <!--  -->
 আমি আমার react inline tailwind css digital agency ওয়েবসাইটের সার্ভিস সেকশনে  অ্যানিমেশন যুক্ত করতে চাই তুমি আমাকে কিছু অ্যানিমেশনের উদাহরণ দেখাও 
+<!--  -->
+আমি একটি react hooks component তৈরি করতে চাই যার কাজ হবে component এর  props string এ দৈর্ঘ্য যদি ২০০ ওয়ার্ডের বেশি হয় তাহলে তাকে ছোট করে দেওয়া বা string এর শেষে ডট ডট যুক্ত করা
 
 
  

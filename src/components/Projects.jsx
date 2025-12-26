@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import Paragraph from "./Paragraph";
 import audit from "../assets/audit.png";
 import branding from "../assets/branding.png";
 import landing from "../assets/landing.png";
 import chatting from "../assets/chatting.png";
 import ecommers from "../assets/ecommers.png";
 import redesign from "../assets/redesign.png";
-//
-//
+import { motion } from "framer-motion";
+import background from "../assets/background.avif"
+
 //
 export default function Projects() {
   //
@@ -81,9 +81,13 @@ export default function Projects() {
       : sampleProjects.filter((p) => p.category === active);
   //
   return (
-    <section className="py-20 dark:bg-[#0C2B4E]">
+    <motion.section
+      
+      className="py-20 bg-fixed bg-center bg-cover"
+      style={{ backgroundImage: `url(${background})` }}
+      // style={{ backgroundColor: "red" }}
+    >
       <div className="max-w-6xl mx-auto relative">
-       
         <div className="flex mt-5 items-center justify-center gap-3 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -117,6 +121,6 @@ export default function Projects() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

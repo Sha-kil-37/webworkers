@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
-import Paragraph from "./Paragraph";
-// import { RxAvatar } from "react-icons/rx";
+import { motion } from "framer-motion";
+import TruncateText from "../lib/utils/TruncateText";
 //
 export default function Testimonials() {
   //
@@ -47,19 +47,26 @@ export default function Testimonials() {
   ];
   //
   return (
-    <section className="">
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="py-10"
+    >
       <div className="max-w-6xl mx-auto">
+        <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
+          Appreciations from our service recipients
+        </h2>
         <Marquee speed={25} delay={0} pauseOnHover={true} direction="left">
           <div className="flex justify-between items-center gap-x-6 mt-5">
             {testimonialsData.map((item, i) => {
               return (
-                <div key={i} className="max-w-80">
-                  <Paragraph className="mt-3 font-mono">
-                    {item.review}
-                  </Paragraph>
+                <div key={i} className="max-w-100 bg-gray-500 rounded-2xl p-4">
+                  <TruncateText text={item.review} />
                   <div className="flex justify-between mt-3">
-                    <span className="font-mono">⭐⭐⭐⭐⭐</span>
-                    <span className="font-mono">{item.name}</span>
+                    <span className="">⭐⭐⭐⭐⭐</span>
+                    <span className="">{item.name}</span>
                   </div>
                 </div>
               );
@@ -67,6 +74,6 @@ export default function Testimonials() {
           </div>
         </Marquee>
       </div>
-    </section>
+    </motion.section>
   );
 }
