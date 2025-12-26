@@ -16,7 +16,7 @@ export default function OurMission() {
       transition={{ duration: 1 }}
       className="py-20 relative"
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-2 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-2 gap-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function OurMission() {
           transition={{ duration: 1 }}
           className="border border-[#082032] rounded-xl p-6 bg-amber-100"
         >
-          <h2 className="text-center text-5xl font-semibold text-[#082032] bg-white py-1">
+          <h2 className="text-center text-5xl font-semibold text-[#082032]">
             Our Mission
           </h2>
           

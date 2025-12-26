@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { Link } from "react-router";
 import audit from "../assets/audit.png";
 import branding from "../assets/branding.png";
 import landing from "../assets/landing.png";
@@ -7,20 +5,19 @@ import chatting from "../assets/chatting.png";
 import ecommers from "../assets/ecommers.png";
 import redesign from "../assets/redesign.png";
 import { motion } from "framer-motion";
-import background from "../assets/background.avif"
+import { FaArrowUpLong } from "react-icons/fa6";
+import Paragraph from "./Paragraph";
+import { Link } from "react-router";
+import { useState } from "react";
 
 //
 export default function Projects() {
   //
-  const categories = [
-    "All",
-    "Web Development",
-    "UI/UX Design",
-    "E-commerce",
-    "Marketing",
-  ];
+  // How many projects to show at first
+  const [visibleCount, setVisibleCount] = useState(4);
+
   // all project data array bellow
-  const sampleProjects = [
+  const projects = [
     {
       id: 1,
       title: "Marketing Site Redesign",
@@ -74,51 +71,67 @@ export default function Projects() {
     },
   ];
   //
-  const [active, setActive] = useState("All");
-  const filtered =
-    active === "All"
-      ? sampleProjects
-      : sampleProjects.filter((p) => p.category === active);
+  // Slice array to show only visible items
+  const visibleProjects = projects.slice(0, visibleCount);
+  // handle load more blogs
+  const handleLoadMoreProjects = () => {
+    setVisibleCount((prev) => prev + 3); // Load 3 more each click
+  };
   //
   return (
-    <motion.section
-      
-      className="py-20 bg-fixed bg-center bg-cover"
-      style={{ backgroundImage: `url(${background})` }}
-      // style={{ backgroundColor: "red" }}
-    >
+    <motion.section className="py-20 bg-fixed bg-center bg-cover">
       <div className="max-w-6xl mx-auto relative">
-        <div className="flex mt-5 items-center justify-center gap-3 flex-wrap">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActive(cat)}
-              className={`${
-                active === cat
-                  ? "px-4 py-1 bg-orange-300 text-white rounded-full font-medium font-mono cursor-pointer"
-                  : "px-4 py-1 bg-gray-800 text-white rounded-full font-medium font-mono cursor-pointer"
-              }`}
-              aria-pressed={active === cat}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-        {/*  */}
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 mt-10">
-          {filtered.map((project, i) => (
+        <h2 className="tracking-wide text-6xl text-center font-bold text-[#082032]">
+          Let's Meet Our Some Beautiful Projects.
+        </h2>
+
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 mt-20">
+          {visibleProjects.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}
               key={i}
-              className="cursor-pointer group overflow-hidden rounded-xl"
+              className="cursor-pointer group overflow-hidden rounded-lg"
             >
-              <img
-                className="group-hover:scale-105 transition-transform duration-300"
-                src={project.image}
-                alt={project.title}
-              />
+              {/* Image */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  className="w-full max-h-70 object-cover group-hover:scale-105 transition-all duration-500"
+                  alt={project.image}
+                />
+                {/* Hover Overlay */}
+                <div className="absolute top-0 left-0 h-full w-full inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 hover:bg-black/30 flex justify-center items-center">
+                  <FaArrowUpLong className="transform-rotate-3" />
+                </div>
+              </div>
+              <Paragraph className="font-medium text-[#082032] mt-3">
+                {project.category}
+              </Paragraph>
+              <Paragraph className="font-medium text-xl text-[#082032] ">
+                {project.title}
+              </Paragraph>
+              <div className="flex gap-x-2 mt-3">
+                {project.tech.map((tech, i) => {
+                  return (
+                    <span
+                      key={i}
+                      className="px-2 rounded-full border text-[#082032] font-medium"
+                    >
+                      {tech}
+                    </span>
+                  );
+                })}
+              </div>
             </Link>
           ))}
+        </div>
+        <div className="flex justify-center mt-20">
+          <button
+            onClick={handleLoadMoreProjects}
+            className="cursor-pointer px-4 py-2 rounded-full bg-amber-200 text-[#082032] font-medium"
+          >
+            More Projects
+          </button>
         </div>
       </div>
     </motion.section>

@@ -103,41 +103,29 @@ export default function Blogs() {
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left sticky column */}
           <aside className="md:col-span-1 border-r border-gray-200">
-            <div className="sticky top-20">
-              <Paragraph className="mt-4 font-mono font-bold text-3xl">
-                Welcome to our blog—your source for expert insights, practical
-                strategies, and the latest digital trends. We share valuable
-                knowledge to help businesses and creators stay ahead, make
-                smarter decisions, and build a stronger digital presence.
-              </Paragraph>
+            <div className="sticky top-0">
+              <h2 className="tracking-wide text-6xl font-bold w-xl text-[#082032]">
+                Let's Meet Our Some Blogs.
+              </h2>
             </div>
           </aside>
-
+          
           {/* Right scrollable column */}
           <main className="md:col-span-1">
             {visibleBlogs.map((blog, i) => (
-              <div
-                key={i}
-                className="group transition-all duration-300 cursor-pointer mb-10"
-              >
-                <div className="overflow-hidden w-full h-56">
+              <Link to={`/blogdetails/${i}`}  key={i} className="mb-10 cursor-pointer block group">
+                {/* Image */}
+                <div className="relative overflow-hidden h-80 rounded-lg">
                   <img
                     src={blog.image}
-                    alt={blog.title}
-                    className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300"
+                    alt={blog.image}
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   />
                 </div>
-                <div className="duration-300 py-2">
-                  <h3 className="font-semibold">{blog.title}</h3>
-                  <Paragraph className="">{blog.date}</Paragraph>
-                  <Link
-                    to={`/blogdetails/${blog.id}`}
-                    className="px-3 py-1 rounded-xl inline-block mt-5 bg-blue-500 text-white font-mono"
-                  >
-                    click for view
-                  </Link>
-                </div>
-              </div>
+                <Paragraph className="mt-3 font-medium text-[#082032]">{blog.category}</Paragraph>
+                <Paragraph className="font-medium text-[#082032] text-2xl mt-2">{blog.title}</Paragraph>
+                <Paragraph className="font-medium text-[#082032]  mt-2">By {blog.author}</Paragraph>
+              </Link>
             ))}
 
             <div className="flex justify-center mt-6 mb-6">

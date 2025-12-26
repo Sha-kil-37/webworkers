@@ -26,7 +26,7 @@ export default function Nav() {
   //
   return (
     <nav
-      className={`bg-[#FFFBDE] py-4 sticky top-0 left-0 z-10 w-full transform transition-transform transition-opacity duration-300 ease-in-out ${
+      className={`py-4 sticky top-0 left-0 z-10 w-full transform transition-transform transition-opacity duration-300 ease-in-out ${
         hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
       }`}
     >

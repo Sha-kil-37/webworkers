@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-const TruncateText = ({ text, limit = 25 }) => {
+const TruncateText = ({ text, limit, className }) => {
   const truncatedText = useMemo(() => {
     if (!text) return "";
 
@@ -13,7 +13,7 @@ const TruncateText = ({ text, limit = 25 }) => {
     return words.slice(0, limit).join(" ") + " ....";
   }, [text, limit]);
 
-  return <p>{truncatedText}</p>;
+  return <p className={className}>“{truncatedText}”</p>;
 };
 
 export default TruncateText;

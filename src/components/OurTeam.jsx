@@ -64,7 +64,7 @@ export default function OurTeam() {
           <aside className="md:col-span-1 border-r border-gray-200">
             <div className="sticky top-0">
               <h2 className="tracking-wide text-6xl font-bold w-xl text-[#082032]">
-                Let's get to know our team members.
+                Let's Get To Know Our Professional Team Members.
               </h2>
             </div>
           </aside>
