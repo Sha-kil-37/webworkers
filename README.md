@@ -34,5 +34,5 @@ How can I manage the contact form on my static react digital web agency portfoli
 <!--  -->
 আমি একটি react hooks component তৈরি করতে চাই যার কাজ হবে component এর  props string এ দৈর্ঘ্য যদি ২০০ ওয়ার্ডের বেশি হয় তাহলে তাকে ছোট করে দেওয়া বা string এর শেষে ডট ডট যুক্ত করা
 
-
- 
+<!--  -->
+আমি চাই যখন আমার ওয়েবসাইটটি লোড হবে এবং আমি যখন আমার our মিশন component ভিজিট করব তখন স্টারগুলো বাম থেকে এনিমেশন হয়ে উড়ে এসে  তার অবস্থানে অবস্থান করবে 

@@ -5,7 +5,7 @@ import { Fragment, lazy, Suspense } from "react";
 import Loading from "./components/Loading";
 import Banner from "./components/Banner";
 import TrustedUs from "./components/TrustedUs";
-import OurMission from "./components/OurMission";
+import OurAchievements from "./components/OurAchievements";
 import Services from "./components/Services";
 import ChooseUs from "./components/ChooseUs";
 import OurTeam from "./components/OurTeam";
@@ -32,8 +32,8 @@ function App() {
             <MainLayout>
               <Fragment>
                 <Banner />
-                <TrustedUs />
-                <OurMission />
+                
+                <OurAchievements />
                 <Services />
                 <ChooseUs />
                 <OurTeam />
@@ -41,6 +41,7 @@ function App() {
                 <Testimonials />
                 <Blogs />
                 <FAQ />
+                <TrustedUs />
                 <Contact />
               </Fragment>
             </MainLayout>

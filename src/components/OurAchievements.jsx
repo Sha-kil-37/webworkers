@@ -1,10 +1,11 @@
+
 import CounterItem from "./CounterItem";
 import Paragraph from "./Paragraph";
 import { motion } from "framer-motion";
 import { CiStar } from "react-icons/ci";
 
 //
-export default function OurMission() {
+export default function OurAchievements() {
   //
 
   //
@@ -29,7 +30,17 @@ export default function OurMission() {
           </h2>
           <div className="flex justify-center mt-5">
             {[1, 2, 3, 4, 5].map((item, i) => {
-              return <CiStar className="text-amber-300 text-4xl" />;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                >
+                  <CiStar className="text-amber-300 text-4xl" />
+                </motion.div>
+              );
             })}
           </div>
 
