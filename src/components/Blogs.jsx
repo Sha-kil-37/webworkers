@@ -97,7 +97,7 @@ export default function Blogs() {
   //
   // Render component
   return (
-    <section className="">
+    <section className="py-10">
       <div className="max-w-6xl mx-auto">
         {/* <BlogSlider blogs={blogs} /> */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -109,11 +109,15 @@ export default function Blogs() {
               </h2>
             </div>
           </aside>
-          
+
           {/* Right scrollable column */}
           <main className="md:col-span-1">
             {visibleBlogs.map((blog, i) => (
-              <Link to={`/blogdetails/${i}`}  key={i} className="mb-10 cursor-pointer block group">
+              <Link
+                to={`/blogdetails/${i}`}
+                key={i}
+                className="mb-10 cursor-pointer block group"
+              >
                 {/* Image */}
                 <div className="relative overflow-hidden h-80 rounded-lg">
                   <img
@@ -122,16 +126,22 @@ export default function Blogs() {
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   />
                 </div>
-                <Paragraph className="mt-3 font-medium text-[#082032]">{blog.category}</Paragraph>
-                <Paragraph className="font-medium text-[#082032] text-2xl mt-2">{blog.title}</Paragraph>
-                <Paragraph className="font-medium text-[#082032]  mt-2">By {blog.author}</Paragraph>
+                <Paragraph className="mt-3 font-medium text-[#082032]">
+                  {blog.category}
+                </Paragraph>
+                <Paragraph className="font-medium text-[#082032] text-2xl mt-2">
+                  {blog.title}
+                </Paragraph>
+                <Paragraph className="font-medium text-[#082032]  mt-2">
+                  By {blog.author}
+                </Paragraph>
               </Link>
             ))}
 
-            <div className="flex justify-center mt-6 mb-6">
+            <div className="flex justify-center mt-20">
               <button
                 onClick={handleLoadMoreBlogs}
-                className="cursor-pointer px-4 py-2 rounded-xl font-medium transition-colors duration-300 shadow-sm hover:shadow-md"
+                className="cursor-pointer px-4 py-2 rounded-full bg-amber-200 text-[#082032] font-medium"
               >
                 More Blogs
               </button>

@@ -1,9 +1,9 @@
 import audit from "../assets/audit.png";
-import branding from "../assets/branding.png";
-import landing from "../assets/landing.png";
-import chatting from "../assets/chatting.png";
+import uiuxdesign from "../assets/uiuxdesign.png";
+import marketing from "../assets/marketing.png";
+import dashbord from "../assets/dashbord.png";
 import ecommers from "../assets/ecommers.png";
-import redesign from "../assets/redesign.png";
+import webdevelopment from "../assets/webdevelopment.png";
 import { motion } from "framer-motion";
 import { FaArrowUpLong } from "react-icons/fa6";
 import Paragraph from "./Paragraph";
@@ -25,7 +25,7 @@ export default function Projects() {
       summary:
         "A fast, accessible marketing site built with a focus on performance and conversions.",
       tech: ["React", "Tailwind", "Vite"],
-      image: redesign,
+      image: webdevelopment,
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ export default function Projects() {
       category: "UI/UX Design",
       summary: "Design system and UI kit for consistent product experiences.",
       tech: ["Figma", "Design Tokens"],
-      image: branding,
+      image: uiuxdesign,
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ export default function Projects() {
       summary:
         "A/B testing framework to validate messaging and increase signups.",
       tech: ["Optimizely", "Analytics"],
-      image: landing,
+      image: marketing,
     },
     {
       id: 5,
@@ -59,7 +59,7 @@ export default function Projects() {
       category: "Web Development",
       summary: "Responsive admin dashboard with charts and real-time updates.",
       tech: ["React", "Firebase", "WebSocket"],
-      image: chatting,
+      image: dashbord,
     },
     {
       id: 6,
@@ -85,7 +85,7 @@ export default function Projects() {
           Let's Meet Our Some Beautiful Projects.
         </h2>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 mt-20">
+        <div className="grid xl:grid-cols-3 gap-6 mt-20">
           {visibleProjects.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}
@@ -93,10 +93,10 @@ export default function Projects() {
               className="cursor-pointer group overflow-hidden rounded-lg"
             >
               {/* Image */}
-              <div className="relative overflow-hidden">
+              <div className="relative h-60 overflow-hidden">
                 <img
                   src={project.image}
-                  className="w-full max-h-70 object-cover group-hover:scale-105 transition-all duration-500"
+                  className="w-full h-full  object-cover group-hover:scale-105 transition-all duration-500"
                   alt={project.image}
                 />
                 {/* Hover Overlay */}

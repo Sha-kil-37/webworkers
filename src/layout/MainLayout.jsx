@@ -9,12 +9,12 @@ export default function MainLayout({ children }) {
   //
   return (
     // <SmoothScroll>
-      <div className="relative">
-        <Nav />
-        <WhatsAppButton />
-        <main>{children}</main>
-        <Footer />
-      </div>
+    <div className="relative dark:bg-black/80 dark:text-white">
+      <Nav />
+      <WhatsAppButton />
+      <main>{children}</main>
+      <Footer />
+    </div>
     // </SmoothScroll>
   );
 }

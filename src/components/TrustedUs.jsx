@@ -25,27 +25,36 @@ export default function TrustedUs() {
         <h2 className="text-center text-2xl font-semibold text-[#082032] tracking-wide">
           Trusted Us
         </h2>
+        <div className="max-w-3xl mx-auto">
+          <Marquee direction="right" className="mt-3">
+            {[
+              british,
+              delair,
+              healtcare,
+              mapesa,
+              narayana,
+              nsic,
+              sbg,
+              sprint,
+            ].map((item, i) => {
+              return (
+                <picture
+                  key={i}
+                  className="h-30 w-50 inline-block grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 overflow-hidden"
+                >
+                  <source srcSet={item} type="image/avif" />
+                  <img
+                    src={item}
+                    alt="Trusted by company logo"
+                    loading="lazy"
+                    className="w-full h-full object-center"
+                  />
+                </picture>
+              );
+            })}
+          </Marquee>
+        </div>
       </div>
-      <Marquee direction="right" className="mt-3">
-        {[british, delair, healtcare, mapesa, narayana, nsic, sbg, sprint].map(
-          (item, i) => {
-            return (
-              <picture
-                key={i}
-                className="h-30 w-50 inline-block grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 overflow-hidden"
-              >
-                <source srcSet={item} type="image/avif" />
-                <img
-                  src={item}
-                  alt="Trusted by company logo"
-                  loading="lazy"
-                  className="w-full h-full object-center"
-                />
-              </picture>
-            );
-          }
-        )}
-      </Marquee>
     </motion.section>
   );
 }

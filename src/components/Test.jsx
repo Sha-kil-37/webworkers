@@ -1,48 +1,85 @@
-import React, { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
-const reviews = [
-  { name: "John", role: "Founder", review: "Amazing quality and fast delivery." },
-  { name: "Sarah", role: "Marketer", review: "Very professional service." },
-  { name: "Mike", role: "Product Owner", review: "Highly recommend this team." },
+const services = [
+  {
+    title: "UI/UX Design",
+    desc: "Modern, user-focused interface designs.",
+    className: "lg:row-span-2",
+    gradient: "from-pink-500 to-purple-500",
+  },
+  {
+    title: "Web Development",
+    desc: "Fast, scalable & SEO-friendly websites.",
+    className: "",
+    gradient: "from-blue-500 to-cyan-500",
+  },
+  {
+    title: "Brand Identity",
+    desc: "Build strong and memorable brands.",
+    className: "",
+    gradient: "from-orange-500 to-yellow-500",
+  },
+  {
+    title: "Digital Marketing",
+    desc: "Grow traffic, leads & conversions.",
+    className: "lg:col-span-2",
+    gradient: "from-green-500 to-emerald-500",
+  },
 ];
 
-const Test = () => {
-  const trackRef = useRef(null);
-  let offset = 0;
-
-  useEffect(() => {
-    let rafId;
-// 
-    const animate = () => {
-      offset -= 0.4; // speed control
-      if (Math.abs(offset) >= trackRef.current.scrollWidth / 2) {
-        offset = 0;
-      }
-      trackRef.current.style.transform = `translateX(${offset}px)`;
-      rafId = requestAnimationFrame(animate);
-    };
-
-    rafId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(rafId);
-  }, []);
-
+export default function Test() {
   return (
-    <div className="overflow-hidden py-10">
-      <div ref={trackRef} className="flex w-max">
-        {[...reviews, ...reviews].map((item, index) => (
-          <div
-            key={index}
-            className="mx-4 w-[300px] rounded-xl border bg-white p-5 shadow"
-          >
-            <p className="text-sm text-gray-600">“{item.review}”</p>
-            <h4 className="mt-3 font-semibold">{item.name}</h4>
-            <span className="text-xs text-gray-500">{item.role}</span>
-          </div>
-        ))}
+    <section className="py-20 bg-slate-950 text-white">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
+        >
+          <h2 className="text-4xl font-bold">
+            Our <span className="text-indigo-400">Services</span>
+          </h2>
+          <p className="text-slate-400 mt-3 max-w-xl mx-auto">
+            We create high-impact digital solutions for growing brands.
+          </p>
+        </motion.div>
+
+        {/* 3 Column Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[220px] gap-6">
+          {services.map((service, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className={`relative rounded-2xl overflow-hidden p-6 group cursor-pointer ${service.className}`}
+            >
+              {/* Gradient */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-80 group-hover:opacity-100 transition`}
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
+
+              {/* Content */}
+              <div className="relative z-10 h-full flex flex-col justify-end">
+                <h3 className="text-2xl font-semibold mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-white/90">
+                  {service.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Test;
-
+}

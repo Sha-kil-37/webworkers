@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
 import CounterItem from "./CounterItem";
 import Paragraph from "./Paragraph";
 import { motion } from "framer-motion";
+import { CiStar } from "react-icons/ci";
 
 //
 export default function OurMission() {
@@ -22,12 +22,17 @@ export default function OurMission() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="border border-[#082032] rounded-xl p-6 bg-amber-100"
+          className="p-6 "
         >
-          <h2 className="text-center text-5xl font-semibold text-[#082032]">
-            Our Mission
+          <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
+            Our Achievements
           </h2>
-          
+          <div className="flex justify-center mt-5">
+            {[1, 2, 3, 4, 5].map((item, i) => {
+              return <CiStar className="text-amber-300 text-4xl" />;
+            })}
+          </div>
+
           <Paragraph className="max-w-4xl mx-auto font-medium text-[#082032] text-center mt-5">
             We create smart, creative, and impactful digital solutions that help
             businesses grow with confidence. We deliver high-quality Web
@@ -41,11 +46,14 @@ export default function OurMission() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="border border-[#082032] rounded-xl p-6 bg-amber-100"
+          className="p-6"
         >
           <CounterItem end={120} label="Projects Completed" />
+          <hr className="my-5 text-[#082032]" />
           <CounterItem end={80} label="Happy Clients" />
+          <hr className="my-5 text-[#082032]" />
           <CounterItem end={5} label="Years Experience" />
+          <hr className="my-5 text-[#082032]" />
           <CounterItem end={12} label="Awards Won" />
         </motion.div>
       </div>

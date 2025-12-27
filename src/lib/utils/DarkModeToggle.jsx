@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { CiDark ,CiLight} from "react-icons/ci";
 //
 export default function DarkModeToggle({ className }) {
   //
@@ -38,7 +37,7 @@ export default function DarkModeToggle({ className }) {
       title={theme === "dark" ? "Switch to light" : "Switch to dark"}
       className={`${className}`}
     >
-      {theme === "dark" ? <CiDark /> : <CiLight />}
+      {theme === "dark" ? <span>&#127769;</span>:<span>&#127774;</span> }
     </button>
   );
 }
