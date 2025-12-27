@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Paragraph from "./Paragraph";
-
+import background from "../assets/background.avif";
+//
 const services = [
   {
     title: "Web Development",
@@ -61,8 +62,14 @@ const services = [
 ];
 //
 export default function Services() {
+  //
+
+  //
   return (
-    <section className="py-10">
+    <section
+      className="py-20 bg-fixed bg-center bg-cover"
+      style={{ backgroundImage: `url(${background})` }}
+    >
       <div className="w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -72,10 +79,10 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
-          Meet Our Services
-        </h2>
-          <Paragraph className="max-w-4xl mx-auto font-medium text-[#082032] text-center mt-5">
+          <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-white">
+            Meet Our Services
+          </h2>
+          <Paragraph className="max-w-4xl mx-auto font-medium text-white text-center mt-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
             accusantium dolores rem, quidem similique, obcaecati error officiis
             sapiente consequatur molestiae fugit pariatur exercitationem atque

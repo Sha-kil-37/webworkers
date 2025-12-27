@@ -1,48 +1,85 @@
-import british from "../assets/british.avif";
-import delair from "../assets/delair.avif";
-import healtcare from "../assets/healthcare.avif";
-import mapesa from "../assets/mapesa.avif";
-import narayana from "../assets/narayana.avif";
-import nsic from "../assets/nsic.avif";
-import sbg from "../assets/sbg.avif";
-import sprint from "../assets/sprint.avif";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+import { motion, AnimatePresence } from "framer-motion";
+//
+const experiences = [
+  {
+    id: 1,
+    image: "/clients/client1.jpg",
+    name: "ABC Corporation",
+    role: "Frontend Developer",
+    description:
+      "Built high-performance UI components and interactive dashboards using React and Tailwind CSS.",
+  },
+  {
+    id: 2,
+    image: "/clients/client2.jpg",
+    name: "XYZ Studio",
+    role: "MERN Stack Developer",
+    description:
+      "Developed full-stack applications with authentication, REST APIs, and optimized UI animations.",
+  },
+  {
+    id: 3,
+    image: "/clients/client3.jpg",
+    name: "Digital Agency",
+    role: "UI Engineer",
+    description:
+      "Created animated, conversion-focused landing pages with smooth transitions and micro-interactions.",
+  },
+];
 //
 export default function WorkExperience() {
   //
-
+  const [index, setIndex] = useState(0);
+  //
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % experiences.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
   //
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      className="relative py-10"
-    >
-      <div className="max-w-6xl mx-auto">
-        <h2 className="tracking-wide text-6xl font-bold text-[#082032] text-center w-5xl mx-auto">
-          With whom we have work experience
-        </h2>
-        <div className="grid xl:grid-cols-2 mt-10">
-          <div>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
-              doloribus ad sapiente, aperiam ex a dolores impedit saepe eaque?
-              Omnis aspernatur sunt ex error, suscipit mollitia provident ut
-              voluptate necessitatibus.
-            </p>
-          </div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi
-              laudantium alias praesentium molestias laborum! Voluptatum quidem
-              autem quos laboriosam totam doloribus, facilis dolorum quo impedit
-              velit officiis asperiores nobis nihil!
-            </p>
-          </div>
+    <section className="max-w-6xl mx-auto py-20 px-6">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="relative h-[260px] overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={experiences[index].id}
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -40, opacity: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="absolute inset-0"
+            >
+              <h3 className="text-2xl font-semibold text-gray-900">
+                {experiences[index].name}
+              </h3>
+              <p className="text-sm text-indigo-600 mt-1">
+                {experiences[index].role}
+              </p>
+              <p className="mt-4 text-gray-600 leading-relaxed">
+                {experiences[index].description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+        <div className="relative h-[380px] overflow-hidden bg-neutral-900">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={experiences[index].id}
+              src={experiences[index].image}
+              alt="Client"
+              className="absolute inset-0 w-full h-full object-cover"
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "-100%", opacity: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            />
+          </AnimatePresence>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

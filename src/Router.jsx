@@ -33,6 +33,7 @@ function App() {
               <Fragment>
                 <Banner />
                 <OurAchievements />
+                <WorkExperience />
                 <Services />
                 <ChooseUs />
                 <OurTeam />
@@ -40,7 +41,6 @@ function App() {
                 <Testimonials />
                 <Blogs />
                 <FAQ />
-                <WorkExperience />
                 <Contact />
               </Fragment>
             </MainLayout>

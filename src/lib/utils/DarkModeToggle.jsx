@@ -37,7 +37,7 @@ export default function DarkModeToggle({ className }) {
       title={theme === "dark" ? "Switch to light" : "Switch to dark"}
       className={`${className}`}
     >
-      {theme === "dark" ? <span>&#127769;</span>:<span>&#127774;</span> }
+      {theme === "dark" ? <span>&#127774;</span> : <span>&#127769;</span>}
     </button>
   );
 }
