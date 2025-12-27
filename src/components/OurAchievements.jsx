@@ -15,7 +15,7 @@ export default function OurAchievements() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-20 relative"
+      className="py-10 relative"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-2 gap-6">
         <motion.div

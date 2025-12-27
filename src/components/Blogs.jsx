@@ -2,13 +2,13 @@ import BlogSlider from "./BlogSlider";
 import { useState } from "react";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
-import blogone from "../assets/blogone.jpg";
-import blogtwo from "../assets/blogtwo.jpg";
-import blogthree from "../assets/blogthree.jpg";
-import blogfour from "../assets/blogfour.jpg";
-import blogfive from "../assets/blogfive.jpg";
-import blogsix from "../assets/blogsix.jpg";
-import blogseven from "../assets/blogseven.jpg";
+import blogone from "../assets/blogs/blogone.jpg";
+import blogtwo from "../assets/blogs/blogtwo.jpg";
+import blogthree from "../assets/blogs/blogthree.jpg";
+import blogfour from "../assets/blogs/blogfour.jpg";
+import blogfive from "../assets/blogs/blogfive.jpg";
+import blogsix from "../assets/blogs/blogsix.jpg";
+import blogseven from "../assets/blogs/blogseven.jpg";
 //
 //
 export default function Blogs() {

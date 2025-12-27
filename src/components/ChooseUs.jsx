@@ -4,8 +4,7 @@ import { FaMobileAlt } from "react-icons/fa";
 import { FaHeadset } from "react-icons/fa";
 import { RiEmotionHappyLine } from "react-icons/ri";
 import { motion } from "framer-motion";
-import background from "../assets/background.avif";
-
+//
 //
 export default function ChooseUs() {
   //
@@ -50,12 +49,19 @@ export default function ChooseUs() {
           {features.map((item, i) => {
             const Icon = item.icon;
             return (
-              <div key={i} className="bg-white rounded-full p-10">
+              <motion.div
+                key={i}
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="p-6 rounded-xl bg-gray-100"
+              >
                 <Icon className="h-15 w-15 mx-auto text-[#082032]" />
                 <Paragraph className="mt-5 text-center text-[#082032] font-medium text-xl">
                   {item.title}
                 </Paragraph>
-              </div>
+              </motion.div>
             );
           })}
         </div>

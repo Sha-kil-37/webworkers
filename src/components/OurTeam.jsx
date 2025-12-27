@@ -1,5 +1,5 @@
-import shakil from "../assets/shakil.png";
-import rakibul from "../assets/rakibul.png";
+import shakil from "../assets/team/shakil.png";
+import rakibul from "../assets/team/rakibul.png";
 import { FaDiscord } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";

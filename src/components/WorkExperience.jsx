@@ -1,85 +1,63 @@
-import { useEffect, useState } from "react";
-
 import { motion, AnimatePresence } from "framer-motion";
-//
-const experiences = [
-  {
-    id: 1,
-    image: "/clients/client1.jpg",
-    name: "ABC Corporation",
-    role: "Frontend Developer",
-    description:
-      "Built high-performance UI components and interactive dashboards using React and Tailwind CSS.",
-  },
-  {
-    id: 2,
-    image: "/clients/client2.jpg",
-    name: "XYZ Studio",
-    role: "MERN Stack Developer",
-    description:
-      "Developed full-stack applications with authentication, REST APIs, and optimized UI animations.",
-  },
-  {
-    id: 3,
-    image: "/clients/client3.jpg",
-    name: "Digital Agency",
-    role: "UI Engineer",
-    description:
-      "Created animated, conversion-focused landing pages with smooth transitions and micro-interactions.",
-  },
+import boycott from "../assets/collaboration/boycott.png";
+import creative from "../assets/collaboration/creative.png";
+import est from "../assets/collaboration/est.png";
+import express from "../assets/collaboration/express.png";
+import go from "../assets/collaboration/go.png";
+import happy from "../assets/collaboration/happy.png";
+import insight from "../assets/collaboration/insight.png";
+import minicraft from "../assets/collaboration/minicraft.png";
+import queen from "../assets/collaboration/queen.png";
+import work from "../assets/collaboration/work.png";
+const logos = [
+  boycott,
+  creative,
+  est,
+  express,
+  go,
+  happy,
+  insight,
+  minicraft,
+  queen,
+  work,
 ];
 //
+const Row = ({ reverse = false }) => (
+  <div className="overflow-hidden w-full mx-auto mt-10">
+    <motion.div
+      className="flex gap-6 w-max"
+      animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
+      transition={{
+        repeat: Infinity,
+        duration: 20,
+        ease: "linear",
+      }}
+    >
+      {[...logos, ...logos].map((logo, i) => (
+        <img key={i} src={logo} className="h-14 opacity-80" />
+      ))}
+    </motion.div>
+  </div>
+);
 export default function WorkExperience() {
   //
-  const [index, setIndex] = useState(0);
-  //
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % experiences.length);
-    }, 3500);
-    return () => clearInterval(interval);
-  }, []);
+
   //
   return (
-    <section className="max-w-6xl mx-auto py-20 px-6">
-      <div className="grid md:grid-cols-2 gap-10 items-center">
-        <div className="relative h-[260px] overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={experiences[index].id}
-              initial={{ y: 40, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -40, opacity: 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="absolute inset-0"
-            >
-              <h3 className="text-2xl font-semibold text-gray-900">
-                {experiences[index].name}
-              </h3>
-              <p className="text-sm text-indigo-600 mt-1">
-                {experiences[index].role}
-              </p>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                {experiences[index].description}
-              </p>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-        <div className="relative h-[380px] overflow-hidden bg-neutral-900">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={experiences[index].id}
-              src={experiences[index].image}
-              alt="Client"
-              className="absolute inset-0 w-full h-full object-cover"
-              initial={{ y: "100%", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: "-100%", opacity: 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-            />
-          </AnimatePresence>
-        </div>
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="py-20"
+    >
+      <div className="max-w-6xl mx-auto">
+        <h2 className="tracking-wide text-6xl font-bold text-center mx-auto w-4xl text-[#082032]">
+          With Whom We Have Work Experience
+        </h2>
+        <Row />
+        <Row reverse />
       </div>
-    </section>
+    </motion.section>
   );
 }

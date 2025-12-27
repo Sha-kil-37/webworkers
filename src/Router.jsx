@@ -32,8 +32,8 @@ function App() {
             <MainLayout>
               <Fragment>
                 <Banner />
-                <OurAchievements />
                 <WorkExperience />
+                <OurAchievements />
                 <Services />
                 <ChooseUs />
                 <OurTeam />

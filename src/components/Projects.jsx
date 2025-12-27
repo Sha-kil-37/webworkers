@@ -1,9 +1,9 @@
-import audit from "../assets/audit.png";
-import uiuxdesign from "../assets/uiuxdesign.png";
-import marketing from "../assets/marketing.png";
-import dashbord from "../assets/dashbord.png";
-import ecommers from "../assets/ecommers.png";
-import webdevelopment from "../assets/webdevelopment.png";
+import audit from "../assets/projects/audit.png";
+import uiuxdesign from "../assets/projects/uiuxdesign.png";
+import marketing from "../assets/projects/marketing.png";
+import dashbord from "../assets/projects/dashbord.png";
+import ecommers from "../assets/projects/ecommers.png";
+import webdevelopment from "../assets/projects/webdevelopment.png";
 import { motion } from "framer-motion";
 import { FaArrowUpLong } from "react-icons/fa6";
 import Paragraph from "./Paragraph";
@@ -79,7 +79,13 @@ export default function Projects() {
   };
   //
   return (
-    <motion.section className="py-20 bg-fixed bg-center bg-cover">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="py-20 bg-fixed bg-center bg-cover"
+    >
       <div className="max-w-6xl mx-auto relative">
         <h2 className="tracking-wide text-6xl text-center font-bold text-[#082032]">
           Let's Meet Our Some Beautiful Projects.

@@ -1,12 +1,11 @@
-import logo from "../assets/logo.png";
 import CopyRight from "./CopyRight";
 import Paragraph from "./Paragraph";
 import SocialLink from "./SocialLink";
 import { Link } from "react-router";
-import visacard from "../assets/visacard.avif";
-import nagad from "../assets/nagad.avif";
-import mastercard from "../assets/mastercard.avif";
-import biksh from "../assets/biksh.avif";
+import visacard from "../assets/payment/visacard.avif";
+import nagad from "../assets/payment/nagad.avif";
+import mastercard from "../assets/payment/mastercard.avif";
+import biksh from "../assets/payment/biksh.avif";
 
 //
 export default function Footer() {
@@ -17,9 +16,7 @@ export default function Footer() {
     <footer className="py-10">
       <div className="max-w-6xl sm:grid sm:grid-cols-2 xl:grid xl:grid-cols-4 2xl:grid 2xl:grid-cols-4 mx-auto">
         <div className="text-center">
-          <Link to="/" className="block h-10 w-10 overflow-hidden mx-auto">
-            <img className="h-full w-full inline-block" src={logo} alt={logo} />
-          </Link>
+          
           <Paragraph className="font-bold mt-2">Web Workers</Paragraph>
           <Paragraph className="mt-2 font-medium">
             Digital Web Service Agency

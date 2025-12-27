@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Paragraph from "./Paragraph";
-import background from "../assets/background.avif";
+import background from "../assets/background/background.avif";
 //
 const services = [
   {
