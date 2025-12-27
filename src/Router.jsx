@@ -4,7 +4,7 @@ import Test from "./components/Test";
 import { Fragment, lazy, Suspense } from "react";
 import Loading from "./components/Loading";
 import Banner from "./components/Banner";
-import TrustedUs from "./components/TrustedUs";
+import WorkExperience from "./components/WorkExperience";
 import OurAchievements from "./components/OurAchievements";
 import Services from "./components/Services";
 import ChooseUs from "./components/ChooseUs";
@@ -32,7 +32,6 @@ function App() {
             <MainLayout>
               <Fragment>
                 <Banner />
-                
                 <OurAchievements />
                 <Services />
                 <ChooseUs />
@@ -41,7 +40,7 @@ function App() {
                 <Testimonials />
                 <Blogs />
                 <FAQ />
-                <TrustedUs />
+                <WorkExperience />
                 <Contact />
               </Fragment>
             </MainLayout>

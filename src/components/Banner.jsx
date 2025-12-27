@@ -2,7 +2,6 @@ import Marquee from "react-fast-marquee";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import SplitText from "./SplitText";
-// import background from "../assets/background.avif";
 
 // Banner component with scroll-driven zoom effect
 export default function Banner() {
@@ -59,7 +58,6 @@ export default function Banner() {
       transition={{ duration: 0.6 }}
       ref={bannerRef}
       className="relative py-30 overflow-hidden "
-      //  style={{ backgroundImage: `url(${background})` }}
     >
       <div ref={frameRef} className="max-w-6xl mx-auto">
         <SplitText

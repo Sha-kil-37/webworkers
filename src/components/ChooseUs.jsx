@@ -4,6 +4,8 @@ import { FaMobileAlt } from "react-icons/fa";
 import { FaHeadset } from "react-icons/fa";
 import { RiEmotionHappyLine } from "react-icons/ri";
 import { motion } from "framer-motion";
+import background from "../assets/background.avif";
+
 //
 export default function ChooseUs() {
   //
@@ -38,7 +40,7 @@ export default function ChooseUs() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-20 bg-[#F9F8F6]"
+      className="py-30 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
