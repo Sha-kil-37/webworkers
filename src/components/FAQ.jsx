@@ -32,7 +32,11 @@ export default function FAQ() {
   };
   //
   return (
-    <motion.section className="py-10">
+    <motion.section initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="py-10 relative">
       <div className="w-4xl mx-auto">
         <h2 className="tracking-wide text-6xl font-bold text-[#082032] text-center">
           How Can I Help You ?

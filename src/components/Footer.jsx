@@ -16,23 +16,22 @@ export default function Footer() {
     <footer className="py-10">
       <div className="max-w-6xl sm:grid sm:grid-cols-2 xl:grid xl:grid-cols-4 2xl:grid 2xl:grid-cols-4 mx-auto">
         <div className="text-center">
-          
           <Paragraph className="font-bold mt-2">Web Workers</Paragraph>
           <Paragraph className="mt-2 font-medium">
             Digital Web Service Agency
           </Paragraph>
         </div>
         <div className="text-center">
-          <h3 className="text-xl font-mono">Legal</h3>
-          <Link className="block font-mono">Privacy & Policy</Link>
-          <Link className="block font-mono">Terms & Conditions</Link>
+          <h3 className="text-xl">Legal</h3>
+          <Link className="block">Privacy & Policy</Link>
+          <Link className="block">Terms & Conditions</Link>
         </div>
         <div className="text-center">
-          <h3 className="text-xl font-mono">Follow Us</h3>
+          <h3 className="text-xl">Follow Us</h3>
           <SocialLink />
         </div>
         <div className="text-center">
-          <h3 className="text-xl font-mono">Payment By</h3>
+          <h3 className="text-xl">Payment By</h3>
           <div className="sm:grid sm:grid-cols-2 mt-3 gap-4">
             {[mastercard, nagad, biksh, visacard].map((item, index) => {
               return (

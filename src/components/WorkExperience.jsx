@@ -49,7 +49,7 @@ export default function WorkExperience() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-20"
+      className="py-10"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="tracking-wide text-6xl font-bold text-center mx-auto w-4xl text-[#082032]">

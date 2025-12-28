@@ -45,7 +45,7 @@ export default function ChooseUs() {
         <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
           All The Benefits You Will Get From Us
         </h2>
-        <div className="grid grid-cols-4 gap-6 mt-20">
+        <div className="grid grid-cols-4 gap-4 mt-20">
           {features.map((item, i) => {
             const Icon = item.icon;
             return (

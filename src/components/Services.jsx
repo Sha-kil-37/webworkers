@@ -7,57 +7,57 @@ const services = [
     title: "Web Development",
     desc: "We create websites that are visually appealing, highly functional, and fully optimized, ensuring your digital presence effectively represents your brand and engages visitors for maximum impact.",
     className: "lg:col-span-2",
-    bg: "bg-gradient-to-r from-cyan-500 to-blue-500",
+    bg: "bg-[#FEFBC7]",
   },
   {
     title: "Digital Marketing",
     desc: "Our digital marketing services help your brand reach the right audience, increase traffic, and boost engagement. We ensure your stunning website gets seen and delivers real results.",
     className: "",
-    bg: "bg-gradient-to-r from-pink-400 to-fuchsia-700",
+    bg: "bg-[#C47BE4]",
   },
   {
     title: "Search Engine Optimization (SEO)",
     desc: "We optimize your website to rank higher on Google, boost visibility, and attract consistent organic traffic, helping your business grow through targeted, effective SEO strategies.",
     className: "",
-    bg: "bg-gradient-to-r from-yellow-300 to-yellow-500",
+    bg: "bg-[#CD2C58]",
   },
   // first row
   {
     title: "Social Media Marketing",
     desc: "We use social platforms to strengthen your brand awareness, increase audience engagement, and drive measurable sales, ensuring your business connects effectively with the right customers across all channels.",
     className: "",
-    bg: "bg-gradient-to-r from-[#6AECE1] to-[#001F3D]",
+    bg: "bg-[#4DFFBE]",
   },
   {
     title: "UI/UX Design",
     desc: "We design intuitive, visually appealing interfaces that enhance usability, improve user satisfaction, and create smooth, enjoyable experiences that keep users engaged and encourage them to return often to your website.",
     className: "lg:col-span-2",
-    bg: "bg-gradient-to-r from-cyan-500 to-[#F7F6D3]",
+    bg: "bg-[#093FB4]",
   },
   {
     title: "App Development",
     desc: "We develop high-performance mobile apps that deliver smooth functionality, intuitive interfaces, and strong user engagement, ensuring your business reaches customers effectively across Android, iOS, and cross-platform environments.",
     className: "",
-    bg: "bg-gradient-to-r from-cyan-500 to-blue-500",
+    bg: "bg-[#1A2A4F]",
   },
   // second row
   {
     title: "Business Consultation",
     desc: "We provide strategic business consultation to identify opportunities, solve challenges, and improve operations, helping your company grow, streamline processes, and make informed decisions that drive long-term success.",
     className: "lg:col-span-1",
-    bg: "bg-gradient-to-r from-cyan-500 to-[#FFF57E]",
+    bg: "bg-[#3B0270]",
   },
   {
     title: "Custom Software Development",
     desc: "We build custom software tailored to your business needs, streamline operations, improve efficiency, and deliver scalable, high-performance solutions that support growth and enhance overall productivity",
     className: "lg:col-span-1",
-    bg: "bg-gradient-to-r from-[#002455] to-[#C47BE4]",
+    bg: "bg-[#F9F5F0]",
   },
   {
     title: "Artificial Intelligence Integration",
     desc: "We seamlessly integrate AI into your digital products to automate processes, enhance user experiences, and unlock smarter decision-making. From chatbots and recommendations to predictive analytics, our AI solutions are secure, scalable, and tailored to your business goals—helping you work faster, smarter, and more efficiently",
     className: "lg:col-span-2",
-    bg: "bg-gradient-to-r from-cyan-200 to-blue-200",
+    bg: "bg-[#FF2DD1]",
   },
 ];
 //
@@ -66,7 +66,7 @@ export default function Services() {
 
   //
   return (
-    <section
+    <section id="services"
       className="py-20 bg-fixed bg-center bg-cover"
       style={{ backgroundImage: `url(${background})` }}
     >

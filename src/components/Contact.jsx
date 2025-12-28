@@ -1,168 +1,160 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Paragraph from "./Paragraph";
-import { HiOutlineMail } from "react-icons/hi";
-import { IoCallOutline } from "react-icons/io5";
-import { CiLocationOn } from "react-icons/ci";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import.meta.env;
 //
-// Validation Schema
-const ContactSchema = z.object({
-  name: z.string().min(3, "Name must be at least 3 characters."),
-  email: z.string().email("Invalid email address."),
-  message: z.string().min(10, "Message must be at least 10 characters."),
-});
-//
-// form api url
-const apiUrl = import.meta.env.VITE_FORM_API_KEY;
-// Contact Component
 export default function Contact() {
-  // form status state
-  const [formStatus, setFormStatus] = useState("");
-  // handle form submit
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm({
-    resolver: zodResolver(ContactSchema),
+  //
+
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    message: "",
   });
   //
-  // Submit Handler
-  const onSubmit = async (data) => {
-    setFormStatus("loading");
-    const formData = new FormData();
-    formData.append("name", data.name);
-    formData.append("email", data.email);
-    formData.append("message", data.message);
-    // Send form data to the API
-    const response = await fetch(apiUrl, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    });
+  const [errors, setErrors] = useState({});
+  const handleChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" });
+  };
 
-    if (response.ok) {
-      setFormStatus("success");
-      reset();
-      // window.location.href = "/thank-you";
-    } else {
-      setFormStatus("error");
+  const validate = () => {
+    const newErrors = {};
+
+    if (!values.name.trim()) {
+      newErrors.name = "Name is required";
     }
+
+    if (!values.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+      newErrors.email = "Enter a valid email";
+    }
+
+    if (!values.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (values.message.length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    console.log("Form Data:", values);
+
+    // reset after submit
+    setValues({ name: "", email: "", message: "" });
   };
   //
   return (
-    <section className="py-10">
-      <div className="max-w-6xl mx-auto block md:block lg:flex xl:flex gap-x-8 justify-between sm:block">
-        <div>
-          <h2 className="font-bold text-4xl font-mono">Get in Touch</h2>
-          <Paragraph className="max-w-xl font-mono mt-2">
-            We’d love to hear from you! Whether you have questions, need
-            support, or want to start a project, our team is ready to help.
-            Reach out to us via email, phone, or our online form, and we’ll
-            respond promptly to discuss how we can bring your ideas to life.
-          </Paragraph>
-          <div className="flex gap-x-4 mt-3 items-center">
-            <HiOutlineMail className="" />
-            <span className=" font-mono">sakildevmern@gmail.com</span>
-          </div>
-          <div className="flex gap-x-4 mt-3">
-            <IoCallOutline className="" />
-            <span className=" font-mono">+8801581049601</span>
-          </div>
-          <div className="flex gap-x-4 mt-3">
-            <CiLocationOn className="" />
-            <span className="font-mono">Gazipur, Dhaka, Bangladesh</span>
-          </div>
-        </div>
-        <div className="max-w-xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center font-mono">
-            Send Us a Message
-          </h2>
+    <motion.section id="contact"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="py-10 relative"
+    >
+      <div className="w-6xl mx-auto">
+        <h2 className="tracking-wide text-6xl font-bold text-center text-[#082032]">
+          Lets Contact Us
+        </h2>
+        <Paragraph className="mx-auto w-3xl text-center font-medium text-[#082032] mt-5">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, eos!
+          Distinctio enim consectetur odio assumenda voluptatem blanditiis
+          commodi neque ratione hic vel, expedita dicta. Cupiditate nam fuga
+          dicta impedit in!
+        </Paragraph>
+        {/*  */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="relative w-3xl mx-auto h-120 mt-20 rounded-2xl bg-[#082032]"
+        >
+          <div className="absolute top-[-20px] left-[-20px] rounded-2xl w-full h-full bg-white shadow-xl"></div>
+          {/* form div bellow  */}
+          <div className="absolute top-[-40px] left-[-40px] rounded-2xl w-full h-full bg-blue-400 shadow-xl p-6">
+            <div className="h-full w-full flex justify-center items-center">
+              <form onSubmit={handleSubmit} className="w-full h-full">
+                {/* Name */}
+                <div>
+                  <label htmlFor="name" className="font-medium text-white">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Inter your name"
+                    value={values.name}
+                    onChange={handleChange}
+                    className={`font-medium bg-white mt-1 block w-full rounded-lg border px-4 py-2 text-sm outline-none transition 
+            ${errors.name ? "" : ""}`}
+                  />
+                  {errors.name && (
+                    <Paragraph className="mt-1 text-red-500">
+                      {errors.name} &#9757;&#9757;
+                    </Paragraph>
+                  )}
+                </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="w-full">
-            {/* Name */}
-            <div className="mb-5 w-full">
-              <label className="block font-medium mb-2 font-mono">
-                Full Name
-              </label>
-              <input
-                type="text"
-                {...register("name")}
-                className="w-full p-3 border rounded focus:ring focus:ring-blue-300 font-mono"
-                placeholder="Enter your name"
-              />
-              {errors.name && (
-                <p className="text-red-600 text-sm mt-1 font-mono">
-                  {errors.name.message}
-                </p>
-              )}
+                {/* Email */}
+                <div className="mt-2">
+                  <label htmlFor="email" className="font-medium text-white">
+                    Your Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Inter Your email"
+                    value={values.email}
+                    onChange={handleChange}
+                    className={`font-medium bg-white mt-1 w-full rounded-lg border px-4 py-2 text-sm outline-none transition 
+            ${errors.email ? "" : ""}`}
+                  />
+                  {errors.email && (
+                    <Paragraph className="mt-1 text-red-500">
+                      {errors.email} &#9757;&#9757;
+                    </Paragraph>
+                  )}
+                </div>
+
+                {/* Message */}
+                <div className="mt-2">
+                  <label htmlFor="message" className="font-medium text-white">
+                    Your Message
+                  </label>
+                  <textarea
+                    name="message"
+                    placeholder="Inter Your message"
+                    rows={4}
+                    value={values.message}
+                    onChange={handleChange}
+                    className={`mt-1 bg-white w-full rounded-lg border px-4 py-2 text-sm outline-none transition resize-none font-medium
+            ${errors.message ? "" : ""}`}
+                  />
+                  {errors.message && (
+                    <Paragraph className="mt-1 text-red-500">
+                      {errors.message} &#9757;&#9757;
+                    </Paragraph>
+                  )}
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full rounded-lg bg-white px-4 py-2 text-sm font-medium text-[#082032] transition-all duration-300 hover:bg-white/90 block mt-3 cursor-pointer shadow-md"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
-
-            {/* Email */}
-            <div className="mb-5 w-full">
-              <label className="block font-medium mb-2 font-mono">
-                Email Address
-              </label>
-              <input
-                type="email"
-                {...register("email")}
-                className="w-full p-3 border rounded focus:ring focus:ring-blue-300 font-mono"
-                placeholder="Enter your email"
-              />
-              {errors.email && (
-                <p className="text-red-600 text-sm mt-1 font-mono">
-                  {errors.email.message}
-                </p>
-              )}
-            </div>
-
-            {/* Message */}
-            <div className="mb-5 w-full">
-              <label className="block font-medium mb-2 font-mono">
-                Message
-              </label>
-              <textarea
-                {...register("message")}
-                className="w-full p-3 border rounded h-32 focus:ring focus:ring-blue-300 font-mono"
-                placeholder="Write your message..."
-              ></textarea>
-              {errors.message && (
-                <p className="text-red-600 text-sm mt-1 font-mono">
-                  {errors.message.message}
-                </p>
-              )}
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="ont-mono font-bold bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition disabled:bg-blue-400 w-full"
-            >
-              {isSubmitting ? "Sending..." : "Send Message"}
-            </button>
-          </form>
-
-          {/* Status Messages */}
-          {formStatus === "success" && (
-            <p className="text-green-600 mt-4 text-center font-medium font-mono">
-              Message sent successfully!
-            </p>
-          )}
-
-          {formStatus === "error" && (
-            <p className="text-red-600 mt-4 text-center font-medium font-mono">
-              Something went wrong. Please try again.
-            </p>
-          )}
-        </div>
+          </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

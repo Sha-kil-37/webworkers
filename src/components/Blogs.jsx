@@ -1,4 +1,3 @@
-import BlogSlider from "./BlogSlider";
 import { useState } from "react";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
@@ -9,6 +8,7 @@ import blogfour from "../assets/blogs/blogfour.jpg";
 import blogfive from "../assets/blogs/blogfive.jpg";
 import blogsix from "../assets/blogs/blogsix.jpg";
 import blogseven from "../assets/blogs/blogseven.jpg";
+import {motion} from "framer-motion"
 //
 //
 export default function Blogs() {
@@ -97,7 +97,11 @@ export default function Blogs() {
   //
   // Render component
   return (
-    <section className="py-10">
+    <motion.section id="blogs" initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="py-10 relative">
       <div className="max-w-6xl mx-auto">
         {/* <BlogSlider blogs={blogs} /> */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -141,7 +145,7 @@ export default function Blogs() {
             <div className="flex justify-center mt-20">
               <button
                 onClick={handleLoadMoreBlogs}
-                className="cursor-pointer px-4 py-2 rounded-full bg-amber-200 text-[#082032] font-medium"
+                className="cursor-pointer px-4 py-2 rounded-full bg-blue-400 text-white font-medium shadow-md"
               >
                 More Blogs
               </button>
@@ -149,6 +153,6 @@ export default function Blogs() {
           </main>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

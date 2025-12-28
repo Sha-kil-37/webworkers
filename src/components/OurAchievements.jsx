@@ -60,11 +60,11 @@ export default function OurAchievements() {
           className="p-6"
         >
           <CounterItem end={120} label="Projects Completed" />
-          <hr className="my-5 text-[#082032]" />
+         
           <CounterItem end={80} label="Happy Clients" />
-          <hr className="my-5 text-[#082032]" />
+         
           <CounterItem end={5} label="Years Experience" />
-          <hr className="my-5 text-[#082032]" />
+          
           <CounterItem end={12} label="Awards Won" />
         </motion.div>
       </div>
