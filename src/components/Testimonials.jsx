@@ -74,9 +74,9 @@ const Testimonials = () => {
       className="relative py-10"
     >
       <div className="w-6xl mx-auto overflow-hidden">
-         <h2 className="tracking-wide text-center text-6xl font-bold text-[#082032]">
-                What does our client say?
-              </h2>
+        <h2 className="tracking-wide text-center text-6xl font-bold text-[#082032]">
+          What does our client say?
+        </h2>
         <div ref={trackRef} className="flex w-max py-10">
           {[...reviews, ...reviews].map((item, index) => (
             <div

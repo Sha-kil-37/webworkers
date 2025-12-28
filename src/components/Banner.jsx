@@ -102,7 +102,7 @@ export default function Banner() {
             stiffness: 120,
             damping: 12,
           }}
-          className="py-2 rounded-2xl block mt-10 bg-[#082032] mx-auto w-sm text-white font-medium "
+          className="py-2 rounded-2xl block mt-10 bg-[#082032] mx-auto w-sm text-white font-medium"
         >
           <Marquee speed={25}>Scroll Down For See More About Me</Marquee>
         </motion.button>

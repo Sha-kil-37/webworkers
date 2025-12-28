@@ -1,63 +1,82 @@
-import { Link } from "react-router";
-import { useEffect, useRef, useState } from "react";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import DarkModeToggle from "../lib/utils/DarkModeToggle";
-//
-export default function Nav() {
-  //
-  const aboutRef = useRef(null);
-  const [hidden, setHidden] = useState(false);
-  const THRESHOLD = 150; // pixels scrolled before hiding the nav
-  // Scroll handler with requestAnimationFrame throttling
-  useEffect(() => {
-    let ticking = false;
-    function onScroll() {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setHidden(window.scrollY > THRESHOLD);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }
 
-    // init state and add listener
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  //
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-  //
-  function handleAboutNavigate(){
-    
-  }
-  // 
+
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "Services", href: "#services" },
+    { name: "Projects", href: "#projects" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   return (
-    <nav
-      className={`py-4 sticky top-0 left-0 z-10 w-full transform transition-transform transition-opacity duration-300 ease-in-out ${
-        hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white/80 backdrop-blur shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <Link
-          to="/"
-          className="overflow-hidden block font-bold text-xl  text-[#082032]"
+      <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <a href="#home" className="text-xl font-bold tracking-wide">
+          Agency<span className="text-indigo-500">.</span>
+        </a>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <a href={link.href} className="hover:text-indigo-500 transition">
+                {link.name}
+              </a>
+            </li>
+          ))}
+           <DarkModeToggle className="text-2xl" />
+        </ul>
+
+        {/* Mobile Button */}
+        <button
+          className="md:hidden"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle Menu"
         >
-          Web Workers
-        </Link>
-        <div className="flex justify-between gap-x-4 items-center">
-          <button onClick={() => scrollTo("home")}>Home</button>
-          <button onClick={() => scrollTo("about")}>About</button>
-          <button onClick={() => scrollTo("services")}>Services</button>
-          <button onClick={() => scrollTo("blogs")}>Blogs</button>
-          <button onClick={() => scrollTo("contact")}>Contact</button>
-        </div>
-        <DarkModeToggle className="cursor-pointer text-2xl" />
+          {open ? <X size={26} /> : <Menu size={26} />}
+        </button>
+      </nav>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="bg-white px-6 py-6 space-y-5 shadow-md">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <a
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block text-sm font-medium hover:text-indigo-500 transition"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+          <DarkModeToggle className="text-2xl" />
+        </ul>
       </div>
-    </nav>
+    </header>
   );
 }
