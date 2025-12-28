@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import TruncateText from "../lib/utils/TruncateText";
 import { useRef, useEffect } from "react";
 import Paragraph from "./Paragraph";
+import { CiStar } from "react-icons/ci";
 //
 const reviews = [
   {
@@ -81,24 +82,27 @@ const Testimonials = () => {
           {[...reviews, ...reviews].map((item, index) => (
             <div
               key={index}
-              className="mx-2 w-[300px] rounded-xl p-4 shadow-sm"
+              className="mx-2 w-[300px] rounded-xl p-4 shadow-sm bg-gray-100"
             >
               <TruncateText
                 className="font-medium text-[#082032]"
                 text={item.review}
                 limit={15}
               />
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-3">
                 <div>
-                  <Paragraph className="mt-3 font-semibold text-[#082032]">
+                  <Paragraph className="font-semibold text-[#082032]">
                     {item.name}
                   </Paragraph>
                   <Paragraph className="text-[#082032]">{item.role}</Paragraph>
                 </div>
                 <div>
-                  <Paragraph className="text-[#082032]">
+                  <Paragraph className="text-[#082032] font-medium text-center">
                     {item.rating}
                   </Paragraph>
+                  <CiStar className="text-amber-300 inline-block" />
+                  <CiStar className="text-amber-300 inline-block" />
+                  <CiStar className="text-amber-300 inline-block" />
                 </div>
               </div>
             </div>
