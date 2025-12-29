@@ -1,9 +1,20 @@
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import Paragraph from "../components/Paragraph";
+import { Link } from "react-router";
+import { FaDiscord } from "react-icons/fa6";
 
+//
 export default function Footer() {
+  //
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+  //
   return (
-    <footer className="bg-neutral-950 text-neutral-300">
-      <div className="max-w-7xl mx-auto px-6 py-14">
+    <footer className="bg-neutral-950 py-15">
+      <div className="max-w-6xl mx-auto">
         {/* Grid */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
@@ -11,70 +22,163 @@ export default function Footer() {
             <h2 className="text-xl font-bold text-white">
               Web Workers<span className="text-indigo-500"> . </span>
             </h2>
-            <p className="mt-3 font-medium leading-relaxed">
+            <Paragraph className="mt-3 font-medium leading-relaxed text-white">
               We build modern, scalable digital experiences for brands that want
               to stand out.
-            </p>
+            </Paragraph>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="hover:text-white transition">Web Development</li>
-              <li className="hover:text-white transition">UI/UX Design</li>
-              <li className="hover:text-white transition">Brand Identity</li>
-              <li className="hover:text-white transition">SEO Optimization</li>
-            </ul>
+            <h3 className="text-white font-bold mb-4 text-lg">Services</h3>
+            <div className="space-y-2">
+              <button
+                onClick={() => scrollTo("services")}
+                className="font-medium text-white cursor-pointer block"
+                title="Services"
+              >
+                Web & App Development
+              </button>
+              <button
+                onClick={() => scrollTo("services")}
+                className="font-medium text-white cursor-pointer block"
+                title="Services"
+              >
+                Digital Marketing & SEO
+              </button>
+              <button
+                onClick={() => scrollTo("services")}
+                className="font-medium text-white cursor-pointer block"
+                title="Services"
+              >
+                Social Media Marketing
+              </button>
+              <button
+                onClick={() => scrollTo("services")}
+                className="font-medium text-white cursor-pointer block"
+                title="Services"
+              >
+                UI/UX Design
+              </button>
+              <button
+                onClick={() => scrollTo("services")}
+                className="font-medium text-white cursor-pointer block"
+                title="Services"
+              >
+                Business Consultation
+              </button>
+              <button
+                onClick={() => scrollTo("services")}
+                className="font-medium text-white cursor-pointer block"
+                title="Services"
+              >
+                Custom Software Development
+              </button>
+              <button
+                onClick={() => scrollTo("services")}
+                className="font-medium text-white cursor-pointer block"
+                title="Services"
+              >
+                Artificial Intelligence Integration
+              </button>
+            </div>
           </div>
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="hover:text-white transition">About Us</li>
-              <li className="hover:text-white transition">Projects</li>
-              <li className="hover:text-white transition">Careers</li>
-              <li className="hover:text-white transition">Contact</li>
-            </ul>
+            <h3 className="text-white font-bold mb-4 text-lg">Company</h3>
+            <div className="space-y-2">
+              <button
+                onClick={() => scrollTo("about")}
+                className="font-medium text-white cursor-pointer block"
+                title="About"
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollTo("projects")}
+                className="font-medium text-white cursor-pointer block"
+                title="Projects"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => scrollTo("blogs")}
+                className="font-medium text-white cursor-pointer block"
+                title="Blogs"
+              >
+                Blogs
+              </button>
+              <button
+                onClick={() => scrollTo("services")}
+                className="font-medium text-white cursor-pointer block"
+                title="Services"
+              >
+                Services
+              </button>
+              <button
+                onClick={() => scrollTo("contact")}
+                className="font-medium text-white cursor-pointer block"
+                title="Contact"
+              >
+                Contact
+              </button>
+            </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact</h3>
-            <p className="text-sm">hello@pixfer.com</p>
-            <p className="text-sm mt-1">+880 1234-567890</p>
+            <h3 className="text-white font-bold mb-4 text-lg">Contact</h3>
+            <Paragraph className="font-medium text-white">
+              sakildevmern@gmail.com
+            </Paragraph>
+            <Paragraph className="font-medium text-white mt-1">
+              +880 1581049601
+            </Paragraph>
 
             {/* Social */}
             <div className="flex gap-4 mt-5">
-              <a className="p-2 rounded-full bg-neutral-800 hover:bg-indigo-600 transition">
-                <FaFacebookF />
-              </a>
-              <a className="p-2 rounded-full bg-neutral-800 hover:bg-indigo-600 transition">
-                <FaTwitter />
-              </a>
-              <a className="p-2 rounded-full bg-neutral-800 hover:bg-indigo-600 transition">
-                <FaLinkedinIn />
-              </a>
-              <a className="p-2 rounded-full bg-neutral-800 hover:bg-indigo-600 transition">
-                <FaGithub />
-              </a>
+              <Link
+                title="Linkedin"
+                to="https://www.linkedin.com/in/shakil-ahmed-aba241317/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn className="text-white" />
+              </Link>
+              <Link
+                title="Facebook"
+                to="https://www.facebook.com/shak.sakil.96"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF className="text-white" />
+              </Link>
+              <Link
+                title="Discord"
+                to="https://discord.com/users/1420788964641603706"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaDiscord className="text-white" />
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-neutral-800 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-          <p>
-           &copy;{new Date().getFullYear()} Web Workers Agency. All rights reserved.
-          </p>
-          <div className="flex gap-4">
-            <span className="hover:text-white transition cursor-pointer">
+        <div className="border-t border-neutral-800 flex items-center justify-between mt-5">
+          <Paragraph className="font-medium text-white">
+            &copy;{new Date().getFullYear()} Web Workers Agency. All rights
+            reserved.
+          </Paragraph>
+          <div className="flex gap-x-4">
+            <Link className="font-medium text-white block">
               Privacy Policy
-            </span>
-            <span className="hover:text-white transition cursor-pointer">
+            </Link>
+            <Link className="font-medium text-white block">
               Terms
-            </span>
+            </Link>
           </div>
         </div>
       </div>

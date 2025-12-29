@@ -37,9 +37,9 @@ export default function Navbar() {
           layoutId="site-logo"
           className="text-xl font-bold cursor-pointer"
         >
-          AGENCY
+          AGENCY <span className="text-[#082032]">.</span>
         </motion.h3>
-
+        {/*  */}
         {/* Desktop Menu */}
         <div className="xl:flex gap-x-6 items-center hidden">
           <button
