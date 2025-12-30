@@ -62,7 +62,8 @@ export default function Banner() {
       <div ref={frameRef} className="xl:w-6xl mx-auto">
         <SplitText
           text="We Build Creative Digital Solutions"
-          className="text-center text-[#082032] font-bold xl:text-7xl max-w-3xl tracking-wide mx-auto"
+          className="text-center text-[#082032] font-bold xl:text-7xl 
+          xl:w-3xl tracking-wide mx-auto"
           delay={50}
           duration={0.5}
           ease="power3.out"
@@ -79,7 +80,7 @@ export default function Banner() {
           online presence to thrive in the digital world. With “We Build Creative Digital Solutions,” we deliver innovative, user-friendly Web Development, Digital
           Marketing, and UI/UX Design that help businesses attract customers,
           strengthen their brand, and grow online"
-          className="text-[#082032] mt-10 w-4xl mx-auto font-medium"
+          className="text-[#082032] mt-10 xl:w-4xl mx-auto font-medium"
           delay={10}
           duration={0.2}
           ease="power3.out"
@@ -102,7 +103,7 @@ export default function Banner() {
             stiffness: 120,
             damping: 12,
           }}
-          className="py-2 rounded-2xl block mt-10 bg-[#082032] mx-auto w-sm text-white font-medium"
+          className="py-2 px-4 rounded-2xl block mt-10 bg-[#082032] mx-auto w-sm text-white font-medium"
         >
           <Marquee speed={25}>Scroll Down For See More About Me</Marquee>
         </motion.button>
