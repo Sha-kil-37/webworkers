@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
-
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 //
 //
 export default function Blogs() {
@@ -18,7 +17,8 @@ export default function Blogs() {
       category: "Technology",
       author: "Sarah Johnson",
       date: "Dec 15, 2024",
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116433/agency/blogs/webdevelopment_lnvy2w.png",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116433/agency/blogs/webdevelopment_lnvy2w.png",
     },
     {
       id: 2,
@@ -28,7 +28,8 @@ export default function Blogs() {
       category: "Design",
       author: "Mike Chen",
       date: "Dec 10, 2024",
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116171/agency/blogs/uiux_tchiqd.png",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116171/agency/blogs/uiux_tchiqd.png",
     },
     {
       id: 3,
@@ -38,7 +39,8 @@ export default function Blogs() {
       category: "Technology",
       author: "Alex Rivera",
       date: "Dec 8, 2024",
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116549/agency/blogs/application_br45vw.jpg",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116549/agency/blogs/application_br45vw.jpg",
     },
     {
       id: 4,
@@ -48,7 +50,8 @@ export default function Blogs() {
       category: "Marketing",
       author: "Emily Watson",
       date: "Dec 5, 2024",
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116713/agency/blogs/digitalmarketing_zptb4k.png",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116713/agency/blogs/digitalmarketing_zptb4k.png",
     },
     {
       id: 5,
@@ -58,7 +61,8 @@ export default function Blogs() {
       category: "Technology",
       author: "James Park",
       date: "Dec 1, 2024",
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116899/agency/blogs/cloudcomputing_ad5zzc.png",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116899/agency/blogs/cloudcomputing_ad5zzc.png",
     },
     {
       id: 6,
@@ -68,7 +72,8 @@ export default function Blogs() {
       category: "Marketing",
       author: "Lisa Anderson",
       date: "Nov 28, 2024",
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117346/agency/blogs/contentstrategy_iyb6ps.png",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117346/agency/blogs/contentstrategy_iyb6ps.png",
     },
     {
       id: 7,
@@ -78,7 +83,8 @@ export default function Blogs() {
       category: "Marketing",
       author: "Lisa Anderson",
       date: "Nov 28, 2024",
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117657/agency/blogs/pharmacy_kvi2pz.jpg",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117657/agency/blogs/pharmacy_kvi2pz.jpg",
     },
   ];
   //
@@ -91,12 +97,15 @@ export default function Blogs() {
   //
   // Render component
   return (
-    <motion.section id="blogs" initial={{ opacity: 0, y: 20 }}
+    <motion.section
+      id="blogs"
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-10 relative">
-      <div className="max-w-6xl mx-auto">
+      className="py-10 relative"
+    >
+      <div className="xl:w-6xl mx-auto">
         {/* <BlogSlider blogs={blogs} /> */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left sticky column */}
@@ -110,11 +119,19 @@ export default function Blogs() {
 
           {/* Right scrollable column */}
           <main className="md:col-span-1">
+            <div className="">
+              <input
+                name="search"
+                type="search"
+                placeholder="Search your blog ..."
+                className="block w-full py-2 bg-gray-50 px-2"
+              />
+            </div>
             {visibleBlogs.map((blog, i) => (
               <Link
                 to={`/blogdetails/${i}`}
                 key={i}
-                className="mb-10 cursor-pointer block group"
+                className="my-5 cursor-pointer block group"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden h-80 rounded-lg">
