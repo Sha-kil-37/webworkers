@@ -1,25 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
-import boycott from "../assets/collaboration/boycott.png";
-import creative from "../assets/collaboration/creative.png";
-import est from "../assets/collaboration/est.png";
-import express from "../assets/collaboration/express.png";
-import go from "../assets/collaboration/go.png";
-import happy from "../assets/collaboration/happy.png";
-import insight from "../assets/collaboration/insight.png";
-import minicraft from "../assets/collaboration/minicraft.png";
-import queen from "../assets/collaboration/queen.png";
-import work from "../assets/collaboration/work.png";
+//
 const logos = [
-  boycott,
-  creative,
-  est,
-  express,
-  go,
-  happy,
-  insight,
-  minicraft,
-  queen,
-  work,
+  "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115242/agency/work_jophws.png",
+  "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115241/agency/queen_yc50ki.png",
+  "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115240/agency/minicraft_uzsptd.png",
+  "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115239/agency/insight_o9pu1g.png",
+  "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115238/agency/happy_dquonu.png",
+  "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115237/agency/go_rzwknp.png",
+  "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115236/agency/express_cyloez.png",
+  "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115235/agency/est_dqk6io.png",
+  "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115234/agency/creative_zlhfpt.png",
+  "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115234/agency/boycott_pvlfsw.png",
 ];
 //
 const Row = ({ reverse = false }) => (

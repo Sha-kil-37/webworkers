@@ -1,15 +1,10 @@
-import audit from "../assets/projects/audit.png";
-import uiuxdesign from "../assets/projects/uiuxdesign.png";
-import marketing from "../assets/projects/marketing.png";
-import dashbord from "../assets/projects/dashbord.png";
-import ecommers from "../assets/projects/ecommers.png";
-import webdevelopment from "../assets/projects/webdevelopment.png";
+
 import { motion } from "framer-motion";
 import { FaArrowUpLong } from "react-icons/fa6";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
 import { useState } from "react";
-
+// 
 //
 export default function Projects() {
   //
@@ -25,7 +20,7 @@ export default function Projects() {
       summary:
         "A fast, accessible marketing site built with a focus on performance and conversions.",
       tech: ["React", "Tailwind", "Vite"],
-      image: webdevelopment,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117859/agency/projects/webdevelopment_gtjbav.png",
     },
     {
       id: 2,
@@ -34,7 +29,7 @@ export default function Projects() {
       summary:
         "Streamlined checkout with improved UX and fewer abandoned carts.",
       tech: ["React", "Stripe", "Node"],
-      image: ecommers,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117859/agency/projects/ecommers_rlkv1p.jpg",
     },
     {
       id: 3,
@@ -42,7 +37,7 @@ export default function Projects() {
       category: "UI/UX Design",
       summary: "Design system and UI kit for consistent product experiences.",
       tech: ["Figma", "Design Tokens"],
-      image: uiuxdesign,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117860/agency/projects/uiuxdesign_valtgm.jpg",
     },
     {
       id: 4,
@@ -51,7 +46,7 @@ export default function Projects() {
       summary:
         "A/B testing framework to validate messaging and increase signups.",
       tech: ["Optimizely", "Analytics"],
-      image: marketing,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117858/agency/projects/marketing_ayxmmc.png",
     },
     {
       id: 5,
@@ -59,7 +54,7 @@ export default function Projects() {
       category: "Web Development",
       summary: "Responsive admin dashboard with charts and real-time updates.",
       tech: ["React", "Firebase", "WebSocket"],
-      image: dashbord,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117859/agency/projects/dashbord_ekt2r7.png",
     },
     {
       id: 6,
@@ -67,7 +62,7 @@ export default function Projects() {
       category: "Marketing",
       summary: "Research-led recommendations for improving conversion funnels.",
       tech: ["Research", "Recommendations"],
-      image: audit,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117857/agency/projects/audit_jdedz4.jpg",
     },
   ];
   //

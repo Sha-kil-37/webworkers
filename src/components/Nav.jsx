@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { motion } from "framer-motion";
 //
 export default function Navbar() {
+  const currentPath = useLocation();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +23,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   //
-
+  // console.log(location);
+  // handle navigate function for page navigate
+  function handleNavigate(path) {
+    if (currentPath.pathname === "/") {
+      scrollTo(path);
+    } else {
+      navigate("/");
+    }
+  }
   //
   return (
     <header
@@ -43,37 +52,37 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="xl:flex gap-x-6 items-center hidden">
           <button
-            onClick={() => scrollTo("home")}
+            onClick={() => handleNavigate("home")}
             className="font-medium text-[#082032] cursor-pointer"
             title="Home"
           >
             Home
           </button>
           <button
-            onClick={() => scrollTo("about")}
+            onClick={() => handleNavigate("about")}
             className="font-medium text-[#082032] cursor-pointer"
             title="About"
           >
             About
           </button>
           <button
-            onClick={() => scrollTo("services")}
+            onClick={() => handleNavigate("services")}
             className="font-medium text-[#082032] cursor-pointer"
             title="Services"
           >
             Services
           </button>
           <button
-            onClick={() => scrollTo("blogs")}
+            onClick={() => handleNavigate("blogs")}
             className="font-medium text-[#082032] cursor-pointer"
-            title="b"
+            title="Blogs"
           >
             Blogs
           </button>
           <button
-            onClick={() => scrollTo("contact")}
+            onClick={() => handleNavigate("contact")}
             className="font-medium text-[#082032] cursor-pointer"
-            title=""
+            title="Contact"
           >
             Contact
           </button>
@@ -95,19 +104,39 @@ export default function Navbar() {
           open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <button onClick={() => scrollTo("home")} className="font-medium">
+        <button
+          title="Home"
+          onClick={() => handleNavigate("home")}
+          className="font-medium"
+        >
           Home
         </button>
-        <button onClick={() => scrollTo("about")} className="font-medium">
+        <button
+          title="About"
+          onClick={() => handleNavigate("about")}
+          className="font-medium"
+        >
           About
         </button>
-        <button onClick={() => scrollTo("services")} className="font-medium">
+        <button
+          title="Services"
+          onClick={() => handleNavigate("services")}
+          className="font-medium"
+        >
           Services
         </button>
-        <button onClick={() => scrollTo("blogs")} className="font-medium">
+        <button
+          title="Blogs"
+          onClick={() => handleNavigate("blogs")}
+          className="font-medium"
+        >
           Blogs
         </button>
-        <button onClick={() => scrollTo("contact")} className="font-medium">
+        <button
+          title="Contact"
+          onClick={() => handleNavigate("contact")}
+          className="font-medium"
+        >
           Contact
         </button>
       </div>

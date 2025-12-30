@@ -1,13 +1,7 @@
 import { useState } from "react";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
-import blogone from "../assets/blogs/blogone.jpg";
-import blogtwo from "../assets/blogs/blogtwo.jpg";
-import blogthree from "../assets/blogs/blogthree.jpg";
-import blogfour from "../assets/blogs/blogfour.jpg";
-import blogfive from "../assets/blogs/blogfive.jpg";
-import blogsix from "../assets/blogs/blogsix.jpg";
-import blogseven from "../assets/blogs/blogseven.jpg";
+
 import {motion} from "framer-motion"
 //
 //
@@ -24,7 +18,7 @@ export default function Blogs() {
       category: "Technology",
       author: "Sarah Johnson",
       date: "Dec 15, 2024",
-      image: blogfour,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116433/agency/blogs/webdevelopment_lnvy2w.png",
     },
     {
       id: 2,
@@ -34,7 +28,7 @@ export default function Blogs() {
       category: "Design",
       author: "Mike Chen",
       date: "Dec 10, 2024",
-      image: blogone,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116171/agency/blogs/uiux_tchiqd.png",
     },
     {
       id: 3,
@@ -44,7 +38,7 @@ export default function Blogs() {
       category: "Technology",
       author: "Alex Rivera",
       date: "Dec 8, 2024",
-      image: blogtwo,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116549/agency/blogs/application_br45vw.jpg",
     },
     {
       id: 4,
@@ -54,7 +48,7 @@ export default function Blogs() {
       category: "Marketing",
       author: "Emily Watson",
       date: "Dec 5, 2024",
-      image: blogthree,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116713/agency/blogs/digitalmarketing_zptb4k.png",
     },
     {
       id: 5,
@@ -64,7 +58,7 @@ export default function Blogs() {
       category: "Technology",
       author: "James Park",
       date: "Dec 1, 2024",
-      image: blogfive,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767116899/agency/blogs/cloudcomputing_ad5zzc.png",
     },
     {
       id: 6,
@@ -74,7 +68,7 @@ export default function Blogs() {
       category: "Marketing",
       author: "Lisa Anderson",
       date: "Nov 28, 2024",
-      image: blogsix,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117346/agency/blogs/contentstrategy_iyb6ps.png",
     },
     {
       id: 7,
@@ -84,7 +78,7 @@ export default function Blogs() {
       category: "Marketing",
       author: "Lisa Anderson",
       date: "Nov 28, 2024",
-      image: blogseven,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117657/agency/blogs/pharmacy_kvi2pz.jpg",
     },
   ];
   //

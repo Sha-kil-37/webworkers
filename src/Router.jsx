@@ -22,7 +22,7 @@ import TermsAndPrivacy from "./components/TermsAndPrivacy";
 //
 function App() {
   AnalyticsTracker();
-
+  //
   //
   return (
     <Routes>

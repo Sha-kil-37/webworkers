@@ -1,11 +1,9 @@
-import shakil from "../assets/team/shakil.png";
-import rakibul from "../assets/team/rakibul.png";
 import { FaDiscord } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import { FaFacebook } from "react-icons/fa";
-
+// 
 //
 export default function OurTeam() {
   //
@@ -13,11 +11,11 @@ export default function OurTeam() {
     {
       name: "Shakil Ahmed",
       role: "Founder & Full-Stack Developer",
-      image: shakil,
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767114313/agency/team/shakil_ta6xay.png",
       socials: {
-        linkedin: "#",
-        discord: "#",
-        facebook: "#",
+        linkedin: "https://www.linkedin.com/in/shakil-ahmed-aba241317/",
+        discord: "https://discord.gg/1420788964641603706",
+        facebook: "https://www.facebook.com/shak.sakil.96",
       },
     },
     {
@@ -33,7 +31,8 @@ export default function OurTeam() {
     {
       name: "Rakibul Islam",
       role: "digital marketer specialist",
-      image: rakibul,
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767114313/agency/team/rakibul_qighom.png",
       socials: {
         linkedin: "#",
         discord: "#",
@@ -95,13 +94,15 @@ export default function OurTeam() {
                       <FaLinkedinIn />
                     </Link>
                     <Link
+                      target="_blank"
                       to={member.socials.discord}
                       className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
                     >
                       <FaDiscord />
                     </Link>
                     <Link
-                      href={member.socials.twitter}
+                      to={member.socials.facebook}
+                      target="_blank"
                       className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
                     >
                       <FaFacebook />

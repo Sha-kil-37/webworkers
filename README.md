@@ -15,4 +15,4 @@ If you are developing a production application, we recommend using TypeScript wi
 <!-- https://www.figma.com/design/WlaUfZtD9ydR6LE0DmqAZH/agency-web?node-id=0-1&p=f&t=kYWviITattQgm7hP-0 -->
 
 <!--  -->
-আমি চাই আমার ওয়েবসাইটটি লোড হওয়ার পরে লোডারের টেক্সট টি navbar লোগোতে এনিমেশনের সাথে সেট হয়ে যাক
+কি চাই আমার react tailwind css agency portfolio website যে সকল ভিজিটর আমার ওয়েবসাইট ভিজিট করবে তাদের সকলকে আমি ট্র্যাক করতে চাই কারণ পরবর্তীতে আমি যেন তাদেরকে আমার ওয়েবসাইটের পক্ষ হতে email  পাঠাতে পারি
