@@ -2,8 +2,9 @@ import shakil from "../assets/team/shakil.png";
 import rakibul from "../assets/team/rakibul.png";
 import { FaDiscord } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
+import { FaFacebook } from "react-icons/fa";
 
 //
 export default function OurTeam() {
@@ -16,7 +17,7 @@ export default function OurTeam() {
       socials: {
         linkedin: "#",
         discord: "#",
-        twitter: "#",
+        facebook: "#",
       },
     },
     {
@@ -26,7 +27,7 @@ export default function OurTeam() {
       socials: {
         linkedin: "#",
         discord: "#",
-        twitter: "#",
+        facebook: "#",
       },
     },
     {
@@ -36,7 +37,7 @@ export default function OurTeam() {
       socials: {
         linkedin: "#",
         discord: "#",
-        twitter: "#",
+        facebook: "https://www.facebook.com/share/16cJQXJZwV/",
       },
     },
     {
@@ -46,7 +47,7 @@ export default function OurTeam() {
       socials: {
         linkedin: "#",
         discord: "#",
-        twitter: "#",
+        facebook: "#",
       },
     },
   ];
@@ -86,24 +87,25 @@ export default function OurTeam() {
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
-                    <a
-                      href={member.socials.linkedin}
+                    <Link
+                      to={member.socials.linkedin}
+                      target="_black"
                       className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
                     >
                       <FaLinkedinIn />
-                    </a>
-                    <a
-                      href={member.socials.discord}
+                    </Link>
+                    <Link
+                      to={member.socials.discord}
                       className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
                     >
                       <FaDiscord />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href={member.socials.twitter}
                       className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
                     >
-                      <FaTwitter />
-                    </a>
+                      <FaFacebook />
+                    </Link>
                   </div>
                 </div>
 
