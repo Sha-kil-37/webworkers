@@ -52,7 +52,7 @@ export default function WorkExperience() {
       className="py-20"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="tracking-wide text-6xl font-bold text-center mx-auto w-4xl text-[#082032]">
+        <h2 className="tracking-wide xl:text-6xl font-bold text-center mx-auto xl:w-4xl text-[#082032]">
           With Whom We Have Work Experience
         </h2>
         <Row />

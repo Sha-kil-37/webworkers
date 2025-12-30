@@ -18,6 +18,7 @@ import BlogDetails from "./components/BlogDetails";
 import ProjectDetails from "./components/ProjectDetails";
 const MainLayout = lazy(() => import("./layout/MainLayout"));
 import AnalyticsTracker from "./lib/utils/AnalyticsTracker";
+import TermsAndPrivacy from "./components/TermsAndPrivacy";
 //
 function App() {
   AnalyticsTracker();
@@ -63,6 +64,16 @@ function App() {
           <Suspense fallback={<Loading />}>
             <MainLayout>
               <ProjectDetails />
+            </MainLayout>
+          </Suspense>
+        }
+      ></Route>
+      <Route
+        path="/terms&privacy"
+        element={
+          <Suspense fallback={<Loading />}>
+            <MainLayout>
+              <TermsAndPrivacy />
             </MainLayout>
           </Suspense>
         }

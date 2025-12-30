@@ -57,12 +57,12 @@ export default function Banner() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       ref={bannerRef}
-      className="relative py-30 overflow-hidden "
+      className="relative py-10 xl:py-30 overflow-hidden "
     >
-      <div ref={frameRef} className="max-w-6xl mx-auto">
+      <div ref={frameRef} className="xl:w-6xl mx-auto">
         <SplitText
           text="We Build Creative Digital Solutions"
-          className="text-center text-[#082032] font-bold text-7xl max-w-3xl tracking-wide mx-auto"
+          className="text-center text-[#082032] font-bold xl:text-7xl max-w-3xl tracking-wide mx-auto"
           delay={50}
           duration={0.5}
           ease="power3.out"

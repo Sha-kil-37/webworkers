@@ -6,7 +6,7 @@ const services = [
   {
     title: "Web Development",
     desc: "We create websites that are visually appealing, highly functional, and fully optimized, ensuring your digital presence effectively represents your brand and engages visitors for maximum impact.",
-    className: "lg:col-span-2",
+    className: "xl:col-span-2",
     bg: "bg-[#B8DB80]",
   },
   {
@@ -31,7 +31,7 @@ const services = [
   {
     title: "UI/UX Design",
     desc: "We design intuitive, visually appealing interfaces that enhance usability, improve user satisfaction, and create smooth, enjoyable experiences that keep users engaged and encourage them to return often to your website.",
-    className: "lg:col-span-2",
+    className: "xl:col-span-2",
     bg: "bg-[#1A2A4F]",
   },
   {
@@ -44,19 +44,19 @@ const services = [
   {
     title: "Business Consultation",
     desc: "We provide strategic business consultation to identify opportunities, solve challenges, and improve operations, helping your company grow, streamline processes, and make informed decisions that drive long-term success.",
-    className: "lg:col-span-1",
+    className: "xl:col-span-1",
     bg: "bg-[#F73D93]",
   },
   {
     title: "Custom Software Development",
     desc: "We build custom software tailored to your business needs, streamline operations, improve efficiency, and deliver scalable, high-performance solutions that support growth and enhance overall productivity",
-    className: "lg:col-span-1",
+    className: "xl:col-span-1",
     bg: "bg-[#15F5BA]",
   },
   {
     title: "Artificial Intelligence Integration",
     desc: "We seamlessly integrate AI into your digital products to automate processes, enhance user experiences, and unlock smarter decision-making. From chatbots and recommendations to predictive analytics, our AI solutions are secure, scalable, and tailored to your business goals—helping you work faster, smarter, and more efficiently",
-    className: "lg:col-span-2",
+    className: "xl:col-span-2",
     bg: "bg-[#3291B6]",
   },
 ];
@@ -71,19 +71,19 @@ export default function Services() {
       className="py-10"
       // style={{ backgroundImage: `url(${background})` }}
     >
-      <div className="w-6xl mx-auto">
+      <div className="xl:w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center"
+          // className="text-center"
         >
-          <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
+          <h2 className="tracking-wide xl:text-6xl font-bold text-center xl:w-3xl mx-auto text-[#082032]">
             Meet Our Services
           </h2>
-          <Paragraph className="max-w-4xl mx-auto font-medium text-[#082032] text-center mt-5">
+          <Paragraph className="xl:w-4xl mx-auto font-medium text-[#082032] text-center mt-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
             accusantium dolores rem, quidem similique, obcaecati error officiis
             sapiente consequatur molestiae fugit pariatur exercitationem atque
@@ -92,7 +92,7 @@ export default function Services() {
         </motion.div>
 
         {/* Bento Grid */}
-        <div className="grid lg:grid-cols-4  gap-6 mt-10">
+        <div className="xl:grid xl:grid-cols-4  xl:gap-6 mt-10">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -106,7 +106,9 @@ export default function Services() {
               <h3 className="text-white font-medium text-2xl">
                 {service.title}
               </h3>
-              <Paragraph className="text-white mt-3 font-medium">{service.desc}</Paragraph>
+              <Paragraph className="text-white mt-3 font-medium">
+                {service.desc}
+              </Paragraph>
             </motion.div>
           ))}
         </div>

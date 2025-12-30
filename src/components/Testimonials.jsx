@@ -74,7 +74,7 @@ const Testimonials = () => {
       transition={{ duration: 1 }}
       className="relative py-10"
     >
-      <div className="w-6xl mx-auto overflow-hidden">
+      <div className="xl:w-6xl mx-auto overflow-hidden">
         <h2 className="tracking-wide text-center text-6xl font-bold text-[#082032]">
           What does our client say?
         </h2>

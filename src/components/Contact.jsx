@@ -58,11 +58,11 @@ export default function Contact() {
       transition={{ duration: 1 }}
       className="py-10 relative"
     >
-      <div className="w-6xl mx-auto">
-        <h2 className="tracking-wide text-6xl font-bold text-center text-[#082032]">
+      <div className="xl:w-6xl mx-auto">
+        <h2 className="tracking-wide xl:text-6xl font-bold text-center text-[#082032]">
           Lets Contact Us
         </h2>
-        <Paragraph className="mx-auto w-3xl text-center font-medium text-[#082032] mt-5">
+        <Paragraph className="mx-auto xl:w-3xl text-center font-medium text-[#082032] mt-5">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, eos!
           Distinctio enim consectetur odio assumenda voluptatem blanditiis
           commodi neque ratione hic vel, expedita dicta. Cupiditate nam fuga
@@ -74,7 +74,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="relative w-3xl mx-auto h-120 mt-20 rounded-2xl bg-[#082032]"
+          className="relative xl:w-3xl mx-auto h-120 mt-20 rounded-2xl bg-[#082032]"
         >
           <div className="absolute top-[-20px] left-[-20px] rounded-2xl w-full h-full bg-white shadow-xl"></div>
           {/* form div bellow  */}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+//
 const faqs = [
   {
     question: "What services does your agency provide?",
@@ -26,19 +26,21 @@ const faqs = [
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
-
+  //
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   //
   return (
-    <motion.section initial={{ opacity: 0, y: 20 }}
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-10 relative">
-      <div className="w-4xl mx-auto">
-        <h2 className="tracking-wide text-6xl font-bold text-[#082032] text-center">
+      className="py-10 relative"
+    >
+      <div className="xl:w-4xl mx-auto">
+        <h2 className="tracking-wide xl:text-6xl font-bold text-[#082032] text-center">
           How Can I Help You ?
         </h2>
         {/*  */}

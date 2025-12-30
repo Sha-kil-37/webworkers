@@ -173,10 +173,10 @@ export default function Footer() {
             reserved.
           </Paragraph>
           <div className="flex gap-x-4">
-            <Link className="font-medium text-white block">
+            <Link to={"/terms&privacy"} className="font-medium text-white block">
               Privacy Policy
             </Link>
-            <Link className="font-medium text-white block">
+            <Link to={"/terms&privacy"} className="font-medium text-white block">
               Terms
             </Link>
           </div>

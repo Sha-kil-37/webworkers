@@ -17,7 +17,7 @@ export default function OurAchievements() {
       transition={{ duration: 1 }}
       className="py-10 relative"
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-2 gap-6">
+      <div className="max-w-6xl mx-auto xl:grid xl:grid-cols-2 gap-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ export default function OurAchievements() {
           transition={{ duration: 1 }}
           className="p-6 "
         >
-          <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
+          <h2 className="tracking-wide xl:text-6xl font-bold text-center xl:max-w-3xl mx-auto text-[#082032]">
             Our Achievements
           </h2>
           <div className="flex justify-center mt-5">
