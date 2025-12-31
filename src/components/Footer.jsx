@@ -34,49 +34,49 @@ export default function Footer() {
             <div className="space-y-2">
               <button
                 onClick={() => scrollTo("services")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Services"
               >
                 Web & App Development
               </button>
               <button
                 onClick={() => scrollTo("services")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Services"
               >
                 Digital Marketing & SEO
               </button>
               <button
                 onClick={() => scrollTo("services")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Services"
               >
                 Social Media Marketing
               </button>
               <button
                 onClick={() => scrollTo("services")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Services"
               >
                 UI/UX Design
               </button>
               <button
                 onClick={() => scrollTo("services")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Services"
               >
                 Business Consultation
               </button>
               <button
                 onClick={() => scrollTo("services")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Services"
               >
                 Custom Software Development
               </button>
               <button
                 onClick={() => scrollTo("services")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Services"
               >
                 Artificial Intelligence Integration
@@ -90,35 +90,35 @@ export default function Footer() {
             <div className="space-y-2">
               <button
                 onClick={() => scrollTo("about")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="About"
               >
                 About
               </button>
               <button
                 onClick={() => scrollTo("projects")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Projects"
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollTo("blogs")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Blogs"
               >
                 Blogs
               </button>
               <button
                 onClick={() => scrollTo("services")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Services"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollTo("contact")}
-                className="font-medium text-white cursor-pointer block"
+                className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white cursor-pointer block"
                 title="Contact"
               >
                 Contact
@@ -129,7 +129,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-white font-bold mb-4 text-lg">Contact</h3>
-            <Paragraph className="font-medium text-white">
+            <Paragraph className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white">
               sakildevmern@gmail.com
             </Paragraph>
             <Paragraph className="font-medium text-white mt-1">

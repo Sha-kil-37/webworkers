@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router";
 import { motion } from "framer-motion";
 import { useSearch } from "../context/SearchContext";
+import DarkModeToggle from "../lib/utils/DarkModeToggle";
 //
 export default function Navbar() {
   const currentPath = useLocation();
@@ -63,7 +64,7 @@ export default function Navbar() {
         scrolled ? "bg-white/80 backdrop-blur" : "bg-transparent"
       }`}
     >
-      <nav className="w-6xl mx-auto py-4 flex items-center justify-between">
+      <nav className="xl:w-6xl mx-auto py-4 xl:flex xl:items-center xl:justify-between">
         {/* Logo */}
         <motion.h3
           onClick={() => navigate("/")}
@@ -144,7 +145,7 @@ export default function Navbar() {
             Contact
           </button>
         </div>
-
+        <DarkModeToggle className="text-2xl cursor-pointer" />
         {/* Mobile Button */}
         <button
           className="md:hidden"
