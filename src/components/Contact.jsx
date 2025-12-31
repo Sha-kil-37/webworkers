@@ -6,8 +6,6 @@ import toast from "react-hot-toast";
 //
 export default function Contact() {
   //
-
-  //
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -15,7 +13,7 @@ export default function Contact() {
   });
   //
   const MAX_WORDS = 100;
-
+  //
   const getWordCount = (text) =>
     text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
 
@@ -24,7 +22,7 @@ export default function Contact() {
   const remainingWords = MAX_WORDS - wordCount;
   //
   const [errors, setErrors] = useState({});
-  //
+  // handle input value by input onChange function
   const handleChange = (e) => {
     const { name, value } = e.target;
     //
@@ -36,7 +34,7 @@ export default function Contact() {
     setValues({ ...values, [name]: value });
     setErrors({ ...errors, [name]: "" });
   };
-  //
+  // custom form validation
   const validate = () => {
     const newErrors = {};
     //
@@ -59,7 +57,7 @@ export default function Contact() {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
+// handle form data submit
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
@@ -86,10 +84,7 @@ export default function Contact() {
           Lets Contact Us
         </h2>
         <Paragraph className="mx-auto xl:w-3xl text-center font-medium text-[#082032] mt-5">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, eos!
-          Distinctio enim consectetur odio assumenda voluptatem blanditiis
-          commodi neque ratione hic vel, expedita dicta. Cupiditate nam fuga
-          dicta impedit in!
+          Let’s bring your ideas to life. Whether you’re looking to build a modern website, improve your online visibility with SEO and social media marketing, develop a custom application, or integrate AI-powered solutions, we’re here to help. Drop us a message and let’s discuss how we can grow your business together.
         </Paragraph>
         {/*  */}
         <motion.div

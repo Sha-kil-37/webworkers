@@ -49,7 +49,8 @@ export default function Banner() {
   }, []);
   //
   return (
-    <motion.section id="home"
+    <motion.section
+      id="home"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -73,6 +74,7 @@ export default function Banner() {
           textAlign="center"
           onLetterAnimationComplete={handleAnimationComplete}
         />
+        
         <SplitText
           text="In today’s fast-moving digital world, Every business needs a strong
           online presence to thrive in the digital world. With “We Build Creative Digital Solutions,” we deliver innovative, user-friendly Web Development, Digital
@@ -103,7 +105,6 @@ export default function Banner() {
           }}
           className="py-2 px-4 rounded-2xl block mt-10 bg-[#F5F5F7] mx-auto w-sm text-[#082032] font-medium"
         >
-          
           Scroll Down
         </motion.button>
       </div>
