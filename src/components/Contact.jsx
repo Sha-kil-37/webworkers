@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Paragraph from "./Paragraph";
 import toast from "react-hot-toast";
+const formspreeApi = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+
 //
 //
 export default function Contact() {
@@ -57,17 +59,32 @@ export default function Contact() {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-// handle form data submit
-  const handleSubmit = (e) => {
+  // handle form data submit
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
+    // form submit
 
-    console.log("Form Data:", values);
-
-    // reset after submit
-    setValues({ name: "", email: "", message: "" });
-    toast.success("send successfully");
-    // toast.error("something went wrong");
+    try {
+      const res = await fetch(formspreeApi, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      console.log(res);
+      if (res.ok) {
+        toast.success("Message sent successfully 🚀");
+        setValues({ name: "", email: "", message: "" });
+      } else {
+        toast.error("Failed to send message");
+      }
+    } catch (err) {
+      console.log(err);
+      toast.error("Something went wrong");
+    }
   };
   //
   return (
@@ -84,7 +101,11 @@ export default function Contact() {
           Lets Contact Us
         </h2>
         <Paragraph className="mx-auto xl:w-3xl text-center font-medium text-[#082032] mt-5">
-          Let’s bring your ideas to life. Whether you’re looking to build a modern website, improve your online visibility with SEO and social media marketing, develop a custom application, or integrate AI-powered solutions, we’re here to help. Drop us a message and let’s discuss how we can grow your business together.
+          Let’s bring your ideas to life. Whether you’re looking to build a
+          modern website, improve your online visibility with SEO and social
+          media marketing, develop a custom application, or integrate AI-powered
+          solutions, we’re here to help. Drop us a message and let’s discuss how
+          we can grow your business together.
         </Paragraph>
         {/*  */}
         <motion.div
