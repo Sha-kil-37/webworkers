@@ -22,7 +22,8 @@ export default function Navbar() {
       const blogsElement = document.getElementById("blogs");
       if (blogsElement) {
         const rect = blogsElement.getBoundingClientRect();
-        setShowSearch(rect.top < window.innerHeight && rect.bottom > 0);
+        // Show search only when scrolled 100px into the blog section
+        setShowSearch(rect.top < -100 && rect.bottom > 0);
       }
     };
     window.addEventListener("scroll", onScroll);
@@ -43,7 +44,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur shadow-sm" : "bg-transparent"
+        scrolled ? "bg-white/80 backdrop-blur" : "bg-transparent"
       }`}
     >
       <nav className="w-6xl mx-auto py-4 flex items-center justify-between">
@@ -62,7 +63,7 @@ export default function Navbar() {
             layoutId="blog-search"
             type="search"
             placeholder="Search blog ..."
-            className="block py-2 bg-gray-50 px-2 rounded mx-4"
+            className="block py-2 bg-gray-100 px-2 rounded mx-4"
           />
         )}
 

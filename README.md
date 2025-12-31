@@ -18,3 +18,4 @@ If you are developing a production application, we recommend using TypeScript wi
 What I want is for my react tailwind css agency portfolio website to track all the visitors who visit my website so that later I can send them emails on behalf of my website.
 <!--  --> 
 I want my blog search input to animate and move between the navbar logo and the menu when I scroll through my blog section.
+আমি চাই যখন আমি আমার blog সেকশনটি স্ক্রল করে অতিক্রম করব তখন আমার সার্চ ইনপুটটি navbar এ এনিমেশন হয়ে অবস্থান করবে
