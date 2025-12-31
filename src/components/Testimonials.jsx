@@ -76,9 +76,17 @@ const Testimonials = () => {
     >
       <div className="xl:w-6xl mx-auto overflow-hidden">
         <h2 className="tracking-wide text-center text-6xl font-bold text-[#082032]">
-          What does our client say?
+          What does our <span className="text-[#81E7AF]">client</span> say ?
         </h2>
-        <div ref={trackRef} className="flex w-max py-10 mt-10">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-5">
+          Our clients trust us because we deliver more than just services—we
+          deliver results. From Web Development and UI/UX Design to Digital
+          Marketing, SEO, and Social Media Marketing, we help businesses build
+          strong digital identities. Whether it’s App Development, Custom
+          Software, AI Integration, or Business Consultation, our solutions are
+          crafted to solve real problems and drive measurable growth.
+        </Paragraph>
+        <div ref={trackRef} className="flex w-max py-5 mt-5">
           {[...reviews, ...reviews].map((item, index) => (
             <div
               key={index}
@@ -100,9 +108,9 @@ const Testimonials = () => {
                   <Paragraph className="text-[#082032] font-medium text-center">
                     {item.rating}
                   </Paragraph>
-                  <CiStar className="text-amber-300 inline-block" />
-                  <CiStar className="text-amber-300 inline-block" />
-                  <CiStar className="text-amber-300 inline-block" />
+                  <CiStar className="text-[#FFE100] inline-block" />
+                  <CiStar className="text-[#FFE100] inline-block" />
+                  <CiStar className="text-[#FFE100] inline-block" />
                 </div>
               </div>
             </div>

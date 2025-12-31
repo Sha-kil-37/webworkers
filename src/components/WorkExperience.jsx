@@ -1,4 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
+import Paragraph from "./Paragraph";
+import ShinyText from "./ShinyText";
 //
 const logos = [
   "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767115242/agency/work_jophws.png",
@@ -36,17 +38,15 @@ export default function WorkExperience() {
   //
   return (
     <motion.section
-    id="workexperience"
+      id="workexperience"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
       className="py-20"
     >
-      <div className="max-w-6xl mx-auto">
-        <h2 className="xl:mb-20 tracking-wide xl:text-6xl font-bold text-center mx-auto xl:w-4xl text-[#082032]">
-          With Whom We Have Work Experience
-        </h2>
+      <div className="xl:w-6xl xl:mx-auto">
+        <h2  className="text-[#082032] font-bold xl:text-6xl xl:w-4xl xl:mx-auto xl:block text-center xl:mb-15" >Work <span  className="text-[#F5F5F7]">Experience</span> With</h2>
         <Row />
         <Row reverse />
       </div>

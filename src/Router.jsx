@@ -5,7 +5,7 @@ import { Fragment, lazy, Suspense } from "react";
 import Loading from "./components/Loading";
 import Banner from "./components/Banner";
 import WorkExperience from "./components/WorkExperience";
-import OurAchievements from "./components/OurAchievements";
+import OurSuccess from "./components/OurSuccess";
 import Services from "./components/Services";
 import ChooseUs from "./components/ChooseUs";
 import OurTeam from "./components/OurTeam";
@@ -35,7 +35,7 @@ function App() {
               <Fragment>
                 <Banner />
                 <WorkExperience />
-                <OurAchievements />
+                <OurSuccess />
                 <Services />
                 <ChooseUs />
                 <OurTeam />

@@ -104,7 +104,7 @@ export default function Contact() {
     >
       <div className="xl:w-6xl mx-auto">
         <h2 className="tracking-wide xl:text-6xl font-bold text-center text-[#082032]">
-          Lets Contact Us
+          <span className="text-[#0076DF]">Contact</span> Us
         </h2>
         <Paragraph className="mx-auto xl:w-3xl text-center font-medium text-[#082032] mt-5">
           Let’s bring your ideas to life. Whether you’re looking to build a

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Paragraph from "./Paragraph";
 //
 const faqs = [
   {
@@ -39,10 +40,20 @@ export default function FAQ() {
       transition={{ duration: 1 }}
       className="py-10 relative"
     >
-      <div className="xl:w-4xl mx-auto">
+      <div className="xl:w-4xl xl:mx-auto">
         <h2 className="tracking-wide xl:text-6xl font-bold text-[#082032] text-center">
-          How Can I Help You ?
+          How Can I <span className="text-[#81E7AF]">Help</span> You ?
         </h2>
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-5">
+          We offer end-to-end digital solutions designed to help businesses grow
+          smarter and faster. From high-performance Web Development and
+          intuitive UI/UX Design to data-driven Digital Marketing, SEO, and
+          Social Media Marketing, our services are tailored to your goals. We
+          also specialize in App Development, Custom Software Development,
+          Business Consultation, and seamless Artificial Intelligence
+          Integration to ensure your brand stays competitive in a rapidly
+          evolving digital world.
+        </Paragraph>
         {/*  */}
         <div className="space-y-4 mt-15">
           {faqs.map((faq, index) => {
@@ -51,7 +62,7 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className="border border-gray-200 rounded-xl overflow-hidden transition-all duration-500 p-4"
+                className="border border-[#F5F5F7] rounded-xl overflow-hidden transition-all duration-500 p-4"
               >
                 {/* Question */}
                 <button

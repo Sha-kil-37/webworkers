@@ -71,7 +71,7 @@ export default function Navbar() {
           layoutId="site-logo"
           className="text-xl font-bold cursor-pointer"
         >
-          AGENCY <span className="text-[#082032]">.</span>
+          AGENCY <span className="text-[#0076DF]">.</span>
         </motion.h3>
 
         {/* Search Input */}

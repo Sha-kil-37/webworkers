@@ -3,6 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import { FaFacebook } from "react-icons/fa";
+import Paragraph from "./Paragraph";
 
 //
 export default function OurTeam() {
@@ -66,8 +67,18 @@ export default function OurTeam() {
           <aside className="md:col-span-1 xl:border-r border-[#F5F5F7]">
             <div className="sticky top-0">
               <h2 className="tracking-wide text-6xl font-bold w-xl text-[#082032]">
-                Let's Get To Know Our Professional Team Members.
+                Meet Our <span className="text-[#F43F5E]">Professional</span> Team Members <span className="text-[#0076DF]">.</span>
               </h2>
+              <Paragraph className="mt-5 font-medium text-[#082032]">
+                We are a multidisciplinary digital team driven by innovation and
+                results. Our expertise spans web and app development, UI/UX
+                design, digital marketing, SEO, and social media
+                marketing—everything your business needs to grow online. By
+                blending strategic thinking, custom software development,
+                AI-powered solutions, and business consultation, we turn ideas
+                into impactful digital products that connect, convert, and
+                scale.
+              </Paragraph>
             </div>
           </aside>
           {/* Right scrollable column */}
@@ -96,13 +107,22 @@ export default function OurTeam() {
                   </div>
                   <div className="flex gap-x-3">
                     <Link target="_blank" to={member.socials.linkedin}>
-                      <FaLinkedinIn className="text-xl text-[#082032]" title="LinkedinIn" />
+                      <FaLinkedinIn
+                        className="text-xl text-[#082032]"
+                        title="LinkedinIn"
+                      />
                     </Link>
                     <Link target="_blank" to={member.socials.discord}>
-                      <FaDiscord className="text-xl text-[#082032]" title="Discord" />
+                      <FaDiscord
+                        className="text-xl text-[#082032]"
+                        title="Discord"
+                      />
                     </Link>
                     <Link target="_blank" to={member.socials.facebook}>
-                      <FaFacebook className="text-xl text-[#082032]" title="facebook" />
+                      <FaFacebook
+                        className="text-xl text-[#082032]"
+                        title="facebook"
+                      />
                     </Link>
                   </div>
                 </div>

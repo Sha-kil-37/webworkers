@@ -23,7 +23,7 @@ export default function ScrollDownIndicator({ targetId = "services" }) {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="flex items-center justify-center w-10 h-10 rounded-full border border-white/30"
+          className="flex items-center justify-center w-10 h-10 rounded-full border border-[#082032]"
         >
           <FiChevronDown size={22} />
         </motion.div>

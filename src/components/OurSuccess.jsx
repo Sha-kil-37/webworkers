@@ -1,4 +1,3 @@
-
 import CounterItem from "./CounterItem";
 import Paragraph from "./Paragraph";
 import { motion } from "framer-motion";
@@ -17,7 +16,7 @@ export default function OurAchievements() {
       transition={{ duration: 1 }}
       className="py-10 relative"
     >
-      <div className="max-w-6xl mx-auto xl:grid xl:grid-cols-2 gap-6">
+      <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,10 +24,10 @@ export default function OurAchievements() {
           transition={{ duration: 1 }}
           className="p-6 "
         >
-          <h2 className="tracking-wide xl:text-6xl font-bold text-center xl:max-w-3xl mx-auto text-[#082032]">
-            Our Achievements
+          <h2 className="tracking-wide xl:text-6xl font-bold text-[#082032]">
+            Our <span className="text-[#FFE100]">Success</span>
           </h2>
-          <div className="flex justify-center mt-5">
+          <div className="flex mt-2 ">
             {[1, 2, 3, 4, 5].map((item, i) => {
               return (
                 <motion.div
@@ -38,13 +37,13 @@ export default function OurAchievements() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
-                  <CiStar className="text-amber-300 text-4xl" />
+                  <CiStar className="text-[#FFE100] text-4xl" />
                 </motion.div>
               );
             })}
           </div>
 
-          <Paragraph className="max-w-4xl mx-auto font-medium text-[#082032] text-center mt-5">
+          <Paragraph className="max-w-4xl mx-auto font-medium text-[#082032] mt-5">
             We create smart, creative, and impactful digital solutions that help
             businesses grow with confidence. We deliver high-quality Web
             Development, Digital Marketing, UI/UX Design, SEO, and innovative
@@ -60,11 +59,8 @@ export default function OurAchievements() {
           className="p-6"
         >
           <CounterItem end={120} label="Projects Completed" />
-         
           <CounterItem end={80} label="Happy Clients" />
-         
           <CounterItem end={5} label="Years Experience" />
-          
           <CounterItem end={12} label="Awards Won" />
         </motion.div>
       </div>

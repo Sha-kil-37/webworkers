@@ -4,7 +4,21 @@
 /* Keep custom dark variant for utilities (class-based dark mode) */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/*  */
+/* custom css  bellow */
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
 
+.animate-shine {
+  background-size: 200% auto;
+  animation: shine 6s linear infinite;
+}
 
 
 

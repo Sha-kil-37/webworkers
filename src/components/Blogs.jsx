@@ -3,7 +3,7 @@ import Paragraph from "./Paragraph";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import { useSearch } from "../context/SearchContext";
-// 
+//
 export default function Blogs() {
   // How many blogs to show at first
   const [visibleCount, setVisibleCount] = useState(3);
@@ -142,8 +142,17 @@ export default function Blogs() {
           <aside className=" md:col-span-1 xl:border-r border-[#F5F5F7]">
             <div className="sticky top-0">
               <h2 className="tracking-wide text-6xl font-bold w-xl text-[#082032]">
-                Let's Meet Our Some Blogs.
+                Read Our <span className="text-[#8D77AB]">Blogs</span>
               </h2>
+              <Paragraph className="mt-5 font-medium text-[#082032]">
+                Our blog is a knowledge hub where technology, creativity, and
+                strategy come together. We share practical insights on web
+                development, digital marketing, SEO, social media marketing,
+                UI/UX design, app development, and custom software solutions.
+                From business consultation to artificial intelligence
+                integration, our articles are designed to help brands grow
+                smarter, build faster, and stay ahead in the digital world.
+              </Paragraph>
             </div>
           </aside>
 
@@ -181,7 +190,7 @@ export default function Blogs() {
             {visibleBlogs.map((blog, i) => (
               <Link
                 to={`/blogdetails/${blog.id}`} // Use blog.id instead of index for better routing
-                key={blog.id}
+                key={i}
                 className="my-4 cursor-pointer block group rounded-xl overflow-hidden"
               >
                 {/* Image */}
@@ -192,17 +201,17 @@ export default function Blogs() {
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   />
                 </div>
-               <div className="bg-[#F5F5F7] p-4">
-                 <Paragraph className="font-medium text-[#082032]">
-                  {blog.category}
-                </Paragraph>
-                <Paragraph className="font-medium text-[#082032] text-2xl mt-2">
-                  {blog.title}
-                </Paragraph>
-                <Paragraph className="font-medium text-[#082032] mt-2">
-                  By {blog.author}
-                </Paragraph>
-               </div>
+                <div className="bg-[#F5F5F7] p-4">
+                  <Paragraph className="font-medium text-[#082032]">
+                    {blog.category}
+                  </Paragraph>
+                  <Paragraph className="font-medium text-[#082032] text-2xl mt-2">
+                    {blog.title}
+                  </Paragraph>
+                  <Paragraph className="font-medium text-[#082032] mt-2">
+                    By {blog.author}
+                  </Paragraph>
+                </div>
               </Link>
             ))}
 

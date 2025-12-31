@@ -1,10 +1,9 @@
-
 import { motion } from "framer-motion";
 import { FaArrowUpLong } from "react-icons/fa6";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
 import { useState } from "react";
-// 
+//
 //
 export default function Projects() {
   //
@@ -20,7 +19,8 @@ export default function Projects() {
       summary:
         "A fast, accessible marketing site built with a focus on performance and conversions.",
       tech: ["React", "Tailwind", "Vite"],
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117859/agency/projects/webdevelopment_gtjbav.png",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117859/agency/projects/webdevelopment_gtjbav.png",
     },
     {
       id: 2,
@@ -29,7 +29,8 @@ export default function Projects() {
       summary:
         "Streamlined checkout with improved UX and fewer abandoned carts.",
       tech: ["React", "Stripe", "Node"],
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117859/agency/projects/ecommers_rlkv1p.jpg",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117859/agency/projects/ecommers_rlkv1p.jpg",
     },
     {
       id: 3,
@@ -37,7 +38,8 @@ export default function Projects() {
       category: "UI/UX Design",
       summary: "Design system and UI kit for consistent product experiences.",
       tech: ["Figma", "Design Tokens"],
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117860/agency/projects/uiuxdesign_valtgm.jpg",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117860/agency/projects/uiuxdesign_valtgm.jpg",
     },
     {
       id: 4,
@@ -46,7 +48,8 @@ export default function Projects() {
       summary:
         "A/B testing framework to validate messaging and increase signups.",
       tech: ["Optimizely", "Analytics"],
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117858/agency/projects/marketing_ayxmmc.png",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117858/agency/projects/marketing_ayxmmc.png",
     },
     {
       id: 5,
@@ -54,7 +57,8 @@ export default function Projects() {
       category: "Web Development",
       summary: "Responsive admin dashboard with charts and real-time updates.",
       tech: ["React", "Firebase", "WebSocket"],
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117859/agency/projects/dashbord_ekt2r7.png",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117859/agency/projects/dashbord_ekt2r7.png",
     },
     {
       id: 6,
@@ -62,7 +66,8 @@ export default function Projects() {
       category: "Marketing",
       summary: "Research-led recommendations for improving conversion funnels.",
       tech: ["Research", "Recommendations"],
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117857/agency/projects/audit_jdedz4.jpg",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117857/agency/projects/audit_jdedz4.jpg",
     },
   ];
   //
@@ -84,9 +89,16 @@ export default function Projects() {
     >
       <div className="max-w-6xl mx-auto relative">
         <h2 className="tracking-wide text-6xl text-center font-bold text-[#082032]">
-          Let's Meet Our Some Beautiful Projects.
+          Meet Our <span className="text-[#FF0075]">Projects</span>
         </h2>
-
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-5">
+          Every project we deliver is designed with innovation and scalability
+          in mind. We work across web development, digital marketing, SEO,
+          social media marketing, UI/UX design, and app development—supported by
+          expert business consultation, custom software solutions, and AI
+          integration. Our focus is on creating digital products that are
+          user-centric, data-driven, and future-ready.
+        </Paragraph>
         <div className="grid xl:grid-cols-3 gap-6 mt-20">
           {visibleProjects.map((project, i) => (
             <Link

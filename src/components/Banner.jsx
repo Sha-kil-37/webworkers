@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import SplitText from "./SplitText";
 import ScrollDownIndicator from "./ScrollDownIndicator";
+import Paragraph from "./Paragraph";
 //
 export default function Banner() {
   //
@@ -10,45 +10,7 @@ export default function Banner() {
     console.log("All letters have animated!");
   };
   //
-  const bannerRef = useRef(null);
-  const frameRef = useRef(null);
-  //
-  useEffect(() => {
-    const el = bannerRef.current;
-    if (!el) return;
 
-    let rafId = null;
-    //
-    const onScroll = () => {
-      if (rafId) cancelAnimationFrame(rafId);
-      rafId = requestAnimationFrame(() => {
-        const rect = el.getBoundingClientRect();
-        const windowH =
-          window.innerHeight || document.documentElement.clientHeight;
-
-        // progress grows as the user scrolls down and the banner moves up
-        const progress = Math.min(Math.max(-rect.top / windowH, 0), 1);
-
-        // scale between 1 and 1.15 (adjust factor to taste)
-        const scale = 1 + progress * 0.15;
-
-        if (frameRef.current) {
-          frameRef.current.style.transform = `scale(${scale})`;
-        }
-      });
-    };
-
-    // initialize and bind
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (rafId) cancelAnimationFrame(rafId);
-    };
-  }, []);
   //
   return (
     <motion.section
@@ -57,10 +19,9 @@ export default function Banner() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      ref={bannerRef}
       className="relative py-20 xl:py-40 overflow-hidden "
     >
-      <div ref={frameRef} className="relative xl:w-6xl mx-auto">
+      <div className="relative xl:w-6xl mx-auto">
         <SplitText
           text="We Build Creative Digital Solutions"
           className="text-center text-[#082032] font-bold xl:text-7xl 
@@ -76,24 +37,13 @@ export default function Banner() {
           textAlign="center"
           onLetterAnimationComplete={handleAnimationComplete}
         />
-
-        <SplitText
-          text="In today’s fast-moving digital world, Every business needs a strong
-          online presence to thrive in the digital world. With “We Build Creative Digital Solutions,” we deliver innovative, user-friendly Web Development, Digital
-          Marketing, and UI/UX Design that help businesses attract customers,
-          strengthen their brand, and grow online"
-          className="text-[#082032] mt-10 xl:w-4xl mx-auto font-medium"
-          delay={10}
-          duration={0.2}
-          ease="power3.out"
-          splitType="chars"
-          from={{ opacity: 0, y: 10 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-          rootMargin="-100px"
-          textAlign="center"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-7">
+          In today’s fast-moving digital world, Every business needs a strong
+          online presence to thrive in the digital world. With “We Build
+          Creative Digital Solutions,” we deliver innovative, user-friendly Web
+          Development, Digital Marketing, and UI/UX Design that help businesses
+          attract customers, strengthen their brand, and grow online
+        </Paragraph>
 
         <ScrollDownIndicator targetId="workexperience" />
       </div>

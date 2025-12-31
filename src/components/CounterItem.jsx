@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import ShinyText from "./ShinyText";
 
+//
 const CounterItem = ({ end, label, duration = 2000 }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -38,16 +40,13 @@ const CounterItem = ({ end, label, duration = 2000 }) => {
 
     requestAnimationFrame(update);
   };
-
+  //
   return (
-    <div
-      ref={ref}
-      className="p-4 grid xl:grid-cols-2 border my-3 rounded-xl"
-    >
-      <h3 className="text-center text-4xl md:text-5xl font-extrabold text-amber-300">
-        {count}+
-      </h3>
-      
+    <div ref={ref} className="p-4 grid xl:grid-cols-2 bg-[#F5F5F7] my-3 rounded-xl">
+      <ShinyText
+        text={`${count}+`}
+        className="text-[#082032] text-center text-4xl md:text-5xl font-extrabold"
+      />
       <p className="text-center mt-2 uppercase tracking-wide text-[#082032] font-medium">
         {label}
       </p>

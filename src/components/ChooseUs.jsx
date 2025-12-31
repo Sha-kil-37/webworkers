@@ -43,8 +43,16 @@ export default function ChooseUs() {
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
-          All The Benefits You Will Get From Us
+          All The <span className="text-[#4ED7F1]">Benefits</span> You Will Get From Us
         </h2>
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-5">
+          We don’t just build digital products—we build solutions that work.
+          From web and app development to UI/UX design, SEO, digital marketing,
+          and social media growth, our approach is always data-driven and
+          results-focused. By combining custom software development, artificial
+          intelligence integration, and strategic business consultation, we help
+          businesses innovate faster and stay ahead of the competition.
+        </Paragraph>
         <div className="xl:grid xl:grid-cols-4 gap-4 mt-20">
           {features.map((item, i) => {
             const Icon = item.icon;
