@@ -14,7 +14,7 @@ const logos = [
 ];
 //
 const Row = ({ reverse = false }) => (
-  <div className="overflow-hidden w-full mx-auto mt-10">
+  <div className="overflow-hidden w-full mx-auto">
     <motion.div
       className="flex gap-6 w-max"
       animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
@@ -44,7 +44,7 @@ export default function WorkExperience() {
       className="py-20"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="tracking-wide xl:text-6xl font-bold text-center mx-auto xl:w-4xl text-[#082032]">
+        <h2 className="xl:mb-20 tracking-wide xl:text-6xl font-bold text-center mx-auto xl:w-4xl text-[#082032]">
           With Whom We Have Work Experience
         </h2>
         <Row />
