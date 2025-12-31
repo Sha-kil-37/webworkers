@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router";
 import { motion } from "framer-motion";
+import { useSearch } from "../context/SearchContext";
 //
 export default function Navbar() {
   const currentPath = useLocation();
@@ -9,6 +10,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const { searchQuery, setSearchQuery } = useSearch();
+  const [activeSection, setActiveSection] = useState("");
   //
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({
@@ -24,6 +27,19 @@ export default function Navbar() {
         const rect = blogsElement.getBoundingClientRect();
         // Show search only when scrolled 100px into the blog section
         setShowSearch(rect.top < -100 && rect.bottom > 0);
+        const sections = ["home", "about", "services", "blogs", "contact"];
+        let current = "";
+        for (let section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= 100 && rect.bottom >= 100) {
+              current = section;
+              break;
+            }
+          }
+        }
+        setActiveSection(current);
       }
     };
     window.addEventListener("scroll", onScroll);
@@ -63,43 +79,66 @@ export default function Navbar() {
             layoutId="blog-search"
             type="search"
             placeholder="Search blog ..."
-            className="block py-2 bg-gray-100 px-2 rounded mx-4"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="block py-1 bg-[#F5F5F7] text-[#082032] px-2 rounded mx-4"
           />
         )}
 
         {/* Desktop Menu */}
-        <div className="xl:flex gap-x-6 items-center hidden">
+        <div className="xl:flex items-center hidden">
           <button
             onClick={() => handleNavigate("home")}
-            className="font-medium text-[#082032] cursor-pointer"
+            className={`font-medium cursor-pointer px-3 py-1 ${
+              activeSection === "home"
+                ? "bg-[#082032] text-white"
+                : "text-[#082032] bg-[#F5F5F7]"
+            }`}
             title="Home"
           >
             Home
           </button>
           <button
-            onClick={() => handleNavigate("about")}
-            className="font-medium text-[#082032] cursor-pointer"
-            title="About"
-          >
-            About
-          </button>
-          <button
             onClick={() => handleNavigate("services")}
-            className="font-medium text-[#082032] cursor-pointer"
+            className={`font-medium cursor-pointer px-3 py-1 ${
+              activeSection === "services"
+                ? "bg-[#082032] text-white"
+                : "text-[#082032] bg-[#F5F5F7]"
+            }`}
             title="Services"
           >
             Services
           </button>
           <button
+            onClick={() => handleNavigate("about")}
+            className={`font-medium cursor-pointer px-3 py-1 ${
+              activeSection === "about"
+                ? "bg-[#082032] text-white"
+                : "text-[#082032] bg-[#F5F5F7]"
+            }`}
+            title="About"
+          >
+            About
+          </button>
+
+          <button
             onClick={() => handleNavigate("blogs")}
-            className="font-medium text-[#082032] cursor-pointer"
+            className={`font-medium cursor-pointer px-3 py-1 ${
+              activeSection === "blogs"
+                ? "bg-[#082032] text-white"
+                : "text-[#082032] bg-[#F5F5F7]"
+            }`}
             title="Blogs"
           >
             Blogs
           </button>
           <button
             onClick={() => handleNavigate("contact")}
-            className="font-medium text-[#082032] cursor-pointer"
+            className={`font-medium cursor-pointer px-3 py-1 ${
+              activeSection === "contact"
+                ? "bg-[#082032] text-white"
+                : "text-[#082032] bg-[#F5F5F7]"
+            }`}
             title="Contact"
           >
             Contact
@@ -125,35 +164,55 @@ export default function Navbar() {
         <button
           title="Home"
           onClick={() => handleNavigate("home")}
-          className="font-medium"
+          className={`font-medium ${
+            activeSection === "home"
+              ? "bg-[#082032] text-white"
+              : "text-[#082032]"
+          }`}
         >
           Home
         </button>
         <button
           title="About"
           onClick={() => handleNavigate("about")}
-          className="font-medium"
+          className={`font-medium ${
+            activeSection === "about"
+              ? "bg-[#082032] text-white"
+              : "text-[#082032]"
+          }`}
         >
           About
         </button>
         <button
           title="Services"
           onClick={() => handleNavigate("services")}
-          className="font-medium"
+          className={`font-medium ${
+            activeSection === "services"
+              ? "bg-[#082032] text-white"
+              : "text-[#082032]"
+          }`}
         >
           Services
         </button>
         <button
           title="Blogs"
           onClick={() => handleNavigate("blogs")}
-          className="font-medium"
+          className={`font-medium ${
+            activeSection === "blogs"
+              ? "bg-[#082032] text-white"
+              : "text-[#082032]"
+          }`}
         >
           Blogs
         </button>
         <button
           title="Contact"
           onClick={() => handleNavigate("contact")}
-          className="font-medium"
+          className={`font-medium ${
+            activeSection === "contact"
+              ? "bg-[#082032] text-white"
+              : "text-[#082032]"
+          }`}
         >
           Contact
         </button>

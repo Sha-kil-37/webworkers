@@ -130,7 +130,7 @@ export default function Projects() {
         <div className="flex justify-center mt-20">
           <button
             onClick={handleLoadMoreProjects}
-            className="cursor-pointer px-4 py-2 rounded-full bg-blue-400 text-white font-medium shadow-md"
+            className="cursor-pointer px-4 py-2 rounded-full bg-[#0076DF] text-white font-medium"
           >
             More Projects
           </button>

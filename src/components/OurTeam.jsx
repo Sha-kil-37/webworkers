@@ -3,7 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import { FaFacebook } from "react-icons/fa";
-// 
+
 //
 export default function OurTeam() {
   //
@@ -11,7 +11,8 @@ export default function OurTeam() {
     {
       name: "Shakil Ahmed",
       role: "Founder & Full-Stack Developer",
-      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767114313/agency/team/shakil_ta6xay.png",
+      image:
+        "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767114313/agency/team/shakil_ta6xay.png",
       socials: {
         linkedin: "https://www.linkedin.com/in/shakil-ahmed-aba241317/",
         discord: "https://discord.gg/1420788964641603706",
@@ -62,7 +63,7 @@ export default function OurTeam() {
     >
       <div className="max-w-6xl mx-auto">
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <aside className="md:col-span-1 border-r border-gray-200">
+          <aside className="md:col-span-1 xl:border-r border-[#F5F5F7]">
             <div className="sticky top-0">
               <h2 className="tracking-wide text-6xl font-bold w-xl text-[#082032]">
                 Let's Get To Know Our Professional Team Members.
@@ -74,7 +75,7 @@ export default function OurTeam() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl  overflow-hidden  transition duration-300"
+                className="group  rounded-2xl overflow-hidden my-4"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden">
@@ -83,39 +84,27 @@ export default function OurTeam() {
                     alt={member.name}
                     className="w-full h-130 object-cover group-hover:scale-105 transition duration-500"
                   />
-
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
-                    <Link
-                      to={member.socials.linkedin}
-                      target="_black"
-                      className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
-                    >
-                      <FaLinkedinIn />
-                    </Link>
-                    <Link
-                      target="_blank"
-                      to={member.socials.discord}
-                      className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
-                    >
-                      <FaDiscord />
-                    </Link>
-                    <Link
-                      to={member.socials.facebook}
-                      target="_blank"
-                      className="text-white p-3 bg-white/20 rounded-full hover:bg-primary transition"
-                    >
-                      <FaFacebook />
-                    </Link>
-                  </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-primary mt-1">{member.role}</p>
+                <div className="p-4 flex justify-between bg-[#F5F5F7]">
+                  <div>
+                    <h3 className="font-medium text-[#082032] text-lg">
+                      {member.name}
+                    </h3>
+                    <p className="text-[#082032]">{member.role}</p>
+                  </div>
+                  <div className="flex gap-x-3">
+                    <Link target="_blank" to={member.socials.linkedin}>
+                      <FaLinkedinIn className="text-xl text-[#082032]" title="LinkedinIn" />
+                    </Link>
+                    <Link target="_blank" to={member.socials.discord}>
+                      <FaDiscord className="text-xl text-[#082032]" title="Discord" />
+                    </Link>
+                    <Link target="_blank" to={member.socials.facebook}>
+                      <FaFacebook className="text-xl text-[#082032]" title="facebook" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}

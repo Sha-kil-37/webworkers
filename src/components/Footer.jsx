@@ -13,7 +13,7 @@ export default function Footer() {
   };
   //
   return (
-    <footer className="bg-neutral-950 py-15">
+    <footer className="bg-[#1D1D1F] py-15">
       <div className="max-w-6xl mx-auto">
         {/* Grid */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -168,11 +168,11 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-neutral-800 flex items-center justify-between mt-5">
-          <Paragraph className="font-medium text-white">
+          <Paragraph className="font-medium text-white mt-2">
             &copy;{new Date().getFullYear()} Web Workers Agency. All rights
             reserved.
           </Paragraph>
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-4 mt-2">
             <Link to={"/terms&privacy"} className="font-medium text-white block">
               Privacy Policy
             </Link>

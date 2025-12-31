@@ -55,7 +55,7 @@ export default function ChooseUs() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-xl bg-gray-100"
+                className="p-6 rounded-xl bg-[#F5F5F7]"
               >
                 <Icon className="h-15 w-15 mx-auto text-[#082032]" />
                 <Paragraph className="mt-5 text-center text-[#082032] font-medium text-xl">

@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
-//
-//
+import { useSearch } from "../context/SearchContext";
+
 export default function Blogs() {
   // How many blogs to show at first
   const [visibleCount, setVisibleCount] = useState(3);
-  // Sample blog data
+  // State for selected category (null means "All")
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const { searchQuery, setSearchQuery } = useSearch();
+
+  // Reset visibleCount when searchQuery changes
+  useEffect(() => {
+    setVisibleCount(3);
+  }, [searchQuery]);
+
+  // Sample blog data (unchanged)
   const blogs = [
     {
       id: 1,
@@ -87,16 +96,36 @@ export default function Blogs() {
         "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117657/agency/blogs/pharmacy_kvi2pz.jpg",
     },
   ];
-  //
- 
 
-  // Slice array to show only visible items
-  const visibleBlogs = blogs.slice(0, visibleCount);
-  // handle load more blogs
+  // Get unique categories and add "All" as the first option
+  const categories = ["All", ...new Set(blogs.map((blog) => blog.category))];
+
+  // Filter blogs based on selected category and search query
+  const filteredBlogs = blogs.filter((blog) => {
+    const matchesCategory =
+      !selectedCategory || blog.category === selectedCategory;
+    const matchesSearch =
+      !searchQuery ||
+      blog.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      blog.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      blog.author.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  // Slice the filtered array to show only visible items
+  const visibleBlogs = filteredBlogs.slice(0, visibleCount);
+
+  // Handle category selection: set category and reset visible count
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category === "All" ? null : category);
+    setVisibleCount(3); // Reset pagination when filtering
+  };
+
+  // Handle load more blogs
   const handleLoadMoreBlogs = () => {
     setVisibleCount((prev) => prev + 3); // Load 3 more each click
   };
-  //
+
   // Render component
   return (
     <motion.section
@@ -108,10 +137,9 @@ export default function Blogs() {
       className="py-10 relative"
     >
       <div className="xl:w-6xl mx-auto">
-        {/* <BlogSlider blogs={blogs} /> */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left sticky column */}
-          <aside className="md:col-span-1 border-r border-gray-200">
+          <aside className=" md:col-span-1 xl:border-r border-[#F5F5F7]">
             <div className="sticky top-0">
               <h2 className="tracking-wide text-6xl font-bold w-xl text-[#082032]">
                 Let's Meet Our Some Blogs.
@@ -128,56 +156,67 @@ export default function Blogs() {
                 name="search"
                 type="search"
                 placeholder="Search blog ..."
-                className="block w-full py-2 px-2 bg-gray-100 font-medium rounded-xl"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="block w-full py-2 px-2 bg-[#F5F5F7] font-medium rounded-xl"
               />
             </div>
             <div className="mt-2 flex flex-wrap gap-1">
-              {blogs.map((item, i) => {
-                return (
-                  <button
-                  title={item.category}
-                    className="px-2 py-1 bg-gray-100 inline-block rounded-xl font-medium cursor-pointer"
-                    key={i}
-                  >
-                    {item.category}
-                  </button>
-                );
-              })}
+              {categories.map((category, i) => (
+                <button
+                  title={category}
+                  key={i}
+                  onClick={() => handleCategorySelect(category)}
+                  className={`px-2 py-1 inline-block rounded-xl font-medium cursor-pointer ${
+                    selectedCategory === category ||
+                    (category === "All" && !selectedCategory)
+                      ? "bg-[#0076DF] text-white"
+                      : "bg-gray-100"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
             {visibleBlogs.map((blog, i) => (
               <Link
-                to={`/blogdetails/${i}`}
-                key={i}
-                className="my-5 cursor-pointer block group"
+                to={`/blogdetails/${blog.id}`} // Use blog.id instead of index for better routing
+                key={blog.id}
+                className="my-4 cursor-pointer block group rounded-xl overflow-hidden"
               >
                 {/* Image */}
-                <div className="relative overflow-hidden h-80 rounded-lg">
+                <div className="relative overflow-hidden h-80">
                   <img
                     src={blog.image}
-                    alt={blog.image}
+                    alt={blog.title} // Better alt text
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   />
                 </div>
-                <Paragraph className="mt-3 font-medium text-[#082032]">
+               <div className="bg-[#F5F5F7] p-4">
+                 <Paragraph className="font-medium text-[#082032]">
                   {blog.category}
                 </Paragraph>
                 <Paragraph className="font-medium text-[#082032] text-2xl mt-2">
                   {blog.title}
                 </Paragraph>
-                <Paragraph className="font-medium text-[#082032]  mt-2">
+                <Paragraph className="font-medium text-[#082032] mt-2">
                   By {blog.author}
                 </Paragraph>
+               </div>
               </Link>
             ))}
 
-            <div className="flex justify-center mt-20">
-              <button
-                onClick={handleLoadMoreBlogs}
-                className="cursor-pointer px-4 py-2 rounded-full bg-blue-400 text-white font-medium shadow-md"
-              >
-                More Blogs
-              </button>
-            </div>
+            {/* Only show "More Blogs" if there are more to load */}
+            {visibleCount < filteredBlogs.length && (
+              <div className="flex justify-center mt-20">
+                <button
+                  onClick={handleLoadMoreBlogs}
+                  className="cursor-pointer px-4 py-2 rounded-full bg-[#0076DF] text-white font-medium "
+                >
+                  More Blogs
+                </button>
+              </div>
+            )}
           </main>
         </div>
       </div>

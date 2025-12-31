@@ -65,7 +65,7 @@ const Testimonials = () => {
     rafId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(rafId);
   }, []);
-
+  //
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ const Testimonials = () => {
           {[...reviews, ...reviews].map((item, index) => (
             <div
               key={index}
-              className="mx-2 w-[300px] rounded-xl p-4 shadow-sm bg-gray-100"
+              className="mx-2 w-[300px] rounded-xl p-4 shadow-sm bg-[#F5F5F7]"
             >
               <TruncateText
                 className="font-medium text-[#082032]"
