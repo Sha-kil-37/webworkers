@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Paragraph from "./Paragraph";
+import toast from "react-hot-toast";
+//
 //
 export default function Contact() {
+  //
+
   //
   const [values, setValues] = useState({
     name: "",
@@ -10,10 +14,27 @@ export default function Contact() {
     message: "",
   });
   //
+  const MAX_WORDS = 100;
+
+  const getWordCount = (text) =>
+    text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+
+  //
+  const wordCount = getWordCount(values.message);
+  const remainingWords = MAX_WORDS - wordCount;
+  //
   const [errors, setErrors] = useState({});
+  //
   const handleChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" });
+    const { name, value } = e.target;
+    //
+    if (name === "message") {
+      const words = getWordCount(value);
+      if (words > MAX_WORDS) return;
+    }
+    //
+    setValues({ ...values, [name]: value });
+    setErrors({ ...errors, [name]: "" });
   };
   //
   const validate = () => {
@@ -31,8 +52,8 @@ export default function Contact() {
 
     if (!values.message.trim()) {
       newErrors.message = "Message is required";
-    } else if (values.message.length < 10) {
-      newErrors.message = "Message must be at least 10 characters";
+    } else if (getWordCount(values.message) < 10) {
+      newErrors.message = "Message must be at least 10 words";
     }
 
     setErrors(newErrors);
@@ -47,6 +68,8 @@ export default function Contact() {
 
     // reset after submit
     setValues({ name: "", email: "", message: "" });
+    toast.success("send successfully");
+    // toast.error("something went wrong");
   };
   //
   return (
@@ -92,7 +115,7 @@ export default function Contact() {
                     placeholder="Inter your name"
                     value={values.name}
                     onChange={handleChange}
-                    className={`font-medium bg-[#F5F5F7] mt-1 block w-full rounded-lg border px-4 py-2 text-sm outline-none transition 
+                    className={`font-medium bg-[#F5F5F7] mt-1 block w-full rounded-lg px-4 py-2 transition 
             ${errors.name ? "" : ""}`}
                   />
                   {errors.name && (
@@ -110,10 +133,10 @@ export default function Contact() {
                   <input
                     type="email"
                     name="email"
-                    placeholder="Inter Your email"
+                    placeholder="Inter your email"
                     value={values.email}
                     onChange={handleChange}
-                    className={`font-medium bg-[#F5F5F7] mt-1 w-full rounded-lg border px-4 py-2 text-sm outline-none transition 
+                    className={`font-medium bg-[#F5F5F7] mt-1 w-full rounded-lg  px-4 py-2 transition 
             ${errors.email ? "" : ""}`}
                   />
                   {errors.email && (
@@ -124,19 +147,28 @@ export default function Contact() {
                 </div>
 
                 {/* Message */}
-                <div className="mt-2">
+                <div className="mt-2 relative">
                   <label htmlFor="message" className="font-medium text-white">
                     Your Message
                   </label>
+
                   <textarea
                     name="message"
-                    placeholder="Inter Your message"
-                    rows={4}
+                    placeholder="Inter your message"
+                    rows={5}
                     value={values.message}
                     onChange={handleChange}
-                    className={`mt-1 bg-[#F5F5F7] w-full rounded-lg border px-4 py-2 text-sm outline-none transition resize-none font-medium
-            ${errors.message ? "" : ""}`}
+                    className="mt-1 bg-[#F5F5F7] w-full rounded-lg px-4 py-2 resize-none font-medium"
                   />
+
+                  {/* Word Counter */}
+                  <div
+                    className={`absolute bottom-2 right-3 text-xs font-medium
+      ${remainingWords < 0 ? "text-[#F43F5E]" : "text-gray-600"}`}
+                  >
+                    {wordCount}/{MAX_WORDS} words
+                  </div>
+
                   {errors.message && (
                     <Paragraph className="mt-1 text-[#F43F5E]">
                       {errors.message} &#9757;&#9757;
@@ -146,7 +178,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-[#F5F5F7] px-4 py-2 text-sm font-medium text-[#082032] transition-all duration-300 hover:bg-white block mt-3 cursor-pointer shadow-md"
+                  className="w-full rounded-lg bg-[#F5F5F7] px-4 py-2 text-sm font-medium text-[#0076DF] transition-all duration-300 hover:bg-white block mt-5 cursor-pointer shadow-md"
                 >
                   Send Message
                 </button>

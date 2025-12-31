@@ -20,13 +20,13 @@ export default function OurTeam() {
       },
     },
     {
-      name: "Sarah Khan",
+      name: "NH Anik",
       role: "UI/UX Designer",
       image: "https://i.pravatar.cc/300?img=32",
       socials: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/nh-anik/",
         discord: "#",
-        facebook: "#",
+        facebook: "https://www.facebook.com/NHANIK11",
       },
     },
     {

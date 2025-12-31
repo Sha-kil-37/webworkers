@@ -1,8 +1,6 @@
-import Marquee from "react-fast-marquee";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import SplitText from "./SplitText";
-
 // Banner component with scroll-driven zoom effect
 export default function Banner() {
   //

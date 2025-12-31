@@ -3,7 +3,7 @@ import Paragraph from "./Paragraph";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import { useSearch } from "../context/SearchContext";
-
+// 
 export default function Blogs() {
   // How many blogs to show at first
   const [visibleCount, setVisibleCount] = useState(3);
