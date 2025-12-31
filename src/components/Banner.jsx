@@ -57,7 +57,7 @@ export default function Banner() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       ref={bannerRef}
-      className="relative py-10 xl:py-30 overflow-hidden "
+      className="relative py-20 xl:py-40 overflow-hidden "
     >
       <div ref={frameRef} className="xl:w-6xl mx-auto">
         <SplitText
@@ -105,7 +105,8 @@ export default function Banner() {
           }}
           className="py-2 px-4 rounded-2xl block mt-10 bg-[#082032] mx-auto w-sm text-white font-medium"
         >
-          <Marquee speed={25}>Scroll Down For See More About Me</Marquee>
+          {/* <Marquee speed={25}>Scroll Down For See More About Me</Marquee> */}
+          Scroll Down
         </motion.button>
       </div>
     </motion.section>

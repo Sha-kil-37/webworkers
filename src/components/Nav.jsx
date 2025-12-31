@@ -8,6 +8,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   //
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({
@@ -18,8 +19,14 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
+      const blogsElement = document.getElementById("blogs");
+      if (blogsElement) {
+        const rect = blogsElement.getBoundingClientRect();
+        setShowSearch(rect.top < window.innerHeight && rect.bottom > 0);
+      }
     };
     window.addEventListener("scroll", onScroll);
+    onScroll(); // initial check
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   //
@@ -48,7 +55,17 @@ export default function Navbar() {
         >
           AGENCY <span className="text-[#082032]">.</span>
         </motion.h3>
-        {/*  */}
+
+        {/* Search Input */}
+        {showSearch && (
+          <motion.input
+            layoutId="blog-search"
+            type="search"
+            placeholder="Search blog ..."
+            className="block py-2 bg-gray-50 px-2 rounded mx-4"
+          />
+        )}
+
         {/* Desktop Menu */}
         <div className="xl:flex gap-x-6 items-center hidden">
           <button

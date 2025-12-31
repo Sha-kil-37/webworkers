@@ -119,13 +119,13 @@ export default function Blogs() {
 
           {/* Right scrollable column */}
           <main className="md:col-span-1">
-            
             <div className="">
-              <input
+              <motion.input
+                layoutId="blog-search"
                 name="search"
                 type="search"
-                placeholder="Search your blog ..."
-                className="block w-full py-2 bg-gray-50 px-2"
+                placeholder="Search blog ..."
+                className="block w-full py-2 bg-gray-100 font-medium"
               />
             </div>
             {visibleBlogs.map((blog, i) => (

@@ -15,4 +15,6 @@ If you are developing a production application, we recommend using TypeScript wi
 <!-- https://www.figma.com/design/WlaUfZtD9ydR6LE0DmqAZH/agency-web?node-id=0-1&p=f&t=kYWviITattQgm7hP-0 -->
 
 <!--  -->
-কি চাই আমার react tailwind css agency portfolio website যে সকল ভিজিটর আমার ওয়েবসাইট ভিজিট করবে তাদের সকলকে আমি ট্র্যাক করতে চাই কারণ পরবর্তীতে আমি যেন তাদেরকে আমার ওয়েবসাইটের পক্ষ হতে email  পাঠাতে পারি
+What I want is for my react tailwind css agency portfolio website to track all the visitors who visit my website so that later I can send them emails on behalf of my website.
+<!--  --> 
+I want my blog search input to animate and move between the navbar logo and the menu when I scroll through my blog section.

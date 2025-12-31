@@ -78,7 +78,7 @@ const Testimonials = () => {
         <h2 className="tracking-wide text-center text-6xl font-bold text-[#082032]">
           What does our client say?
         </h2>
-        <div ref={trackRef} className="flex w-max py-10">
+        <div ref={trackRef} className="flex w-max py-10 mt-10">
           {[...reviews, ...reviews].map((item, index) => (
             <div
               key={index}
