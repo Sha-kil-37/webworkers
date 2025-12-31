@@ -119,6 +119,7 @@ export default function Blogs() {
 
           {/* Right scrollable column */}
           <main className="md:col-span-1">
+            
             <div className="">
               <input
                 name="search"
