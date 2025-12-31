@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 import Paragraph from "./Paragraph";
 import toast from "react-hot-toast";
 const formspreeApi = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+import { useNavigate } from "react-router";
 
 //
 //
 export default function Contact() {
+  //
+  const navigate = useNavigate();
   //
   const [values, setValues] = useState({
     name: "",
@@ -74,10 +77,13 @@ export default function Contact() {
         },
         body: JSON.stringify(values),
       });
-      
+
       if (res.ok) {
         toast.success("Message sent successfully 🚀");
         setValues({ name: "", email: "", message: "" });
+        setTimeout(() => {
+          navigate("/contact-success");
+        }, 1500); // small delay so toast is visible
       } else {
         toast.error("Failed to send message");
       }

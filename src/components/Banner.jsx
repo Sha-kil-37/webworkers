@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import SplitText from "./SplitText";
-// Banner component with scroll-driven zoom effect
+import ScrollDownIndicator from "./ScrollDownIndicator";
+//
 export default function Banner() {
   //
+
   const handleAnimationComplete = () => {
     console.log("All letters have animated!");
   };
@@ -58,7 +60,7 @@ export default function Banner() {
       ref={bannerRef}
       className="relative py-20 xl:py-40 overflow-hidden "
     >
-      <div ref={frameRef} className="xl:w-6xl mx-auto">
+      <div ref={frameRef} className="relative xl:w-6xl mx-auto">
         <SplitText
           text="We Build Creative Digital Solutions"
           className="text-center text-[#082032] font-bold xl:text-7xl 
@@ -74,7 +76,7 @@ export default function Banner() {
           textAlign="center"
           onLetterAnimationComplete={handleAnimationComplete}
         />
-        
+
         <SplitText
           text="In today’s fast-moving digital world, Every business needs a strong
           online presence to thrive in the digital world. With “We Build Creative Digital Solutions,” we deliver innovative, user-friendly Web Development, Digital
@@ -93,20 +95,7 @@ export default function Banner() {
           onLetterAnimationComplete={handleAnimationComplete}
         />
 
-        <motion.button
-          initial={{ y: -80, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            delay: 0.2,
-            duration: 1.5,
-            type: "spring",
-            stiffness: 120,
-            damping: 12,
-          }}
-          className="py-2 px-4 rounded-2xl block mt-10 bg-[#F5F5F7] mx-auto w-sm text-[#082032] font-medium"
-        >
-          Scroll Down
-        </motion.button>
+        <ScrollDownIndicator targetId="workexperience" />
       </div>
     </motion.section>
   );

@@ -19,6 +19,7 @@ import ProjectDetails from "./components/ProjectDetails";
 const MainLayout = lazy(() => import("./layout/MainLayout"));
 import AnalyticsTracker from "./lib/utils/AnalyticsTracker";
 import TermsAndPrivacy from "./components/TermsAndPrivacy";
+import ContactSuccess from "./components/ContactSuccess";
 //
 function App() {
   AnalyticsTracker();
@@ -78,6 +79,7 @@ function App() {
           </Suspense>
         }
       ></Route>
+      <Route path="/contact-success" element={<ContactSuccess />} />
       <Route path="/test" element={<Test />}></Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
