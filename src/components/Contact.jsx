@@ -74,7 +74,7 @@ export default function Contact() {
         },
         body: JSON.stringify(values),
       });
-      console.log(res);
+      
       if (res.ok) {
         toast.success("Message sent successfully 🚀");
         setValues({ name: "", email: "", message: "" });
