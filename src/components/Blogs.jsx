@@ -88,6 +88,8 @@ export default function Blogs() {
     },
   ];
   //
+ 
+
   // Slice array to show only visible items
   const visibleBlogs = blogs.slice(0, visibleCount);
   // handle load more blogs
@@ -121,12 +123,26 @@ export default function Blogs() {
           <main className="md:col-span-1">
             <div className="">
               <motion.input
+                title="Search Blogs"
                 layoutId="blog-search"
                 name="search"
                 type="search"
                 placeholder="Search blog ..."
-                className="block w-full py-2 bg-gray-100 font-medium"
+                className="block w-full py-2 px-2 bg-gray-100 font-medium rounded-xl"
               />
+            </div>
+            <div className="mt-2 flex flex-wrap gap-1">
+              {blogs.map((item, i) => {
+                return (
+                  <button
+                  title={item.category}
+                    className="px-2 py-1 bg-gray-100 inline-block rounded-xl font-medium cursor-pointer"
+                    key={i}
+                  >
+                    {item.category}
+                  </button>
+                );
+              })}
             </div>
             {visibleBlogs.map((blog, i) => (
               <Link
