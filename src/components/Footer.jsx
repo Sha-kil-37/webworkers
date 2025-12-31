@@ -20,9 +20,9 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h2 className="text-xl font-bold text-white">
-              Web Workers<span className="text-indigo-500"> . </span>
+              Web Workers<span className="text-[#0076DF]"> . </span>
             </h2>
-            <Paragraph className="mt-3 font-medium leading-relaxed text-white">
+            <Paragraph className="mt-3 font-medium leading-relaxed text-[#0076DF]">
               We build modern, scalable digital experiences for brands that want
               to stand out.
             </Paragraph>
@@ -129,12 +129,22 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-white font-bold mb-4 text-lg">Contact</h3>
-            <Paragraph className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white">
+            <Link
+              title="Mail"
+              to="mailto:sakildevmern@gmail.com"
+              target="_blank"
+              className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white block"
+            >
               sakildevmern@gmail.com
-            </Paragraph>
-            <Paragraph className="font-medium text-white mt-1">
+            </Link>
+            <Link
+              title="Call"
+              to="tel:+8801581049601"
+              target="_blank"
+              className="hover:text-[#0076DF] duration-300 transition-all font-medium text-white block"
+            >
               +880 1581049601
-            </Paragraph>
+            </Link>
 
             {/* Social */}
             <div className="flex gap-4 mt-5">
@@ -173,10 +183,16 @@ export default function Footer() {
             reserved.
           </Paragraph>
           <div className="flex gap-x-4 mt-2">
-            <Link to={"/terms&privacy"} className="font-medium text-white block">
+            <Link
+              to={"/terms&privacy"}
+              className="font-medium text-white block"
+            >
               Privacy Policy
             </Link>
-            <Link to={"/terms&privacy"} className="font-medium text-white block">
+            <Link
+              to={"/terms&privacy"}
+              className="font-medium text-white block"
+            >
               Terms
             </Link>
           </div>
