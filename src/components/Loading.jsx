@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import Paragraph from "./Paragraph";
 //
 export default function Loader() {
+  //
   return (
     <motion.div
-      className="fixed inset-0 z-10 flex items-center justify-center bg-neutral-950"
+      className="fixed inset-0 z-10 flex items-center justify-center bg-[#1D1D1F]"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
@@ -17,7 +18,9 @@ export default function Loader() {
         >
           AGENCY
         </motion.h3>
-        <Paragraph className='mt-3 font-medium text-white'>Please Wait...</Paragraph>
+        <Paragraph className="mt-3 font-medium text-white">
+          Please Wait...
+        </Paragraph>
       </div>
     </motion.div>
   );
