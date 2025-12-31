@@ -6,15 +6,15 @@ export default function ScrollDownIndicator({ targetId = "services" }) {
     const section = document.getElementById(targetId);
     section?.scrollIntoView({ behavior: "smooth" });
   };
-// 
+  //
   return (
-    <div className="absolute bottom-1/2 left-1/2 -translate-x-1/2">
+    <div className="absolute bottom-[-50%] left-1/2 -translate-x-1/2">
       <button
         onClick={handleScroll}
         aria-label="Scroll Down"
-        className="flex flex-col items-center gap-2 text-black hover:text-white transition"
+        className="flex flex-col items-center gap-2 text-[#082032] transition"
       >
-        <span className="text-xs tracking-widest uppercase">Scroll</span>
+        <span className="font-medium text-[#082032] tracking-widest uppercase cursor-pointer">Scroll</span>
 
         <motion.div
           animate={{ y: [0, 10, 0] }}
