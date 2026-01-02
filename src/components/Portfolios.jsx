@@ -9,7 +9,6 @@ import { useSearch } from "../context/SearchContext";
 export default function Projects() {
   //
   // How many projects to show at first
-  const [visibleCount, setVisibleCount] = useState(4);
   const { projectActiveCategory, setProjectActiveCategory } = useSearch();
   const categories = [
     "All",
@@ -113,10 +112,10 @@ export default function Projects() {
               key={cat}
               layoutId={`project-filter-${cat}`}
               onClick={() => setProjectActiveCategory(cat)}
-              className={`whitespace-nowrap px-4 py-2 rounded-full  cursor-pointer transition-colors duration-300 font-medium border ${
+              className={`whitespace-nowrap px-4 py-2 rounded-full cursor-pointer transition-colors duration-300 font-medium ${
                 projectActiveCategory === cat
-                  ? "text-[var(--white-color)] "
-                  : ""
+                  ? "text-white bg-[#0076DF]"
+                  : "text-[#082032] bg-[#F5F5F7]"
               }`}
               aria-pressed={projectActiveCategory === cat}
             >

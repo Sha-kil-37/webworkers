@@ -167,16 +167,16 @@ export default function Blogs() {
                 placeholder="Search blog ..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="block w-full py-2 px-2 bg-[#F5F5F7] font-medium rounded-xl"
+                className="block w-full py-2 px-4 bg-[#F5F5F7] font-medium"
               />
             </div>
-            <div className="mt-2 flex flex-wrap gap-1">
+            <div className="mt-3 flex flex-wrap gap-1">
               {categories.map((category, i) => (
                 <button
                   title={category}
                   key={i}
                   onClick={() => handleCategorySelect(category)}
-                  className={`px-2 py-1 inline-block rounded-xl font-medium cursor-pointer ${
+                  className={`px-3  inline-block rounded-xl font-medium cursor-pointer ${
                     selectedCategory === category ||
                     (category === "All" && !selectedCategory)
                       ? "bg-[#0076DF] text-white"

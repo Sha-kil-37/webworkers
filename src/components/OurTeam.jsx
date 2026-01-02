@@ -108,19 +108,19 @@ export default function OurTeam() {
                   <div className="flex gap-x-3">
                     <Link target="_blank" to={member.socials.linkedin}>
                       <FaLinkedinIn
-                        className="text-xl text-[#082032]"
+                        className="text-xl text-[#0072B1]"
                         title="LinkedinIn"
                       />
                     </Link>
                     <Link target="_blank" to={member.socials.discord}>
                       <FaDiscord
-                        className="text-xl text-[#082032]"
+                        className="text-xl text-[#7289da]"
                         title="Discord"
                       />
                     </Link>
                     <Link target="_blank" to={member.socials.facebook}>
                       <FaFacebook
-                        className="text-xl text-[#082032]"
+                        className="text-xl text-[#1877F2]"
                         title="facebook"
                       />
                     </Link>

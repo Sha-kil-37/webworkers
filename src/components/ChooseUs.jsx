@@ -65,7 +65,7 @@ export default function ChooseUs() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="p-6 rounded-xl bg-[#F5F5F7]"
               >
-                <Icon className="h-15 w-15 mx-auto text-[#082032]" />
+                <Icon className="h-15 w-15 mx-auto text-[#81E7AF]" />
                 <Paragraph className="mt-5 text-center text-[#082032] font-medium text-xl">
                   {item.title}
                 </Paragraph>

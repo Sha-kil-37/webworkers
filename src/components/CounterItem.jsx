@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import ShinyText from "./ShinyText";
+import Paragraph from "./Paragraph";
 
 //
 const CounterItem = ({ end, label, duration = 2000 }) => {
@@ -42,14 +42,16 @@ const CounterItem = ({ end, label, duration = 2000 }) => {
   };
   //
   return (
-    <div ref={ref} className="p-4 grid xl:grid-cols-2 bg-[#F5F5F7] my-3 rounded-xl">
-      <ShinyText
-        text={`${count}+`}
-        className="text-[#082032] text-center text-4xl md:text-5xl font-extrabold"
-      />
-      <p className="text-center mt-2 uppercase tracking-wide text-[#082032] font-medium">
+    <div
+      ref={ref}
+      className="p-4 grid xl:grid-cols-2 bg-[#F5F5F7] my-3 rounded-xl"
+    >
+      <h3 className="text-[#FFE100] text-center text-4xl md:text-5xl font-extrabold">
+        {count}+
+      </h3>
+      <Paragraph className="text-center mt-2 uppercase tracking-wide text-[#082032] font-medium">
         {label}
-      </p>
+      </Paragraph>
     </div>
   );
 };

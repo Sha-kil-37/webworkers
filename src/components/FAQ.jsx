@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Paragraph from "./Paragraph";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
 //
 const faqs = [
   {
@@ -24,7 +26,7 @@ const faqs = [
       "Absolutely. Every website we build is fully responsive and optimized for all devices.",
   },
 ];
-
+//
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
   //
@@ -40,7 +42,7 @@ export default function FAQ() {
       transition={{ duration: 1 }}
       className="py-10 relative"
     >
-      <div className="xl:w-4xl xl:mx-auto">
+      <div className="xl:w-6xl xl:mx-auto">
         <h2 className="tracking-wide xl:text-6xl font-bold text-[#082032] text-center">
           How Can I <span className="text-[#81E7AF]">Help</span> You ?
         </h2>
@@ -55,48 +57,53 @@ export default function FAQ() {
           evolving digital world.
         </Paragraph>
         {/*  */}
-        <div className="space-y-4 mt-15">
-          {faqs.map((faq, index) => {
-            const isOpen = activeIndex === index;
-            //
-            return (
-              <div
-                key={index}
-                className="border border-[#F5F5F7] rounded-xl overflow-hidden transition-all duration-500 p-4"
-              >
-                {/* Question */}
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between text-left transition-all duration-500"
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center xl:mt-10">
+          <div className="w-full">
+            <DotLottieReact src="path/to/animation.lottie" loop autoplay />
+          </div>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => {
+              const isOpen = activeIndex === index;
+              //
+              return (
+                <div
+                  key={index}
+                  className="border border-[#F5F5F7] rounded-xl overflow-hidden transition-all duration-500 p-4"
                 >
-                  <span className="text-[#082032] font-medium text-xl">
-                    {faq.question}
-                  </span>
+                  {/* Question */}
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full flex items-center justify-between text-left transition-all duration-500"
+                  >
+                    <span className="text-[#082032] font-medium text-xl">
+                      {faq.question}
+                    </span>
 
-                  <span
-                    className={`text-[#082032] text-2xl transform transition-transform duration-300 ${
-                      isOpen ? "rotate-45 text-red-500" : "rotate-0"
+                    <span
+                      className={`text-[#082032] text-2xl transform transition-transform duration-300 ${
+                        isOpen ? "rotate-45 text-red-500" : "rotate-0"
+                      }`}
+                    >
+                      +
+                    </span>
+                  </button>
+
+                  {/* Answer */}
+                  <div
+                    className={`grid transition-all duration-500 ease-in-out ${
+                      isOpen
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0"
                     }`}
                   >
-                    +
-                  </span>
-                </button>
-
-                {/* Answer */}
-                <div
-                  className={`grid transition-all duration-500 ease-in-out ${
-                    isOpen
-                      ? "grid-rows-[1fr] opacity-100"
-                      : "grid-rows-[0fr] opacity-0"
-                  }`}
-                >
-                  <div className="mt-3 overflow-hidden text-[#082032] font-medium">
-                    {faq.answer}
+                    <div className="mt-3 overflow-hidden text-[#082032] font-medium">
+                      {faq.answer}
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </motion.section>

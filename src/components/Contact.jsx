@@ -124,7 +124,8 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-          <div className="space-y-4 p-6 shadow">
+          <div className="space-y-4 p-8 shadow">
+            <h3 className="text-xl font-medium text-center text-[#4ED7F1]">Send a message </h3>
             <form onSubmit={handleSubmit} className="">
               {/* Name */}
               <div>
@@ -199,8 +200,9 @@ export default function Contact() {
               </div>
 
               <button
+              title="Send Message"
                 type="submit"
-                className="w-full rounded-lg bg-[#F5F5F7] px-4 py-2 text-sm font-medium text-[#0076DF] transition-all duration-300 hover:bg-white block mt-5 cursor-pointer shadow-md"
+                className="w-full rounded-lg bg-[#0076DF] px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-[#0077dfa6] block mt-5 cursor-pointer shadow-md"
               >
                 Send Message
               </button>
