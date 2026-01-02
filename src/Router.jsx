@@ -9,7 +9,7 @@ import OurSuccess from "./components/OurSuccess";
 import Services from "./components/Services";
 import ChooseUs from "./components/ChooseUs";
 import OurTeam from "./components/OurTeam";
-import Projects from "./components/Projects";
+import Portfolios from "./components/Portfolios";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
@@ -39,7 +39,7 @@ function App() {
                 <Services />
                 <ChooseUs />
                 <OurTeam />
-                <Projects />
+                <Portfolios />
                 <Testimonials />
                 <Blogs />
                 <FAQ />

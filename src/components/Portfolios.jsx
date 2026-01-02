@@ -9,7 +9,13 @@ export default function Projects() {
   //
   // How many projects to show at first
   const [visibleCount, setVisibleCount] = useState(4);
-
+  const categories = [
+    "All",
+    "Web Development",
+    "UI/UX Design",
+    "E-commerce",
+    "Marketing",
+  ];
   // all project data array bellow
   const projects = [
     {
@@ -70,13 +76,12 @@ export default function Projects() {
         "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117857/agency/projects/audit_jdedz4.jpg",
     },
   ];
+  const [active, setActive] = useState("All");
+  const filtered =
+    active === "All" ? projects : projects.filter((p) => p.category === active);
   //
   // Slice array to show only visible items
-  const visibleProjects = projects.slice(0, visibleCount);
-  // handle load more blogs
-  const handleLoadMoreProjects = () => {
-    setVisibleCount((prev) => prev + 3); // Load 3 more each click
-  };
+
   //
   return (
     <motion.section
@@ -89,7 +94,7 @@ export default function Projects() {
     >
       <div className="max-w-6xl mx-auto relative">
         <h2 className="tracking-wide text-6xl text-center font-bold text-[#082032]">
-          Meet Our <span className="text-[#FF0075]">Projects</span>
+          Meet Our <span className="text-[#FF0075]">Portfolios</span>
         </h2>
         <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-5">
           Every project we deliver is designed with innovation and scalability
@@ -99,8 +104,22 @@ export default function Projects() {
           integration. Our focus is on creating digital products that are
           user-centric, data-driven, and future-ready.
         </Paragraph>
+        <div className="flex mt-30 items-center justify-center gap-3 flex-wrap">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActive(cat)}
+              className={`whitespace-nowrap px-4 py-2 rounded-full  cursor-pointer transition-colors duration-300 font-medium border ${
+                active === cat ? "text-[var(--white-color)] " : ""
+              }`}
+              aria-pressed={active === cat}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
         <div className="grid xl:grid-cols-3 gap-6 mt-20">
-          {visibleProjects.map((project, i) => (
+          {filtered.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}
               key={i}
@@ -138,14 +157,6 @@ export default function Projects() {
               </div>
             </Link>
           ))}
-        </div>
-        <div className="flex justify-center mt-20">
-          <button
-            onClick={handleLoadMoreProjects}
-            className="cursor-pointer px-4 py-2 rounded-full bg-[#0076DF] text-white font-medium"
-          >
-            More Projects
-          </button>
         </div>
       </div>
     </motion.section>
