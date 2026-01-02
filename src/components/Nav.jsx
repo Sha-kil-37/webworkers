@@ -11,8 +11,21 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const { searchQuery, setSearchQuery } = useSearch();
+  const [showProjectFilters, setShowProjectFilters] = useState(false);
+  const {
+    searchQuery,
+    setSearchQuery,
+    projectActiveCategory,
+    setProjectActiveCategory,
+  } = useSearch();
   const [activeSection, setActiveSection] = useState("");
+  const categories = [
+    "All",
+    "Web Development",
+    "UI/UX Design",
+    "E-commerce",
+    "Marketing",
+  ];
   //
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({
@@ -24,24 +37,30 @@ export default function Navbar() {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
       const blogsElement = document.getElementById("blogs");
+      const projectsElement = document.getElementById("projects");
       if (blogsElement) {
         const rect = blogsElement.getBoundingClientRect();
         // Show search only when scrolled 100px into the blog section
         setShowSearch(rect.top < -100 && rect.bottom > 0);
-        const sections = ["home", "about", "services", "blogs", "contact"];
-        let current = "";
-        for (let section of sections) {
-          const element = document.getElementById(section);
-          if (element) {
-            const rect = element.getBoundingClientRect();
-            if (rect.top <= 100 && rect.bottom >= 100) {
-              current = section;
-              break;
-            }
+      }
+      if (projectsElement) {
+        const rect = projectsElement.getBoundingClientRect();
+        // Show project filters only when scrolled 100px into the projects section
+        setShowProjectFilters(rect.top < -100 && rect.bottom > 0);
+      }
+      const sections = ["home", "about", "services", "blogs", "contact"];
+      let current = "";
+      for (let section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            current = section;
+            break;
           }
         }
-        setActiveSection(current);
       }
+      setActiveSection(current);
     };
     window.addEventListener("scroll", onScroll);
     onScroll(); // initial check
@@ -84,6 +103,27 @@ export default function Navbar() {
             onChange={(e) => setSearchQuery(e.target.value)}
             className="block py-1 bg-[#F5F5F7] text-[#082032] px-2 rounded mx-4"
           />
+        )}
+
+        {/* Project Filters */}
+        {showProjectFilters && (
+          <div className="flex gap-2 mx-4">
+            {categories.map((cat) => (
+              <motion.button
+                key={cat}
+                layoutId={`project-filter-${cat}`}
+                onClick={() => setProjectActiveCategory(cat)}
+                className={`whitespace-nowrap px-3 py-1 rounded-full cursor-pointer transition-colors duration-300 font-medium border ${
+                  projectActiveCategory === cat
+                    ? "text-white bg-[#082032]"
+                    : "text-[#082032] bg-[#F5F5F7]"
+                }`}
+                aria-pressed={projectActiveCategory === cat}
+              >
+                {cat}
+              </motion.button>
+            ))}
+          </div>
         )}
 
         {/* Desktop Menu */}

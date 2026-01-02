@@ -3,12 +3,14 @@ import { FaArrowUpLong } from "react-icons/fa6";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
 import { useState } from "react";
+import { useSearch } from "../context/SearchContext";
 //
 //
 export default function Projects() {
   //
   // How many projects to show at first
   const [visibleCount, setVisibleCount] = useState(4);
+  const { projectActiveCategory, setProjectActiveCategory } = useSearch();
   const categories = [
     "All",
     "Web Development",
@@ -76,9 +78,10 @@ export default function Projects() {
         "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767117857/agency/projects/audit_jdedz4.jpg",
     },
   ];
-  const [active, setActive] = useState("All");
   const filtered =
-    active === "All" ? projects : projects.filter((p) => p.category === active);
+    projectActiveCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category === projectActiveCategory);
   //
   // Slice array to show only visible items
 
@@ -106,16 +109,19 @@ export default function Projects() {
         </Paragraph>
         <div className="flex mt-30 items-center justify-center gap-3 flex-wrap">
           {categories.map((cat) => (
-            <button
+            <motion.button
               key={cat}
-              onClick={() => setActive(cat)}
+              layoutId={`project-filter-${cat}`}
+              onClick={() => setProjectActiveCategory(cat)}
               className={`whitespace-nowrap px-4 py-2 rounded-full  cursor-pointer transition-colors duration-300 font-medium border ${
-                active === cat ? "text-[var(--white-color)] " : ""
+                projectActiveCategory === cat
+                  ? "text-[var(--white-color)] "
+                  : ""
               }`}
-              aria-pressed={active === cat}
+              aria-pressed={projectActiveCategory === cat}
             >
               {cat}
-            </button>
+            </motion.button>
           ))}
         </div>
         <div className="grid xl:grid-cols-3 gap-6 mt-20">
