@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Paragraph from "./Paragraph";
 import toast from "react-hot-toast";
 const formspreeApi = import.meta.env.VITE_FORMSPREE_ENDPOINT;
@@ -103,10 +103,10 @@ export default function Contact() {
       className="py-10 relative"
     >
       <div className="xl:w-6xl mx-auto">
-        <h2 className="tracking-wide xl:text-6xl font-bold text-center text-[#082032]">
+        <h2 className="tracking-wide xl:text-6xl font-bold text-center">
           <span className="text-[#0076DF]">Contact</span> Us
         </h2>
-        <Paragraph className="mx-auto xl:w-3xl text-center font-medium text-[#082032] mt-5">
+        <Paragraph className="mx-auto xl:w-3xl text-center font-medium mt-5">
           Let’s bring your ideas to life. Whether you’re looking to build a
           modern website, improve your online visibility with SEO and social
           media marketing, develop a custom application, or integrate AI-powered
@@ -125,7 +125,9 @@ export default function Contact() {
             />
           </div>
           <div className="space-y-4 p-8 shadow">
-            <h3 className="text-xl font-medium text-center text-[#4ED7F1]">Send a message </h3>
+            <h3 className="text-xl font-medium text-center text-[#4ED7F1]">
+              Send a message{" "}
+            </h3>
             <form onSubmit={handleSubmit} className="">
               {/* Name */}
               <div>
@@ -200,7 +202,7 @@ export default function Contact() {
               </div>
 
               <button
-              title="Send Message"
+                title="Send Message"
                 type="submit"
                 className="w-full rounded-lg bg-[#0076DF] px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-[#0077dfa6] block mt-5 cursor-pointer shadow-md"
               >

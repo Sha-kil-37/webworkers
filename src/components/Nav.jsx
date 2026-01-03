@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
 import DarkModeToggle from "../lib/utils/DarkModeToggle";
 //
@@ -80,7 +80,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur" : "bg-transparent"
+        scrolled ? "bg-white/80 backdrop-blur dark:bg-black/80" : "bg-transparent"
       }`}
     >
       <nav className="xl:w-6xl mx-auto py-4 xl:flex xl:items-center xl:justify-between">

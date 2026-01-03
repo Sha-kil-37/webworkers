@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
 //
 export default function Blogs() {
@@ -141,10 +141,10 @@ export default function Blogs() {
           {/* Left sticky column */}
           <aside className=" md:col-span-1 xl:border-r border-[#F5F5F7]">
             <div className="sticky top-0">
-              <h2 className="tracking-wide text-6xl font-bold w-xl text-[#082032]">
+              <h2 className="tracking-wide text-6xl font-bold w-xl">
                 Read Our <span className="text-[#8D77AB]">Blogs</span>
               </h2>
-              <Paragraph className="mt-5 font-medium text-[#082032]">
+              <Paragraph className="mt-5 font-medium">
                 Our blog is a knowledge hub where technology, creativity, and
                 strategy come together. We share practical insights on web
                 development, digital marketing, SEO, social media marketing,
@@ -202,13 +202,13 @@ export default function Blogs() {
                   />
                 </div>
                 <div className="bg-[#F5F5F7] p-4">
-                  <Paragraph className="font-medium text-[#082032]">
+                  <Paragraph className="font-medium">
                     {blog.category}
                   </Paragraph>
-                  <Paragraph className="font-medium text-[#082032] text-2xl mt-2">
+                  <Paragraph className="font-medium text-2xl mt-2">
                     {blog.title}
                   </Paragraph>
-                  <Paragraph className="font-medium text-[#082032] mt-2">
+                  <Paragraph className="font-medium mt-2">
                     By {blog.author}
                   </Paragraph>
                 </div>

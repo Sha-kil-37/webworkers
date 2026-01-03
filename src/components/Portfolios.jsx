@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { FaArrowUpLong } from "react-icons/fa6";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
@@ -95,10 +95,10 @@ export default function Projects() {
       className="py-20 bg-fixed bg-center bg-cover"
     >
       <div className="max-w-6xl mx-auto relative">
-        <h2 className="tracking-wide text-6xl text-center font-bold text-[#082032]">
+        <h2 className="tracking-wide text-6xl text-center font-bold">
           Meet Our <span className="text-[#FF0075]">Portfolios</span>
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-5">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5">
           Every project we deliver is designed with innovation and scalability
           in mind. We work across web development, digital marketing, SEO,
           social media marketing, UI/UX design, and app development—supported by
@@ -114,8 +114,8 @@ export default function Projects() {
               onClick={() => setProjectActiveCategory(cat)}
               className={`whitespace-nowrap px-4 py-2 rounded-full cursor-pointer transition-colors duration-300 font-medium ${
                 projectActiveCategory === cat
-                  ? "text-white bg-[#0076DF]"
-                  : "text-[#082032] bg-[#F5F5F7]"
+                  ? " bg-[#0076DF]"
+                  : " bg-[#F5F5F7]"
               }`}
               aria-pressed={projectActiveCategory === cat}
             >
@@ -142,10 +142,10 @@ export default function Projects() {
                   <FaArrowUpLong className="transform-rotate-3" />
                 </div>
               </div>
-              <Paragraph className="font-medium text-[#082032] mt-3">
+              <Paragraph className="font-medium mt-3">
                 {project.category}
               </Paragraph>
-              <Paragraph className="font-medium text-xl text-[#082032] ">
+              <Paragraph className="font-medium text-xl">
                 {project.title}
               </Paragraph>
               <div className="flex gap-x-2 mt-3">
@@ -153,7 +153,7 @@ export default function Projects() {
                   return (
                     <span
                       key={i}
-                      className="px-2 rounded-full border text-[#082032] font-medium"
+                      className="px-2 rounded-full border font-medium"
                     >
                       {tech}
                     </span>

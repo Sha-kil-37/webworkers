@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Paragraph from "./Paragraph";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-
+import video from "../assets/video/agency.mp4";
 //
 const faqs = [
   {
@@ -40,13 +39,14 @@ export default function FAQ() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-10 relative"
+      className="py-10"
+      
     >
       <div className="xl:w-6xl xl:mx-auto">
-        <h2 className="tracking-wide xl:text-6xl font-bold text-[#082032] text-center">
+        <h2 className="tracking-wide xl:text-6xl font-bold text-center">
           How Can I <span className="text-[#81E7AF]">Help</span> You ?
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-5">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5">
           We offer end-to-end digital solutions designed to help businesses grow
           smarter and faster. From high-performance Web Development and
           intuitive UI/UX Design to data-driven Digital Marketing, SEO, and
@@ -57,9 +57,16 @@ export default function FAQ() {
           evolving digital world.
         </Paragraph>
         {/*  */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center xl:mt-10">
-          <div className="w-full">
-            <DotLottieReact src="path/to/animation.lottie" loop autoplay />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center xl:mt-10">
+          <div className="relative bg-rose-500 w-full h-full">
+            <div className="bg-gray-100 absolute bottom-0 right-0 h-[50%] w-[50%] z-10"></div>
+            <video
+              src={video}
+              autoPlay
+              muted
+              loop
+              className="w-full h-full object-cover"
+            ></video>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => {
@@ -75,12 +82,12 @@ export default function FAQ() {
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex items-center justify-between text-left transition-all duration-500"
                   >
-                    <span className="text-[#082032] font-medium text-xl">
+                    <span className="font-medium text-xl">
                       {faq.question}
                     </span>
 
                     <span
-                      className={`text-[#082032] text-2xl transform transition-transform duration-300 ${
+                      className={`text-2xl transform transition-transform duration-300 ${
                         isOpen ? "rotate-45 text-red-500" : "rotate-0"
                       }`}
                     >
@@ -103,6 +110,7 @@ export default function FAQ() {
                 </div>
               );
             })}
+          
           </div>
         </div>
       </div>

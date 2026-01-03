@@ -1,25 +1,21 @@
-/* Tailwind base import */
 @import "tailwindcss";
 
-/* Keep custom dark variant for utilities (class-based dark mode) */
+/* Dark mode variant */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/*  */
-/* custom css  bellow */
-@keyframes shine {
-  0% {
-    background-position: -200%;
-  }
-  100% {
-    background-position: 200%;
-  }
+@theme {
+  /* colors */
+  --color-red: #6e026f;
+
+  /* font family */
+  --font-primary: "Titillium Web", sans-serif;
 }
 
-.animate-shine {
-  background-size: 200% auto;
-  animation: shine 6s linear infinite;
+@layer components {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
-
-
-
 

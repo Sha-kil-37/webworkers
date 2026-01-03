@@ -11,7 +11,7 @@ export default function MainLayout({ children }) {
   return (
     <SearchProvider>
       <SmoothScroll>
-        <div className="relative dark:bg-black/80 dark:text-white">
+        <div className="relative dark:bg-black dark:text-white">
           <Nav />
           <WhatsAppButton />
           <main>{children}</main>

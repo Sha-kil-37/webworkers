@@ -1,6 +1,6 @@
 import CounterItem from "./CounterItem";
 import Paragraph from "./Paragraph";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { CiStar } from "react-icons/ci";
 
 //
@@ -24,7 +24,7 @@ export default function OurAchievements() {
           transition={{ duration: 1 }}
           className="p-6 "
         >
-          <h2 className="tracking-wide xl:text-6xl font-bold text-[#082032]">
+          <h2 className="tracking-wide xl:text-6xl font-bold">
             Our <span className="text-[#FFE100]">Success</span>
           </h2>
           <div className="flex mt-2 ">
@@ -43,7 +43,7 @@ export default function OurAchievements() {
             })}
           </div>
 
-          <Paragraph className="max-w-4xl mx-auto font-medium text-[#082032] mt-5">
+          <Paragraph className="max-w-4xl mx-auto font-medium mt-5">
             We create smart, creative, and impactful digital solutions that help
             businesses grow with confidence. We deliver high-quality Web
             Development, Digital Marketing, UI/UX Design, SEO, and innovative

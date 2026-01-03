@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Paragraph from "./Paragraph";
 // import background from "../assets/background/background.avif";
 //
@@ -69,7 +69,6 @@ export default function Services() {
     <section
       id="services"
       className="py-10"
-      // style={{ backgroundImage: `url(${background})` }}
     >
       <div className="xl:w-6xl mx-auto">
         {/* Section Header */}
@@ -78,12 +77,11 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          // className="text-center"
         >
-          <h2 className="tracking-wide xl:text-6xl font-bold text-center xl:w-3xl mx-auto text-[#082032]">
+          <h2 className="tracking-wide xl:text-6xl font-bold text-center xl:w-3xl mx-auto font-primary text-red">
             Meet Our <span className="text-[#0076DF]">Services</span>
           </h2>
-          <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-5">
+          <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5">
             Our services are built to drive measurable growth. From high-quality
             web and app development to intuitive UI/UX design, SEO, digital
             marketing, and social media strategy, we cover every stage of your
@@ -105,10 +103,10 @@ export default function Services() {
               whileHover={{ y: -8 }}
               className={`relative xl:rounded-2xl overflow-hidden ${service.className} ${service.bg} p-6`}
             >
-              <h3 className="text-white font-medium text-2xl">
+              <h3 className=" font-medium text-2xl">
                 {service.title}
               </h3>
-              <Paragraph className="text-white mt-3 font-medium">
+              <Paragraph className=" mt-3 font-medium">
                 {service.desc}
               </Paragraph>
             </motion.div>

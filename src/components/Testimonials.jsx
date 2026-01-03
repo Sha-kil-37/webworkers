@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import TruncateText from "../lib/utils/TruncateText";
 import { useRef, useEffect } from "react";
 import Paragraph from "./Paragraph";
@@ -75,10 +75,10 @@ const Testimonials = () => {
       className="relative py-10"
     >
       <div className="xl:w-6xl mx-auto overflow-hidden">
-        <h2 className="tracking-wide text-center text-6xl font-bold text-[#082032]">
+        <h2 className="tracking-wide text-center text-6xl font-bold">
           What does our <span className="text-[#81E7AF]">client</span> say ?
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-5">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5">
           Our clients trust us because we deliver more than just services—we
           deliver results. From Web Development and UI/UX Design to Digital
           Marketing, SEO, and Social Media Marketing, we help businesses build
@@ -93,19 +93,19 @@ const Testimonials = () => {
               className="mx-2 w-[300px] rounded-xl p-4 shadow-sm bg-[#F5F5F7]"
             >
               <TruncateText
-                className="font-medium text-[#082032]"
+                className="font-medium"
                 text={item.review}
                 limit={15}
               />
               <div className="flex justify-between items-center mt-3">
                 <div>
-                  <Paragraph className="font-semibold text-[#082032]">
+                  <Paragraph className="font-semibold">
                     {item.name}
                   </Paragraph>
-                  <Paragraph className="text-[#082032]">{item.role}</Paragraph>
+                  <Paragraph className="">{item.role}</Paragraph>
                 </div>
                 <div>
-                  <Paragraph className="text-[#082032] font-medium text-center">
+                  <Paragraph className="font-medium text-center">
                     {item.rating}
                   </Paragraph>
                   <CiStar className="text-[#FFE100] inline-block" />

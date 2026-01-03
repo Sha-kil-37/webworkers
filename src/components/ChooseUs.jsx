@@ -3,7 +3,7 @@ import { IoIosTimer } from "react-icons/io";
 import { FaMobileAlt } from "react-icons/fa";
 import { FaHeadset } from "react-icons/fa";
 import { RiEmotionHappyLine } from "react-icons/ri";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 //
 //
 export default function ChooseUs() {
@@ -42,10 +42,11 @@ export default function ChooseUs() {
       className="py-30 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto text-[#082032]">
-          All The <span className="text-[#4ED7F1]">Benefits</span> You Will Get From Us
+        <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto">
+          All The <span className="text-[#4ED7F1]">Benefits</span> You Will Get
+          From Us
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-[#082032] text-center mt-5">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5">
           We don’t just build digital products—we build solutions that work.
           From web and app development to UI/UX design, SEO, digital marketing,
           and social media growth, our approach is always data-driven and
@@ -66,7 +67,7 @@ export default function ChooseUs() {
                 className="p-6 rounded-xl bg-[#F5F5F7]"
               >
                 <Icon className="h-15 w-15 mx-auto text-[#81E7AF]" />
-                <Paragraph className="mt-5 text-center text-[#082032] font-medium text-xl">
+                <Paragraph className="mt-5 text-center font-medium text-xl">
                   {item.title}
                 </Paragraph>
               </motion.div>

@@ -1,10 +1,10 @@
 import { FaDiscord } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Link } from "react-router";
 import { FaFacebook } from "react-icons/fa";
 import Paragraph from "./Paragraph";
-
+// 
 //
 export default function OurTeam() {
   //
@@ -66,10 +66,10 @@ export default function OurTeam() {
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           <aside className="md:col-span-1 xl:border-r border-[#F5F5F7]">
             <div className="sticky top-0">
-              <h2 className="tracking-wide text-6xl font-bold w-xl text-[#082032]">
+              <h2 className="tracking-wide text-6xl font-bold w-xl">
                 Meet Our <span className="text-[#F43F5E]">Professional</span> Team Members <span className="text-[#0076DF]">.</span>
               </h2>
-              <Paragraph className="mt-5 font-medium text-[#082032]">
+              <Paragraph className="mt-5 font-medium">
                 We are a multidisciplinary digital team driven by innovation and
                 results. Our expertise spans web and app development, UI/UX
                 design, digital marketing, SEO, and social media
@@ -100,10 +100,10 @@ export default function OurTeam() {
                 {/* Content */}
                 <div className="p-4 flex justify-between bg-[#F5F5F7]">
                   <div>
-                    <h3 className="font-medium text-[#082032] text-lg">
+                    <h3 className="font-medium text-lg">
                       {member.name}
                     </h3>
-                    <p className="text-[#082032]">{member.role}</p>
+                    <p className="">{member.role}</p>
                   </div>
                   <div className="flex gap-x-3">
                     <Link target="_blank" to={member.socials.linkedin}>

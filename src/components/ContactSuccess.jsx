@@ -1,5 +1,5 @@
 // pages/ContactSuccess.jsx
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Link } from "react-router";
 
 export default function ContactSuccess() {

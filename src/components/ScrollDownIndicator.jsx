@@ -12,9 +12,9 @@ export default function ScrollDownIndicator({ targetId = "services" }) {
       <button
         onClick={handleScroll}
         aria-label="Scroll Down"
-        className="flex flex-col items-center gap-2 text-[#082032] transition"
+        className="flex flex-col items-center gap-2 transition"
       >
-        <span className="font-medium text-[#082032] tracking-widest uppercase cursor-pointer">Scroll</span>
+        <span className="font-medium tracking-widest uppercase cursor-pointer">Scroll</span>
 
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -23,7 +23,7 @@ export default function ScrollDownIndicator({ targetId = "services" }) {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="flex items-center justify-center w-10 h-10 rounded-full border border-[#082032]"
+          className="flex items-center justify-center w-10 h-10 rounded-full shadow"
         >
           <FiChevronDown size={22} />
         </motion.div>
