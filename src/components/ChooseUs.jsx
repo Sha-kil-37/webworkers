@@ -39,14 +39,14 @@ export default function ChooseUs() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-30 overflow-hidden"
+      className="py-10 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="tracking-wide text-6xl font-bold text-center max-w-3xl mx-auto">
-          All The <span className="text-[#4ED7F1]">Benefits</span> You Will Get
-          From Us
+        <h2 className="text-3xl font-bold text-center max-w-3xl mx-auto font-primary tracking-wide">
+          All The <span className="text-[#0076DF]">Benefits</span> You Gain By
+          Working With Us
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5 tracking-wide font-primary">
           We don’t just build digital products—we build solutions that work.
           From web and app development to UI/UX design, SEO, digital marketing,
           and social media growth, our approach is always data-driven and
@@ -54,7 +54,7 @@ export default function ChooseUs() {
           intelligence integration, and strategic business consultation, we help
           businesses innovate faster and stay ahead of the competition.
         </Paragraph>
-        <div className="xl:grid xl:grid-cols-4 gap-4 mt-20">
+        <div className="xl:grid xl:grid-cols-4 mt-5">
           {features.map((item, i) => {
             const Icon = item.icon;
             return (
@@ -64,10 +64,10 @@ export default function ChooseUs() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-xl bg-[#F5F5F7]"
+                className="p-4 bg-[#F5F5F7]"
               >
-                <Icon className="h-15 w-15 mx-auto text-[#81E7AF]" />
-                <Paragraph className="mt-5 text-center font-medium text-xl">
+                <Icon className="h-13 w-13 mx-auto text-[#0076DF]" />
+                <Paragraph className="text-2xl mt-5 text-center font-medium font-primary tracking-wide">
                   {item.title}
                 </Paragraph>
               </motion.div>

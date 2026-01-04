@@ -8,6 +8,7 @@
 
   /* font family */
   --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Josefin Sans", sans-serif;
 }
 
 @layer components {

@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router";
 import { FaFacebook } from "react-icons/fa";
 import Paragraph from "./Paragraph";
-// 
+//
 //
 export default function OurTeam() {
   //
@@ -62,14 +62,16 @@ export default function OurTeam() {
       transition={{ duration: 1 }}
       className="py-10"
     >
-      <div className="max-w-6xl mx-auto">
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="xl:w-6xl mx-auto">
+        <div className="grid xl:grid-cols-2 xl:gap-12">
           <aside className="md:col-span-1 xl:border-r border-[#F5F5F7]">
-            <div className="sticky top-0">
-              <h2 className="tracking-wide text-6xl font-bold w-xl">
-                Meet Our <span className="text-[#F43F5E]">Professional</span> Team Members <span className="text-[#0076DF]">.</span>
+            <div className="sticky xl:top-16">
+              <h2 className="tracking-wide text-3xl font-bold font-primary">
+                Our <span className="text-[#0076DF]">Professional</span>{" "}
+                {""}
+                Team Members
               </h2>
-              <Paragraph className="mt-5 font-medium">
+              <Paragraph className="xl:w-lg mt-5 font-medium tracking-wide font-primary">
                 We are a multidisciplinary digital team driven by innovation and
                 results. Our expertise spans web and app development, UI/UX
                 design, digital marketing, SEO, and social media
@@ -82,28 +84,26 @@ export default function OurTeam() {
             </div>
           </aside>
           {/* Right scrollable column */}
-          <main className="md:col-span-1">
+          <main className="">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="group  rounded-2xl overflow-hidden my-4"
+                className="group rounded-2xl overflow-hidden my-4 shadow"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-130 object-cover group-hover:scale-105 transition duration-500"
+                    className="w-full h-100 object-cover group-hover:scale-105 transition duration-500"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="p-4 flex justify-between bg-[#F5F5F7]">
+                <div className="p-6 flex justify-between bg-[#F5F5F7]">
                   <div>
-                    <h3 className="font-medium text-lg">
-                      {member.name}
-                    </h3>
-                    <p className="">{member.role}</p>
+                    <h3 className="font-medium text-xl font-primary tracking-wide">{member.name}</h3>
+                    <Paragraph className="font-primary tracking-wide">{member.role}</Paragraph>
                   </div>
                   <div className="flex gap-x-3">
                     <Link target="_blank" to={member.socials.linkedin}>

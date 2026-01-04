@@ -75,10 +75,10 @@ const Testimonials = () => {
       className="relative py-10"
     >
       <div className="xl:w-6xl mx-auto overflow-hidden">
-        <h2 className="tracking-wide text-center text-6xl font-bold">
-          What does our <span className="text-[#81E7AF]">client</span> say ?
+        <h2 className="tracking-wide text-center xl:text-3xl font-bold font-primary">
+          What does our <span className="text-[#0076DF]">client</span> say ?
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5 font-primary tracking-wide">
           Our clients trust us because we deliver more than just services—we
           deliver results. From Web Development and UI/UX Design to Digital
           Marketing, SEO, and Social Media Marketing, we help businesses build
@@ -90,27 +90,27 @@ const Testimonials = () => {
           {[...reviews, ...reviews].map((item, index) => (
             <div
               key={index}
-              className="mx-2 w-[300px] rounded-xl p-4 shadow-sm bg-[#F5F5F7]"
+              className="mx-2 w-[300px] rounded-xl p-4 shadow bg-[#F5F5F7]"
             >
               <TruncateText
-                className="font-medium"
+                className="font-medium font-secondary tracking-wide"
                 text={item.review}
                 limit={15}
               />
               <div className="flex justify-between items-center mt-3">
                 <div>
-                  <Paragraph className="font-semibold">
+                  <Paragraph className="font-medium font-secondary">
                     {item.name}
                   </Paragraph>
-                  <Paragraph className="">{item.role}</Paragraph>
+                  <Paragraph className="font-secondary">{item.role}</Paragraph>
                 </div>
                 <div>
-                  <Paragraph className="font-medium text-center">
+                  <Paragraph className="text-center font-secondary">
                     {item.rating}
                   </Paragraph>
-                  <CiStar className="text-[#FFE100] inline-block" />
-                  <CiStar className="text-[#FFE100] inline-block" />
-                  <CiStar className="text-[#FFE100] inline-block" />
+                  <CiStar className="text-[#0076DF] inline-block" />
+                  <CiStar className="text-[#0076DF] inline-block" />
+                  <CiStar className="text-[#0076DF] inline-block" />
                 </div>
               </div>
             </div>

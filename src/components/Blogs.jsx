@@ -139,12 +139,12 @@ export default function Blogs() {
       <div className="xl:w-6xl mx-auto">
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left sticky column */}
-          <aside className=" md:col-span-1 xl:border-r border-[#F5F5F7]">
-            <div className="sticky top-0">
-              <h2 className="tracking-wide text-6xl font-bold w-xl">
-                Read Our <span className="text-[#8D77AB]">Blogs</span>
+          <aside className="md:col-span-1 xl:border-r border-[#F5F5F7]">
+            <div className="sticky xl:top-16">
+              <h2 className="tracking-wide xl:text-3xl font-bold">
+                Read Our <span className="text-[#0076DF]">Blogs</span>
               </h2>
-              <Paragraph className="mt-5 font-medium">
+              <Paragraph className="xl:w-lg mt-5 font-medium tracking-wide font-primary">
                 Our blog is a knowledge hub where technology, creativity, and
                 strategy come together. We share practical insights on web
                 development, digital marketing, SEO, social media marketing,
@@ -157,7 +157,7 @@ export default function Blogs() {
           </aside>
 
           {/* Right scrollable column */}
-          <main className="md:col-span-1">
+          <main className="">
             <div className="">
               <motion.input
                 title="Search Blogs"
@@ -170,16 +170,16 @@ export default function Blogs() {
                 className="block w-full py-2 px-4 bg-[#F5F5F7] font-medium"
               />
             </div>
-            <div className="mt-3 flex flex-wrap gap-1">
+            <div className="mt-3 flex flex-wrap gap-2">
               {categories.map((category, i) => (
                 <button
                   title={category}
                   key={i}
                   onClick={() => handleCategorySelect(category)}
-                  className={`px-3  inline-block rounded-xl font-medium cursor-pointer ${
+                  className={`px-3  inline-block rounded-xl font-medium cursor-pointer font-primary tracking-wide transition-all duration-200 ${
                     selectedCategory === category ||
                     (category === "All" && !selectedCategory)
-                      ? "bg-[#0076DF] text-white"
+                      ? "bg-[#0076DF]"
                       : "bg-gray-100"
                   }`}
                 >
@@ -201,14 +201,12 @@ export default function Blogs() {
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   />
                 </div>
-                <div className="bg-[#F5F5F7] p-4">
-                  <Paragraph className="font-medium">
-                    {blog.category}
-                  </Paragraph>
-                  <Paragraph className="font-medium text-2xl mt-2">
+                <div className="bg-[#F5F5F7] p-6">
+                  <Paragraph className="font-medium tracking-wide font-primary">{blog.category}</Paragraph>
+                  <Paragraph className="tracking-wide font-primary font-medium text-2xl">
                     {blog.title}
                   </Paragraph>
-                  <Paragraph className="font-medium mt-2">
+                  <Paragraph className="font-medium font-primary tracking-wide text-[#0076DF]">
                     By {blog.author}
                   </Paragraph>
                 </div>
@@ -217,12 +215,12 @@ export default function Blogs() {
 
             {/* Only show "More Blogs" if there are more to load */}
             {visibleCount < filteredBlogs.length && (
-              <div className="flex justify-center mt-20">
+              <div className="flex justify-center mt-10">
                 <button
                   onClick={handleLoadMoreBlogs}
-                  className="cursor-pointer px-4 py-2 rounded-full bg-[#0076DF] text-white font-medium "
+                  className="cursor-pointer px-4 py-2 rounded-full bg-[#0076DF] font-medium font-primary tracking-wide"
                 >
-                  More Blogs
+                  More blogs
                 </button>
               </div>
             )}

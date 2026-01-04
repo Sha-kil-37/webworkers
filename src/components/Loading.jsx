@@ -6,7 +6,7 @@ export default function Loader() {
   //
   return (
     <motion.div
-      className="fixed inset-0 z-10 flex items-center justify-center bg-[#1D1D1F]"
+      className="fixed inset-0 z-10 flex items-center justify-center bg-[#232729]"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}

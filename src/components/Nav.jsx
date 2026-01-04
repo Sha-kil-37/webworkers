@@ -4,7 +4,6 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
 import DarkModeToggle from "../lib/utils/DarkModeToggle";
-import { CiStar } from "react-icons/ci";
 
 //
 export default function Navbar() {
@@ -95,7 +94,6 @@ export default function Navbar() {
           className="text-xl font-bold cursor-pointer font-primary tracking-wide"
         >
           AGENCY
-          <CiStar className="text-[#FFE100] text-base inline-block" />
         </motion.h3>
 
         {/* Search Input */}

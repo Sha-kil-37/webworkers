@@ -17,17 +17,11 @@ export default function OurAchievements() {
       className="py-10 relative"
     >
       <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="p-6 "
-        >
-          <h2 className="tracking-wide xl:text-6xl font-bold">
+        <div className="">
+          <h2 className="tracking-wide xl:text-3xl font-bold font-primary">
             Our <span className="text-[#FFE100]">Success</span>
           </h2>
-          <div className="flex mt-2 ">
+          <div className="flex mt-2">
             {[1, 2, 3, 4, 5].map((item, i) => {
               return (
                 <motion.div
@@ -37,32 +31,26 @@ export default function OurAchievements() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
-                  <CiStar className="text-[#FFE100] text-4xl" />
+                  <CiStar className="text-[#FFE100] xl:text-3xl" />
                 </motion.div>
               );
             })}
           </div>
 
-          <Paragraph className="max-w-4xl mx-auto font-medium mt-5">
+          <Paragraph className="mt-5 font-medium font-primary">
             We create smart, creative, and impactful digital solutions that help
             businesses grow with confidence. We deliver high-quality Web
             Development, Digital Marketing, UI/UX Design, SEO, and innovative
             software services. We empower clients, strengthen brands, and build
             meaningful digital experiences that drive real results.
           </Paragraph>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="p-6"
-        >
+        </div>
+        <div className="xl:grid grid-cols-2">
           <CounterItem end={120} label="Projects Completed" />
           <CounterItem end={80} label="Happy Clients" />
           <CounterItem end={5} label="Years Experience" />
           <CounterItem end={12} label="Awards Won" />
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );

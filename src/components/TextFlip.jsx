@@ -17,7 +17,7 @@ export const TextFlip = ({ text, words, duration }) => {
     <>
       <motion.span
         layoutId="subtext"
-        className="xl:text-5xl xl:font-bold xl:tracking-wide font-primary block text-[#0076DF]"
+        className="xl:text-5xl xl:font-bold xl:tracking-wide font-primary block text-[#0076DF] xl:w-xl"
       >
         {text}
       </motion.span>

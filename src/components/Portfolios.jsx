@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { FaArrowUpLong } from "react-icons/fa6";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
-import { useState } from "react";
 import { useSearch } from "../context/SearchContext";
 //
 //
@@ -92,13 +91,13 @@ export default function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-20 bg-fixed bg-center bg-cover"
+      className="py-10"
     >
-      <div className="max-w-6xl mx-auto relative">
-        <h2 className="tracking-wide text-6xl text-center font-bold">
-          Meet Our <span className="text-[#FF0075]">Portfolios</span>
+      <div className="xl:w-6xl mx-auto relative">
+        <h2 className="tracking-wide text-3xl text-center font-bold font-primary">
+          Our <span className="text-[#0076DF]">Portfolios</span>
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5 tracking-wide font-primary">
           Every project we deliver is designed with innovation and scalability
           in mind. We work across web development, digital marketing, SEO,
           social media marketing, UI/UX design, and app development—supported by
@@ -106,13 +105,14 @@ export default function Projects() {
           integration. Our focus is on creating digital products that are
           user-centric, data-driven, and future-ready.
         </Paragraph>
-        <div className="flex mt-30 items-center justify-center gap-3 flex-wrap">
+        <div className="flex mt-10 items-center justify-center gap-3 flex-wrap">
           {categories.map((cat) => (
             <motion.button
+              title={cat}
               key={cat}
               layoutId={`project-filter-${cat}`}
               onClick={() => setProjectActiveCategory(cat)}
-              className={`whitespace-nowrap px-4 py-2 rounded-full cursor-pointer transition-colors duration-300 font-medium ${
+              className={`whitespace-nowrap xl:px-4 xl:py-2 rounded-full cursor-pointer transition-colors duration-200 font-medium shadow font-primary tracking-wide ${
                 projectActiveCategory === cat
                   ? " bg-[#0076DF]"
                   : " bg-[#F5F5F7]"
@@ -123,7 +123,7 @@ export default function Projects() {
             </motion.button>
           ))}
         </div>
-        <div className="grid xl:grid-cols-3 gap-6 mt-20">
+        <div className="xl:grid xl:grid-cols-3 gap-6 xl:mt-10">
           {filtered.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}
@@ -137,26 +137,23 @@ export default function Projects() {
                   className="w-full h-full  object-cover group-hover:scale-105 transition-all duration-500"
                   alt={project.image}
                 />
-                {/* Hover Overlay */}
-                <div className="absolute top-0 left-0 h-full w-full inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 hover:bg-black/30 flex justify-center items-center">
-                  <FaArrowUpLong className="transform-rotate-3" />
-                </div>
               </div>
-              <Paragraph className="font-medium mt-3">
+              <Paragraph className="mt-3 font-primary tracking-wide">
                 {project.category}
               </Paragraph>
-              <Paragraph className="font-medium text-xl">
+              <Paragraph className="font-medium text-xl font-primary tracking-wider">
                 {project.title}
               </Paragraph>
               <div className="flex gap-x-2 mt-3">
                 {project.tech.map((tech, i) => {
                   return (
-                    <span
+                    <Paragraph
+                      title={tech}
                       key={i}
-                      className="px-2 rounded-full border font-medium"
+                      className="px-2 rounded-full bg-[#F5F5F7] font-medium font-primary tracking-wide"
                     >
                       {tech}
-                    </span>
+                    </Paragraph>
                   );
                 })}
               </div>
