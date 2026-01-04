@@ -1,99 +1,101 @@
 import React from "react";
+import Paragraph from "./Paragraph";
 
 export default function TermsAndPrivacy() {
   //
   return (
-    <section className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 px-4 py-16">
-      <div className="max-w-5xl mx-auto space-y-16">
+    <section className="py-20">
+      <div className="xl:w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
+        <div className="text-center">
+          <h1 className="font-primary tracking-wide xl:text-5xl font-bold">
             Privacy Policy & Terms
           </h1>
-          <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+          <Paragraph className="xl:w-2xl mx-auto mt-5 font-primary tracking-wide">
             Transparency matters. Here’s how we handle your data and the rules
             that guide our services.
-          </p>
+          </Paragraph>
         </div>
 
         {/* Privacy Policy */}
         <div className="space-y-8">
-          <h2 className="text-3xl font-semibold">Privacy Policy</h2>
-
-          <div className="space-y-6 text-sm md:text-base leading-relaxed">
-            <p>
+          <h2 className="text-3xl font-semibold font-primary tracking-wide">
+            Privacy Policy
+          </h2>
+          <div className="space-y-6 ">
+            <Paragraph className="tracking-wide font-primary">
               We respect your privacy and are committed to protecting your
               personal information. Any data collected through our website is
               used solely to improve our services and communication.
-            </p>
+            </Paragraph>
 
             <div>
-              <h3 className="font-semibold text-lg mb-2">
+              <h3 className="font-semibold font-primary tracking-wide mb-2">
                 Information We Collect
               </h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Name, email address, and contact details</li>
-                <li>Project inquiries and messages</li>
-                <li>Technical data such as browser type and device</li>
+                <li className="font-primary tracking-wide">Name, email address, and contact details</li>
+                <li className="font-primary tracking-wide">Project inquiries and messages</li>
+                <li className="font-primary tracking-wide">Technical data such as browser type and device</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="font-semibold text-lg mb-2">
+              <h3 className="font-semibold font-primary tracking-wide mb-2">
                 How We Use Your Information
               </h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Respond to inquiries and project requests</li>
-                <li>Improve website performance and user experience</li>
-                <li>Send updates related to our services</li>
+                <li className="font-primary tracking-wide">Respond to inquiries and project requests</li>
+                <li className="font-primary tracking-wide">Improve website performance and user experience</li>
+                <li className="font-primary tracking-wide">Send updates related to our services</li>
               </ul>
             </div>
 
-            <p>
+            <Paragraph className="font-primary tracking-wide">
               We never sell or share your personal data with third parties
               without consent unless required by law.
-            </p>
+            </Paragraph>
           </div>
         </div>
 
         {/* Terms & Conditions */}
         <div className="space-y-8">
-          <h2 className="text-3xl font-semibold">Terms & Conditions</h2>
+          <h2 className="text-3xl font-semibold font-primary tracking-wide">Terms & Conditions</h2>
 
-          <div className="space-y-6 text-sm md:text-base leading-relaxed">
-            <p>
+          <div className="space-y-6">
+            <Paragraph className="font-primary tracking-wide">
               By using our website and services, you agree to the following
               terms and conditions. Please read them carefully.
-            </p>
+            </Paragraph>
 
             <div>
-              <h3 className="font-semibold text-lg mb-2">Use of Services</h3>
-              <p>
+              <h3 className="font-semibold font-primary tracking-wide mb-2">Use of Services</h3>
+              <Paragraph className="font-primary tracking-wide">
                 Our services are provided for lawful purposes only. You agree
                 not to misuse, disrupt, or attempt unauthorized access to our
                 systems.
-              </p>
+              </Paragraph>
             </div>
 
             <div>
-              <h3 className="font-semibold text-lg mb-2">
+              <h3 className="font-semibold font-primary tracking-wide mb-2">
                 Intellectual Property
               </h3>
-              <p>
+              <Paragraph className="font-primary tracking-wide">
                 All content, designs, and code are the intellectual property of
                 our agency unless otherwise stated. Reuse without permission is
                 prohibited.
-              </p>
+              </Paragraph>
             </div>
 
             <div>
-              <h3 className="font-semibold text-lg mb-2">
+              <h3 className="font-semibold font-primary tracking-wide mb-2">
                 Limitation of Liability
               </h3>
-              <p>
+              <Paragraph className="tracking-wide font-primary">
                 We are not liable for any indirect or consequential damages
                 arising from the use of our website or services.
-              </p>
+              </Paragraph>
             </div>
           </div>
         </div>

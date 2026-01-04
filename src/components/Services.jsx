@@ -101,7 +101,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className={`relative xl:rounded-2xl overflow-hidden ${service.className} ${service.bg} p-6`}
+              className={`relative xl:rounded-2xl overflow-hidden shadow ${service.className} ${service.bg} p-6`}
             >
               <h3 className="font-medium text-2xl font-primary tracking-wide">
                 {service.title}

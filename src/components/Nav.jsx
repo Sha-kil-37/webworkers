@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
 import DarkModeToggle from "../lib/utils/DarkModeToggle";
+import { IoSearchOutline } from "react-icons/io5";
 
 //
 export default function Navbar() {
@@ -20,6 +21,7 @@ export default function Navbar() {
     setProjectActiveCategory,
   } = useSearch();
   const [activeSection, setActiveSection] = useState("");
+  //
   const categories = [
     "All",
     "Web Development",
@@ -78,7 +80,7 @@ export default function Navbar() {
   //
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-20 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-20 transition-all duration-200 ${
         scrolled
           ? "bg-white/70 backdrop-blur dark:bg-black/70 shadow"
           : "bg-transparent "
@@ -86,7 +88,7 @@ export default function Navbar() {
     >
       <nav className="xl:w-6xl mx-auto py-4 xl:flex xl:items-center xl:justify-between">
         {/* Logo */}
-        {showProjectFilters ? null : showSearch ? null : (
+        {showProjectFilters ? null : (
           <motion.h3
             onClick={() => handleNavigate("home")}
             layoutId="site-logo"
@@ -99,14 +101,23 @@ export default function Navbar() {
 
         {/* Search Input */}
         {showSearch && (
-          <motion.input
-            layoutId="blog-search"
-            type="search"
-            placeholder="Search blog ..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="block py-1 bg-[#F5F5F7] text-[#082032] px-2 rounded mx-4"
-          />
+          <div className="relative group">
+            <span className="absolute left-2 top-1/2 -translate-y-1/2 group-focus-within:text-[#0076DF] transition duration-200">
+              <IoSearchOutline className="" size={18} />
+            </span>
+            <motion.input
+              title="Search Blogs"
+              layoutId="blog-search"
+              name="search"
+              type="search"
+              placeholder="Search blog ..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 focus:outline focus:outline-[#0076DF]
+                    focus:border-[#0076DF]
+                    transition-all duration-200 font-primary tracking-wide font-medium bg-[#F5F5F7] rounded"
+            />
+          </div>
         )}
 
         {/* Project Filters */}
@@ -132,7 +143,7 @@ export default function Navbar() {
         )}
 
         {/* Desktop Menu */}
-        {showProjectFilters ? null : (
+        {showProjectFilters ? null : showSearch ? null : (
           <div className="xl:flex items-center hidden">
             <button
               onClick={() => handleNavigate("home")}

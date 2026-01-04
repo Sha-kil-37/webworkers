@@ -186,7 +186,7 @@ export default function Contact() {
                   rows={5}
                   value={values.message}
                   onChange={handleChange}
-                  className="mt-1 bg-[#F5F5F7] w-full rounded-lg px-4 py-2 resize-none font-medium transition-all duration-200 focus:outline focus:outline-[#0076DF]
+                  className="mt-1 bg-[#F5F5F7] w-full rounded px-4 py-2 resize-none font-medium transition-all duration-200 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF] font-primary tracking-wide"
                 />
 
