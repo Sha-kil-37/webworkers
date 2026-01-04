@@ -86,15 +86,16 @@ export default function Navbar() {
     >
       <nav className="xl:w-6xl mx-auto py-4 xl:flex xl:items-center xl:justify-between">
         {/* Logo */}
-
-        <motion.h3
-          onClick={() => handleNavigate("home")}
-          layoutId="site-logo"
-          title="Home"
-          className="text-xl font-bold cursor-pointer font-primary tracking-wide"
-        >
-          AGENCY
-        </motion.h3>
+        {showProjectFilters ? null : showSearch ? null : (
+          <motion.h3
+            onClick={() => handleNavigate("home")}
+            layoutId="site-logo"
+            title="Home"
+            className="text-xl font-bold cursor-pointer font-primary tracking-wide"
+          >
+            AGENCY
+          </motion.h3>
+        )}
 
         {/* Search Input */}
         {showSearch && (
@@ -110,16 +111,17 @@ export default function Navbar() {
 
         {/* Project Filters */}
         {showProjectFilters && (
-          <div className="flex gap-2 mx-4">
+          <div className="flex gap-2 mx-2">
             {categories.map((cat) => (
               <motion.button
+                title={cat}
                 key={cat}
                 layoutId={`project-filter-${cat}`}
                 onClick={() => setProjectActiveCategory(cat)}
-                className={`whitespace-nowrap px-3 py-1 rounded-full cursor-pointer transition-colors duration-300 font-medium border ${
+                className={`whitespace-nowrap px-3 py-1 rounded-full cursor-pointer transition-colors duration-200 font-medium font-primary tracking-wide ${
                   projectActiveCategory === cat
-                    ? "text-white bg-[#082032]"
-                    : "text-[#082032] bg-[#F5F5F7]"
+                    ? "bg-[#0076DF]"
+                    : "bg-[#F5F5F7]"
                 }`}
                 aria-pressed={projectActiveCategory === cat}
               >
@@ -130,54 +132,57 @@ export default function Navbar() {
         )}
 
         {/* Desktop Menu */}
-        <div className="xl:flex items-center hidden">
-          <button
-            onClick={() => handleNavigate("home")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "home" ? "bg-[#0076DF]" : "bg-white"
-            }`}
-            title="Home"
-          >
-            Home
-          </button>
-          <button
-            onClick={() => handleNavigate("services")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "services" ? "bg-[#0076DF]" : "bg-white"
-            }`}
-            title="Services"
-          >
-            Services
-          </button>
-          <button
-            onClick={() => handleNavigate("about")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "about" ? "bg-[#0076DF]" : "bg-white"
-            }`}
-            title="About"
-          >
-            About
-          </button>
+        {showProjectFilters ? null : (
+          <div className="xl:flex items-center hidden">
+            <button
+              onClick={() => handleNavigate("home")}
+              className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+                activeSection === "home" ? "bg-[#0076DF]" : "bg-white"
+              }`}
+              title="Home"
+            >
+              Home
+            </button>
+            <button
+              onClick={() => handleNavigate("services")}
+              className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+                activeSection === "services" ? "bg-[#0076DF]" : "bg-white"
+              }`}
+              title="Services"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => handleNavigate("about")}
+              className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+                activeSection === "about" ? "bg-[#0076DF]" : "bg-white"
+              }`}
+              title="About"
+            >
+              About
+            </button>
 
-          <button
-            onClick={() => handleNavigate("blogs")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "blogs" ? "bg-[#0076DF]" : "bg-white"
-            }`}
-            title="Blogs"
-          >
-            Blogs
-          </button>
-          <button
-            onClick={() => handleNavigate("contact")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "contact" ? "bg-[#0076DF]" : "bg-white"
-            }`}
-            title="Contact"
-          >
-            Contact
-          </button>
-        </div>
+            <button
+              onClick={() => handleNavigate("blogs")}
+              className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+                activeSection === "blogs" ? "bg-[#0076DF]" : "bg-white"
+              }`}
+              title="Blogs"
+            >
+              Blogs
+            </button>
+            <button
+              onClick={() => handleNavigate("contact")}
+              className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+                activeSection === "contact" ? "bg-[#0076DF]" : "bg-white"
+              }`}
+              title="Contact"
+            >
+              Contact
+            </button>
+          </div>
+        )}
+
         <DarkModeToggle className="text-2xl cursor-pointer" />
         {/* Mobile Button */}
         <button

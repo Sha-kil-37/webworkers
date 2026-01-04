@@ -100,7 +100,7 @@ export default function Contact() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-10 relative"
+      className="py-20 relative"
     >
       <div className="xl:w-6xl mx-auto">
         <h2 className="tracking-wide font-primary xl:text-3xl font-bold text-center">
@@ -132,7 +132,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="">
               {/* Name */}
               <div>
-                <label htmlFor="name" className="font-medium text-white">
+                <label htmlFor="name" className="font-medium tracking-wide font-primary">
                   Your Name
                 </label>
                 <input
@@ -141,11 +141,12 @@ export default function Contact() {
                   placeholder="Inter your name"
                   value={values.name}
                   onChange={handleChange}
-                  className={`font-medium bg-[#F5F5F7] mt-1 block w-full rounded-lg px-4 py-2 transition 
+                  className={`mt-1 font-medium bg-[#F5F5F7] block w-full rounded font-primary tracking-wide px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
+          focus:border-[#0076DF] 
             ${errors.name ? "" : ""}`}
                 />
                 {errors.name && (
-                  <Paragraph className="mt-1 text-[#F43F5E]">
+                  <Paragraph className="mt-1 text-[#F43F5E] font-primary tracking-wide">
                     {errors.name} &#9757;&#9757;
                   </Paragraph>
                 )}
@@ -153,7 +154,7 @@ export default function Contact() {
 
               {/* Email */}
               <div className="mt-2">
-                <label htmlFor="email" className="font-medium text-white">
+                <label htmlFor="email" className="font-medium tracking-wide font-primary">
                   Your Email
                 </label>
                 <input
@@ -162,11 +163,12 @@ export default function Contact() {
                   placeholder="Inter your email"
                   value={values.email}
                   onChange={handleChange}
-                  className={`font-medium bg-[#F5F5F7] mt-1 w-full rounded-lg  px-4 py-2 transition 
+                  className={`font-medium font-primary tracking-wide bg-[#F5F5F7] mt-1 w-full rounded px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
+          focus:border-[#0076DF] 
             ${errors.email ? "" : ""}`}
                 />
                 {errors.email && (
-                  <Paragraph className="mt-1 text-[#F43F5E]">
+                  <Paragraph className="mt-1 text-[#F43F5E] font-primary tracking-wide">
                     {errors.email} &#9757;&#9757;
                   </Paragraph>
                 )}
@@ -174,7 +176,7 @@ export default function Contact() {
 
               {/* Message */}
               <div className="mt-2 relative">
-                <label htmlFor="message" className="font-medium text-white">
+                <label htmlFor="message" className="font-medium font-primary tracking-wide">
                   Your Message
                 </label>
 
@@ -184,19 +186,20 @@ export default function Contact() {
                   rows={5}
                   value={values.message}
                   onChange={handleChange}
-                  className="mt-1 bg-[#F5F5F7] w-full rounded-lg px-4 py-2 resize-none font-medium"
+                  className="mt-1 bg-[#F5F5F7] w-full rounded-lg px-4 py-2 resize-none font-medium transition-all duration-200 focus:outline focus:outline-[#0076DF]
+          focus:border-[#0076DF] font-primary tracking-wide"
                 />
 
                 {/* Word Counter */}
                 <div
                   className={`absolute bottom-2 right-3 text-xs font-medium
-      ${remainingWords < 0 ? "text-[#F43F5E]" : "text-gray-600"}`}
+      ${remainingWords < 0 ? "text-[#F43F5E] font-primary tracking-wide" : "text-gray-600 font-primary tracking-wide"}`}
                 >
                   {wordCount}/{MAX_WORDS} words
                 </div>
 
                 {errors.message && (
-                  <Paragraph className="mt-1 text-[#F43F5E]">
+                  <Paragraph className="mt-1 text-[#F43F5E] font-primary tracking-wide">
                     {errors.message} &#9757;&#9757;
                   </Paragraph>
                 )}

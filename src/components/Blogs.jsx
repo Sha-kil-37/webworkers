@@ -3,6 +3,8 @@ import Paragraph from "./Paragraph";
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
+import { IoSearchOutline } from "react-icons/io5";
+
 //
 export default function Blogs() {
   // How many blogs to show at first
@@ -158,7 +160,10 @@ export default function Blogs() {
 
           {/* Right scrollable column */}
           <main className="">
-            <div className="">
+            <div className="relative group">
+              <span className="absolute left-2 top-1/2 -translate-y-1/2 group-focus-within:text-[#0076DF] transition duration-200">
+                <IoSearchOutline className="" size={18} />
+              </span>
               <motion.input
                 title="Search Blogs"
                 layoutId="blog-search"
@@ -167,7 +172,9 @@ export default function Blogs() {
                 placeholder="Search blog ..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="block w-full py-2 px-4 bg-[#F5F5F7] font-medium"
+                className="w-full pl-10 pr-4 py-2 focus:outline focus:outline-[#0076DF]
+          focus:border-[#0076DF]
+          transition-all duration-200 font-primary tracking-wide font-medium bg-[#F5F5F7] rounded"
               />
             </div>
             <div className="mt-3 flex flex-wrap gap-2">
@@ -202,7 +209,9 @@ export default function Blogs() {
                   />
                 </div>
                 <div className="bg-[#F5F5F7] p-6">
-                  <Paragraph className="font-medium tracking-wide font-primary">{blog.category}</Paragraph>
+                  <Paragraph className="font-medium tracking-wide font-primary">
+                    {blog.category}
+                  </Paragraph>
                   <Paragraph className="tracking-wide font-primary font-medium text-2xl">
                     {blog.title}
                   </Paragraph>
