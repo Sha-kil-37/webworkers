@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { useLocation, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
 import DarkModeToggle from "../lib/utils/DarkModeToggle";
+import { CiStar } from "react-icons/ci";
+
 //
 export default function Navbar() {
   const currentPath = useLocation();
@@ -66,8 +68,6 @@ export default function Navbar() {
     onScroll(); // initial check
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  //
-  // console.log(location);
   // handle navigate function for page navigate
   function handleNavigate(path) {
     if (currentPath.pathname === "/") {
@@ -80,17 +80,22 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur dark:bg-black/80" : "bg-transparent"
+        scrolled
+          ? "bg-white/70 backdrop-blur dark:bg-black/70 shadow"
+          : "bg-transparent "
       }`}
     >
       <nav className="xl:w-6xl mx-auto py-4 xl:flex xl:items-center xl:justify-between">
         {/* Logo */}
+
         <motion.h3
-          onClick={() => navigate("/")}
+          onClick={() => handleNavigate("home")}
           layoutId="site-logo"
-          className="text-xl font-bold cursor-pointer"
+          title="Home"
+          className="text-xl font-bold cursor-pointer font-primary tracking-wide"
         >
-          AGENCY <span className="text-[#0076DF]">.</span>
+          AGENCY
+          <CiStar className="text-[#FFE100] text-base inline-block" />
         </motion.h3>
 
         {/* Search Input */}
@@ -130,10 +135,8 @@ export default function Navbar() {
         <div className="xl:flex items-center hidden">
           <button
             onClick={() => handleNavigate("home")}
-            className={`font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "home"
-                ? "bg-[#082032] text-white"
-                : "text-[#082032] bg-[#F5F5F7]"
+            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+              activeSection === "home" ? "bg-[#0076DF]" : "bg-white"
             }`}
             title="Home"
           >
@@ -141,10 +144,8 @@ export default function Navbar() {
           </button>
           <button
             onClick={() => handleNavigate("services")}
-            className={`font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "services"
-                ? "bg-[#082032] text-white"
-                : "text-[#082032] bg-[#F5F5F7]"
+            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+              activeSection === "services" ? "bg-[#0076DF]" : "bg-white"
             }`}
             title="Services"
           >
@@ -152,10 +153,8 @@ export default function Navbar() {
           </button>
           <button
             onClick={() => handleNavigate("about")}
-            className={`font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "about"
-                ? "bg-[#082032] text-white"
-                : "text-[#082032] bg-[#F5F5F7]"
+            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+              activeSection === "about" ? "bg-[#0076DF]" : "bg-white"
             }`}
             title="About"
           >
@@ -164,10 +163,8 @@ export default function Navbar() {
 
           <button
             onClick={() => handleNavigate("blogs")}
-            className={`font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "blogs"
-                ? "bg-[#082032] text-white"
-                : "text-[#082032] bg-[#F5F5F7]"
+            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+              activeSection === "blogs" ? "bg-[#0076DF]" : "bg-white"
             }`}
             title="Blogs"
           >
@@ -175,10 +172,8 @@ export default function Navbar() {
           </button>
           <button
             onClick={() => handleNavigate("contact")}
-            className={`font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "contact"
-                ? "bg-[#082032] text-white"
-                : "text-[#082032] bg-[#F5F5F7]"
+            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+              activeSection === "contact" ? "bg-[#0076DF]" : "bg-white"
             }`}
             title="Contact"
           >

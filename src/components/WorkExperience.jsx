@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
 import Paragraph from "./Paragraph";
-import ShinyText from "./ShinyText";
 //
   // work expreience data bellow
   const logos = [
@@ -45,11 +44,11 @@ export default function WorkExperience() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-20"
+      className="py-10"
     >
       <div className="xl:w-6xl xl:mx-auto">
-        <h2 className="font-bold xl:text-6xl xl:w-4xl xl:mx-auto xl:block text-center xl:mb-15">
-          Work <span className="text-[#F5F5F7]">Experience</span> With
+        <h2 className="font-bold xl:text-3xl text-center xl:mb-5 tracking-wide font-primary">
+          Work <span className="text-[#0076DF]">Experience</span> With
         </h2>
         <Row />
         <Row reverse  />

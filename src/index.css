@@ -2,20 +2,18 @@
 
 /* Dark mode variant */
 @custom-variant dark (&:where(.dark, .dark *));
-
+/*  */
 @theme {
   /* colors */
-  --color-red: #6e026f;
 
   /* font family */
-  --font-primary: "Titillium Web", sans-serif;
+  --font-primary: "Montserrat", sans-serif;
 }
 
 @layer components {
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
   }
 }
-

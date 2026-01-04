@@ -1,7 +1,6 @@
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import WhatsAppButton from "../components/WhatsAppButton";
-import SmoothScroll from "../lib/utils/SmoothScroll";
 import { SearchProvider } from "../context/SearchContext";
 //
 export default function MainLayout({ children }) {
@@ -10,14 +9,12 @@ export default function MainLayout({ children }) {
   //
   return (
     <SearchProvider>
-      <SmoothScroll>
-        <div className="relative dark:bg-black dark:text-white">
-          <Nav />
-          <WhatsAppButton />
-          <main>{children}</main>
-          <Footer />
-        </div>
-      </SmoothScroll>
+      <div className="relative dark:bg-[#232729] dark:text-white">
+        <Nav />
+        <WhatsAppButton />
+        <main>{children}</main>
+        <Footer />
+      </div>
     </SearchProvider>
   );
 }
