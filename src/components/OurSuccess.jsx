@@ -19,7 +19,7 @@ export default function OurAchievements() {
       <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-6">
         <div className="">
           <h2 className="tracking-wide xl:text-3xl font-bold font-primary">
-            Our <span className="text-[#FFE100]">Success</span>
+            Our <span className="text-[#0076DF]">Success</span>
           </h2>
           <div className="flex mt-2">
             {[1, 2, 3, 4, 5].map((item, i) => {
@@ -31,13 +31,13 @@ export default function OurAchievements() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
-                  <CiStar className="text-[#FFE100] xl:text-3xl" />
+                  <CiStar className="text-[#0076DF] xl:text-3xl" />
                 </motion.div>
               );
             })}
           </div>
 
-          <Paragraph className="mt-5 font-medium font-primary">
+          <Paragraph className="mt-2 font-medium font-primary">
             We create smart, creative, and impactful digital solutions that help
             businesses grow with confidence. We deliver high-quality Web
             Development, Digital Marketing, UI/UX Design, SEO, and innovative

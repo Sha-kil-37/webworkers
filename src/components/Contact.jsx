@@ -103,10 +103,10 @@ export default function Contact() {
       className="py-10 relative"
     >
       <div className="xl:w-6xl mx-auto">
-        <h2 className="tracking-wide xl:text-6xl font-bold text-center">
+        <h2 className="tracking-wide font-primary xl:text-3xl font-bold text-center">
           <span className="text-[#0076DF]">Contact</span> Us
         </h2>
-        <Paragraph className="mx-auto xl:w-3xl text-center font-medium mt-5">
+        <Paragraph className="tracking-wide font-primary mx-auto xl:w-3xl text-center font-medium mt-2">
           Let’s bring your ideas to life. Whether you’re looking to build a
           modern website, improve your online visibility with SEO and social
           media marketing, develop a custom application, or integrate AI-powered
@@ -125,8 +125,9 @@ export default function Contact() {
             />
           </div>
           <div className="space-y-4 p-8 shadow">
-            <h3 className="text-xl font-medium text-center text-[#4ED7F1]">
-              Send a message{" "}
+            <h3 className="text-2xl font-medium text-center text-[#0076DF] tracking-wide font-primary">
+              Send a message
+              <span>&#128400;</span>
             </h3>
             <form onSubmit={handleSubmit} className="">
               {/* Name */}
@@ -204,7 +205,7 @@ export default function Contact() {
               <button
                 title="Send Message"
                 type="submit"
-                className="w-full rounded-lg bg-[#0076DF] px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-[#0077dfa6] block mt-5 cursor-pointer shadow-md"
+                className="w-full rounded-lg bg-[#0076DF] px-4 py-2 font-medium text-white transition-all duration-300 hover:bg-[#0077dfa6] block mt-3 cursor-pointer shadow-md font-primary tracking-wide"
               >
                 Send Message
               </button>

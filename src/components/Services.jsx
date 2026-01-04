@@ -81,7 +81,7 @@ export default function Services() {
           <h2 className="tracking-wide xl:text-3xl font-bold text-center xl:w-3xl mx-auto font-primary">
             Meet Our <span className="text-[#0076DF]">Services</span>
           </h2>
-          <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5 font-primary tracking-wide">
+          <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide">
             Our services are built to drive measurable growth. From high-quality
             web and app development to intuitive UI/UX design, SEO, digital
             marketing, and social media strategy, we cover every stage of your
@@ -92,7 +92,7 @@ export default function Services() {
         </motion.div>
 
         {/* Bento Grid */}
-        <div className="xl:grid xl:grid-cols-4  xl:gap-6 mt-10">
+        <div className="xl:grid xl:grid-cols-4  xl:gap-6 mt-5">
           {services.map((service, i) => (
             <motion.div
               key={i}

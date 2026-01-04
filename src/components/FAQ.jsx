@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import Paragraph from "./Paragraph";
 import video from "../assets/video/agency.mp4";
+import { MdContactSupport } from "react-icons/md";
+
 //
 const faqs = [
   {
@@ -9,20 +11,26 @@ const faqs = [
     answer:
       "We provide web design, web development, UI/UX design, branding, and performance optimization services tailored for modern businesses.",
   },
+
   {
-    question: "How long does a project usually take?",
+    question: "Do you develop mobile applications?",
     answer:
-      "Project timelines vary depending on scope, but most websites are completed within 2–4 weeks.",
+      "We develop scalable and secure mobile applications using modern technologies, ensuring smooth performance across Android and iOS platforms where required.",
   },
   {
-    question: "Do you offer post-launch support?",
+    question: "How does your digital marketing service help grow my business?",
     answer:
-      "Yes! We offer ongoing support, maintenance, and performance improvements after project delivery.",
+      "Our digital marketing strategies combine SEO, social media marketing, content planning, and data-driven campaigns to increase brand awareness, engagement, and conversions.",
   },
   {
-    question: "Is my website mobile-friendly?",
+    question: "Can you build custom software for my business needs?",
     answer:
-      "Absolutely. Every website we build is fully responsive and optimized for all devices.",
+      "Yes. We create custom software solutions designed specifically to streamline your operations, improve efficiency, and scale with your business.",
+  },
+  {
+    question: "Do you offer AI integration services?",
+    answer:
+      "We integrate AI-powered solutions such as chatbots, automation tools, data analysis, and intelligent workflows to enhance productivity and customer experience.",
   },
 ];
 //
@@ -40,26 +48,29 @@ export default function FAQ() {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
       className="py-10"
-      
     >
       <div className="xl:w-6xl xl:mx-auto">
-        <h2 className="tracking-wide xl:text-6xl font-bold text-center">
-          How Can I <span className="text-[#81E7AF]">Help</span> You ?
+        <h2 className="tracking-wide xl:text-3xl font-bold text-center font-primary">
+          How Can I <span className="text-[#0076DF]">Help</span> You ?
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5">
-          We offer end-to-end digital solutions designed to help businesses grow
-          smarter and faster. From high-performance Web Development and
-          intuitive UI/UX Design to data-driven Digital Marketing, SEO, and
-          Social Media Marketing, our services are tailored to your goals. We
-          also specialize in App Development, Custom Software Development,
-          Business Consultation, and seamless Artificial Intelligence
-          Integration to ensure your brand stays competitive in a rapidly
-          evolving digital world.
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide">
+          We provide end-to-end digital solutions that help businesses grow
+          smarter and faster—combining high-performance web and app development,
+          intuitive UI/UX design, data-driven digital marketing, SEO, social
+          media marketing, custom software, business consultation, and AI
+          integration to keep your brand competitive.
         </Paragraph>
         {/*  */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center xl:mt-10">
-          <div className="relative bg-rose-500 w-full h-full">
-            <div className="bg-gray-100 absolute bottom-0 right-0 h-[50%] w-[50%] z-10"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 items-center xl:mt-10">
+          <div className="relative w-full h-full">
+            <div className="bg-gray-100 absolute bottom-0 right-0 h-[50%] w-[50%] z-10 flex justify-center items-center">
+              <div>
+                <MdContactSupport className="h-15 w-15 mx-auto text-[#0076DF]" />
+                <h2 className=" mt-3 font-primary tracking-wide font-bold">
+                  Some familiar questions
+                </h2>
+              </div>
+            </div>
             <video
               src={video}
               autoPlay
@@ -68,27 +79,27 @@ export default function FAQ() {
               className="w-full h-full object-cover"
             ></video>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-2">
             {faqs.map((faq, index) => {
               const isOpen = activeIndex === index;
               //
               return (
                 <div
                   key={index}
-                  className="border border-[#F5F5F7] rounded-xl overflow-hidden transition-all duration-500 p-4"
+                  className="border border-[#F5F5F7] rounded-xl overflow-hidden transition-all duration-500 p-3"
                 >
                   {/* Question */}
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full flex items-center justify-between text-left transition-all duration-500"
+                    className="w-full flex items-center justify-between text-left transition-all duration-200"
                   >
-                    <span className="font-medium text-xl">
+                    <span className="font-medium text-xl font-primary tracking-wide">
                       {faq.question}
                     </span>
 
                     <span
-                      className={`text-2xl transform transition-transform duration-300 ${
-                        isOpen ? "rotate-45 text-red-500" : "rotate-0"
+                      className={`text-3xl transform transition-transform duration-300 cursor-pointer ${
+                        isOpen ? "rotate-45 text-[#0076DF]" : "rotate-0"
                       }`}
                     >
                       +
@@ -97,20 +108,19 @@ export default function FAQ() {
 
                   {/* Answer */}
                   <div
-                    className={`grid transition-all duration-500 ease-in-out ${
+                    className={`grid transition-all duration-200 ease-in-out ${
                       isOpen
                         ? "grid-rows-[1fr] opacity-100"
                         : "grid-rows-[0fr] opacity-0"
                     }`}
                   >
-                    <div className="mt-3 overflow-hidden text-[#082032] font-medium">
+                    <div className="overflow-hidden font-medium font-primary tracking-wide">
                       {faq.answer}
                     </div>
                   </div>
                 </div>
               );
             })}
-          
           </div>
         </div>
       </div>

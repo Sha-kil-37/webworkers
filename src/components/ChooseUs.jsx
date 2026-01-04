@@ -46,7 +46,7 @@ export default function ChooseUs() {
           All The <span className="text-[#0076DF]">Benefits</span> You Gain By
           Working With Us
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5 tracking-wide font-primary">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 tracking-wide font-primary">
           We don’t just build digital products—we build solutions that work.
           From web and app development to UI/UX design, SEO, digital marketing,
           and social media growth, our approach is always data-driven and
@@ -54,7 +54,7 @@ export default function ChooseUs() {
           intelligence integration, and strategic business consultation, we help
           businesses innovate faster and stay ahead of the competition.
         </Paragraph>
-        <div className="xl:grid xl:grid-cols-4 mt-5">
+        <div className="xl:grid xl:grid-cols-4 mt-10">
           {features.map((item, i) => {
             const Icon = item.icon;
             return (

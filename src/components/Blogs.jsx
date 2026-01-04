@@ -144,7 +144,7 @@ export default function Blogs() {
               <h2 className="tracking-wide xl:text-3xl font-bold">
                 Read Our <span className="text-[#0076DF]">Blogs</span>
               </h2>
-              <Paragraph className="xl:w-lg mt-5 font-medium tracking-wide font-primary">
+              <Paragraph className="xl:w-lg mt-2 font-medium tracking-wide font-primary">
                 Our blog is a knowledge hub where technology, creativity, and
                 strategy come together. We share practical insights on web
                 development, digital marketing, SEO, social media marketing,

@@ -71,7 +71,7 @@ export default function OurTeam() {
                 {""}
                 Team Members
               </h2>
-              <Paragraph className="xl:w-lg mt-5 font-medium tracking-wide font-primary">
+              <Paragraph className="xl:w-lg mt-2 font-medium tracking-wide font-primary">
                 We are a multidisciplinary digital team driven by innovation and
                 results. Our expertise spans web and app development, UI/UX
                 design, digital marketing, SEO, and social media

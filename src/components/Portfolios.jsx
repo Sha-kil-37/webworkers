@@ -97,7 +97,7 @@ export default function Projects() {
         <h2 className="tracking-wide text-3xl text-center font-bold font-primary">
           Our <span className="text-[#0076DF]">Portfolios</span>
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-5 tracking-wide font-primary">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 tracking-wide font-primary">
           Every project we deliver is designed with innovation and scalability
           in mind. We work across web development, digital marketing, SEO,
           social media marketing, UI/UX design, and app development—supported by
@@ -105,7 +105,7 @@ export default function Projects() {
           integration. Our focus is on creating digital products that are
           user-centric, data-driven, and future-ready.
         </Paragraph>
-        <div className="flex mt-10 items-center justify-center gap-3 flex-wrap">
+        <div className="flex mt-5 items-center justify-center gap-3 flex-wrap">
           {categories.map((cat) => (
             <motion.button
               title={cat}
