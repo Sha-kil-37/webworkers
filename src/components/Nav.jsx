@@ -106,7 +106,7 @@ export default function Navbar() {
 
         {/* Search Input */}
         {showSearch && (
-          <div className="relative group xl:w-96">
+          <div className="relative group xl:w-96 lg:w-80">
             <span className="absolute left-2 top-1/2 -translate-y-1/2 group-focus-within:text-[#0076DF] transition duration-200">
               <IoSearchOutline className="" size={18} />
             </span>
