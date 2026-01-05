@@ -63,7 +63,7 @@ export default function Services() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       id="services"
-      className="xl:py-20 py-10"
+      className="xl:py-20 py-10 md:py-10"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
         {/* Section Header */}

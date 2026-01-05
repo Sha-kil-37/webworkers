@@ -89,11 +89,11 @@ export default function Navbar() {
   //
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-20 transition-all duration-200 ${
+      className={`fixed top-0 left-0 w-full z-20 transition-all duration-200 md:bg-amber-200  ${
         scrolled ? "bg-white dark:bg-[#232729] shadow" : "bg-transparent"
       }`}
     >
-      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto py-4 xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between ">
+      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto py-4 xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between px-6">
         {/* Logo */}
         <motion.h3
           onClick={() => handleNavigate("home")}

@@ -43,10 +43,10 @@ const CounterItem = ({ end, label, duration = 2000 }) => {
   //
   return (
     <div ref={ref}>
-      <h3 className="text-[#0076DF] text-center xl:text-3xl xl:font-bold xl:tracking-wide font-primary lg:text-3xl lg:font-bold lg:tracking-wide">
+      <h3 className="text-[#0076DF] text-center xl:text-3xl xl:font-bold xl:tracking-wide font-primary lg:text-3xl lg:font-bold lg:tracking-wide md:tracking-wide md:text-3xl md:font-bold font-bold">
         {count}+
       </h3>
-      <Paragraph className="text-center mt-2 uppercase xl:tracking-wide font-medium font-primary lg:tracking-wide lg:mt-2 lg:font-medium">
+      <Paragraph className="text-center mt-2 uppercase xl:tracking-wide md:font-primary md:tracking-wide md:mt-2 font-medium font-primary lg:tracking-wide lg:mt-2 lg:font-medium md:font-medium">
         {label}
       </Paragraph>
     </div>
