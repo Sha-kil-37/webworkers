@@ -41,18 +41,16 @@ export default function ChooseUs() {
       transition={{ duration: 1 }}
       className="xl:py-10 overflow-hidden lg:py-8"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto lg:px-8">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
         <h2 className="text-3xl font-bold text-center max-w-3xl mx-auto font-primary xl:tracking-wide lg:text-3xl lg:tracking-wide">
           All The <span className="text-[#0076DF]">Benefits</span> You Gain By
           Working With Us
         </h2>
         <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 tracking-wide font-primary lg:w-3xl lg:mx-auto lg:text-center lg:mt-2 lg:tracking-wide">
-          We don’t just build digital products—we build solutions that work.
-          From web and app development to UI/UX design, SEO, digital marketing,
-          and social media growth, our approach is always data-driven and
-          results-focused. By combining custom software development, artificial
-          intelligence integration, and strategic business consultation, we help
-          businesses innovate faster and stay ahead of the competition.
+          We build results-driven digital solutions—from web and app development
+          to UI/UX, SEO, and digital marketing—powered by custom software, AI
+          integration, and strategic business consultation to help businesses
+          stay ahead.
         </Paragraph>
         <div className="xl:grid xl:grid-cols-4 mt-10 lg:grid lg:grid-cols-4 lg:mt-8">
           {features.map((item, i) => {

@@ -16,7 +16,7 @@ export default function OurAchievements() {
       transition={{ duration: 1 }}
       className="xl:py-10 relative lg:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-6 lg:w-5xl lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-6 lg:px-8">
+      <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-6 lg:w-5xl lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-6">
         <div className="">
           <h2 className="xl:tracking-wide xl:text-3xl font-bold font-primary lg:tracking-wide lg:font-bold lg:text-3xl">
             Our <span className="text-[#0076DF]">Success</span>

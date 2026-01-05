@@ -4,7 +4,6 @@ import Paragraph from "./Paragraph";
 import toast from "react-hot-toast";
 const formspreeApi = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 import { useNavigate } from "react-router";
-
 //
 //
 export default function Contact() {
@@ -100,13 +99,13 @@ export default function Contact() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-20 relative"
+      className="xl:py-10 relative lg:py-10"
     >
-      <div className="xl:w-6xl mx-auto">
-        <h2 className="tracking-wide font-primary xl:text-3xl font-bold text-center">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
+        <h2 className="tracking-wide font-primary xl:text-3xl font-bold text-center lg:text-3xl">
           <span className="text-[#0076DF]">Contact</span> Us
         </h2>
-        <Paragraph className="tracking-wide font-primary mx-auto xl:w-3xl text-center font-medium mt-2">
+        <Paragraph className="tracking-wide font-primary mx-auto xl:w-3xl text-center font-medium xl:mt-2 lg:mt-2 lg:w-2xl lg:tracking-wide">
           Let’s bring your ideas to life. Whether you’re looking to build a
           modern website, improve your online visibility with SEO and social
           media marketing, develop a custom application, or integrate AI-powered
@@ -114,7 +113,7 @@ export default function Contact() {
           we can grow your business together.
         </Paragraph>
         {/*  */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center xl:mt-10">
+        <div className="w-full xl:grid xl:grid-cols-2 xl:mt-10 xl:gap-12 xl:items-center lg:grid lg:grid-cols-2 lg:mt-10 lg:gap-10 lg:items-center">
           <div className="w-full h-full">
             <iframe
               title="Office Location"

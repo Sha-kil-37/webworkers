@@ -1,8 +1,8 @@
-import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import Paragraph from "../components/Paragraph";
 import { Link } from "react-router";
 import { FaDiscord } from "react-icons/fa6";
-
+//
 //
 export default function Footer() {
   //
@@ -13,10 +13,10 @@ export default function Footer() {
   };
   //
   return (
-    <footer className="py-10 bg-[#F5F5F7] dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto">
+    <footer className="xl:py-10 bg-[#F5F5F7] dark:bg-gray-800 lg:py-10">
+      <div className="xl:w-6xl mx-auto lg:w-5xl">
         {/* Grid */}
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="xl:grid xl:gap-12 xl:grid-cols-4 lg:grid lg:gap-10 lg:grid-cols-4">
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-bold tracking-wide font-primary">
@@ -30,7 +30,9 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="mb-2 font-semibold font-primary tracking-wide">Company</h3>
+            <h3 className="mb-2 font-semibold font-primary tracking-wide">
+              Company
+            </h3>
             <div className="space-y-1">
               <button
                 onClick={() => scrollTo("about")}
@@ -129,7 +131,9 @@ export default function Footer() {
           </div>
           {/* Contact */}
           <div>
-            <h3 className="mb-2 font-semibold font-primary tracking-wide">Say Hello</h3>
+            <h3 className="mb-2 font-semibold font-primary tracking-wide">
+              Say Hello
+            </h3>
             <Link
               title="Mail"
               to="mailto:sakildevmern@gmail.com"
@@ -186,11 +190,17 @@ export default function Footer() {
             &copy;{new Date().getFullYear()} Web Workers Agency. All rights
             reserved.
           </Paragraph>
-          <div className="flex gap-x-4 mt-2">
-            <Link to={"/terms&privacy"} className="font-medium  font-primary tracking-wide block">
+          <div className="xl:flex xl:gap-x-4 xl:mt-2 lg:flex lg:gap-x-4 lg:mt-2">
+            <Link
+              to={"/terms&privacy"}
+              className="font-medium  font-primary tracking-wide block"
+            >
               Privacy Policy
             </Link>
-            <Link to={"/terms&privacy"} className="font-medium  font-primary tracking-wide block">
+            <Link
+              to={"/terms&privacy"}
+              className="font-medium  font-primary tracking-wide block"
+            >
               Terms
             </Link>
           </div>

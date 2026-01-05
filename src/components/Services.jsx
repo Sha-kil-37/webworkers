@@ -65,7 +65,7 @@ export default function Services() {
       id="services"
       className="xl:py-20 py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto lg:px-8">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
         {/* Section Header */}
         <div>
           <h2 className="xl:tracking-wide xl:text-3xl font-bold text-center xl:w-3xl mx-auto font-primary lg:tracking-wide lg:font-bold lg:text-3xl">

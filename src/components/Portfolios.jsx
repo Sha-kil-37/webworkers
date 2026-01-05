@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
 import { useSearch } from "../context/SearchContext";
-
+//
 //
 export default function Projects() {
   //
@@ -90,31 +90,28 @@ export default function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-20"
+      className="xl:py-15 lg:py-10"
     >
-      <div className="xl:w-6xl mx-auto relative">
-        <h2 className="tracking-wide text-3xl text-center font-bold font-primary">
+      <div className="xl:w-6xl xl:mx-auto relative lg:w-5xl lg:mx-auto">
+        <h2 className="tracking-wide text-3xl text-center font-bold font-primary lg:text-3xl lg:tracking-wide">
           Our <span className="text-[#0076DF]">Portfolios</span>
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 tracking-wide font-primary">
-          Every project we deliver is designed with innovation and scalability
-          in mind. We work across web development, digital marketing, SEO,
-          social media marketing, UI/UX design, and app development—supported by
-          expert business consultation, custom software solutions, and AI
-          integration. Our focus is on creating digital products that are
-          user-centric, data-driven, and future-ready.
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 tracking-wide font-primary lg:mt-2 lg:tracking-wide lg:w-3xl lg:mx-auto">
+          Every project we deliver is built for innovation and scalability. We
+          provide web development, digital marketing, SEO, social media
+          marketing, UI/UX design, and app development—backed by business
+          consultation, custom software, and AI integration—to create
+          user-centric, data-driven, future-ready digital solutions.
         </Paragraph>
-        <div className="flex mt-5 items-center justify-center gap-3 flex-wrap">
+        <div className="xl:flex xl:mt-5 xl:items-center xl:justify-center xl:gap-3 xl:flex-wrap lg:mt-4 lg:flex lg:items-center lg:justify-center lg:gap-3 lg:flex-wrap">
           {categories.map((cat) => (
             <motion.button
               title={cat}
               key={cat}
               layoutId={`project-filter-${cat}`}
               onClick={() => setProjectActiveCategory(cat)}
-              className={`whitespace-nowrap xl:px-4 xl:py-2 rounded-full cursor-pointer transition-colors duration-200 font-medium shadow font-primary tracking-wide ${
-                projectActiveCategory === cat
-                  ? " text-[#0076DF]"
-                  : " "
+              className={`whitespace-nowrap xl:px-4 xl:py-2 rounded-full cursor-pointer transition-colors duration-200 font-medium shadow font-primary tracking-wide lg:px-4 lg:py-2 ${
+                projectActiveCategory === cat ? " text-[#0076DF]" : " "
               }`}
               aria-pressed={projectActiveCategory === cat}
             >
@@ -122,12 +119,12 @@ export default function Projects() {
             </motion.button>
           ))}
         </div>
-        <div className="xl:grid xl:grid-cols-3 gap-6 xl:mt-10">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-6 xl:mt-10 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-8">
           {filtered.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}
               key={i}
-              className="cursor-pointer group overflow-hidden rounded-lg"
+              className="cursor-pointer group overflow-hidden rounded-lg shadow"
             >
               {/* Image */}
               <div className="relative h-60 overflow-hidden">
@@ -137,24 +134,26 @@ export default function Projects() {
                   alt={project.image}
                 />
               </div>
-              <Paragraph className="mt-3 font-primary tracking-wide">
-                {project.category}
-              </Paragraph>
-              <Paragraph className="font-medium text-xl font-primary tracking-wider">
-                {project.title}
-              </Paragraph>
-              <div className="flex gap-x-2 mt-3 p-2">
-                {project.tech.map((tech, i) => {
-                  return (
-                    <Paragraph
-                      title={tech}
-                      key={i}
-                      className="px-2 rounded-full shadow font-medium font-primary tracking-wide"
-                    >
-                      {tech}
-                    </Paragraph>
-                  );
-                })}
+              <div className="xl:p-4 lg:p-4">
+                <Paragraph className="font-primary tracking-wide">
+                  {project.category}
+                </Paragraph>
+                <Paragraph className="font-medium text-xl font-primary tracking-wider lg:text-lg lg:tracking-wide">
+                  {project.title}
+                </Paragraph>
+                <div className="xl:flex xl:gap-x-2 xl:mt-3 lg:flex lg:gap-x-2 lg:mt-2">
+                  {project.tech.map((tech, i) => {
+                    return (
+                      <Paragraph
+                        title={tech}
+                        key={i}
+                        className="xl:px-2 rounded-full shadow font-medium font-primary tracking-wide lg:px-2"
+                      >
+                        {tech}
+                      </Paragraph>
+                    );
+                  })}
+                </div>
               </div>
             </Link>
           ))}

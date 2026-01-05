@@ -62,7 +62,7 @@ export default function OurTeam() {
       transition={{ duration: 1 }}
       className="xl:py-10 lg:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto lg:px-8">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
         <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-10">
           <aside className="md:col-span-1 xl:border-r border-[#F5F5F7]">
             <div className="xl:sticky xl:top-16 lg:sticky lg:top-16">
@@ -88,7 +88,7 @@ export default function OurTeam() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="group rounded-2xl overflow-hidden xl:my-4 shadow lg:mb-4"
+                className="group rounded-2xl overflow-hidden xl:mb-4 shadow lg:mb-4"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden">

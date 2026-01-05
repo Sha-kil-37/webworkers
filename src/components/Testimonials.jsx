@@ -72,37 +72,32 @@ const Testimonials = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="relative py-10"
+      className="relative py-10 lg:py-10"
     >
-      <div className="xl:w-6xl mx-auto overflow-hidden">
-        <h2 className="tracking-wide text-center xl:text-3xl font-bold font-primary">
+      <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden">
+        <h2 className="tracking-wide text-center xl:text-3xl font-bold font-primary lg:text-3xl lg:tracking-wide">
           What does our <span className="text-[#0076DF]">client</span> say ?
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide">
-          Our clients trust us because we deliver more than just services—we
-          deliver results. From Web Development and UI/UX Design to Digital
-          Marketing, SEO, and Social Media Marketing, we help businesses build
-          strong digital identities. Whether it’s App Development, Custom
-          Software, AI Integration, or Business Consultation, our solutions are
-          crafted to solve real problems and drive measurable growth.
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:w-3xl lg:mx-auto">
+          Our clients trust us because we deliver results, not just services.
+          From web development and UI/UX design to digital marketing, SEO, and
+          social media, we build strong digital identities through smart,
+          growth-driven solutions.
         </Paragraph>
-        <div ref={trackRef} className="flex w-max py-5 mt-5">
+        <div ref={trackRef} className="xl:flex xl:w-max xl:py-5 xl:mt-5 lg:flex lg:w-max lg:py-4 lg:mt-2">
           {[...reviews, ...reviews].map((item, index) => (
-            <div
-              key={index}
-              className="mx-2 w-[300px] rounded-xl p-4 shadow "
-            >
+            <div key={index} className="xl:mx-2 xl:w-[300px] rounded-xl xl:p-4 shadow lg:mx-2 lg:w-[250px] lg:p-4 lg:shadow">
               <TruncateText
                 className="font-medium font-secondary tracking-wide"
                 text={item.review}
                 limit={15}
               />
-              <div className="flex justify-between items-center mt-3">
+              <div className="xl:flex xl:justify-between xl:items-center xl:mt-3 lg:flex lg:justify-between lg:items-center lg:mt-2">
                 <div>
-                  <Paragraph className="font-medium font-secondary">
+                  <Paragraph className="font-medium font-secondary tracking-wide lg:tracking-wide">
                     {item.name}
                   </Paragraph>
-                  <Paragraph className="font-secondary">{item.role}</Paragraph>
+                  <Paragraph className="font-secondary tracking-wide lg:tracking-wide">{item.role}</Paragraph>
                 </div>
                 <div>
                   <Paragraph className="text-center font-secondary">

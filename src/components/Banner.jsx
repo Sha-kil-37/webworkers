@@ -14,7 +14,7 @@ export default function Banner() {
       id="home"
       className="xl:py-45 bg-[#F5F5F7] dark:bg-[#232729] lg:py-36"
     >
-      <div className="relative xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto lg:px-8">
+      <div className="relative xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
         <TextFlip
           text="We Build Creative Digital Solutions"
           words={[
