@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import Paragraph from "./Paragraph";
 import { TextFlip } from "./TextFlip";
-
+// 
 // import background from "../assets/backgroundImages/background.jpg";
 
 //
@@ -12,9 +12,9 @@ export default function Banner() {
   return (
     <motion.section
       id="home"
-      className="xl:py-45 bg-[#F5F5F7] dark:bg-[#232729]"
+      className="xl:py-45 bg-[#F5F5F7] dark:bg-[#232729] lg:py-36"
     >
-      <div className="relative xl:w-6xl mx-auto ">
+      <div className="relative xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto lg:px-8">
         <TextFlip
           text="We Build Creative Digital Solutions"
           words={[
@@ -30,7 +30,7 @@ export default function Banner() {
           ]}
           duration={2000}
         />
-        <Paragraph className="xl:tracking-wide font-primary font-medium xl:mt-7 xl:w-xl">
+        <Paragraph className="xl:tracking-wide font-primary font-medium xl:mt-7 xl:w-xl lg:w-lg lg:mt-5">
           In today’s fast-moving digital world, Every business needs a strong
           online presence to thrive in the digital world. With{" "}
           <span className="text-[#0076DF]">“We Build Creative Digital Solutions,”</span> we deliver

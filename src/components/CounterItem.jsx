@@ -21,32 +21,32 @@ const CounterItem = ({ end, label, duration = 2000 }) => {
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
-
+  //
   const animateCount = () => {
     let start = 0;
     const startTime = performance.now();
-
+    //
     const update = (currentTime) => {
       const progress = Math.min((currentTime - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
       const value = Math.floor(eased * end);
-
+      //
       setCount(value);
-
+      //
       if (progress < 1) {
         requestAnimationFrame(update);
       }
     };
-
+    //
     requestAnimationFrame(update);
   };
   //
   return (
     <div ref={ref}>
-      <h3 className="text-[#0076DF] text-center xl:text-3xl font-bold tracking-wide font-primary">
+      <h3 className="text-[#0076DF] text-center xl:text-3xl xl:font-bold xl:tracking-wide font-primary lg:text-3xl lg:font-bold lg:tracking-wide">
         {count}+
       </h3>
-      <Paragraph className="text-center mt-2 uppercase tracking-wide font-medium font-primary">
+      <Paragraph className="text-center mt-2 uppercase xl:tracking-wide font-medium font-primary lg:tracking-wide lg:mt-2 lg:font-medium">
         {label}
       </Paragraph>
     </div>

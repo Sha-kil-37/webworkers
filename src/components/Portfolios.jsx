@@ -1,9 +1,8 @@
 import { motion } from "motion/react";
-import { FaArrowUpLong } from "react-icons/fa6";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router";
 import { useSearch } from "../context/SearchContext";
-//
+
 //
 export default function Projects() {
   //
@@ -86,12 +85,12 @@ export default function Projects() {
   //
   return (
     <motion.section
-      id="projects"
+      id="portfolios"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-10"
+      className="py-20"
     >
       <div className="xl:w-6xl mx-auto relative">
         <h2 className="tracking-wide text-3xl text-center font-bold font-primary">
@@ -114,8 +113,8 @@ export default function Projects() {
               onClick={() => setProjectActiveCategory(cat)}
               className={`whitespace-nowrap xl:px-4 xl:py-2 rounded-full cursor-pointer transition-colors duration-200 font-medium shadow font-primary tracking-wide ${
                 projectActiveCategory === cat
-                  ? " bg-[#0076DF]"
-                  : " bg-[#F5F5F7]"
+                  ? " text-[#0076DF]"
+                  : " "
               }`}
               aria-pressed={projectActiveCategory === cat}
             >
@@ -144,13 +143,13 @@ export default function Projects() {
               <Paragraph className="font-medium text-xl font-primary tracking-wider">
                 {project.title}
               </Paragraph>
-              <div className="flex gap-x-2 mt-3">
+              <div className="flex gap-x-2 mt-3 p-2">
                 {project.tech.map((tech, i) => {
                   return (
                     <Paragraph
                       title={tech}
                       key={i}
-                      className="px-2 rounded-full bg-[#F5F5F7] font-medium font-primary tracking-wide"
+                      className="px-2 rounded-full shadow font-medium font-primary tracking-wide"
                     >
                       {tech}
                     </Paragraph>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation, useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
 import DarkModeToggle from "../lib/utils/DarkModeToggle";
@@ -40,7 +40,7 @@ export default function Navbar() {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
       const blogsElement = document.getElementById("blogs");
-      const projectsElement = document.getElementById("projects");
+      const projectsElement = document.getElementById("portfolios");
       if (blogsElement) {
         const rect = blogsElement.getBoundingClientRect();
         // Show search only when scrolled 100px into the blog section
@@ -51,7 +51,14 @@ export default function Navbar() {
         // Show project filters only when scrolled 100px into the projects section
         setShowProjectFilters(rect.top < -100 && rect.bottom > 0);
       }
-      const sections = ["home", "about", "services", "blogs", "contact"];
+      const sections = [
+        "home",
+        "about",
+        "portfolios",
+        "services",
+        "blogs",
+        "contact",
+      ];
       let current = "";
       for (let section of sections) {
         const element = document.getElementById(section);
@@ -78,30 +85,28 @@ export default function Navbar() {
     }
   }
   //
+  // console.log(currentPath.pathname)
+  //
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-20 transition-all duration-200 ${
-        scrolled
-          ? "bg-white/70 backdrop-blur dark:bg-black/70 shadow"
-          : "bg-transparent "
+      className={`lg:bg-red-500 xl:bg-amber-200 fixed top-0 left-0 w-full z-20 transition-all duration-200 ${
+        scrolled ? "bg-white dark:bg-[#232729] shadow" : "bg-transparent"
       }`}
     >
-      <nav className="xl:w-6xl mx-auto py-4 xl:flex xl:items-center xl:justify-between">
+      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto lg:px-8 xl:mx-auto py-4 xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between ">
         {/* Logo */}
-        {showProjectFilters ? null : (
-          <motion.h3
-            onClick={() => handleNavigate("home")}
-            layoutId="site-logo"
-            title="Home"
-            className="text-xl font-bold cursor-pointer font-primary tracking-wide"
-          >
-            AGENCY
-          </motion.h3>
-        )}
+        <motion.h3
+          onClick={() => handleNavigate("home")}
+          layoutId="site-logo"
+          title="Home"
+          className="text-xl font-bold cursor-pointer font-primary tracking-wide"
+        >
+          AGENCY
+        </motion.h3>
 
         {/* Search Input */}
         {showSearch && (
-          <div className="relative group">
+          <div className="relative group xl:w-96">
             <span className="absolute left-2 top-1/2 -translate-y-1/2 group-focus-within:text-[#0076DF] transition duration-200">
               <IoSearchOutline className="" size={18} />
             </span>
@@ -115,7 +120,7 @@ export default function Navbar() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-2 focus:outline focus:outline-[#0076DF]
                     focus:border-[#0076DF]
-                    transition-all duration-200 font-primary tracking-wide font-medium bg-[#F5F5F7] rounded"
+                    transition-all duration-200 font-primary tracking-wide font-medium shadow rounded"
             />
           </div>
         )}
@@ -130,9 +135,7 @@ export default function Navbar() {
                 layoutId={`project-filter-${cat}`}
                 onClick={() => setProjectActiveCategory(cat)}
                 className={`whitespace-nowrap px-3 py-1 rounded-full cursor-pointer transition-colors duration-200 font-medium font-primary tracking-wide ${
-                  projectActiveCategory === cat
-                    ? "bg-[#0076DF]"
-                    : "bg-[#F5F5F7]"
+                  projectActiveCategory === cat ? "text-[#0076DF]" : ""
                 }`}
                 aria-pressed={projectActiveCategory === cat}
               >
@@ -141,14 +144,14 @@ export default function Navbar() {
             ))}
           </div>
         )}
-
+        {/*  */}
         {/* Desktop Menu */}
         {showProjectFilters ? null : showSearch ? null : (
-          <div className="xl:flex items-center hidden">
+          <div className="xl:flex xl:items-center lg:flex lg:items-center hidden">
             <button
               onClick={() => handleNavigate("home")}
               className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-                activeSection === "home" ? "bg-[#0076DF]" : "bg-white"
+                activeSection === "home" ? "text-[#0076DF]" : ""
               }`}
               title="Home"
             >
@@ -157,26 +160,34 @@ export default function Navbar() {
             <button
               onClick={() => handleNavigate("services")}
               className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-                activeSection === "services" ? "bg-[#0076DF]" : "bg-white"
+                activeSection === "services" ? "text-[#0076DF]" : ""
               }`}
               title="Services"
             >
               Services
             </button>
             <button
+              onClick={() => handleNavigate("portfolios")}
+              className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+                activeSection === "portfolios" ? "text-[#0076DF]" : ""
+              }`}
+              title="Portfolios"
+            >
+              Portfolios
+            </button>
+            <button
               onClick={() => handleNavigate("about")}
               className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-                activeSection === "about" ? "bg-[#0076DF]" : "bg-white"
+                activeSection === "about" ? "text-[#0076DF]" : ""
               }`}
               title="About"
             >
               About
             </button>
-
             <button
               onClick={() => handleNavigate("blogs")}
               className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-                activeSection === "blogs" ? "bg-[#0076DF]" : "bg-white"
+                activeSection === "blogs" ? "text-[#0076DF]" : ""
               }`}
               title="Blogs"
             >
@@ -185,7 +196,7 @@ export default function Navbar() {
             <button
               onClick={() => handleNavigate("contact")}
               className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-                activeSection === "contact" ? "bg-[#0076DF]" : "bg-white"
+                activeSection === "contact" ? "text-[#0076DF]" : ""
               }`}
               title="Contact"
             >
@@ -193,7 +204,7 @@ export default function Navbar() {
             </button>
           </div>
         )}
-
+        {/*  */}
         <DarkModeToggle className="text-2xl cursor-pointer" />
         {/* Mobile Button */}
         <button

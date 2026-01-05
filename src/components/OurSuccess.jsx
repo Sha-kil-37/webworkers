@@ -14,11 +14,11 @@ export default function OurAchievements() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-10 relative"
+      className="xl:py-10 relative lg:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-6">
+      <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-6 lg:w-5xl lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-6 lg:px-8">
         <div className="">
-          <h2 className="tracking-wide xl:text-3xl font-bold font-primary">
+          <h2 className="xl:tracking-wide xl:text-3xl font-bold font-primary lg:tracking-wide lg:font-bold lg:text-3xl">
             Our <span className="text-[#0076DF]">Success</span>
           </h2>
           <div className="flex mt-2">
@@ -31,13 +31,13 @@ export default function OurAchievements() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
-                  <CiStar className="text-[#0076DF] xl:text-3xl" />
+                  <CiStar className="text-[#0076DF] xl:text-3xl lg:text-3xl" />
                 </motion.div>
               );
             })}
           </div>
 
-          <Paragraph className="mt-2 font-medium font-primary">
+          <Paragraph className="xl:mt-2 lg:mt-2 font-medium font-primary xl:tracking-wide lg:tracking-wide">
             We create smart, creative, and impactful digital solutions that help
             businesses grow with confidence. We deliver high-quality Web
             Development, Digital Marketing, UI/UX Design, SEO, and innovative
@@ -45,7 +45,7 @@ export default function OurAchievements() {
             meaningful digital experiences that drive real results.
           </Paragraph>
         </div>
-        <div className="xl:grid grid-cols-2">
+        <div className="xl:grid xl:grid-cols-2 lg:grid lg:grid-cols-2">
           <CounterItem end={120} label="Projects Completed" />
           <CounterItem end={80} label="Happy Clients" />
           <CounterItem end={5} label="Years Experience" />

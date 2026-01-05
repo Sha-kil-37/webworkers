@@ -174,7 +174,7 @@ export default function Blogs() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF]
-          transition-all duration-200 font-primary tracking-wide font-medium bg-[#F5F5F7] rounded"
+          transition-all duration-200 font-primary tracking-wide font-medium shadow rounded"
               />
             </div>
             <div className="mt-3 flex flex-wrap gap-2">
@@ -186,8 +186,8 @@ export default function Blogs() {
                   className={`px-3  inline-block rounded-xl font-medium cursor-pointer font-primary tracking-wide transition-all duration-200 ${
                     selectedCategory === category ||
                     (category === "All" && !selectedCategory)
-                      ? "bg-[#0076DF]"
-                      : "bg-gray-100"
+                      ? "text-[#0076DF] shadow"
+                      : "shadow"
                   }`}
                 >
                   {category}
@@ -208,7 +208,7 @@ export default function Blogs() {
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   />
                 </div>
-                <div className="bg-[#F5F5F7] p-6">
+                <div className="p-6">
                   <Paragraph className="font-medium tracking-wide font-primary">
                     {blog.category}
                   </Paragraph>

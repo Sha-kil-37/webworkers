@@ -133,7 +133,7 @@ export default function Contact() {
               {/* Name */}
               <div>
                 <label htmlFor="name" className="font-medium tracking-wide font-primary">
-                  Your Name
+                  Name
                 </label>
                 <input
                   type="text"
@@ -141,7 +141,7 @@ export default function Contact() {
                   placeholder="Inter your name"
                   value={values.name}
                   onChange={handleChange}
-                  className={`mt-1 font-medium bg-[#F5F5F7] block w-full rounded font-primary tracking-wide px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
+                  className={`mt-1 font-medium shadow block w-full rounded font-primary tracking-wide px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF] 
             ${errors.name ? "" : ""}`}
                 />
@@ -155,7 +155,7 @@ export default function Contact() {
               {/* Email */}
               <div className="mt-2">
                 <label htmlFor="email" className="font-medium tracking-wide font-primary">
-                  Your Email
+                  Email
                 </label>
                 <input
                   type="email"
@@ -163,7 +163,7 @@ export default function Contact() {
                   placeholder="Inter your email"
                   value={values.email}
                   onChange={handleChange}
-                  className={`font-medium font-primary tracking-wide bg-[#F5F5F7] mt-1 w-full rounded px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
+                  className={`font-medium font-primary tracking-wide shadow mt-1 w-full rounded px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF] 
             ${errors.email ? "" : ""}`}
                 />
@@ -177,7 +177,7 @@ export default function Contact() {
               {/* Message */}
               <div className="mt-2 relative">
                 <label htmlFor="message" className="font-medium font-primary tracking-wide">
-                  Your Message
+                  Message
                 </label>
 
                 <textarea
@@ -186,7 +186,7 @@ export default function Contact() {
                   rows={5}
                   value={values.message}
                   onChange={handleChange}
-                  className="mt-1 bg-[#F5F5F7] w-full rounded px-4 py-2 resize-none font-medium transition-all duration-200 focus:outline focus:outline-[#0076DF]
+                  className="mt-1 shadow w-full rounded px-4 py-2 resize-none font-medium transition-all duration-200 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF] font-primary tracking-wide"
                 />
 

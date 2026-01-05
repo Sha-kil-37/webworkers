@@ -90,7 +90,7 @@ const Testimonials = () => {
           {[...reviews, ...reviews].map((item, index) => (
             <div
               key={index}
-              className="mx-2 w-[300px] rounded-xl p-4 shadow bg-[#F5F5F7]"
+              className="mx-2 w-[300px] rounded-xl p-4 shadow "
             >
               <TruncateText
                 className="font-medium font-secondary tracking-wide"

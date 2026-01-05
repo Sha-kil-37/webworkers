@@ -44,10 +44,10 @@ export default function WorkExperience() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="py-10"
+      className="xl:py-10 lg:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto">
-        <h2 className="font-bold xl:text-3xl text-center xl:mb-5 tracking-wide font-primary">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto lg:px-8">
+        <h2 className="font-bold xl:text-3xl text-center xl:mb-5 tracking-wide font-primary lg:font-bold lg:tracking-wide lg:mb-5 lg:text-3xl">
           Work <span className="text-[#0076DF]">Experience</span> With
         </h2>
         <Row />
