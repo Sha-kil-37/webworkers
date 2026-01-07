@@ -86,14 +86,14 @@ export default function FAQ() {
               return (
                 <div
                   key={index}
-                  className="border border-[#F5F5F7] rounded-xl overflow-hidden transition-all duration-200 xl:p-3 lg:p-3"
+                  className="border border-[#F5F5F7] rounded-xl overflow-hidden transition-all duration-200 xl:p-3 lg:p-3 md:p-2"
                 >
                   {/* Question */}
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex items-center justify-between text-left transition-all duration-200"
                   >
-                    <span className="font-medium text-xl font-primary tracking-wide">
+                    <span className="font-medium xl:text-xl 2xl:text-xl lg:text-xl md:text-lg font-primary tracking-wide">
                       {faq.question}
                     </span>
 
