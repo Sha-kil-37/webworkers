@@ -99,13 +99,13 @@ export default function Contact() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 relative lg:py-10"
+      className="xl:py-10 relative lg:py-10 md:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
-        <h2 className="tracking-wide font-primary xl:text-3xl font-bold text-center lg:text-3xl">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-6 md:mx-auto">
+        <h2 className="tracking-wide font-primary xl:text-3xl font-bold text-center lg:text-3xl md:text-2xl">
           <span className="text-[#0076DF]">Contact</span> Us
         </h2>
-        <Paragraph className="tracking-wide font-primary mx-auto xl:w-3xl text-center font-medium xl:mt-2 lg:mt-2 lg:w-2xl lg:tracking-wide">
+        <Paragraph className="tracking-wide font-primary mx-auto xl:w-3xl text-center font-medium xl:mt-2 lg:mt-2 lg:w-2xl lg:tracking-wide md:mt-2 ">
           Let’s bring your ideas to life. Whether you’re looking to build a
           modern website, improve your online visibility with SEO and social
           media marketing, develop a custom application, or integrate AI-powered
@@ -113,7 +113,7 @@ export default function Contact() {
           we can grow your business together.
         </Paragraph>
         {/*  */}
-        <div className="w-full xl:grid xl:grid-cols-2 xl:mt-10 xl:gap-12 xl:items-center lg:grid lg:grid-cols-2 lg:mt-10 lg:gap-10 lg:items-center">
+        <div className="w-full xl:grid xl:grid-cols-2 xl:mt-10 xl:gap-12 xl:items-center lg:grid lg:grid-cols-2 lg:mt-10 lg:gap-10 lg:items-center md:mt-10 md:grid md:grid-cols-2 md:gap-8 md:items-center">
           <div className="w-full h-full">
             <iframe
               title="Office Location"
@@ -124,7 +124,7 @@ export default function Contact() {
             />
           </div>
           <div className="space-y-4 p-8 shadow">
-            <h3 className="text-2xl font-medium text-center text-[#0076DF] tracking-wide font-primary">
+            <h3 className="text-2xl font-medium text-center text-[#0076DF] tracking-wide font-primary md:text-xl">
               Send a message
               <span>&#128400;</span>
             </h3>
