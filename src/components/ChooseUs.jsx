@@ -46,7 +46,7 @@ export default function ChooseUs() {
           All The <span className="text-[#0076DF]">Benefits</span> You Gain By
           Working With Us
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 tracking-wide font-primary lg:w-3xl lg:mx-auto lg:text-center lg:mt-2 lg:tracking-wide md:tracking-wide md:mt-2">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 tracking-wide font-primary lg:w-3xl lg:mx-auto lg:text-center lg:mt-2 lg:tracking-wide md:tracking-wide md:mt-2  md:w-2xl md:mx-auto">
           We build results-driven digital solutions—from web and app development
           to UI/UX, SEO, and digital marketing—powered by custom software, AI
           integration, and strategic business consultation to help businesses

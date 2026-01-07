@@ -71,7 +71,7 @@ export default function Services() {
           <h2 className="xl:tracking-wide xl:text-3xl font-bold text-center xl:w-3xl mx-auto font-primary lg:tracking-wide lg:font-bold lg:text-3xl md:text-2xl md:font-bold md:tracking-wide">
             Meet Our <span className="text-[#0076DF]">Services</span>
           </h2>
-          <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:tracking-wide lg:w-4xl lg:mx-auto lg:mt-2 md:tracking-wide md:mt-2 md:font-medium md:font-primary">
+          <Paragraph className="font-primary font-medium text-center tracking-wide mt-2 2xl:w-4xl xl:mx-auto lg:w-3xl lg:mx-auto lg:mt-2 md:w-2xl md:mx-auto md:mt-2">
             Our services are built to drive measurable growth. From high-quality
             web and app development to intuitive UI/UX design, SEO, digital
             marketing, and social media strategy, we cover every stage of your

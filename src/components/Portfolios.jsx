@@ -96,7 +96,7 @@ export default function Projects() {
         <h2 className="tracking-wide text-3xl text-center font-bold font-primary lg:text-3xl lg:tracking-wide md:text-2xl">
           Our <span className="text-[#0076DF]">Portfolios</span>
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 tracking-wide font-primary lg:mt-2 lg:tracking-wide lg:w-3xl lg:mx-auto md:mt-2 md:mx-auto">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 tracking-wide font-primary lg:mt-2 lg:tracking-wide lg:w-3xl lg:mx-auto md:mt-2 md:mx-auto md:w-2xl">
           Every project we deliver is built for innovation and scalability. We
           provide web development, digital marketing, SEO, social media
           marketing, UI/UX design, and app development—backed by business

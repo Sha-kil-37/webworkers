@@ -30,7 +30,7 @@ export default function Banner() {
           ]}
           duration={2000}
         />
-        <Paragraph className="xl:tracking-wide font-primary font-medium xl:mt-7 xl:w-xl lg:w-lg lg:mt-5 md:mt-5 md:tracking-wide md:font-medium md:w-full">
+        <Paragraph className="xl:tracking-wide font-primary font-medium xl:mt-7 xl:w-xl lg:w-lg lg:mt-5 md:mt-5 md:tracking-wide md:font-medium md:w-2xl  ">
           In today’s fast-moving digital world, Every business needs a strong
           online presence to thrive in the digital world. With{" "}
           <span className="text-[#0076DF]">“We Build Creative Digital Solutions,”</span> we deliver

@@ -78,7 +78,7 @@ const Testimonials = () => {
         <h2 className="tracking-wide text-center xl:text-3xl font-bold font-primary lg:text-3xl lg:tracking-wide md:text-2xl">
           What does our <span className="text-[#0076DF]">client</span> say ?
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:w-3xl lg:mx-auto ">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:w-3xl lg:mx-auto  md:w-2xl md:mx-auto">
           Our clients trust us because we deliver results, not just services.
           From web development and UI/UX design to digital marketing, SEO, and
           social media, we build strong digital identities through smart,

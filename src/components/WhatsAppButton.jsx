@@ -10,18 +10,19 @@ export default function WhatsAppButton() {
 
   return (
     <Link
-      href={whatsappUrl}
+    title="WhatsApp"
+      to={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50"
+      className="fixed bottom-6 right-6 z-30"
       aria-label="Chat on WhatsApp"
     >
-      <div className="relative flex items-center justify-center w-16 h-16 rounded-full bg-green-500 shadow-lg hover:scale-110 transition-transform duration-300">
+      <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-green-500 shadow-lg hover:scale-105 transition-all duration-200 ease-in-out">
         {/* Pulse animation */}
         <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping" />
 
         {/* Icon */}
-        <FaWhatsapp className="relative text-white text-3xl" />
+        <FaWhatsapp className="relative text-white text-2xl" />
       </div>
     </Link>
   );

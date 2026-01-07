@@ -13,7 +13,7 @@ export default function Footer() {
   };
   //
   return (
-    <footer className="xl:py-10 bg-[#F5F5F7] dark:bg-gray-800 lg:py-10 ">
+    <footer className="xl:py-10 bg-[#F5F5F7] dark:bg-gray-800 lg:py-10 md:py-10 ">
       <div className="xl:w-6xl mx-auto lg:w-5xl md:px-6 md:mx-auto">
         {/* Grid */}
         <div className="xl:grid xl:gap-12 xl:grid-cols-4 lg:grid lg:gap-10 lg:grid-cols-4 md:grid md:gap-8 md:grid-cols-2">

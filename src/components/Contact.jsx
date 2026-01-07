@@ -105,7 +105,7 @@ export default function Contact() {
         <h2 className="tracking-wide font-primary xl:text-3xl font-bold text-center lg:text-3xl md:text-2xl">
           <span className="text-[#0076DF]">Contact</span> Us
         </h2>
-        <Paragraph className="tracking-wide font-primary mx-auto xl:w-3xl text-center font-medium xl:mt-2 lg:mt-2 lg:w-2xl lg:tracking-wide md:mt-2 ">
+        <Paragraph className="tracking-wide font-primary mx-auto xl:w-3xl text-center font-medium xl:mt-2 lg:mt-2 lg:w-2xl lg:tracking-wide md:mt-2  md:w-2xl md:mx-auto">
           Let’s bring your ideas to life. Whether you’re looking to build a
           modern website, improve your online visibility with SEO and social
           media marketing, develop a custom application, or integrate AI-powered
