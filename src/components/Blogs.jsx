@@ -208,11 +208,11 @@ export default function Blogs() {
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-200"
                   />
                 </div>
-                <div className="xl:p-6 lg:p-4">
+                <div className="xl:p-6 lg:p-4 md:p-4">
                   <Paragraph className="font-medium tracking-wide font-primary">
                     {blog.category}
                   </Paragraph>
-                  <Paragraph className="tracking-wide font-primary font-medium text-xl">
+                  <Paragraph className="tracking-wide font-primary font-medium text-xl md:text-lg">
                     {blog.title}
                   </Paragraph>
                   <Paragraph className="font-medium font-primary tracking-wide text-[#0076DF]">
