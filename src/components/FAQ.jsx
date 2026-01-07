@@ -65,8 +65,8 @@ export default function FAQ() {
           <div className="relative w-full h-full">
             <div className="bg-gray-100 absolute bottom-0 right-0 h-[50%] w-[50%] z-10 flex justify-center items-center">
               <div>
-                <MdContactSupport className="xl:h-15 xl:w-15 mx-auto text-[#0076DF] lg:h-13 lg:w-13" />
-                <h2 className="mt-3 font-primary tracking-wide font-bold">
+                <MdContactSupport className="xl:h-15 xl:w-15 mx-auto text-[#0076DF] lg:h-13 md:h-10 lg:w-13 md:w-10" />
+                <h2 className="mt-3 font-primary tracking-wide font-bold md:text-center">
                   Some familiar questions
                 </h2>
               </div>
