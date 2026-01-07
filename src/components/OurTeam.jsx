@@ -60,18 +60,18 @@ export default function OurTeam() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 lg:py-10"
+      className="xl:py-10 lg:py-10 md:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
-        <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-10">
-          <aside className="md:col-span-1 xl:border-r border-[#F5F5F7]">
-            <div className="xl:sticky xl:top-16 lg:sticky lg:top-16">
-              <h2 className="xl:tracking-wide text-3xl font-bold font-primary lg:text-3xl lg:tracking-wide">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6">
+        <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-10 md:gap-10 md:grid md:grid-cols-2">
+          <aside className="md:col-span-1 xl:border-r lg:border-r  md:border-r border-[#F5F5F7]">
+            <div className="xl:sticky xl:top-16 lg:sticky lg:top-16 md:top-16 md:sticky">
+              <h2 className="xl:tracking-wide text-3xl font-bold font-primary lg:text-3xl lg:tracking-wide md:text-2xl md:tracking-wide">
                 Our <span className="text-[#0076DF]">Professional</span>{" "}
                 {""}
                 Team Members
               </h2>
-              <Paragraph className="xl:w-lg mt-2 font-medium tracking-wide font-primary lg:mt-2 lg:tracking-wide">
+              <Paragraph className="xl:w-lg mt-2 font-medium tracking-wide font-primary lg:mt-2 lg:tracking-wide md:mt-2 md:tracking-wide">
                 We are a multidisciplinary digital team driven by innovation and
                 results. Our expertise spans web and app development, UI/UX
                 design, digital marketing, SEO, and social media
@@ -88,22 +88,22 @@ export default function OurTeam() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="group rounded-2xl overflow-hidden xl:mb-4 shadow lg:mb-4"
+                className="group rounded-2xl overflow-hidden xl:mb-4 shadow lg:mb-4 md:mb-4"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="xl:w-full xl:h-100 object-cover group-hover:scale-105 transition duration-200 ease-in-out lg:w-full lg:h-100"
+                    className="xl:w-full xl:h-100 object-cover group-hover:scale-105 transition duration-200 ease-in-out lg:w-full lg:h-100 md:w-full md:h-100"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="xl:p-6 flex justify-between lg:p-4">
+                <div className="xl:p-6 flex justify-between lg:p-4 md:p-4">
                   <div>
-                    <h3 className="font-medium text-xl font-primary tracking-wide">{member.name}</h3>
-                    <Paragraph className="font-primary tracking-wide">{member.role}</Paragraph>
+                    <h3 className="font-medium text-xl font-primary tracking-wide md:tracking-wide md:text-lg">{member.name}</h3>
+                    <Paragraph className="font-primary tracking-wide ">{member.role}</Paragraph>
                   </div>
                   <div className="flex gap-x-3">
                     <Link target="_blank" to={member.socials.linkedin}>

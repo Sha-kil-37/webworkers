@@ -136,17 +136,17 @@ export default function Blogs() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 relative lg:py-10"
+      className="xl:py-10 relative lg:py-10 md:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
-        <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-10">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6">
+        <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-10 md:gap-10 md:grid md:grid-cols-2">
           {/* Left sticky column */}
           <aside className="md:col-span-1 xl:border-r border-[#F5F5F7]">
-            <div className="xl:sticky xl:top-16 lg:sticky lg:top-16">
-              <h2 className="tracking-wide xl:text-3xl font-bold lg:text-3xl lg:tracking-wide">
+            <div className="xl:sticky xl:top-16 lg:sticky lg:top-16 md:top-16 md:sticky">
+              <h2 className="tracking-wide xl:text-3xl font-bold lg:text-3xl lg:tracking-wide md:text-2xl font-primary">
                 Read Our <span className="text-[#0076DF]">Blogs</span>
               </h2>
-              <Paragraph className="xl:w-lg xl:mt-2 font-medium tracking-wide font-primary lg:mt-2 lg:tracking-wide">
+              <Paragraph className="xl:w-lg xl:mt-2 font-medium tracking-wide font-primary lg:mt-2 lg:tracking-wide md:mt-2 md:tracking-wide">
                 Our blog is a knowledge hub where technology, creativity, and
                 strategy come together. We share practical insights on web
                 development, digital marketing, SEO, social media marketing,
@@ -177,7 +177,7 @@ export default function Blogs() {
           transition-all duration-200 font-primary tracking-wide font-medium shadow rounded"
               />
             </div>
-            <div className="xl:mt-3 xl:flex xl:flex-wrap xl:gap-2 lg:mt-3 lg:flex lg:flex-wrap lg:gap-2">
+            <div className="xl:mt-3 xl:flex xl:flex-wrap xl:gap-2 lg:mt-3 lg:flex lg:flex-wrap lg:gap-2 md:mt-3 md:flex md:flex-wrap md:gap-2">
               {categories.map((category, i) => (
                 <button
                   title={category}
@@ -198,14 +198,14 @@ export default function Blogs() {
               <Link
                 to={`/blogdetails/${blog.id}`} // Use blog.id instead of index for better routing
                 key={i}
-                className="xl:mb-4 cursor-pointer block group rounded-xl overflow-hidden shadow lg:mb-4"
+                className="xl:my-4 cursor-pointer block group rounded-xl overflow-hidden shadow lg:my-4 md:my-4"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden h-80">
                   <img
                     src={blog.image}
                     alt={blog.title} // Better alt text
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-200"
                   />
                 </div>
                 <div className="xl:p-6 lg:p-4">

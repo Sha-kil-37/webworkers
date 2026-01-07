@@ -6,12 +6,12 @@ const services = [
   {
     title: "Web Development",
     desc: "We create websites that are visually appealing, highly functional, and fully optimized, ensuring your digital presence effectively represents your brand and engages visitors for maximum impact.",
-    className: "xl:col-span-2 lg:col-span-2",
+    className: "xl:col-span-2 lg:col-span-2 ",
   },
   {
     title: "Digital Marketing",
     desc: "Our digital marketing services help your brand reach the right audience, increase traffic, and boost engagement. We ensure your stunning website gets seen and delivers real results.",
-    className: "lg:col-span-1",
+    className: "lg:col-span-1 ",
   },
   {
     title: "Search Engine Optimization (SEO)",
@@ -65,13 +65,13 @@ export default function Services() {
       id="services"
       className="xl:py-20 py-10 md:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6">
         {/* Section Header */}
         <div>
-          <h2 className="xl:tracking-wide xl:text-3xl font-bold text-center xl:w-3xl mx-auto font-primary lg:tracking-wide lg:font-bold lg:text-3xl">
+          <h2 className="xl:tracking-wide xl:text-3xl font-bold text-center xl:w-3xl mx-auto font-primary lg:tracking-wide lg:font-bold lg:text-3xl md:text-2xl md:font-bold md:tracking-wide">
             Meet Our <span className="text-[#0076DF]">Services</span>
           </h2>
-          <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:tracking-wide lg:w-4xl lg:mx-auto lg:mt-2">
+          <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:tracking-wide lg:w-4xl lg:mx-auto lg:mt-2 md:tracking-wide md:mt-2 md:font-medium md:font-primary">
             Our services are built to drive measurable growth. From high-quality
             web and app development to intuitive UI/UX design, SEO, digital
             marketing, and social media strategy, we cover every stage of your
@@ -82,7 +82,7 @@ export default function Services() {
         </div>
 
         {/* Bento Grid */}
-        <div className="xl:grid xl:grid-cols-4  xl:gap-6 xl:mt-5 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-4">
+        <div className="xl:grid xl:grid-cols-4  xl:gap-6 xl:mt-5 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-4 md:mt-4 md:grid md:grid-cols-3 md:gap-4">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -91,12 +91,12 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className={`relative xl:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5`}
+              className={`relative xl:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5 md:p-4`}
             >
-              <h3 className="font-medium text-2xl font-primary tracking-wide lg:tracking-wide lg:text-2xl">
+              <h3 className="font-medium text-2xl font-primary tracking-wide lg:tracking-wide lg:text-2xl md:tracking-wide md:text-xl">
                 {service.title}
               </h3>
-              <Paragraph className="xl:mt-3 font-medium font-primary xl:tracking-wide lg:tracking-wide lg:mt-3">
+              <Paragraph className="xl:mt-3 lg:font-medium  xl:font-medium font-primary xl:tracking-wide lg:tracking-wide lg:mt-3 md:mt-2 md:tracking-wide md:font-normal">
                 {service.desc}
               </Paragraph>
             </motion.div>

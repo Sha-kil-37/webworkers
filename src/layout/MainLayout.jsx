@@ -11,7 +11,7 @@ export default function MainLayout({ children }) {
     <SearchProvider>
       <div className="relative dark:bg-[#232729] dark:text-white">
         <Nav />
-        <WhatsAppButton />
+        {/* <WhatsAppButton /> */}
         <main>{children}</main>
         <Footer />
       </div>

@@ -48,17 +48,17 @@ const reviews = [
 //
 const Testimonials = () => {
   const trackRef = useRef(null);
-  let offset = 0;
+  const offsetRef = useRef(0);
   //
   useEffect(() => {
     let rafId;
     //
     const animate = () => {
-      offset -= 1.5; // speed control
-      if (Math.abs(offset) >= trackRef.current.scrollWidth / 2) {
-        offset = 0;
+      offsetRef.current -= 1.5; // speed control
+      if (Math.abs(offsetRef.current) >= trackRef.current.scrollWidth / 2) {
+        offsetRef.current = 0;
       }
-      trackRef.current.style.transform = `translateX(${offset}px)`;
+      trackRef.current.style.transform = `translateX(${offsetRef.current}px)`;
       rafId = requestAnimationFrame(animate);
     };
 
@@ -72,40 +72,50 @@ const Testimonials = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="relative py-10 lg:py-10"
+      className="relative py-10 lg:py-10 md:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden">
-        <h2 className="tracking-wide text-center xl:text-3xl font-bold font-primary lg:text-3xl lg:tracking-wide">
+      <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden md:px-6 md:mx-auto md:overflow-hidden">
+        <h2 className="tracking-wide text-center xl:text-3xl font-bold font-primary lg:text-3xl lg:tracking-wide md:text-2xl">
           What does our <span className="text-[#0076DF]">client</span> say ?
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:w-3xl lg:mx-auto">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:w-3xl lg:mx-auto ">
           Our clients trust us because we deliver results, not just services.
           From web development and UI/UX design to digital marketing, SEO, and
           social media, we build strong digital identities through smart,
           growth-driven solutions.
         </Paragraph>
-        <div ref={trackRef} className="xl:flex xl:w-max xl:py-5 xl:mt-5 lg:flex lg:w-max lg:py-4 lg:mt-2">
+        <div
+          ref={trackRef}
+          className="xl:flex xl:w-max xl:py-5 xl:mt-5 lg:flex lg:w-max lg:py-4 lg:mt-5 md:mt-5 md:flex md:w-max p-6"
+        >
           {[...reviews, ...reviews].map((item, index) => (
-            <div key={index} className="xl:mx-2 xl:w-[300px] rounded-xl xl:p-4 shadow lg:mx-2 lg:w-[250px] lg:p-4 lg:shadow">
+            <div
+              key={index}
+              className="xl:mx-4 xl:w-[300px] rounded-xl xl:p-4 shadow lg:mx-4 lg:w-[250px] lg:p-4 lg:shadow md:w-[230px] md:p-3 md:mx-2"
+            >
               <TruncateText
                 className="font-medium font-secondary tracking-wide"
                 text={item.review}
                 limit={15}
               />
-              <div className="xl:flex xl:justify-between xl:items-center xl:mt-3 lg:flex lg:justify-between lg:items-center lg:mt-2">
+              <div className="xl:flex xl:justify-between xl:items-center xl:mt-3 lg:flex lg:justify-between lg:items-center lg:mt-2 md:flex md:mt-2 md:justify-between md:items-center">
                 <div>
-                  <Paragraph className="font-medium font-secondary tracking-wide lg:tracking-wide">
+                  <Paragraph className="font-secondary tracking-wide ">
                     {item.name}
                   </Paragraph>
-                  <Paragraph className="font-secondary tracking-wide lg:tracking-wide">{item.role}</Paragraph>
+                  <Paragraph className="font-secondary tracking-wide lg:tracking-wide">
+                    {item.role}
+                  </Paragraph>
                 </div>
                 <div>
                   <Paragraph className="text-center font-secondary">
                     {item.rating}
                   </Paragraph>
-                  <CiStar className="text-[#0076DF] inline-block" />
-                  <CiStar className="text-[#0076DF] inline-block" />
-                  <CiStar className="text-[#0076DF] inline-block" />
+                  <div className="md:flex">
+                    <CiStar className="text-[#0076DF] inline-block" />
+                    <CiStar className="text-[#0076DF] inline-block" />
+                    <CiStar className="text-[#0076DF] inline-block" />
+                  </div>
                 </div>
               </div>
             </div>
