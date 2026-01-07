@@ -47,10 +47,10 @@ export default function FAQ() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 lg:py-10"
+      className="xl:py-10 lg:py-10 md:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto">
-        <h2 className="tracking-wide xl:text-3xl font-bold text-center font-primary lg:text-3xl">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-6 md:mx-auto">
+        <h2 className="tracking-wide xl:text-3xl font-bold text-center font-primary lg:text-3xl md:text-2xl">
           How Can I <span className="text-[#0076DF]">Help</span> You ?
         </h2>
         <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:w-3xl lg:mx-auto">
@@ -61,7 +61,7 @@ export default function FAQ() {
           integration to keep your brand competitive.
         </Paragraph>
         {/*  */}
-        <div className="xl:grid xl:grid-cols-2 xl:gap-x-12 xl:items-center lg:items-center xl:mt-10 lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-x-10">
+        <div className="xl:grid xl:grid-cols-2 xl:gap-x-12 xl:items-center lg:items-center xl:mt-10 lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-x-10 md:mt-10 md:grid md:grid-cols-2 md:gap-x-6 ">
           <div className="relative w-full h-full">
             <div className="bg-gray-100 absolute bottom-0 right-0 h-[50%] w-[50%] z-10 flex justify-center items-center">
               <div>
