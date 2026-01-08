@@ -63,15 +63,15 @@ export default function Services() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       id="services"
-      className="xl:py-20 py-10 md:py-10"
+      className="xl:py-20 py-10 md:py-10 sm:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6 sm:px-6 sm:mx-auto">
         {/* Section Header */}
         <div>
-          <h2 className="xl:tracking-wide xl:text-3xl font-bold text-center xl:w-3xl mx-auto font-primary lg:tracking-wide lg:font-bold lg:text-3xl md:text-2xl md:font-bold md:tracking-wide">
+          <h2 className="xl:tracking-wide xl:text-3xl font-bold text-center xl:w-3xl mx-auto font-primary lg:tracking-wide lg:font-bold lg:text-3xl md:text-2xl md:font-bold md:tracking-wide sm:text-2xl sm:font-bold sm:tracking-wide">
             Meet Our <span className="text-[#0076DF]">Services</span>
           </h2>
-          <Paragraph className="font-primary font-medium text-center tracking-wide mt-2 2xl:w-4xl xl:mx-auto lg:w-3xl lg:mx-auto lg:mt-2 md:w-2xl md:mx-auto md:mt-2">
+          <Paragraph className="font-primary font-medium text-center tracking-wide mt-2 2xl:w-4xl xl:mx-auto lg:w-3xl lg:mx-auto lg:mt-2 md:w-2xl md:mx-auto md:mt-2 sm:w-xl sm:mx-auto sm:mt-2">
             Our services are built to drive measurable growth. From high-quality
             web and app development to intuitive UI/UX design, SEO, digital
             marketing, and social media strategy, we cover every stage of your
@@ -82,7 +82,7 @@ export default function Services() {
         </div>
 
         {/* Bento Grid */}
-        <div className="xl:grid xl:grid-cols-4  xl:gap-6 xl:mt-5 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-4 md:mt-4 md:grid md:grid-cols-3 md:gap-4">
+        <div className="xl:grid xl:grid-cols-4  xl:gap-6 xl:mt-5 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-5 md:mt-5 md:grid md:grid-cols-3 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-5">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -91,12 +91,12 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className={`relative 2xl:rounded-2xl xl:rounded-2xl lg:rounded-2xl md:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5 md:p-4`}
+              className={`relative 2xl:rounded-2xl xl:rounded-2xl lg:rounded-2xl md:rounded-2xl sm:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5 md:p-4 sm:p-4`}
             >
-              <h3 className="font-medium text-2xl font-primary tracking-wide lg:tracking-wide lg:text-2xl md:tracking-wide md:text-xl">
+              <h3 className="font-medium text-2xl font-primary tracking-wide lg:tracking-wide lg:text-2xl md:tracking-wide md:text-xl sm:tracking-wide sm:text-xl">
                 {service.title}
               </h3>
-              <Paragraph className="xl:mt-3 lg:font-medium  xl:font-medium font-primary xl:tracking-wide lg:tracking-wide lg:mt-3 md:mt-2 md:tracking-wide md:font-normal">
+              <Paragraph className="xl:mt-3 lg:font-medium  xl:font-medium font-primary xl:tracking-wide lg:tracking-wide lg:mt-3 md:mt-2 md:tracking-wide md:font-normal sm:mt-2 sm:tracking-wide sm:font-normal">
                 {service.desc}
               </Paragraph>
             </motion.div>

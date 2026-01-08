@@ -12,9 +12,9 @@ export default function Banner() {
   return (
     <motion.section
       id="home"
-      className="xl:py-45 bg-[#F5F5F7] dark:bg-[#232729] lg:py-36 md:pt-35 md:pb-20"
+      className="xl:py-45 lg:py-36 md:pt-35 md:pb-20 sm:pt-35 sm:pb-10 relative overflow-hidden"
     >
-      <div className="relative xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6">
+      <div className="relative xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6 sm:px-6 sm:mx-auto">
         <TextFlip
           text="We Build Creative Digital Solutions"
           words={[
@@ -30,7 +30,7 @@ export default function Banner() {
           ]}
           duration={2000}
         />
-        <Paragraph className="xl:tracking-wide font-primary font-medium xl:mt-7 xl:w-xl lg:w-lg lg:mt-5 md:mt-5 md:tracking-wide md:font-medium md:w-2xl  ">
+        <Paragraph className="xl:tracking-wide font-primary font-medium xl:mt-7 xl:w-xl lg:w-lg lg:mt-5 md:mt-5 md:tracking-wide md:font-medium md:w-2xl sm:mt-4 sm:tracking-wide sm:font-medium sm:w-lg">
           In today’s fast-moving digital world, Every business needs a strong
           online presence to thrive in the digital world. With{" "}
           <span className="text-[#0076DF]">“We Build Creative Digital Solutions,”</span> we deliver

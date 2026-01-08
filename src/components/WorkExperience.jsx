@@ -19,7 +19,7 @@ import Paragraph from "./Paragraph";
 const Row = ({ reverse = false,}) => (
   <div className="overflow-hidden w-full mx-auto">
     <motion.div
-      className="flex gap-6 md:gap-4 w-max"
+      className="flex gap-6 lg:gap-4 xl:gap-4 2xl:gap-4 md:gap-4 w-max"
       animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
       transition={{
         repeat: Infinity,
@@ -28,7 +28,7 @@ const Row = ({ reverse = false,}) => (
       }}
     >
       {[...logos, ...logos].map((logo, i) => (
-        <img key={i} src={logo} className="xl:h-14 lg:h-14 md:h-12 opacity-80" />
+        <img key={i} src={logo} className="xl:h-14 lg:h-14 md:h-12 sm:h-10 opacity-80" />
       ))}
     </motion.div>
   </div>
@@ -44,10 +44,10 @@ export default function WorkExperience() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 lg:py-10 md:py-10"
+      className="xl:py-10 lg:py-10 md:py-10 sm:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-6">
-        <h2 className="font-bold xl:text-3xl text-center xl:mb-5 tracking-wide font-primary lg:font-bold lg:tracking-wide lg:mb-5 lg:text-3xl md:tracking-wide md:mb-5 md:text-2xl md:font-bold md:font-primary">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-6 sm:px-6 sm:mx-auto">
+        <h2 className="font-bold xl:text-3xl text-center xl:mb-5 tracking-wide font-primary lg:font-bold lg:tracking-wide lg:mb-5 lg:text-3xl md:tracking-wide md:mb-5 md:text-2xl md:font-bold md:font-primary sm:mb-5 sm:text-2xl sm:font-bold sm:font-primary sm:tracking-wide">
           Work <span className="text-[#0076DF]">Experience</span> With
         </h2>
         <Row />

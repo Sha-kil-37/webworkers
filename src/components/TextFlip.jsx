@@ -17,13 +17,13 @@ export const TextFlip = ({ text, words, duration }) => {
     <>
       <motion.span
         layoutId="subtext"
-        className="xl:text-5xl xl:font-bold xl:tracking-wide font-primary block text-[#0076DF] xl:w-xl lg:text-5xl lg:font-bold lg:tracking-wide lg:w-lg md:text-5xl md:tracking-wide md:font-bold md:w-lg"
+        className="xl:text-5xl xl:font-bold xl:tracking-wide font-primary block text-[#0076DF] xl:w-xl lg:text-5xl lg:font-bold lg:tracking-wide lg:w-lg md:text-5xl md:tracking-wide md:font-bold md:w-lg sm:w-lg sm:text-4xl sm:tracking-wide sm:font-bold"
       >
         {text}
       </motion.span>
       <motion.span
         layout
-        className="xl:mt-5 lg:mt-5 md:mt-5 xl:text-5xl xl:font-bold xl:tracking-wide font-primary block lg:text-5xl lg:font-bold lg:tracking-wide md:text-5xl md:tracking-wide md:font-bold"
+        className="xl:mt-5 lg:mt-5 md:mt-5 xl:text-5xl xl:font-bold xl:tracking-wide font-primary block lg:text-5xl lg:font-bold lg:tracking-wide md:text-5xl md:tracking-wide md:font-bold sm:text-3xl sm:tracking-wide sm:font-bold sm:mt-4 sm:w-full"
       >
         <AnimatePresence mode="popLayout">
           <motion.span

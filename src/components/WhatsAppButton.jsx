@@ -14,7 +14,7 @@ export default function WhatsAppButton() {
       to={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-30"
+      className="fixed bottom-10 right-10 z-30"
       aria-label="Chat on WhatsApp"
     >
       <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-green-500 shadow-lg hover:scale-105 transition-all duration-200 ease-in-out">

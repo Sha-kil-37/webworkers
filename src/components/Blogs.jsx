@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
 import { IoSearchOutline } from "react-icons/io5";
-
+// Blogs Component
 //
 export default function Blogs() {
   // How many blogs to show at first
@@ -136,17 +136,17 @@ export default function Blogs() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 relative lg:py-10 md:py-10"
+      className="xl:py-10 relative lg:py-10 md:py-10 sm:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6">
-        <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-10 md:gap-10 md:grid md:grid-cols-2">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6 sm:px-6 sm:mx-auto">
+        <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-10 md:gap-10 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 sm:gap-6">
           {/* Left sticky column */}
-          <aside className="md:col-span-1 xl:border-r border-[#F5F5F7]">
-            <div className="xl:sticky xl:top-16 lg:sticky lg:top-16 md:top-16 md:sticky">
-              <h2 className="tracking-wide xl:text-3xl font-bold lg:text-3xl lg:tracking-wide md:text-2xl font-primary">
+          <aside className="md:col-span-1 xl:border-r 2xl:border-r lg:border-r  border-[#F5F5F7] md:border-r sm:border-r">
+            <div className="xl:sticky xl:top-16 lg:sticky lg:top-16 md:top-16 md:sticky sm:top-16 sm:sticky">
+              <h2 className="tracking-wide xl:text-3xl font-bold lg:text-3xl lg:tracking-wide md:text-2xl sm:text-2xl font-primary sm:tracking-wide md:tracking-wide">
                 Read Our <span className="text-[#0076DF]">Blogs</span>
               </h2>
-              <Paragraph className="xl:w-lg xl:mt-2 font-medium tracking-wide font-primary lg:mt-2 lg:tracking-wide md:mt-2 md:tracking-wide">
+              <Paragraph className="xl:w-lg xl:mt-2 font-medium tracking-wide font-primary lg:mt-2 lg:tracking-wide md:mt-2 md:tracking-wide sm:mt-2 sm:tracking-wide">
                 Our blog is a knowledge hub where technology, creativity, and
                 strategy come together. We share practical insights on web
                 development, digital marketing, SEO, social media marketing,
@@ -160,10 +160,7 @@ export default function Blogs() {
 
           {/* Right scrollable column */}
           <main className="">
-            <div className="relative group">
-              <span className="absolute left-2 top-1/2 -translate-y-1/2 group-focus-within:text-[#0076DF] transition duration-200">
-                <IoSearchOutline className="" size={18} />
-              </span>
+            <div className="w-full flex items-center rounded-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full justify-between h-10 border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200">
               <motion.input
                 title="Search Blogs"
                 layoutId="blog-search"
@@ -172,12 +169,18 @@ export default function Blogs() {
                 placeholder="Search blog ..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 focus:outline focus:outline-[#0076DF]
-          focus:border-[#0076DF]
-          transition-all duration-200 font-primary tracking-wide font-medium shadow rounded"
+                className="font-primary tracking-wide w-full h-full px-4 rounded-[0,0,100%,100%] outline-none focus:outline-none border-none focus:placeholder:text-[#0076DF] transition-all duration-200"
               />
+              <button
+                type="button"
+                className="inline-block w-15 cursor-pointer h-full bg-[#EEEEEE] border-none outline-none rounded-[0,100%,100%,0] hover:bg-[#eeeeeeb2]"
+                aria-label="Search Blogs"
+              >
+                <IoSearchOutline className="text-2xl mx-auto" />
+              </button>
             </div>
-            <div className="xl:mt-3 xl:flex xl:flex-wrap xl:gap-2 lg:mt-3 lg:flex lg:flex-wrap lg:gap-2 md:mt-3 md:flex md:flex-wrap md:gap-2">
+
+            <div className="xl:mt-3 xl:flex xl:flex-wrap xl:gap-2 lg:mt-3 lg:flex lg:flex-wrap lg:gap-2 md:mt-3 md:flex md:flex-wrap md:gap-2 sm:mt-3 sm:flex sm:flex-wrap sm:gap-2">
               {categories.map((category, i) => (
                 <button
                   title={category}
@@ -198,7 +201,7 @@ export default function Blogs() {
               <Link
                 to={`/blogdetails/${blog.id}`} // Use blog.id instead of index for better routing
                 key={i}
-                className="xl:my-4 cursor-pointer block group rounded-xl overflow-hidden shadow lg:my-4 md:my-4"
+                className="xl:my-4 cursor-pointer block group rounded-xl overflow-hidden shadow lg:my-4 md:my-4 sm:my-4"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden h-80">
@@ -208,11 +211,11 @@ export default function Blogs() {
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-200"
                   />
                 </div>
-                <div className="xl:p-6 lg:p-4 md:p-4">
+                <div className="xl:p-6 lg:p-4 md:p-4 sm:p-4">
                   <Paragraph className="font-medium tracking-wide font-primary">
                     {blog.category}
                   </Paragraph>
-                  <Paragraph className="tracking-wide font-primary font-medium text-xl md:text-lg">
+                  <Paragraph className="tracking-wide font-primary font-medium text-xl md:text-lg sm:text-lg sm:tracking-wide">
                     {blog.title}
                   </Paragraph>
                   <Paragraph className="font-medium font-primary tracking-wide text-[#0076DF]">

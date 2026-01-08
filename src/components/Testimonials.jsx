@@ -72,13 +72,13 @@ const Testimonials = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="relative py-10 lg:py-10 md:py-10"
+      className="relative py-10 lg:py-10 md:py-10 sm:py-8"
     >
-      <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden md:px-6 md:mx-auto md:overflow-hidden">
-        <h2 className="tracking-wide text-center xl:text-3xl font-bold font-primary lg:text-3xl lg:tracking-wide md:text-2xl">
+      <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden md:px-6 md:mx-auto md:overflow-hidden sm:px-6 sm:mx-auto">
+        <h2 className="tracking-wide text-center xl:text-3xl font-bold font-primary lg:text-3xl lg:tracking-wide md:text-2xl sm:text-2xl">
           What does our <span className="text-[#0076DF]">client</span> say ?
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:w-3xl lg:mx-auto  md:w-2xl md:mx-auto">
+        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:w-3xl lg:mx-auto  md:w-2xl md:mx-auto sm:w-xl sm:mx-auto">
           Our clients trust us because we deliver results, not just services.
           From web development and UI/UX design to digital marketing, SEO, and
           social media, we build strong digital identities through smart,
@@ -86,19 +86,20 @@ const Testimonials = () => {
         </Paragraph>
         <div
           ref={trackRef}
-          className="xl:flex xl:w-max xl:py-5 xl:mt-5 lg:flex lg:w-max lg:py-4 lg:mt-5 md:mt-5 md:flex md:w-max p-6"
+          className="xl:flex xl:w-max xl:py-5 xl:mt-5 lg:flex lg:w-max lg:py-4 lg:mt-5 md:mt-5 md:flex md:w-max p-6 sm
+          :mt-5 sm:flex"
         >
           {[...reviews, ...reviews].map((item, index) => (
             <div
               key={index}
-              className="xl:mx-4 xl:w-[300px] rounded-xl xl:p-4 shadow lg:mx-4 lg:w-[250px] lg:p-4 lg:shadow md:w-[230px] md:p-3 md:mx-2"
+              className="xl:mx-4 xl:w-[300px] rounded-xl xl:p-4 shadow lg:mx-4 lg:w-[250px] lg:p-4 lg:shadow md:w-[250px] md:p-3 md:mx-2 sm:mx-1 sm:p-3 sm:w-[250px]"
             >
               <TruncateText
-                className="font-medium font-secondary tracking-wide"
+                className="sm:font-normal font-medium font-secondary tracking-wide"
                 text={item.review}
                 limit={15}
               />
-              <div className="xl:flex xl:justify-between xl:items-center xl:mt-3 lg:flex lg:justify-between lg:items-center lg:mt-2 md:flex md:mt-2 md:justify-between md:items-center">
+              <div className="xl:flex xl:justify-between xl:items-center xl:mt-3 lg:flex lg:justify-between lg:items-center lg:mt-2 md:flex md:mt-2 md:justify-between md:items-center sm:flex sm:justify-between sm:items-center sm:mt-2">
                 <div>
                   <Paragraph className="font-secondary tracking-wide ">
                     {item.name}
@@ -111,7 +112,7 @@ const Testimonials = () => {
                   <Paragraph className="text-center font-secondary">
                     {item.rating}
                   </Paragraph>
-                  <div className="md:flex">
+                  <div className="md:flex sm:flex">
                     <CiStar className="text-[#0076DF] inline-block" />
                     <CiStar className="text-[#0076DF] inline-block" />
                     <CiStar className="text-[#0076DF] inline-block" />

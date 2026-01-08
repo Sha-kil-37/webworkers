@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
@@ -10,7 +9,6 @@ import { IoSearchOutline } from "react-icons/io5";
 export default function Navbar() {
   const currentPath = useLocation();
   const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [showProjectFilters, setShowProjectFilters] = useState(false);
@@ -89,11 +87,11 @@ export default function Navbar() {
   //
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-20 transition-all duration-200  ${
-        scrolled ? "bg-white dark:bg-[#232729] shadow" : "bg-transparent"
+      className={`fixed 2xl:top-0 2xl:left-0 w-full z-20 transition-all duration-200 xl:top-0 xl:left-0 lg:top-0 lg:left-0 md:top-0 md:left-0 sm:top-0 sm:left-0  ${
+        scrolled ? "bg-white dark:bg-black shadow" : "bg-transparent"
       }`}
     >
-      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto py-4 xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between px-6">
+      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto py-4 xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between px-6 sm:flex sm:items-center sm:justify-between">
         {/* Logo */}
         <motion.h3
           onClick={() => handleNavigate("home")}
@@ -127,7 +125,7 @@ export default function Navbar() {
 
         {/* Project Filters */}
         {showProjectFilters && (
-          <div className="flex gap-2 mx-2">
+          <div className="2xl:flex xl:flex lg:flex md:flex  gap-2  mx-2 sm:hidden">
             {categories.map((cat) => (
               <motion.button
                 title={cat}
@@ -147,7 +145,7 @@ export default function Navbar() {
         {/*  */}
         {/* Desktop Menu */}
         {showProjectFilters ? null : showSearch ? null : (
-          <div className="xl:flex xl:items-center lg:flex lg:items-center md:flex hidden">
+          <div className="2xl:flex xl:flex xl:items-center lg:flex lg:items-center md:flex sm:hidden">
             <button
               onClick={() => handleNavigate("home")}
               className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
@@ -205,79 +203,8 @@ export default function Navbar() {
           </div>
         )}
         {/*  */}
-        <DarkModeToggle className="text-2xl cursor-pointer" />
-        {/* Mobile Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle Menu"
-        >
-          {open ? <X size={26} /> : <Menu size={26} />}
-        </button>
+        <DarkModeToggle className="2xl:block xl:block lg:block md:block  text-2xl cursor-pointer" />
       </nav>
-
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <button
-          title="Home"
-          onClick={() => handleNavigate("home")}
-          className={`font-medium ${
-            activeSection === "home"
-              ? "bg-[#082032] text-white"
-              : "text-[#082032]"
-          }`}
-        >
-          Home
-        </button>
-        <button
-          title="About"
-          onClick={() => handleNavigate("about")}
-          className={`font-medium ${
-            activeSection === "about"
-              ? "bg-[#082032] text-white"
-              : "text-[#082032]"
-          }`}
-        >
-          About
-        </button>
-        <button
-          title="Services"
-          onClick={() => handleNavigate("services")}
-          className={`font-medium ${
-            activeSection === "services"
-              ? "bg-[#082032] text-white"
-              : "text-[#082032]"
-          }`}
-        >
-          Services
-        </button>
-        <button
-          title="Blogs"
-          onClick={() => handleNavigate("blogs")}
-          className={`font-medium ${
-            activeSection === "blogs"
-              ? "bg-[#082032] text-white"
-              : "text-[#082032]"
-          }`}
-        >
-          Blogs
-        </button>
-        <button
-          title="Contact"
-          onClick={() => handleNavigate("contact")}
-          className={`font-medium ${
-            activeSection === "contact"
-              ? "bg-[#082032] text-white"
-              : "text-[#082032]"
-          }`}
-        >
-          Contact
-        </button>
-      </div>
     </header>
   );
 }
