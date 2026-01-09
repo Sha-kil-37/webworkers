@@ -33,7 +33,7 @@ export default function Banner() {
         <Paragraph className="font-primary mt-4 tracking-wide 2xl:w-xl xl:w-xl lg:w-lg md:w-md sm:w-sm w-full ">
           In today’s fast-moving digital world, Every business needs a strong
           online presence to thrive in the digital world. With{" "}
-          <span className="text-[#0076DF]">“We Build Creative Digital Solutions,”</span> we deliver
+          <span className="text-[#0076DF]">“ We Build Creative Digital Solutions ”</span> we deliver
           innovative, user-friendly Web Development, Digital Marketing, and
           UI/UX Design that help businesses attract customers, strengthen their
           brand, and grow online
