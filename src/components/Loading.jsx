@@ -6,7 +6,7 @@ export default function Loader() {
   //
   return (
     <motion.div
-      className="fixed inset-0 z-10 flex items-center justify-center bg-[#232729]"
+      className="fixed inset-0 z-10 flex items-center justify-center "
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
@@ -14,11 +14,11 @@ export default function Loader() {
       <div>
         <motion.h3
           layoutId="site-logo"
-          className="text-xl font-bold tracking-wide text-white"
+          className="font-primary tracking-wide font-bold text-center 2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg"
         >
           AGENCY
         </motion.h3>
-        <Paragraph className="mt-3 font-medium text-white">
+        <Paragraph className="text-center mt-1 font-primary text-sky-500">
           Please Wait...
         </Paragraph>
       </div>

@@ -39,12 +39,12 @@ export default function Navbar() {
       if (blogsElement) {
         const rect = blogsElement.getBoundingClientRect();
         // Show search only when scrolled 100px into the blog section
-        setShowSearch(rect.top < -50 && rect.bottom > 0);
+        setShowSearch(rect.top < -100 && rect.bottom > 0);
       }
       if (projectsElement) {
         const rect = projectsElement.getBoundingClientRect();
         // Show project filters only when scrolled 100px into the projects section
-        setShowProjectFilters(rect.top < -30 && rect.bottom > 0);
+        setShowProjectFilters(rect.top < 100 && rect.bottom > -100);
       }
       const sections = [
         "home",
@@ -182,7 +182,7 @@ export default function Navbar() {
             >
               Portfolios
             </button>
-            
+
             <button
               onClick={() => handleNavigate("blogs")}
               className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
