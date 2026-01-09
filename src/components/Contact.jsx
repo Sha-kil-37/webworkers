@@ -20,7 +20,6 @@ export default function Contact() {
   //
   const getWordCount = (text) =>
     text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
-
   //
   const wordCount = getWordCount(values.message);
   const remainingWords = MAX_WORDS - wordCount;
@@ -136,7 +135,7 @@ export default function Contact() {
                   placeholder="Inter your name"
                   value={values.name}
                   onChange={handleChange}
-                  className={`mt-1 font-medium shadow block w-full rounded font-primary tracking-wide px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
+                  className={`mt-1 font-medium border block w-full rounded-full font-primary tracking-wide px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF] 
             ${errors.name ? "" : ""}`}
                 />
@@ -158,7 +157,7 @@ export default function Contact() {
                   placeholder="Inter your email"
                   value={values.email}
                   onChange={handleChange}
-                  className={`font-medium font-primary tracking-wide shadow mt-1 w-full rounded px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
+                  className={`font-medium font-primary tracking-wide shadow mt-1 w-full rounded-full border px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF] 
             ${errors.email ? "" : ""}`}
                 />
@@ -181,7 +180,7 @@ export default function Contact() {
                   rows={5}
                   value={values.message}
                   onChange={handleChange}
-                  className="mt-1 shadow w-full rounded px-4 py-2 resize-none font-medium transition-all duration-200 focus:outline focus:outline-[#0076DF]
+                  className="mt-1 shadow w-full rounded-4xl border px-6 py-6 resize-none font-medium transition-all duration-200 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF] font-primary tracking-wide"
                 />
 

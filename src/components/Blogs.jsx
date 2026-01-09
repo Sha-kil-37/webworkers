@@ -11,6 +11,8 @@ export default function Blogs() {
   const [visibleCount, setVisibleCount] = useState(3);
   // State for selected category (null means "All")
   const [selectedCategory, setSelectedCategory] = useState(null);
+  // Local state for input value
+  const [inputValue, setInputValue] = useState("");
   const { searchQuery, setSearchQuery } = useSearch();
 
   // Reset visibleCount when searchQuery changes
@@ -160,19 +162,20 @@ export default function Blogs() {
 
           {/* Right scrollable column */}
           <main className="">
-            <div className="w-full flex items-center rounded-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full justify-between h-10 border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200">
+            <div className="w-full flex items-center rounded-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full justify-between h-9 border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200">
               <motion.input
                 title="Search Blogs"
                 layoutId="blog-search"
                 name="search"
                 type="search"
                 placeholder="Search blog ..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
                 className="font-primary tracking-wide w-full h-full px-4 rounded-[0,0,100%,100%] outline-none focus:outline-none border-none focus:placeholder:text-[#0076DF] transition-all duration-200"
               />
               <button
                 type="button"
+                onClick={() => setSearchQuery(inputValue)}
                 className="inline-block w-15 cursor-pointer h-full bg-[#EEEEEE] border-none outline-none rounded-[0,100%,100%,0] hover:bg-[#eeeeeeb2]"
                 aria-label="Search Blogs"
               >
@@ -199,11 +202,11 @@ export default function Blogs() {
             </div>
             {visibleBlogs.map((blog, i) => (
               <Link
-                to={`/blogdetails/${blog.id}`} // Use blog.id instead of index for better routing
+                to={`/blogdetails/${blog.id}`} 
                 key={i}
                 className="xl:my-4 cursor-pointer block group rounded-xl overflow-hidden shadow lg:my-4 md:my-4 sm:my-4"
               >
-                {/* Image */}
+              
                 <div className="relative overflow-hidden h-80">
                   <img
                     src={blog.image}

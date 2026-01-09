@@ -110,7 +110,8 @@ export default function Projects() {
               key={cat}
               layoutId={`project-filter-${cat}`}
               onClick={() => setProjectActiveCategory(cat)}
-              className={`whitespace-nowrap xl:px-4 xl:py-2 rounded-full cursor-pointer transition-colors duration-200 font-medium shadow font-primary tracking-wide lg:px-4 lg:py-2 md:py-2 md:px-4 sm:px-4 sm:py-1 ${
+              className={`whitespace-nowrap xl:px-4 py-1 rounded-full cursor-pointer transition-colors duration-200 font-medium shadow font-primary tracking-wide 
+                lg:px-4 md:px-4 sm:px-4${
                 projectActiveCategory === cat ? " text-[#0076DF]" : " "
               }`}
               aria-pressed={projectActiveCategory === cat}

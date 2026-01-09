@@ -30,3 +30,4 @@ How can I set my email in the Link component so that clicking on the Link compon
 How can I see the total number of words that can be written in my form message input and how many words the user has written and how many are left? All this information is displayed at the right bottom of the text area input.
 <!--  -->
 I want my project menus to appear in the navbar with animations like the blog search input when I scroll down my project section.
+সার্চ ফিল্টারটি আমি বাটন ক্লিক এর মাধ্যমে করতে চাই। যা এখন ইনপুট অন চেঞ্জের মাধ্যমে সম্পন্ন হচ্ছে
