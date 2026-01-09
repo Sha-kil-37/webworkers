@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import Paragraph from "./Paragraph";
-import video from "../assets/video/agency.mp4";
 import { MdContactSupport } from "react-icons/md";
 
 //
@@ -72,7 +71,7 @@ export default function FAQ() {
               </div>
             </div>
             <video
-              src={video}
+              src="https://res.cloudinary.com/dmbkgbtqj/video/upload/v1767978936/agency/faq/agency_jyzuj0.mp4"
               autoPlay
               muted
               loop
