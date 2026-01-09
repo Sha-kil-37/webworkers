@@ -72,13 +72,13 @@ const Testimonials = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="relative py-10 lg:py-10 md:py-10 sm:py-8"
+      className="relative py-8"
     >
       <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden md:px-6 md:mx-auto md:overflow-hidden sm:px-6 sm:mx-auto">
-        <h2 className="tracking-wide text-center xl:text-3xl font-bold font-primary lg:text-3xl lg:tracking-wide md:text-2xl sm:text-2xl">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
           What does our <span className="text-[#0076DF]">client</span> say ?
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:w-3xl lg:mx-auto  md:w-2xl md:mx-auto sm:w-xl sm:mx-auto">
+        <Paragraph className="font-primary tracking-wide text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full">
           Our clients trust us because we deliver results, not just services.
           From web development and UI/UX design to digital marketing, SEO, and
           social media, we build strong digital identities through smart,
@@ -86,13 +86,12 @@ const Testimonials = () => {
         </Paragraph>
         <div
           ref={trackRef}
-          className="xl:flex xl:w-max xl:py-5 xl:mt-5 lg:flex lg:w-max lg:py-4 lg:mt-5 md:mt-5 md:flex md:w-max p-6 sm
-          :mt-5 sm:flex"
+          className="flex mt-5 w-max py-3"
         >
           {[...reviews, ...reviews].map((item, index) => (
             <div
               key={index}
-              className="xl:mx-4 xl:w-[300px] rounded-xl xl:p-4 shadow lg:mx-4 lg:w-[250px] lg:p-4 lg:shadow md:w-[250px] md:p-3 md:mx-2 sm:mx-1 sm:p-3 sm:w-[250px]"
+              className="w-[250px] shadow mx-2 p-4 rounded-2xl"
             >
               <TruncateText
                 className="sm:font-normal font-medium font-secondary tracking-wide"

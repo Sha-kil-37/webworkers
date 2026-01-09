@@ -93,25 +93,24 @@ export default function Projects() {
       className="xl:py-15 lg:py-10 md:py-10 sm:py-10"
     >
       <div className="xl:w-6xl xl:mx-auto relative lg:w-5xl lg:mx-auto md:mx-auto md:px-6 sm:mx-auto sm:px-6">
-        <h2 className="tracking-wide text-3xl text-center font-bold font-primary lg:text-3xl lg:tracking-wide md:text-2xl sm:text-2xl sm:tracking-wide ">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
           Our <span className="text-[#0076DF]">Portfolios</span>
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 tracking-wide font-primary lg:mt-2 lg:tracking-wide lg:w-3xl lg:mx-auto md:mt-2 md:mx-auto md:w-2xl sm:mt-2 sm:mx-auto sm:w-xl">
+        <Paragraph className="font-primary tracking-wide text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full">
           Every project we deliver is built for innovation and scalability. We
           provide web development, digital marketing, SEO, social media
           marketing, UI/UX design, and app development—backed by business
           consultation, custom software, and AI integration—to create
           user-centric, data-driven, future-ready digital solutions.
         </Paragraph>
-        <div className="xl:flex xl:mt-5 xl:items-center xl:justify-center xl:gap-3 xl:flex-wrap lg:mt-4 lg:flex lg:items-center lg:justify-center lg:gap-3 lg:flex-wrap md:mt-5 md:flex md:items-center md:justify-center md:gap-3 md:flex-wrap sm:flex sm:items-center sm:justify-center sm:gap-3 sm:flex-wrap sm:mt-4">
+        <div className="flex items-center mx-auto mt-5 flex-wrap gap-2 justify-center">
           {categories.map((cat) => (
             <motion.button
               title={cat}
               key={cat}
               layoutId={`project-filter-${cat}`}
               onClick={() => setProjectActiveCategory(cat)}
-              className={`whitespace-nowrap xl:px-4 py-1 rounded-full cursor-pointer transition-colors duration-200 font-medium shadow font-primary tracking-wide 
-                lg:px-4 md:px-4 sm:px-4${
+              className={`px-3 border font-primary tracking-wide font-medium cursor-pointer ${
                 projectActiveCategory === cat ? " text-[#0076DF]" : " "
               }`}
               aria-pressed={projectActiveCategory === cat}
@@ -136,19 +135,19 @@ export default function Projects() {
                 />
               </div>
               <div className="xl:p-4 lg:p-4 md:p-4 sm:p-4">
-                <Paragraph className="font-primary tracking-wide">
+                <Paragraph className="font-primary">
                   {project.category}
                 </Paragraph>
-                <Paragraph className="font-medium text-xl md:text-lg font-primary tracking-wide sm:text-lg">
+                <Paragraph className="font-medium tracking-wide font-primary">
                   {project.title}
                 </Paragraph>
-                <div className="xl:flex xl:gap-x-2 xl:mt-3 lg:flex  lg:flex-wrap xl:flex-wrap lg:gap-x-2 lg:mt-2 md:mt-2 md:flex md:gap-2 md:flex-wrap sm:mt-2 sm:flex sm:gap-2 sm:flex-wrap">
+                <div className="flex flex-wrap gap-2 mt-1">
                   {project.tech.map((tech, i) => {
                     return (
                       <Paragraph
                         title={tech}
                         key={i}
-                        className="xl:px-2 rounded-full shadow font-medium font-primary tracking-wide lg:px-2 md:px-2 sm:px-2"
+                        className="font-primary shadow px-2 rounded-full"
                       >
                         {tech}
                       </Paragraph>

@@ -50,10 +50,10 @@ export default function FAQ() {
       className="xl:py-10 lg:py-10 md:py-10 sm:py-10 "
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-6 md:mx-auto sm:px-6 sm:mx-auto">
-        <h2 className="tracking-wide xl:text-3xl font-bold text-center font-primary lg:text-3xl md:text-2xl sm:text-2xl sm:tracking-wide">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
           How Can I <span className="text-[#0076DF]">Help</span> You ?
         </h2>
-        <Paragraph className="xl:w-4xl xl:mx-auto font-medium text-center mt-2 font-primary tracking-wide lg:w-3xl lg:mx-auto sm:w-xl sm:mx-auto md:w-xl md:mx-auto">
+        <Paragraph className="font-primary tracking-wide text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full">
           We provide end-to-end digital solutions that help businesses grow
           smarter and faster—combining high-performance web and app development,
           intuitive UI/UX design, data-driven digital marketing, SEO, social
@@ -66,7 +66,7 @@ export default function FAQ() {
             <div className="bg-gray-100 absolute bottom-0 right-0 h-[50%] w-[50%] z-10 flex justify-center items-center">
               <div className="sm:px-2">
                 <MdContactSupport className="xl:h-15 xl:w-15 mx-auto text-[#0076DF] lg:h-13 md:h-10 lg:w-13 md:w-10 sm:h-10 sm:w-10" />
-                <h2 className="mt-3 font-primary tracking-wide font-bold md:text-center sm:text-center">
+                <h2 className="font-primary tracking-wide font-medium">
                   Some familiar questions
                 </h2>
               </div>
@@ -79,26 +79,26 @@ export default function FAQ() {
               className="w-full h-full object-cover"
             ></video>
           </div>
-          <div className="space-y-2 sm:mt-5">
+          <div className="space-y-2">
             {faqs.map((faq, index) => {
               const isOpen = activeIndex === index;
               //
               return (
                 <div
                   key={index}
-                  className="border border-[#F5F5F7] rounded-xl overflow-hidden transition-all duration-200 xl:p-3 lg:p-3 md:p-2 sm:p-2"
+                  className="border border-[#F5F5F7] rounded-xl overflow-hidden transition-all duration-200 p-2"
                 >
                   {/* Question */}
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex items-center justify-between text-left transition-all duration-200"
                   >
-                    <span className="font-medium xl:text-xl 2xl:text-xl lg:text-xl md:text-lg sm:text-lg sm:tracking-wide font-primary tracking-wide">
+                    <span className="font-medium font-primary tracking-wide">
                       {faq.question}
                     </span>
 
                     <span
-                      className={`text-3xl transform transition-transform duration-300 cursor-pointer ${
+                      className={`text-2xl transform transition-transform duration-300 cursor-pointer ${
                         isOpen ? "rotate-45 text-[#0076DF]" : "rotate-0"
                       }`}
                     >
@@ -114,7 +114,7 @@ export default function FAQ() {
                         : "grid-rows-[0fr] opacity-0"
                     }`}
                   >
-                    <div className="overflow-hidden font-medium font-primary tracking-wide">
+                    <div className="overflow-hidden font-primary tracking-wide">
                       {faq.answer}
                     </div>
                   </div>

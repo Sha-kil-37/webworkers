@@ -71,7 +71,7 @@ export default function OurTeam() {
                 {""}
                 Team Members
               </h2>
-              <Paragraph className="xl:w-lg mt-2 font-medium tracking-wide font-primary lg:mt-2 lg:tracking-wide md:mt-2 md:tracking-wide sm:mt-2 sm:tracking-wide">
+              <Paragraph className="font-primary tracking-wide w-full">
                 We are a multidisciplinary digital team driven by innovation and
                 results. Our expertise spans web and app development, UI/UX
                 design, digital marketing, SEO, and social media
@@ -102,7 +102,7 @@ export default function OurTeam() {
                 {/* Content */}
                 <div className="xl:p-6 flex justify-between lg:p-4 md:p-4 sm:p-4">
                   <div>
-                    <h3 className="font-medium text-xl font-primary tracking-wide md:tracking-wide md:text-lg sm:tracking-wide sm:text-lg">{member.name}</h3>
+                    <h3 className="font-medium font-primary tracking-wide">{member.name}</h3>
                     <Paragraph className="font-primary tracking-wide">{member.role}</Paragraph>
                   </div>
                   <div className="flex gap-x-3">

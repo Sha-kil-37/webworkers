@@ -1,16 +1,12 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
 //
 export default function MobileNav() {
   const [showProjectFilters, setShowProjectFilters] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const navigate = useNavigate();
-  const currentPath = window.location;
   //
   const { projectActiveCategory, setProjectActiveCategory } = useSearch();
-
   //
   const categories = [
     "All",
@@ -53,14 +49,12 @@ export default function MobileNav() {
     onScroll(); // initial check
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  // handle navigate function for page navigate
-  function handleNavigate(path) {
-    if (currentPath.pathname === "/") {
-      scrollTo(path);
-    } else {
-      navigate("/");
-    }
-  }
+  // 
+    const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   //
   return (
     <aside className="hidden 2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  bg-white dark:bg-black shadow">
@@ -84,7 +78,7 @@ export default function MobileNav() {
       ) : (
         <nav className="w-full px-4 flex justify-between">
           <button
-            onClick={() => handleNavigate("home")}
+            onClick={() => scrollTo("home")}
             className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
               activeSection === "home" ? "text-[#0076DF]" : ""
             }`}
@@ -94,7 +88,7 @@ export default function MobileNav() {
             Home
           </button>
           <button
-            onClick={() => handleNavigate("services")}
+            onClick={() => scrollTo("services")}
             className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
               activeSection === "services" ? "text-[#0076DF]" : ""
             }`}
@@ -104,7 +98,7 @@ export default function MobileNav() {
             Services
           </button>
           <button
-            onClick={() => handleNavigate("about")}
+            onClick={() => scrollTo("about")}
             className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
               activeSection === "about" ? "text-[#0076DF]" : ""
             }`}
@@ -114,7 +108,7 @@ export default function MobileNav() {
             About
           </button>
           <button
-            onClick={() => handleNavigate("portfolios")}
+            onClick={() => scrollTo("portfolios")}
             className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
               activeSection === "portfolios" ? "text-[#0076DF]" : ""
             }`}
@@ -125,7 +119,7 @@ export default function MobileNav() {
           </button>
           
           <button
-            onClick={() => handleNavigate("blogs")}
+            onClick={() => scrollTo("blogs")}
             className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
               activeSection === "blogs" ? "text-[#0076DF]" : ""
             }`}
@@ -135,7 +129,7 @@ export default function MobileNav() {
             Blogs
           </button>
           <button
-            onClick={() => handleNavigate("contact")}
+            onClick={() => scrollTo("contact")}
             className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
               activeSection === "contact" ? "text-[#0076DF]" : ""
             }`}
@@ -147,9 +141,6 @@ export default function MobileNav() {
         </nav>
       )}
 
-    
-
-      {/*  */}
     </aside>
   );
 }

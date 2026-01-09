@@ -145,10 +145,10 @@ export default function Blogs() {
           {/* Left sticky column */}
           <aside className="md:col-span-1 xl:border-r 2xl:border-r lg:border-r  border-[#F5F5F7] md:border-r sm:border-r">
             <div className="xl:sticky xl:top-16 lg:sticky lg:top-16 md:top-16 md:sticky sm:top-16 sm:sticky">
-              <h2 className="tracking-wide xl:text-3xl font-bold lg:text-3xl lg:tracking-wide md:text-2xl sm:text-2xl font-primary sm:tracking-wide md:tracking-wide">
+              <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary">
                 Read Our <span className="text-[#0076DF]">Blogs</span>
               </h2>
-              <Paragraph className="xl:w-lg xl:mt-2 font-medium tracking-wide font-primary lg:mt-2 lg:tracking-wide md:mt-2 md:tracking-wide sm:mt-2 sm:tracking-wide">
+              <Paragraph className="font-primary tracking-wide w-full">
                 Our blog is a knowledge hub where technology, creativity, and
                 strategy come together. We share practical insights on web
                 development, digital marketing, SEO, social media marketing,
@@ -189,7 +189,7 @@ export default function Blogs() {
                   title={category}
                   key={i}
                   onClick={() => handleCategorySelect(category)}
-                  className={`px-3  inline-block rounded-xl font-medium cursor-pointer font-primary tracking-wide transition-all duration-200 ${
+                  className={`px-3 inline-block rounded-xl font-medium cursor-pointer font-primary tracking-wide transition-all duration-200 ${
                     selectedCategory === category ||
                     (category === "All" && !selectedCategory)
                       ? "text-[#0076DF] shadow"
@@ -204,7 +204,7 @@ export default function Blogs() {
               <Link
                 to={`/blogdetails/${blog.id}`} 
                 key={i}
-                className="xl:my-4 cursor-pointer block group rounded-xl overflow-hidden shadow lg:my-4 md:my-4 sm:my-4"
+                className="xl:my-4 cursor-pointer block group rounded-xl overflow-hidden shadow my-2"
               >
               
                 <div className="relative overflow-hidden h-80">
@@ -214,14 +214,14 @@ export default function Blogs() {
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-200"
                   />
                 </div>
-                <div className="xl:p-6 lg:p-4 md:p-4 sm:p-4">
-                  <Paragraph className="font-medium tracking-wide font-primary">
+                <div className="p-4">
+                  <Paragraph className="tracking-wide font-primary">
                     {blog.category}
                   </Paragraph>
-                  <Paragraph className="tracking-wide font-primary font-medium text-xl md:text-lg sm:text-lg sm:tracking-wide">
+                  <Paragraph className="tracking-wide font-primary font-medium">
                     {blog.title}
                   </Paragraph>
-                  <Paragraph className="font-medium font-primary tracking-wide text-[#0076DF]">
+                  <Paragraph className="font-secondary tracking-wide text-[#0076DF]">
                     By {blog.author}
                   </Paragraph>
                 </div>

@@ -88,13 +88,13 @@ export default function Navbar() {
         scrolled ? "bg-white dark:bg-black shadow" : "bg-transparent"
       }`}
     >
-      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto py-4 xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between px-6 sm:flex sm:items-center sm:justify-between">
+      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto py-4 xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between px-1 sm:flex sm:items-center sm:justify-between flex justify-between items-center">
         {/* Logo */}
         <motion.h3
           onClick={() => handleNavigate("home")}
           layoutId="site-logo"
           title="Home"
-          className="text-xl font-bold cursor-pointer font-primary tracking-wide"
+          className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-base 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide  xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide tracking-wide font-medium"
         >
           AGENCY
         </motion.h3>
@@ -145,7 +145,7 @@ export default function Navbar() {
         {/*  */}
         {/* Desktop Menu */}
         {showProjectFilters ? null : showSearch ? null : (
-          <div className="2xl:flex xl:flex xl:items-center lg:flex lg:items-center md:flex sm:hidden">
+          <div className="2xl:flex xl:flex xl:items-center lg:flex lg:items-center md:flex sm:hidden hidden">
             <button
               onClick={() => handleNavigate("home")}
               className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
@@ -204,7 +204,7 @@ export default function Navbar() {
           </div>
         )}
         {/*  */}
-        <DarkModeToggle className="2xl:block xl:block lg:block md:block  text-2xl cursor-pointer" />
+        <DarkModeToggle className="2xl:block xl:block lg:block  md:block 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl text-xl cursor-pointer" />
       </nav>
     </header>
   );

@@ -101,10 +101,10 @@ export default function Contact() {
       className="xl:py-10 relative lg:py-10 md:py-10 sm:py-10"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-6 md:mx-auto sm:px-6 sm:mx-auto">
-        <h2 className="tracking-wide font-primary xl:text-3xl font-bold text-center lg:text-3xl md:text-2xl sm:text-2xl sm:tracking-wide">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
           <span className="text-[#0076DF]">Contact</span> Us
         </h2>
-        <Paragraph className="tracking-wide font-primary mx-auto xl:w-3xl text-center font-medium xl:mt-2 lg:mt-2 lg:w-2xl lg:tracking-wide md:mt-2  md:w-2xl md:mx-auto sm:mt-2 sm:w-lg">
+        <Paragraph className="font-primary tracking-wide text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full">
           Let’s turn your ideas into reality. From modern websites and digital marketing to custom apps and AI solutions, we help your business grow. Contact us to get started.
         </Paragraph>
         {/*  */}
@@ -119,14 +119,14 @@ export default function Contact() {
             />
           </div>
           <div className="space-y-4 p-8 shadow sm:mt-5">
-            <h3 className="text-2xl font-medium text-center text-[#0076DF] tracking-wide font-primary md:text-xl">
+            <h3 className="font-primary tracking-wide font-semibold text-center text-[#0076DF]">
               Send a message
               <span>&#128400;</span>
             </h3>
             <form onSubmit={handleSubmit} className="">
               {/* Name */}
               <div>
-                <label htmlFor="name" className="font-medium tracking-wide font-primary">
+                <label htmlFor="name" className=" tracking-wide font-primary">
                   Name
                 </label>
                 <input
@@ -135,7 +135,7 @@ export default function Contact() {
                   placeholder="Inter your name"
                   value={values.name}
                   onChange={handleChange}
-                  className={`mt-1 font-medium border block w-full rounded-full font-primary tracking-wide px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
+                  className={`mt-1 border block w-full rounded-full font-primary tracking-wide px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF] 
             ${errors.name ? "" : ""}`}
                 />
@@ -148,7 +148,7 @@ export default function Contact() {
 
               {/* Email */}
               <div className="mt-2">
-                <label htmlFor="email" className="font-medium tracking-wide font-primary">
+                <label htmlFor="email" className="tracking-wide font-primary">
                   Email
                 </label>
                 <input
@@ -157,7 +157,7 @@ export default function Contact() {
                   placeholder="Inter your email"
                   value={values.email}
                   onChange={handleChange}
-                  className={`font-medium font-primary tracking-wide shadow mt-1 w-full rounded-full border px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
+                  className={`font-primary tracking-wide shadow mt-1 w-full rounded-full border px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF] 
             ${errors.email ? "" : ""}`}
                 />
@@ -170,7 +170,7 @@ export default function Contact() {
 
               {/* Message */}
               <div className="mt-2 relative">
-                <label htmlFor="message" className="font-medium font-primary tracking-wide">
+                <label htmlFor="message" className=" font-primary tracking-wide">
                   Message
                 </label>
 
@@ -180,13 +180,13 @@ export default function Contact() {
                   rows={5}
                   value={values.message}
                   onChange={handleChange}
-                  className="mt-1 shadow w-full rounded-4xl border px-6 py-6 resize-none font-medium transition-all duration-200 focus:outline focus:outline-[#0076DF]
+                  className="mt-1 shadow w-full rounded-4xl border px-6 py-6 resize-none transition-all duration-200 focus:outline focus:outline-[#0076DF]
           focus:border-[#0076DF] font-primary tracking-wide"
                 />
 
                 {/* Word Counter */}
                 <div
-                  className={`absolute bottom-2 right-3 text-xs font-medium
+                  className={`absolute bottom-2 right-3
       ${remainingWords < 0 ? "text-[#F43F5E] font-primary tracking-wide" : "text-gray-600 font-primary tracking-wide"}`}
                 >
                   {wordCount}/{MAX_WORDS} words

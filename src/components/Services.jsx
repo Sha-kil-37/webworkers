@@ -53,7 +53,6 @@ const services = [
 ];
 //
 export default function Services() {
-  //
 
   //
   return (
@@ -63,26 +62,23 @@ export default function Services() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       id="services"
-      className="xl:py-20 py-10 md:py-10 sm:py-10"
+      className="xl:py-20 md:py-10 sm:py-10 py-5"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6 sm:px-6 sm:mx-auto">
-        {/* Section Header */}
-        <div>
-          <h2 className="xl:tracking-wide xl:text-3xl font-bold text-center xl:w-3xl mx-auto font-primary lg:tracking-wide lg:font-bold lg:text-3xl md:text-2xl md:font-bold md:tracking-wide sm:text-2xl sm:font-bold sm:tracking-wide">
-            Meet Our <span className="text-[#0076DF]">Services</span>
-          </h2>
-          <Paragraph className="font-primary font-medium text-center tracking-wide mt-2 2xl:w-4xl xl:mx-auto lg:w-3xl lg:mx-auto lg:mt-2 md:w-2xl md:mx-auto md:mt-2 sm:w-xl sm:mx-auto sm:mt-2">
-            Our services are built to drive measurable growth. From high-quality
-            web and app development to intuitive UI/UX design, SEO, digital
-            marketing, and social media strategy, we cover every stage of your
-            digital journey. With custom software solutions, AI-powered
-            integrations, and strategic business consultation, we help brands
-            innovate, automate, and scale faster.
-          </Paragraph>
-        </div>
+      <div className="2xl:w-6xl xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6 sm:px-6 sm:mx-auto px-1 mx-auto">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
+          Meet Our <span className="text-[#0076DF]">Services</span>
+        </h2>
+        <Paragraph className="font-primary tracking-wide text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full">
+          Our services are built to drive measurable growth. From high-quality
+          web and app development to intuitive UI/UX design, SEO, digital
+          marketing, and social media strategy, we cover every stage of your
+          digital journey. With custom software solutions, AI-powered
+          integrations, and strategic business consultation, we help brands
+          innovate, automate, and scale faster.
+        </Paragraph>
 
         {/* Bento Grid */}
-        <div className="xl:grid xl:grid-cols-4  xl:gap-6 xl:mt-5 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-5 md:mt-5 md:grid md:grid-cols-3 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-5">
+        <div className="xl:grid xl:grid-cols-4 xl:gap-6 xl:mt-10 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-8 md:mt-8 md:grid md:grid-cols-3 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-6 mt-5">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -91,12 +87,12 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className={`relative 2xl:rounded-2xl xl:rounded-2xl lg:rounded-2xl md:rounded-2xl sm:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5 md:p-4 sm:p-4`}
+              className={`relative 2xl:rounded-2xl xl:rounded-2xl lg:rounded-2xl md:rounded-2xl sm:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5 md:p-4 sm:p-4 p-4 rounded-2xl`}
             >
-              <h3 className="font-medium text-2xl font-primary tracking-wide lg:tracking-wide lg:text-2xl md:tracking-wide md:text-xl sm:tracking-wide sm:text-xl">
+              <h3 className="tracking-wide font-semibold font-primary">
                 {service.title}
               </h3>
-              <Paragraph className="xl:mt-3 lg:font-medium  xl:font-medium font-primary xl:tracking-wide lg:tracking-wide lg:mt-3 md:mt-2 md:tracking-wide md:font-normal sm:mt-2 sm:tracking-wide sm:font-normal">
+              <Paragraph className="tracking-wide font-primary">
                 {service.desc}
               </Paragraph>
             </motion.div>
