@@ -16,7 +16,7 @@ export default function OurAchievements() {
       transition={{ duration: 1 }}
       className="xl:py-10 relative lg:py-10 md:py-10 sm:py-10 py-5"
     >
-      <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 2xl:grid 2xl:grid-cols-2 2xl:gap-12 lg:w-5xl lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-10 md:px-6 md:grid md:grid-cols-2 md:gap-6 sm:px-6 sm:mx-auto sm:grid sm:grid-cols-2 sm:gap-6 mx-auto px-1">
+      <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-x-40 2xl:grid 2xl:grid-cols-2 2xl:gap-12 lg:w-5xl lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-20 md:px-8 md:grid md:grid-cols-2 md:gap-x-20 sm:px-8 sm:mx-auto sm:grid sm:grid-cols-2 sm:gap-x-15 mx-auto">
         <div className="">
           <h2 className="tracking-wide font-semibold font-primary text-center 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl">
             Our <span className="text-[#0076DF]">Success</span>
@@ -45,7 +45,7 @@ export default function OurAchievements() {
             meaningful digital experiences that drive real results.
           </Paragraph>
         </div>
-        <div className="xl:grid xl:grid-cols-2 lg:grid lg:grid-cols-2 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 2xl:gap-6 xl:gap-6 lg:gap-6 md:gap-6 sm:gap-6 2xl:mt-0 xl:mt-6 lg:mt-6 md:mt-6 sm:mt-6 mt-6">
+        <div className="xl:grid xl:grid-cols-2 lg:grid lg:grid-cols-2 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 2xl:gap-6 xl:gap-6 md:gap-6 sm:gap-6 mt-6">
           <CounterItem end={120} label="Projects Completed" />
           <CounterItem end={80} label="Happy Clients" />
           <CounterItem end={5} label="Years Experience" />

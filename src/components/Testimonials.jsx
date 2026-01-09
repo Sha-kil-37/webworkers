@@ -74,7 +74,7 @@ const Testimonials = () => {
       transition={{ duration: 1 }}
       className="relative py-8"
     >
-      <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden md:px-6 md:mx-auto md:overflow-hidden sm:px-6 sm:mx-auto">
+      <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden md:px-8 md:mx-auto md:overflow-hidden sm:px-8 sm:mx-auto">
         <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
           What does our <span className="text-[#0076DF]">client</span> say ?
         </h2>

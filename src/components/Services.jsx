@@ -64,7 +64,7 @@ export default function Services() {
       id="services"
       className="xl:py-20 md:py-10 sm:py-10 py-5"
     >
-      <div className="2xl:w-6xl xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-6 sm:px-6 sm:mx-auto px-1 mx-auto">
+      <div className="2xl:w-6xl xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto">
         <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
           Meet Our <span className="text-[#0076DF]">Services</span>
         </h2>
@@ -78,7 +78,7 @@ export default function Services() {
         </Paragraph>
 
         {/* Bento Grid */}
-        <div className="xl:grid xl:grid-cols-4 xl:gap-6 xl:mt-10 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-8 md:mt-8 md:grid md:grid-cols-3 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-6 mt-5">
+        <div className="xl:grid xl:grid-cols-4 xl:gap-6 xl:mt-10 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-8 md:mt-8 md:grid md:grid-cols-2 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-6 mt-5">
           {services.map((service, i) => (
             <motion.div
               key={i}

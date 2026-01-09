@@ -47,9 +47,9 @@ export default function FAQ() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 lg:py-10 md:py-10 sm:py-10 "
+      className="xl:py-10 lg:py-10 md:py-10 sm:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-6 md:mx-auto sm:px-6 sm:mx-auto">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:px-8 sm:mx-auto">
         <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
           How Can I <span className="text-[#0076DF]">Help</span> You ?
         </h2>
@@ -61,12 +61,12 @@ export default function FAQ() {
           integration to keep your brand competitive.
         </Paragraph>
         {/*  */}
-        <div className="xl:grid xl:grid-cols-2 xl:gap-x-12 xl:items-center lg:items-center xl:mt-10 lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-x-10 md:mt-10 md:grid md:grid-cols-2 md:gap-x-6 sm:grid  sm:mt-10">
+        <div className="xl:grid xl:grid-cols-2 xl:gap-x-12 xl:items-center lg:items-center xl:mt-10 lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-x-10 md:mt-10 md:grid md:grid-cols-2 md:gap-x-10 sm:grid sm:mt-10">
           <div className="relative w-full h-full">
             <div className="bg-gray-100 absolute bottom-0 right-0 h-[50%] w-[50%] z-10 flex justify-center items-center">
               <div className="sm:px-2">
                 <MdContactSupport className="xl:h-15 xl:w-15 mx-auto text-[#0076DF] lg:h-13 md:h-10 lg:w-13 md:w-10 sm:h-10 sm:w-10" />
-                <h2 className="font-primary tracking-wide font-medium">
+                <h2 className="font-primary tracking-wide font-medium md:text-center">
                   Some familiar questions
                 </h2>
               </div>
@@ -79,7 +79,7 @@ export default function FAQ() {
               className="w-full h-full object-cover"
             ></video>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2 sm:mt-5">
             {faqs.map((faq, index) => {
               const isOpen = activeIndex === index;
               //

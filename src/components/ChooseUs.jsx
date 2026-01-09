@@ -41,7 +41,7 @@ export default function ChooseUs() {
       transition={{ duration: 1 }}
       className="xl:py-10 overflow-hidden lg:py-10 md:py-10 sm:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-6 md:mx-auto sm:mx-auto sm:px-6">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:mx-auto sm:px-8">
         <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
           All The <span className="text-[#0076DF]">Benefits</span> You Gain By
           Working With Us
@@ -52,7 +52,7 @@ export default function ChooseUs() {
           integration, and strategic business consultation to help businesses
           stay ahead.
         </Paragraph>
-        <div className="xl:grid xl:grid-cols-4 xl:mt-10 lg:grid lg:grid-cols-4 lg:mt-8 md:mt-8 md:grid md:grid-cols-2 md:gap-x-12 md:gap-y-6 sm:grid sm:grid-cols-2 sm:gap-6 sm:mt-8">
+        <div className="xl:grid xl:grid-cols-4 xl:mt-10 lg:grid lg:grid-cols-4 lg:mt-8 md:mt-8 md:grid md:grid-cols-2 md:gap-x-10 sm:mt-5 sm:grid sm:grid-cols-2 sm:gap-x-10">
           {features.map((item, i) => {
             const Icon = item.icon;
             //

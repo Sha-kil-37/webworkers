@@ -92,7 +92,7 @@ export default function Projects() {
       transition={{ duration: 1 }}
       className="xl:py-15 lg:py-10 md:py-10 sm:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto relative lg:w-5xl lg:mx-auto md:mx-auto md:px-6 sm:mx-auto sm:px-6">
+      <div className="xl:w-6xl xl:mx-auto relative lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:mx-auto sm:px-8">
         <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
           Our <span className="text-[#0076DF]">Portfolios</span>
         </h2>
@@ -119,7 +119,7 @@ export default function Projects() {
             </motion.button>
           ))}
         </div>
-        <div className="xl:grid xl:grid-cols-3 xl:gap-6 xl:mt-10 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-8 md:mt-6 md:grid md:grid-cols-3 md:gap-4 sm:mt-5 sm:grid sm:grid-cols-2 sm:gap-6">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-6 xl:mt-10 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-8 md:mt-6 md:grid md:grid-cols-2 md:gap-4 sm:mt-5 sm:grid sm:grid-cols-2 sm:gap-4">
           {filtered.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}

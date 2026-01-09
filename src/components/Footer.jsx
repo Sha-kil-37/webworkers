@@ -14,9 +14,9 @@ export default function Footer() {
   //
   return (
     <footer className="xl:py-10 lg:py-10 md:py-10 sm:pt-10 sm:pb-20">
-      <div className="xl:w-6xl mx-auto lg:w-5xl md:px-6 md:mx-auto sm:px-6 sm:mx-auto">
+      <div className="xl:w-6xl mx-auto lg:w-5xl md:px-8 md:mx-auto sm:px-6 sm:mx-auto">
         {/* Grid */}
-        <div className="xl:grid xl:gap-12 xl:grid-cols-4 lg:grid lg:gap-10 lg:grid-cols-4 md:grid md:gap-8 md:grid-cols-2 sm:grid sm:gap-8 sm:grid-cols-2">
+        <div className="xl:grid xl:gap-12 xl:grid-cols-4 lg:grid lg:gap-10 lg:grid-cols-4 md:grid md:gap-10 md:grid-cols-2 sm:grid sm:gap-8 sm:grid-cols-2">
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-bold tracking-wide font-primary">

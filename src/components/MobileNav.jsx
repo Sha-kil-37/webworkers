@@ -57,9 +57,9 @@ export default function MobileNav() {
   };
   //
   return (
-    <aside className="hidden 2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  bg-white dark:bg-black shadow">
+    <aside className="hidden 2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  bg-white dark:bg-black shadow  sm:justify-center">
       {showProjectFilters ? (
-        <div className="2xl:flex xl:flex lg:flex md:flex  gap-2  mx-2">
+        <div className="">
           {categories.map((cat) => (
             <motion.button
               title={cat}

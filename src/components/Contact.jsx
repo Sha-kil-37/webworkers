@@ -100,7 +100,7 @@ export default function Contact() {
       transition={{ duration: 1 }}
       className="xl:py-10 relative lg:py-10 md:py-10 sm:py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-6 md:mx-auto sm:px-6 sm:mx-auto">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:px-8 sm:mx-auto">
         <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
           <span className="text-[#0076DF]">Contact</span> Us
         </h2>
@@ -108,7 +108,7 @@ export default function Contact() {
           Let’s turn your ideas into reality. From modern websites and digital marketing to custom apps and AI solutions, we help your business grow. Contact us to get started.
         </Paragraph>
         {/*  */}
-        <div className="w-full xl:grid xl:grid-cols-2 xl:mt-10 xl:gap-12 xl:items-center lg:grid lg:grid-cols-2 lg:mt-10 lg:gap-10 lg:items-center md:mt-10 md:grid md:grid-cols-2 md:gap-8 md:items-center sm:mt-10">
+        <div className="w-full xl:grid xl:grid-cols-2 xl:mt-10 xl:gap-12 xl:items-center lg:grid lg:grid-cols-2 lg:mt-10 lg:gap-10 lg:items-center md:mt-10 md:grid md:grid-cols-2 md:gap-10 md:items-center sm:mt-10">
           <div className="w-full h-full">
             <iframe
               title="Office Location"
