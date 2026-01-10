@@ -45,10 +45,10 @@ export default function FAQ() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 lg:py-10 md:py-10 sm:py-10 py-5"
+      className="2xl:py-15 xl:py-15 lg:py-15 md:py-15 sm:py-15 py-7"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:px-8 sm:mx-auto px-4">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center tracking-wide">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center text-xl tracking-wide">
           How Can I <span className="text-[#0076DF]">Help</span> You ?
         </h2>
         <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-2">

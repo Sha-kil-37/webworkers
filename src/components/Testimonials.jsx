@@ -72,10 +72,10 @@ const Testimonials = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="relative py-8"
+      className="relative 2xl:py-15 xl:py-15 lg:py-15 md:py-15 sm:py-15 py-7"
     >
       <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden md:px-8 md:mx-auto md:overflow-hidden sm:px-8 sm:mx-auto">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-xl font-semibold font-primary text-center tracking-wide">
           What does our <span className="text-[#0076DF]">client</span> say ?
         </h2>
         <Paragraph className="font-primary tracking-wide text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full">

@@ -62,10 +62,10 @@ export default function Services() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       id="services"
-      className="xl:py-20 md:py-10 sm:py-10 py-5"
+      className="2xl:py-15 xl:py-15 lg:py-15 md:py-15 sm:py-15 py-7"
     >
       <div className="2xl:w-6xl xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-4 mx-auto w-full">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center tracking-wide">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center text-xl tracking-wide">
           Meet Our <span className="text-[#0076DF]">Services</span>
         </h2>
         <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-2">
