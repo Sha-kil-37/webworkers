@@ -64,11 +64,11 @@ export default function Services() {
       id="services"
       className="xl:py-20 md:py-10 sm:py-10 py-5"
     >
-      <div className="2xl:w-6xl xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
+      <div className="2xl:w-6xl xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-2 mx-auto w-full">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center tracking-wide">
           Meet Our <span className="text-[#0076DF]">Services</span>
         </h2>
-        <Paragraph className="font-primary tracking-wide text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full">
+        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-2">
           Our services are built to drive measurable growth. From high-quality
           web and app development to intuitive UI/UX design, SEO, digital
           marketing, and social media strategy, we cover every stage of your
@@ -87,12 +87,12 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className={`relative 2xl:rounded-2xl xl:rounded-2xl lg:rounded-2xl md:rounded-2xl sm:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5 md:p-4 sm:p-4 p-4 rounded-2xl`}
+              className={`relative 2xl:rounded-2xl xl:rounded-2xl lg:rounded-2xl md:rounded-2xl sm:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5 md:p-4 sm:p-4 p-4 rounded-2xl mb-2`}
             >
               <h3 className="tracking-wide font-semibold font-primary">
                 {service.title}
               </h3>
-              <Paragraph className="tracking-wide font-primary">
+              <Paragraph className="font-primary">
                 {service.desc}
               </Paragraph>
             </motion.div>

@@ -41,7 +41,7 @@ function App() {
                 <ChooseUs />
                 <OurTeam />
                 <Portfolios />
-                <Testimonials />
+                {/* <Testimonials /> */}
                 <Blogs />
                 <FAQ />
                 <Contact />

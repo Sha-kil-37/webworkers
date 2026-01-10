@@ -60,18 +60,18 @@ export default function OurTeam() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 lg:py-10 md:py-10 sm:py-8"
+      className="xl:py-10 lg:py-10 md:py-10 sm:py-8 py-5"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-2">
         <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-x-10 md:gap-10 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 sm:gap-x-6">
-          <aside className="md:col-span-1 xl:border-r lg:border-r  md:border-r border-[#F5F5F7] sm:border-r">
+          <aside className="md:col-span-1 xl:border-r lg:border-r md:border-r border-[#F5F5F7] sm:border-r">
             <div className="xl:sticky xl:top-16 lg:sticky lg:top-16 md:top-16 md:sticky sm:top-16 sm:sticky">
-              <h2 className="xl:tracking-wide text-3xl font-bold font-primary lg:text-3xl lg:tracking-wide md:text-2xl md:tracking-wide sm:text-2xl sm:tracking-wide ">
+              <h2 className="tracking-wide font-semibold font-primary text-center 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl mx-auto mb-2">
                 Our <span className="text-[#0076DF]">Professional</span>{" "}
                 {""}
                 Team Members
               </h2>
-              <Paragraph className="font-primary tracking-wide w-full">
+              <Paragraph className="font-primary w-full 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left text-center">
                 We are a multidisciplinary digital team driven by innovation and
                 results. Our expertise spans web and app development, UI/UX
                 design, digital marketing, SEO, and social media
@@ -84,26 +84,26 @@ export default function OurTeam() {
             </div>
           </aside>
           {/* Right scrollable column */}
-          <main className="">
+          <main className="2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0  mt-5">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="group rounded-2xl overflow-hidden xl:mb-4 shadow lg:mb-4 md:mb-4 sm:mb-4"
+                className="group rounded-2xl overflow-hidden xl:mb-4 shadow lg:mb-4 md:mb-4 sm:mb-4 mb-2"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="xl:w-full xl:h-100 object-cover group-hover:scale-105 transition duration-200 ease-in-out lg:w-full lg:h-100 md:w-full md:h-100 sm:w-full sm:h-100"
+                    className="xl:w-full xl:h-100 object-cover group-hover:scale-105 transition duration-200 ease-in-out lg:w-full lg:h-100 md:w-full md:h-100 sm:w-full sm:h-100 h-100 w-full"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="xl:p-6 flex justify-between lg:p-4 md:p-4 sm:p-4">
+                <div className="xl:p-6 flex justify-between lg:p-4 md:p-4 sm:p-4 p-2">
                   <div>
                     <h3 className="font-medium font-primary tracking-wide">{member.name}</h3>
-                    <Paragraph className="font-primary tracking-wide">{member.role}</Paragraph>
+                    <Paragraph className="font-primary">{member.role}</Paragraph>
                   </div>
                   <div className="flex gap-x-3">
                     <Link target="_blank" to={member.socials.linkedin}>

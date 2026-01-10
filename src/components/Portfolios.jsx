@@ -90,13 +90,13 @@ export default function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-15 lg:py-10 md:py-10 sm:py-10"
+      className="xl:py-15 lg:py-10 md:py-10 sm:py-10 py-5"
     >
-      <div className="xl:w-6xl xl:mx-auto relative lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:mx-auto sm:px-8">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
+      <div className="xl:w-6xl xl:mx-auto relative lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:mx-auto sm:px-8 px-2">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center tracking-wide ">
           Our <span className="text-[#0076DF]">Portfolios</span>
         </h2>
-        <Paragraph className="font-primary tracking-wide text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full">
+        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-2">
           Every project we deliver is built for innovation and scalability. We
           provide web development, digital marketing, SEO, social media
           marketing, UI/UX design, and app development—backed by business

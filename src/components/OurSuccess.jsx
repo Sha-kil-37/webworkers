@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { CiStar } from "react-icons/ci";
 
 //
-export default function OurAchievements() {
+export default function OurSuccess() {
   //
 
   //
@@ -16,9 +16,9 @@ export default function OurAchievements() {
       transition={{ duration: 1 }}
       className="xl:py-10 relative lg:py-10 md:py-10 sm:py-10 py-5"
     >
-      <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-x-40 2xl:grid 2xl:grid-cols-2 2xl:gap-12 lg:w-5xl lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-20 md:px-8 md:grid md:grid-cols-2 md:gap-x-20 sm:px-8 sm:mx-auto sm:grid sm:grid-cols-2 sm:gap-x-15 mx-auto">
+      <div className="xl:w-6xl xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-x-40 2xl:grid 2xl:grid-cols-2 2xl:gap-12 lg:w-5xl lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-20 md:px-8 md:grid md:grid-cols-2 md:gap-x-20 sm:px-8 sm:mx-auto sm:grid sm:grid-cols-2 sm:gap-x-15 mx-auto px-2">
         <div className="">
-          <h2 className="tracking-wide font-semibold font-primary text-center 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl">
+          <h2 className="tracking-wide font-semibold font-primary text-center 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl">
             Our <span className="text-[#0076DF]">Success</span>
           </h2>
           <div className="2xl:flex xl:flex lg:flex md:flex sm:flex 2xl:mt-2 xl:mt-2 lg:mt-2 md:mt-2 sm:mt-2 mt-2 flex">
@@ -37,7 +37,7 @@ export default function OurAchievements() {
             })}
           </div>
           {/*  */}
-          <Paragraph className="font-primary  text-center 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left">
+          <Paragraph className="font-primary text-center 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left">
             We create smart, creative, and impactful digital solutions that help
             businesses grow with confidence. We deliver high-quality Web
             Development, Digital Marketing, UI/UX Design, SEO, and innovative
@@ -45,7 +45,7 @@ export default function OurAchievements() {
             meaningful digital experiences that drive real results.
           </Paragraph>
         </div>
-        <div className="xl:grid xl:grid-cols-2 lg:grid lg:grid-cols-2 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 2xl:gap-6 xl:gap-6 md:gap-6 sm:gap-6 mt-6">
+        <div className="xl:grid xl:grid-cols-2 lg:grid lg:grid-cols-2 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 2xl:gap-6 xl:gap-6 md:gap-6 sm:gap-6 mt-3">
           <CounterItem end={120} label="Projects Completed" />
           <CounterItem end={80} label="Happy Clients" />
           <CounterItem end={5} label="Years Experience" />

@@ -28,7 +28,7 @@ const Row = ({ reverse = false,}) => (
       }}
     >
       {[...logos, ...logos].map((logo, i) => (
-        <img key={i} src={logo} className="xl:h-14 lg:h-14 md:h-12 sm:h-10 opacity-80 h-7" />
+        <img key={i} src={logo} className="2xl:h-14 xl:h-14 lg:h-14 md:h-12 sm:h-10 opacity-80 h-6" />
       ))}
     </motion.div>
   </div>
@@ -44,10 +44,10 @@ export default function WorkExperience() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="2xl:py-10 xl:py-10 lg:py-10 md:py-10 sm:py-10 py-5"
+      className="2xl:py-10 xl:py-10 lg:py-10 md:py-10 sm:py-10 py-2"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 sm:px-8">
-        <h2 className="tracking-wide font-semibold font-primary text-center 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl mx-auto">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 sm:px-8 px-2">
+        <h2 className="tracking-wide font-semibold font-primary text-center 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl mx-auto mb-2">
           Work <span className="text-[#0076DF]">Experience</span> With
         </h2>
         <Row />

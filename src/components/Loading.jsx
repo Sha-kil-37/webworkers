@@ -14,9 +14,9 @@ export default function Loader() {
       <div>
         <motion.h3
           layoutId="site-logo"
-          className="font-primary tracking-wide font-bold text-center 2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg"
+          className="font-primary tracking-wide 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold text-center 2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-base font-normal"
         >
-          AGENCY
+          Agency
         </motion.h3>
         <Paragraph className="text-center mt-1 font-primary text-sky-500">
           Please Wait...

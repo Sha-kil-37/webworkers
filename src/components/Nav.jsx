@@ -84,19 +84,19 @@ export default function Navbar() {
   //
   return (
     <header
-      className={`fixed 2xl:top-0 2xl:left-0 w-full z-20 transition-all duration-200 xl:top-0 xl:left-0 lg:top-0 lg:left-0 md:top-0 md:left-0 sm:top-0 sm:left-0  ${
+      className={`2xl:fixed xl:fixed lg:fixed md:fixed sm:fixed 2xl:top-0 2xl:left-0 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full z-20 transition-all duration-200 xl:top-0 xl:left-0 lg:top-0 lg:left-0 md:top-0 md:left-0 sm:top-0 sm:left-0 top-0 left-0 fixed w-full  ${
         scrolled ? "bg-white dark:bg-black shadow" : "bg-transparent"
       }`}
     >
-      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto py-4 xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between sm:px-8 flex justify-between items-center md:mx-auto md:px-8">
+      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto 2xl:py-4 xl:py-4 lg:py-4 md:py-4 sm:4 py-2 xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between sm:px-8 flex justify-between items-center md:mx-auto md:px-8 px-2">
         {/* Logo */}
         <motion.h3
           onClick={() => handleNavigate("home")}
           layoutId="site-logo"
           title="Home"
-          className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-base 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide  xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide tracking-wide font-medium"
+          className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-base 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide font-normal tracking-wide"
         >
-          AGENCY
+          Agency
         </motion.h3>
 
         {/* Search Input */}
@@ -125,7 +125,7 @@ export default function Navbar() {
 
         {/* Project Filters */}
         {showProjectFilters && (
-          <div className="flex 2xl:flex xl:flex lg:flex md:flex  gap-2 mx-2 sm:hidden">
+          <div className="2xl:flex xl:flex lg:flex md:flex  gap-2 mx-2 sm:hidden hidden">
             {categories.map((cat) => (
               <motion.button
                 title={cat}
@@ -204,7 +204,7 @@ export default function Navbar() {
           </div>
         )}
         {/*  */}
-        <DarkModeToggle className="2xl:block xl:block lg:block  md:block 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl text-xl cursor-pointer" />
+        <DarkModeToggle className="2xl:block xl:block lg:block  md:block 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl text-lg cursor-pointer" />
       </nav>
     </header>
   );
