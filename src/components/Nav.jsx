@@ -103,7 +103,7 @@ export default function Navbar() {
 
         {/* Search Input */}
         {showSearch && (
-          <div className="2xl:flex xl:flex lg:flex md:flex sm:flex items-center rounded-full 2xl:w-xl xl:w-lg lg:w-lg md:w-md justify-between 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-8 sm:w-full w-full border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 hidden">
+          <div className="2xl:flex xl:flex lg:flex md:flex sm:hidden items-center rounded-full 2xl:w-xl xl:w-lg lg:w-lg md:w-md justify-between 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-8 sm:w-full w-full border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 hidden">
             <motion.input
               title="Search Blogs"
               layoutId="blog-search"
@@ -112,7 +112,7 @@ export default function Navbar() {
               placeholder="Search blog ..."
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              className="font-primary tracking-wide w-full h-full px-4 rounded-[0,0,100%,100%] outline-none focus:outline-none border-none focus:placeholder:text-[#0076DF] transition-all duration-200"
+              className="font-primary tracking-wide w-full h-full px-4 rounded-[0,0,100%,100%] outline-none focus:outline-none border-none focus:placeholder:text-[#0076DF] transition-all duration-200 cursor-pointer "
             />
             <button
               type="button"

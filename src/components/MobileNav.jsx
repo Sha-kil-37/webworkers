@@ -88,25 +88,27 @@ export default function MobileNav() {
           ))}
         </div>
       ) : showSearch ? (
-        <div className="flex w-full border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 h-8 rounded-full">
-          <motion.input
-            title="Search Blogs"
-            layoutId="blog-search"
-            name="search"
-            type="search"
-            placeholder="Search blog ..."
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            className="font-primary tracking-wide w-full h-full px-4 rounded-[0,0,100%,100%] outline-none focus:outline-none border-none focus:placeholder:text-[#0076DF] transition-all duration-200"
-          />
-          <button
-            type="button"
-            onClick={() => setSearchQuery(inputValue)}
-            className="inline-block w-15 cursor-pointer h-full bg-[#EEEEEE] border-none outline-none rounded-[0,100%,100%,0] hover:bg-[#eeeeeeb2]"
-            aria-label="Search Blogs"
-          >
-            <IoSearchOutline className="text-2xl mx-auto" />
-          </button>
+        <div className="px-6 w-full">
+          <div className="flex border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 h-8 rounded-full w-full">
+            <motion.input
+              title="Search Blogs"
+              layoutId="blog-search"
+              name="search"
+              type="search"
+              placeholder="Search blog ..."
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              className="font-primary tracking-wide w-full h-full px-4 rounded-[0,0,100%,100%] outline-none focus:outline-none border-none focus:placeholder:text-[#0076DF] transition-all duration-200"
+            />
+            <button
+              type="button"
+              onClick={() => setSearchQuery(inputValue)}
+              className="inline-block w-15 cursor-pointer h-full bg-[#EEEEEE] border-none outline-none rounded-[0,100%,100%,0] hover:bg-[#eeeeeeb2]"
+              aria-label="Search Blogs"
+            >
+              <IoSearchOutline className="text-2xl mx-auto" />
+            </button>
+          </div>
         </div>
       ) : (
         <nav className="w-full sm:px-10 flex justify-between px-2">
