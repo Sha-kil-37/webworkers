@@ -7,6 +7,8 @@ import { IoSearchOutline } from "react-icons/io5";
 // Blogs Component
 //
 export default function Blogs() {
+  const [showSearch, setShowSearch] = useState(false);
+
   // How many blogs to show at first
   const [visibleCount, setVisibleCount] = useState(3);
   // State for selected category (null means "All")
@@ -19,6 +21,21 @@ export default function Blogs() {
   useEffect(() => {
     setVisibleCount(3);
   }, [searchQuery]);
+  //
+  useEffect(() => {
+    const onScroll = () => {
+      const blogsElement = document.getElementById("blogs");
+      //
+      if (blogsElement) {
+        const rect = blogsElement.getBoundingClientRect();
+        // Show search only when scrolled 1px into the blog section
+        setShowSearch(rect.top < -1 && rect.bottom > 0);
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // initial check
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Sample blog data (unchanged)
   const blogs = [
@@ -129,6 +146,7 @@ export default function Blogs() {
   const handleLoadMoreBlogs = () => {
     setVisibleCount((prev) => prev + 3); // Load 3 more each click
   };
+  console.log(showSearch);
 
   // Render component
   return (
@@ -162,26 +180,28 @@ export default function Blogs() {
 
           {/* Right scrollable column */}
           <main className="mt-2">
-            <div className="w-full mx-auto 2xl:flex xl:flex lg:flex md:flex sm:flex items-center rounded-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full justify-between 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-7 border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 hidden">
-              <motion.input
-                title="Search Blogs"
-                layoutId="blog-search"
-                name="search"
-                type="search"
-                placeholder="Search blog ..."
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                className="font-primary tracking-wide w-full h-full px-4 rounded-[0,0,100%,100%] outline-none focus:outline-none border-none focus:placeholder:text-[#0076DF] transition-all duration-200"
-              />
-              <button
-                type="button"
-                onClick={() => setSearchQuery(inputValue)}
-                className="inline-block w-15 cursor-pointer h-full bg-[#EEEEEE] border-none outline-none rounded-[0,100%,100%,0] hover:bg-[#eeeeeeb2]"
-                aria-label="Search Blogs"
-              >
-                <IoSearchOutline className="text-2xl mx-auto" />
-              </button>
-            </div>
+            {showSearch ? null : (
+              <div className="w-full mx-auto 2xl:flex xl:flex lg:flex md:flex sm:flex items-center rounded-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full justify-between 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-7 border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 hidden">
+                <motion.input
+                  title="Search Blogs"
+                  layoutId="blog-search"
+                  name="search"
+                  type="search"
+                  placeholder="Search blog ..."
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  className="font-primary tracking-wide w-full h-full px-4 rounded-[0,0,100%,100%] outline-none focus:outline-none border-none focus:placeholder:text-[#0076DF] transition-all duration-200"
+                />
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery(inputValue)}
+                  className="inline-block w-15 cursor-pointer h-full bg-[#EEEEEE] border-none outline-none rounded-[0,100%,100%,0] hover:bg-[#eeeeeeb2]"
+                  aria-label="Search Blogs"
+                >
+                  <IoSearchOutline className="text-2xl mx-auto" />
+                </button>
+              </div>
+            )}
 
             <div className="2xl:flex 2xl:gap-2 2xl:flex-wrap xl:flex xl:flex-wrap xl:gap-2 lg:flex lg:flex-wrap lg:gap-2 md:flex md:flex-wrap md:gap-2 sm:flex sm:flex-wrap sm:gap-2 mt-3 flex flex-wrap justify-center gap-1">
               {categories.map((category, i) => (
@@ -201,8 +221,11 @@ export default function Blogs() {
               ))}
             </div>
             {visibleBlogs.map((blog, i) => (
-              <div key={i} className="xl:my-4 2xl:my-4 lg:my-3 md:my-3 sm:my-2 cursor-pointer block group rounded-xl overflow-hidden shadow mt-3">
-                <Link to={`/blogdetails/${blog.id}`} >
+              <div
+                key={i}
+                className="xl:my-4 2xl:my-4 lg:my-3 md:my-3 sm:my-2 cursor-pointer block group rounded-xl overflow-hidden shadow mt-3"
+              >
+                <Link to={`/blogdetails/${blog.id}`}>
                   <div className="relative overflow-hidden h-80">
                     <img
                       src={blog.image}

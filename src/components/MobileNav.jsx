@@ -69,9 +69,9 @@ export default function MobileNav() {
   console.log(showSearch);
   //
   return (
-    <aside className="2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  dark:bg-black shadow sm:justify-center flex justify-center fixed bottom-0 left-0 bg-white py-2 px-6">
+    <aside className="2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  dark:bg-black shadow sm:justify-center flex justify-center fixed bottom-0 left-0 bg-white py-2 px-4">
       {showProjectFilters ? (
-        <div className="flex flex-wrap gap-x-2 justify-center">
+        <div className="flex flex-wrap gap-x-3 justify-center w-full">
           {categories.map((cat) => (
             <motion.button
               title={cat}
@@ -88,7 +88,7 @@ export default function MobileNav() {
           ))}
         </div>
       ) : showSearch ? (
-        <div className="px-6 w-full">
+        <div className="w-full">
           <div className="flex border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 h-8 rounded-full w-full">
             <motion.input
               title="Search Blogs"
@@ -111,10 +111,10 @@ export default function MobileNav() {
           </div>
         </div>
       ) : (
-        <nav className="w-full sm:px-10 flex justify-between px-2">
+        <nav className="w-full flex justify-center items-center gap-x-5 flex-wrap">
           <button
             onClick={() => scrollTo("services")}
-            className={`text-base font-normal font-primary cursor-pointer ${
+            className={`text-base font-normal font-primary cursor-pointer block ${
               activeSection === "services" ? "text-[#0076DF]" : ""
             }`}
             title="Services"
@@ -134,7 +134,7 @@ export default function MobileNav() {
           </button>
           <button
             onClick={() => scrollTo("portfolios")}
-            className={`text-base font-normal font-primary cursor-pointer ${
+            className={`text-base font-normal font-primary cursor-pointer block ${
               activeSection === "portfolios" ? "text-[#0076DF]" : ""
             }`}
             title="Portfolios"
@@ -144,7 +144,7 @@ export default function MobileNav() {
           </button>
           <button
             onClick={() => scrollTo("blogs")}
-            className={`text-base font-normal font-primary cursor-pointer ${
+            className={`text-base font-normal font-primary cursor-pointer block ${
               activeSection === "blogs" ? "text-[#0076DF]" : ""
             }`}
             title="Blogs"
