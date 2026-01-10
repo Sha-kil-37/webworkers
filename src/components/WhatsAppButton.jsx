@@ -14,15 +14,15 @@ export default function WhatsAppButton() {
       to={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-10 right-10 z-30"
+      className="fixed bottom-15 right-5 z-30"
       aria-label="Chat on WhatsApp"
     >
-      <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-green-500 shadow-lg hover:scale-105 transition-all duration-200 ease-in-out">
+      <div className="relative flex items-center justify-center 2xl:w-8 xl:w-8 lg:w-8 md:w-6 sm:w-5 2xl:h-8 xl:h-8 lg:h-8 md:h-6 sm:h-5 h-5 w-5 rounded-full bg-green-500 shadow-lg hover:scale-105 transition-all duration-200 ease-in-out">
         {/* Pulse animation */}
         <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping" />
 
         {/* Icon */}
-        <FaWhatsapp className="relative text-white text-2xl" />
+        <FaWhatsapp className="relative text-white 2xl:text-2xl xl:text-2xl lg:text-xl md:text-xl sm:text-lg text-base" />
       </div>
     </Link>
   );

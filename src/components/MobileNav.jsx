@@ -49,24 +49,24 @@ export default function MobileNav() {
     onScroll(); // initial check
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  // 
-    const scrollTo = (id) => {
+  //
+  const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
     });
   };
   //
   return (
-    <aside className="hidden 2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  bg-white dark:bg-black shadow  sm:justify-center">
+    <aside className="2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  dark:bg-black shadow sm:justify-center flex justify-center fixed bottom-0 left-0 bg-white py-1 px-6">
       {showProjectFilters ? (
-        <div className="">
+        <div className="flex flex-wrap gap-x-2 justify-center">
           {categories.map((cat) => (
             <motion.button
               title={cat}
               key={cat}
               layoutId={`project-filter-${cat}`}
               onClick={() => setProjectActiveCategory(cat)}
-              className={`whitespace-nowrap px-3 py-1 rounded-full cursor-pointer transition-colors duration-200 font-medium font-primary tracking-wide ${
+              className={`whitespace-nowrap  rounded-full cursor-pointer transition-colors duration-200 font-medium font-primary tracking-wide ${
                 projectActiveCategory === cat ? "text-[#0076DF]" : ""
               }`}
               aria-pressed={projectActiveCategory === cat}
@@ -76,20 +76,10 @@ export default function MobileNav() {
           ))}
         </div>
       ) : (
-        <nav className="w-full px-4 flex justify-between">
-          <button
-            onClick={() => scrollTo("home")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
-              activeSection === "home" ? "text-[#0076DF]" : ""
-            }`}
-            title="Home"
-          >
-            <span className="block">&#127968;</span>
-            Home
-          </button>
+        <nav className="w-full sm:px-10 flex justify-between px-2">
           <button
             onClick={() => scrollTo("services")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+            className={`text-base font-normal font-primary cursor-pointer ${
               activeSection === "services" ? "text-[#0076DF]" : ""
             }`}
             title="Services"
@@ -99,7 +89,7 @@ export default function MobileNav() {
           </button>
           <button
             onClick={() => scrollTo("about")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+            className={`text-base font-normal font-primary cursor-pointer sm:block hidden ${
               activeSection === "about" ? "text-[#0076DF]" : ""
             }`}
             title="About"
@@ -109,7 +99,7 @@ export default function MobileNav() {
           </button>
           <button
             onClick={() => scrollTo("portfolios")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+            className={`text-base font-normal font-primary cursor-pointer ${
               activeSection === "portfolios" ? "text-[#0076DF]" : ""
             }`}
             title="Portfolios"
@@ -117,10 +107,10 @@ export default function MobileNav() {
             <span className="mx-auto block">&#127912;</span>
             Portfolios
           </button>
-          
+
           <button
             onClick={() => scrollTo("blogs")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+            className={`text-base font-normal font-primary cursor-pointer ${
               activeSection === "blogs" ? "text-[#0076DF]" : ""
             }`}
             title="Blogs"
@@ -130,7 +120,7 @@ export default function MobileNav() {
           </button>
           <button
             onClick={() => scrollTo("contact")}
-            className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+            className={`text-base font-normal font-primary cursor-pointer sm:block hidden ${
               activeSection === "contact" ? "text-[#0076DF]" : ""
             }`}
             title="Contact"
@@ -140,7 +130,6 @@ export default function MobileNav() {
           </button>
         </nav>
       )}
-
     </aside>
   );
 }

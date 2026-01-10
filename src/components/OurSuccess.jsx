@@ -21,12 +21,12 @@ export default function OurSuccess() {
           <h2 className="tracking-wide font-semibold font-primary text-center 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl">
             Our <span className="text-[#0076DF]">Success</span>
           </h2>
-          <div className="2xl:flex xl:flex lg:flex md:flex sm:flex 2xl:mt-2 xl:mt-2 lg:mt-2 md:mt-2 sm:mt-2 mt-2 flex">
+          <div className="flex justify-center 2xl:justify-start xl:justify-start lg:justify-start md:justify-start sm:justify-start">
             {[1, 2, 3, 4, 5].map((item, i) => {
               return (
                 <motion.div
                   key={i}
-                  initial={{ x: -100, opacity: 0 }}
+                  initial={{ x: -20, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}

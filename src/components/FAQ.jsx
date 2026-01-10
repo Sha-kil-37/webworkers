@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import Paragraph from "./Paragraph";
 import { MdContactSupport } from "react-icons/md";
-
 //
 const faqs = [
   {
@@ -46,13 +45,13 @@ export default function FAQ() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 lg:py-10 md:py-10 sm:py-10"
+      className="xl:py-10 lg:py-10 md:py-10 sm:py-10 py-5"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:px-8 sm:mx-auto">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary text-center">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:px-8 sm:mx-auto px-2 ">
+        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center tracking-wide">
           How Can I <span className="text-[#0076DF]">Help</span> You ?
         </h2>
-        <Paragraph className="font-primary tracking-wide text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full">
+        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-2">
           We provide end-to-end digital solutions that help businesses grow
           smarter and faster—combining high-performance web and app development,
           intuitive UI/UX design, data-driven digital marketing, SEO, social
@@ -64,8 +63,8 @@ export default function FAQ() {
           <div className="relative w-full h-full">
             <div className="bg-gray-100 absolute bottom-0 right-0 h-[50%] w-[50%] z-10 flex justify-center items-center">
               <div className="sm:px-2">
-                <MdContactSupport className="xl:h-15 xl:w-15 mx-auto text-[#0076DF] lg:h-13 md:h-10 lg:w-13 md:w-10 sm:h-10 sm:w-10" />
-                <h2 className="font-primary tracking-wide font-medium md:text-center">
+                <MdContactSupport className="xl:h-15 xl:w-15 mx-auto text-[#0076DF] lg:h-13 md:h-10 lg:w-13 md:w-10 sm:h-10 sm:w-10 h-6 w-6" />
+                <h2 className="font-primary tracking-wide font-medium md:text-center text-center">
                   Some familiar questions
                 </h2>
               </div>
@@ -78,7 +77,7 @@ export default function FAQ() {
               className="w-full h-full object-cover"
             ></video>
           </div>
-          <div className="space-y-2 sm:mt-5">
+          <div className="space-y-2 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0  sm:mt-5 mt-5">
             {faqs.map((faq, index) => {
               const isOpen = activeIndex === index;
               //

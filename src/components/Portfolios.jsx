@@ -110,7 +110,7 @@ export default function Projects() {
               key={cat}
               layoutId={`project-filter-${cat}`}
               onClick={() => setProjectActiveCategory(cat)}
-              className={`px-3 border font-primary tracking-wide font-medium cursor-pointer ${
+              className={`2xl:px-3 xl:px-3 lg:px-3 md:px-3 sm:px-3 px-1 2xl:border xl:border lg:border md:border  font-primary tracking-wide font-normal cursor-pointer ${
                 projectActiveCategory === cat ? " text-[#0076DF]" : " "
               }`}
               aria-pressed={projectActiveCategory === cat}
@@ -119,12 +119,12 @@ export default function Projects() {
             </motion.button>
           ))}
         </div>
-        <div className="xl:grid xl:grid-cols-3 xl:gap-6 xl:mt-10 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-8 md:mt-6 md:grid md:grid-cols-2 md:gap-4 sm:mt-5 sm:grid sm:grid-cols-2 sm:gap-4">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-6 xl:mt-10 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-8 md:mt-6 md:grid md:grid-cols-2 md:gap-4 sm:mt-5 sm:grid sm:grid-cols-2 sm:gap-4 mt-5">
           {filtered.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}
               key={i}
-              className="cursor-pointer group overflow-hidden rounded-2xl shadow"
+              className="cursor-pointer group overflow-hidden rounded-2xl shadow w-full relative block mb-2"
             >
               {/* Image */}
               <div className="relative h-60 overflow-hidden">
@@ -134,11 +134,11 @@ export default function Projects() {
                   alt={project.image}
                 />
               </div>
-              <div className="xl:p-4 lg:p-4 md:p-4 sm:p-4">
+              <div className="xl:p-4 lg:p-4 md:p-4 sm:p-4 p-2">
                 <Paragraph className="font-primary">
                   {project.category}
                 </Paragraph>
-                <Paragraph className="font-medium tracking-wide font-primary">
+                <Paragraph className="2xl:font-medium xl:font-medium lg:font-medium md:font-medium sm:font-medium font-medium tracking-wide font-primary">
                   {project.title}
                 </Paragraph>
                 <div className="flex flex-wrap gap-2 mt-1">

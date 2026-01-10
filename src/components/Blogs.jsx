@@ -138,17 +138,17 @@ export default function Blogs() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 relative lg:py-10 md:py-10 sm:py-10"
+      className="xl:py-10 relative lg:py-10 md:py-10 sm:py-10 py-5"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-2">
         <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-x-10 md:gap-10 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 sm:gap-x-6">
           {/* Left sticky column */}
           <aside className="md:col-span-1 xl:border-r 2xl:border-r lg:border-r  border-[#F5F5F7] md:border-r sm:border-r">
-            <div className="xl:sticky xl:top-16 lg:sticky lg:top-16 md:top-16 md:sticky sm:top-16 sm:sticky">
-              <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl font-semibold font-primary">
+            <div className="2xl:sticky 2xl:top-18 xl:sticky xl:top-18 lg:sticky lg:top-18 md:top-18 md:sticky sm:top-18 sm:sticky">
+              <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left text-center tracking-wide">
                 Read Our <span className="text-[#0076DF]">Blogs</span>
               </h2>
-              <Paragraph className="font-primary tracking-wide w-full">
+              <Paragraph className="font-primary w-full mt-2 2xl:text-left xl:text-left lg:left-left md:text-left sm:text-left text-center">
                 Our blog is a knowledge hub where technology, creativity, and
                 strategy come together. We share practical insights on web
                 development, digital marketing, SEO, social media marketing,
@@ -161,8 +161,8 @@ export default function Blogs() {
           </aside>
 
           {/* Right scrollable column */}
-          <main className="">
-            <div className="w-full flex items-center rounded-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full justify-between h-9 border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200">
+          <main className="mt-2">
+            <div className="w-full mx-auto 2xl:flex xl:flex lg:flex md:flex sm:flex items-center rounded-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full justify-between 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-7 border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 hidden">
               <motion.input
                 title="Search Blogs"
                 layoutId="blog-search"
@@ -183,7 +183,7 @@ export default function Blogs() {
               </button>
             </div>
 
-            <div className="xl:mt-3 xl:flex xl:flex-wrap xl:gap-2 lg:mt-3 lg:flex lg:flex-wrap lg:gap-2 md:mt-3 md:flex md:flex-wrap md:gap-2 sm:mt-3 sm:flex sm:flex-wrap sm:gap-2">
+            <div className="2xl:flex 2xl:gap-2 2xl:flex-wrap xl:flex xl:flex-wrap xl:gap-2 lg:flex lg:flex-wrap lg:gap-2 md:flex md:flex-wrap md:gap-2 sm:flex sm:flex-wrap sm:gap-2 mt-3 flex flex-wrap justify-center gap-1">
               {categories.map((category, i) => (
                 <button
                   title={category}
@@ -201,39 +201,36 @@ export default function Blogs() {
               ))}
             </div>
             {visibleBlogs.map((blog, i) => (
-              <Link
-                to={`/blogdetails/${blog.id}`} 
-                key={i}
-                className="xl:my-4 cursor-pointer block group rounded-xl overflow-hidden shadow my-2"
-              >
-              
-                <div className="relative overflow-hidden h-80">
-                  <img
-                    src={blog.image}
-                    alt={blog.title} // Better alt text
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-200"
-                  />
-                </div>
-                <div className="p-4">
-                  <Paragraph className="tracking-wide font-primary">
-                    {blog.category}
-                  </Paragraph>
-                  <Paragraph className="tracking-wide font-primary font-medium">
-                    {blog.title}
-                  </Paragraph>
-                  <Paragraph className="font-secondary tracking-wide text-[#0076DF]">
-                    By {blog.author}
-                  </Paragraph>
-                </div>
-              </Link>
+              <div key={i} className="xl:my-4 2xl:my-4 lg:my-3 md:my-3 sm:my-2 cursor-pointer block group rounded-xl overflow-hidden shadow mt-3">
+                <Link to={`/blogdetails/${blog.id}`} >
+                  <div className="relative overflow-hidden h-80">
+                    <img
+                      src={blog.image}
+                      alt={blog.title} // Better alt text
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-200"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <Paragraph className="font-primary">
+                      {blog.category}
+                    </Paragraph>
+                    <Paragraph className="tracking-wide font-primary font-medium">
+                      {blog.title}
+                    </Paragraph>
+                    <Paragraph className="font-secondary text-[#0076DF]">
+                      By {blog.author}
+                    </Paragraph>
+                  </div>
+                </Link>
+              </div>
             ))}
 
             {/* Only show "More Blogs" if there are more to load */}
             {visibleCount < filteredBlogs.length && (
-              <div className="flex justify-center xl:mt-10 lg:mt-8">
+              <div className="flex justify-center 2xl:mt-10 xl:mt-10 lg:mt-8 md:mt-8 sm:mt-6 mt-5">
                 <button
                   onClick={handleLoadMoreBlogs}
-                  className="cursor-pointer px-4 py-2 rounded-full bg-[#0076DF] font-medium font-primary tracking-wide"
+                  className="cursor-pointer 2xl:px-4 xl:px-3 lg:px-3 md:px-3 sm:px-2 2xl:py-1 xl:py-1 lg:py-1 md:py-1 sm:py-1 text-white rounded-full bg-[#0076DF] font-primary px-2"
                 >
                   More blogs
                 </button>

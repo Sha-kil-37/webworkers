@@ -31,6 +31,8 @@ export default function Navbar() {
     });
   };
   //
+
+  //
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -84,24 +86,26 @@ export default function Navbar() {
   //
   return (
     <header
-      className={`2xl:fixed xl:fixed lg:fixed md:fixed sm:fixed 2xl:top-0 2xl:left-0 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full z-20 transition-all duration-200 xl:top-0 xl:left-0 lg:top-0 lg:left-0 md:top-0 md:left-0 sm:top-0 sm:left-0 top-0 left-0 fixed w-full  ${
+      className={`2xl:fixed xl:fixed lg:fixed md:fixed sm:fixed 2xl:top-0 2xl:left-0 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full z-20 transition-all duration-200 xl:top-0 xl:left-0 lg:top-0 lg:left-0 md:top-0 md:left-0 sm:top-0 sm:left-0 top-0 left-0 fixed w-full ${
         scrolled ? "bg-white dark:bg-black shadow" : "bg-transparent"
       }`}
     >
-      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto 2xl:py-4 xl:py-4 lg:py-4 md:py-4 sm:4 py-2 xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between sm:px-8 flex justify-between items-center md:mx-auto md:px-8 px-2">
+      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between sm:px-8 flex justify-between items-center md:mx-auto md:px-8 px-2 py-3 2xl:py-3 xl:py-3 lg:py-3 md:py-3 sm:py-3 gap-x-2">
         {/* Logo */}
-        <motion.h3
-          onClick={() => handleNavigate("home")}
-          layoutId="site-logo"
-          title="Home"
-          className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-base 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide font-normal tracking-wide"
-        >
-          Agency
-        </motion.h3>
+        {showSearch ? null : (
+          <motion.h3
+            onClick={() => handleNavigate("home")}
+            layoutId="site-logo"
+            title="Home"
+            className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-base 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide font-normal tracking-wide"
+          >
+            Agency
+          </motion.h3>
+        )}
 
         {/* Search Input */}
         {showSearch && (
-          <div className="flex items-center rounded-full 2xl:w-xl xl:w-lg lg:w-lg md:w-md justify-between h-9 border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200">
+          <div className="flex items-center rounded-full 2xl:w-xl xl:w-lg lg:w-lg md:w-md justify-between 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-7 border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200">
             <motion.input
               title="Search Blogs"
               layoutId="blog-search"
@@ -125,14 +129,14 @@ export default function Navbar() {
 
         {/* Project Filters */}
         {showProjectFilters && (
-          <div className="2xl:flex xl:flex lg:flex md:flex  gap-2 mx-2 sm:hidden hidden">
+          <div className="2xl:flex xl:flex lg:flex md:flex sm:hidden hidden 2xl:gap-x-5 xl:gap-x-5 lg:gap-x-5 md:gap-x-4">
             {categories.map((cat) => (
               <motion.button
                 title={cat}
                 key={cat}
                 layoutId={`project-filter-${cat}`}
                 onClick={() => setProjectActiveCategory(cat)}
-                className={`whitespace-nowrap px-3 py-1 rounded-full cursor-pointer transition-colors duration-200 font-medium font-primary tracking-wide ${
+                className={`whitespace-nowrap cursor-pointer transition-colors duration-200 font-medium font-primary block ${
                   projectActiveCategory === cat ? "text-[#0076DF]" : ""
                 }`}
                 aria-pressed={projectActiveCategory === cat}
@@ -148,7 +152,7 @@ export default function Navbar() {
           <div className="2xl:flex xl:flex xl:items-center lg:flex lg:items-center md:flex sm:hidden hidden">
             <button
               onClick={() => handleNavigate("home")}
-              className={`tracking-wide font-primary font-medium cursor-pointer px-3 py-1 ${
+              className={`tracking-wide font-primary font-medium cursor-pointer px-2 py-1 ${
                 activeSection === "home" ? "text-[#0076DF]" : ""
               }`}
               title="Home"
