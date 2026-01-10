@@ -46,7 +46,7 @@ export default function WorkExperience() {
       transition={{ duration: 1 }}
       className="2xl:py-10 xl:py-10 lg:py-10 md:py-10 sm:py-10 py-2"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 sm:px-8 px-2">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 sm:px-8 px-4">
         <h2 className="tracking-wide font-semibold font-primary text-center 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl mx-auto mb-2">
           Work <span className="text-[#0076DF]">Experience</span> With
         </h2>

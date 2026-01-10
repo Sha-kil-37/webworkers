@@ -64,7 +64,7 @@ export default function Services() {
       id="services"
       className="xl:py-20 md:py-10 sm:py-10 py-5"
     >
-      <div className="2xl:w-6xl xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-2 mx-auto w-full">
+      <div className="2xl:w-6xl xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-4 mx-auto w-full">
         <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center tracking-wide">
           Meet Our <span className="text-[#0076DF]">Services</span>
         </h2>

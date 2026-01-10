@@ -100,12 +100,14 @@ export default function Contact() {
       transition={{ duration: 1 }}
       className="xl:py-10 relative lg:py-10 md:py-10 sm:py-10 py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:px-8 sm:mx-auto px-2">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:px-8 sm:mx-auto px-4">
         <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center tracking-wide">
           <span className="text-[#0076DF]">Contact</span> Us
         </h2>
         <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-2">
-          Let’s turn your ideas into reality. From modern websites and digital marketing to custom apps and AI solutions, we help your business grow. Contact us to get started.
+          Let’s turn your ideas into reality. From modern websites and digital
+          marketing to custom apps and AI solutions, we help your business grow.
+          Contact us to get started.
         </Paragraph>
         {/*  */}
         <div className="w-full xl:grid xl:grid-cols-2 xl:mt-10 xl:gap-12 xl:items-center lg:grid lg:grid-cols-2 lg:mt-10 lg:gap-10 lg:items-center md:mt-10 md:grid md:grid-cols-2 md:gap-10 md:items-center sm:mt-10 mt-5">
@@ -136,7 +138,7 @@ export default function Contact() {
                   value={values.name}
                   onChange={handleChange}
                   className={`mt-1 border block w-full rounded-full font-primary tracking-wide px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
-          focus:border-[#0076DF] 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-7 
+          focus:border-[#0076DF] 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-8 
             ${errors.name ? "" : ""}`}
                 />
                 {errors.name && (
@@ -158,7 +160,7 @@ export default function Contact() {
                   value={values.email}
                   onChange={handleChange}
                   className={`font-primary tracking-wide shadow mt-1 w-full rounded-full border px-4 py-2 transition-all duration-200 focus:outline focus:outline-[#0076DF]
-          focus:border-[#0076DF] 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-7 
+          focus:border-[#0076DF] 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-8 
             ${errors.email ? "" : ""}`}
                 />
                 {errors.email && (
@@ -170,7 +172,10 @@ export default function Contact() {
 
               {/* Message */}
               <div className="mt-2 relative">
-                <label htmlFor="message" className=" font-primary tracking-wide">
+                <label
+                  htmlFor="message"
+                  className=" font-primary tracking-wide"
+                >
                   Message
                 </label>
 
@@ -187,7 +192,11 @@ export default function Contact() {
                 {/* Word Counter */}
                 <div
                   className={`absolute bottom-2 right-3
-      ${remainingWords < 0 ? "text-[#F43F5E] font-primary tracking-wide" : "text-gray-600 font-primary tracking-wide"}`}
+      ${
+        remainingWords < 0
+          ? "text-[#F43F5E] font-primary tracking-wide"
+          : "text-gray-600 font-primary tracking-wide"
+      }`}
                 >
                   {wordCount}/{MAX_WORDS} words
                 </div>
@@ -202,7 +211,7 @@ export default function Contact() {
               <button
                 title="Send Message"
                 type="submit"
-                className="w-full rounded-lg bg-[#0076DF] px-4 py-2 font-medium text-white transition-all duration-300 hover:bg-[#0077dfa6] block mt-3 cursor-pointer shadow-md font-primary tracking-wide"
+                className="w-full rounded-lg bg-[#0076DF] 2xl:py-2 xl:py-2 lg:py-2 md:py-1 sm:py-1 py-1 font-medium text-white transition-all duration-300 hover:bg-[#0077dfa6] block mt-3 cursor-pointer shadow-md font-primary tracking-wide"
               >
                 Send Message
               </button>

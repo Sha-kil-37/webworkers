@@ -90,22 +90,20 @@ export default function Navbar() {
         scrolled ? "bg-white dark:bg-black shadow" : "bg-transparent"
       }`}
     >
-      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between sm:px-8 flex justify-between items-center md:mx-auto md:px-8 px-2 py-3 2xl:py-3 xl:py-3 lg:py-3 md:py-3 sm:py-3 gap-x-2">
+      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between sm:px-8 flex justify-between items-center md:mx-auto md:px-8 px-4 py-3 2xl:py-3 xl:py-3 lg:py-3 md:py-3 sm:py-3 gap-x-6">
         {/* Logo */}
-        {showSearch ? null : (
-          <motion.h3
-            onClick={() => handleNavigate("home")}
-            layoutId="site-logo"
-            title="Home"
-            className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-base 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide font-normal tracking-wide"
-          >
-            Agency
-          </motion.h3>
-        )}
+        <motion.h3
+          onClick={() => handleNavigate("home")}
+          layoutId="site-logo"
+          title="Home"
+          className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-base 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide font-normal tracking-wide"
+        >
+          Agency
+        </motion.h3>
 
         {/* Search Input */}
         {showSearch && (
-          <div className="flex items-center rounded-full 2xl:w-xl xl:w-lg lg:w-lg md:w-md justify-between 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-7 border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200">
+          <div className="2xl:flex xl:flex lg:flex md:flex sm:flex items-center rounded-full 2xl:w-xl xl:w-lg lg:w-lg md:w-md justify-between 2xl:h-9 xl:h-9 lg:h-9 md:h-8 sm:h-8 h-8 sm:w-full w-full border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 hidden">
             <motion.input
               title="Search Blogs"
               layoutId="blog-search"

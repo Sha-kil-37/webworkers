@@ -92,7 +92,7 @@ export default function Projects() {
       transition={{ duration: 1 }}
       className="xl:py-15 lg:py-10 md:py-10 sm:py-10 py-5"
     >
-      <div className="xl:w-6xl xl:mx-auto relative lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:mx-auto sm:px-8 px-2">
+      <div className="xl:w-6xl xl:mx-auto relative lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:mx-auto sm:px-8 px-4">
         <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center tracking-wide ">
           Our <span className="text-[#0076DF]">Portfolios</span>
         </h2>

@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { useSearch } from "../context/SearchContext";
+import { IoSearchOutline } from "react-icons/io5";
+
 //
 export default function MobileNav() {
+  const [showSearch, setShowSearch] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   const [showProjectFilters, setShowProjectFilters] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   //
-  const { projectActiveCategory, setProjectActiveCategory } = useSearch();
+  const { projectActiveCategory, setProjectActiveCategory, setSearchQuery } =
+    useSearch();
   //
   const categories = [
     "All",
@@ -26,7 +31,13 @@ export default function MobileNav() {
         "blogs",
         "contact",
       ];
+      const blogsElement = document.getElementById("blogs");
       const projectsElement = document.getElementById("portfolios");
+      if (blogsElement) {
+        const rect = blogsElement.getBoundingClientRect();
+        // Show search only when scrolled 100px into the blog section
+        setShowSearch(rect.top < -100 && rect.bottom > 0);
+      }
       if (projectsElement) {
         const rect = projectsElement.getBoundingClientRect();
         // Show project filters only when scrolled 100px into the projects section
@@ -55,9 +66,10 @@ export default function MobileNav() {
       behavior: "smooth",
     });
   };
+  console.log(showSearch);
   //
   return (
-    <aside className="2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  dark:bg-black shadow sm:justify-center flex justify-center fixed bottom-0 left-0 bg-white py-1 px-6">
+    <aside className="2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  dark:bg-black shadow sm:justify-center flex justify-center fixed bottom-0 left-0 bg-white py-2 px-6">
       {showProjectFilters ? (
         <div className="flex flex-wrap gap-x-2 justify-center">
           {categories.map((cat) => (
@@ -74,6 +86,27 @@ export default function MobileNav() {
               {cat}
             </motion.button>
           ))}
+        </div>
+      ) : showSearch ? (
+        <div className="flex w-full border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 h-8 rounded-full">
+          <motion.input
+            title="Search Blogs"
+            layoutId="blog-search"
+            name="search"
+            type="search"
+            placeholder="Search blog ..."
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            className="font-primary tracking-wide w-full h-full px-4 rounded-[0,0,100%,100%] outline-none focus:outline-none border-none focus:placeholder:text-[#0076DF] transition-all duration-200"
+          />
+          <button
+            type="button"
+            onClick={() => setSearchQuery(inputValue)}
+            className="inline-block w-15 cursor-pointer h-full bg-[#EEEEEE] border-none outline-none rounded-[0,100%,100%,0] hover:bg-[#eeeeeeb2]"
+            aria-label="Search Blogs"
+          >
+            <IoSearchOutline className="text-2xl mx-auto" />
+          </button>
         </div>
       ) : (
         <nav className="w-full sm:px-10 flex justify-between px-2">
@@ -107,7 +140,6 @@ export default function MobileNav() {
             <span className="mx-auto block">&#127912;</span>
             Portfolios
           </button>
-
           <button
             onClick={() => scrollTo("blogs")}
             className={`text-base font-normal font-primary cursor-pointer ${

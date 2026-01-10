@@ -41,7 +41,7 @@ export default function ChooseUs() {
       transition={{ duration: 1 }}
       className="xl:py-10 overflow-hidden lg:py-10 md:py-10 sm:py-10 py-5"
     >
-      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:mx-auto sm:px-8 px-2">
+      <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:mx-auto sm:px-8 px-4">
         <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center">
           All The <span className="text-[#0076DF]">Benefits</span> You Gain By
           Working With Us
