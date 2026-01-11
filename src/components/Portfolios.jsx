@@ -90,20 +90,20 @@ export default function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-15 lg:py-10 md:py-10 sm:py-10"
+      className="xl:py-20 2xl:py-20 lg:py-20 md:py-15 sm:py-8"
     >
       <div className="xl:w-6xl xl:mx-auto relative lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:mx-auto sm:px-8 px-4">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center tracking-wide text-xl">
+        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto mb-2 text-2xl">
           Our <span className="text-[#0076DF]">Portfolios</span>
         </h2>
-        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-2">
+        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide">
           Every project we deliver is built for innovation and scalability. We
           provide web development, digital marketing, SEO, social media
           marketing, UI/UX design, and app development—backed by business
           consultation, custom software, and AI integration—to create
           user-centric, data-driven, future-ready digital solutions.
         </Paragraph>
-        <div className="flex items-center mx-auto mt-5 flex-wrap gap-2 justify-center">
+        <div className="flex items-center mx-auto mt-10 flex-wrap gap-2 justify-center">
           {categories.map((cat) => (
             <motion.button
               title={cat}
@@ -119,7 +119,7 @@ export default function Projects() {
             </motion.button>
           ))}
         </div>
-        <div className="xl:grid xl:grid-cols-3 xl:gap-6 xl:mt-10 lg:grid lg:grid-cols-3 lg:gap-4 lg:mt-8 md:mt-6 md:grid md:grid-cols-2 md:gap-4 sm:mt-5 sm:grid sm:grid-cols-2 sm:gap-4 mt-5">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-6 lg:grid lg:grid-cols-3 lg:gap-4 md:grid md:grid-cols-2 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 mt-10">
           {filtered.map((project, i) => (
             <Link
               to={`/projectdetails/${i}`}
@@ -138,7 +138,7 @@ export default function Projects() {
                 <Paragraph className="font-primary">
                   {project.category}
                 </Paragraph>
-                <Paragraph className="2xl:font-medium xl:font-medium lg:font-medium md:font-medium sm:font-medium font-medium tracking-wide font-primary">
+                <Paragraph className="font-medium font-primary">
                   {project.title}
                 </Paragraph>
                 <div className="flex flex-wrap gap-2 mt-1">

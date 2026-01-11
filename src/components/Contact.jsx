@@ -98,13 +98,13 @@ export default function Contact() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="2xl:py-15 relative xl:py-15 lg:py-15 md:py-15 sm:py-15 pt-2 pb-5"
+      className="2xl:py-15 xl:py-15 lg:py-15 md:py-15 sm:py-10 py-10"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:px-8 sm:mx-auto px-4">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center tracking-wide text-xl">
+        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto mb-2 text-2xl">
           <span className="text-[#0076DF]">Contact</span> Us
         </h2>
-        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-2">
+        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide">
           Let’s turn your ideas into reality. From modern websites and digital
           marketing to custom apps and AI solutions, we help your business grow.
           Contact us to get started.

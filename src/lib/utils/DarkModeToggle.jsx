@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { IoMdSunny } from "react-icons/io";
+import { GoMoon } from "react-icons/go";
+
 //
 export default function DarkModeToggle({ className }) {
   //
@@ -11,6 +14,7 @@ export default function DarkModeToggle({ className }) {
         ? "dark"
         : "light";
     } catch (e) {
+      // console.log(e)
       return "light";
     }
   });
@@ -37,7 +41,7 @@ export default function DarkModeToggle({ className }) {
       title={theme === "dark" ? "Switch to light" : "Switch to dark"}
       className={`${className}`}
     >
-      {theme === "dark" ? <span>&#127774;</span> : <span>&#127769;</span>}
+      {theme === "dark" ? <IoMdSunny /> : <GoMoon />}
     </button>
   );
 }

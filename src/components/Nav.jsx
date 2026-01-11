@@ -90,7 +90,7 @@ export default function Navbar() {
         scrolled ? "bg-white dark:bg-black shadow" : "bg-transparent"
       }`}
     >
-      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between sm:px-8 flex justify-between items-center md:mx-auto md:px-8 px-4 py-3 2xl:py-3 xl:py-3 lg:py-3 md:py-3 sm:py-3 gap-x-6">
+      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between sm:px-8 flex justify-between items-center md:mx-auto md:px-8 px-4 2xl:py-4 xl:py-4 lg:py-4 md:py-3 sm:py-3 py-2 gap-x-6">
         {/* Logo */}
         <motion.h3
           onClick={() => handleNavigate("home")}
@@ -206,7 +206,7 @@ export default function Navbar() {
           </div>
         )}
         {/*  */}
-        <DarkModeToggle className="2xl:block xl:block lg:block  md:block 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl text-lg cursor-pointer" />
+        <DarkModeToggle className="flex justify-center items-center p-1 rounded-full transition-all duration-300 hover:bg-[#F3F4F4] 2xl:text-2xl xl:text-2xl lg:text-xl md:text-xl sm:text-xl cursor-pointer text-xl" />
       </nav>
     </header>
   );

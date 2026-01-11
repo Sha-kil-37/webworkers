@@ -60,18 +60,18 @@ export default function OurTeam() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="xl:py-10 lg:py-10 md:py-10 sm:py-8 py-7"
+      className="xl:py-20 lg:py-16 md:py-16 sm:py-8 py-7"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-4">
         <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-x-10 md:gap-10 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 sm:gap-x-6">
           <aside className="md:col-span-1 xl:border-r lg:border-r md:border-r border-[#F5F5F7] sm:border-r">
             <div className="2xl:sticky 2xl:top-18 xl:sticky xl:top-18 lg:sticky lg:top-18 md:top-18 md:sticky sm:top-18 sm:sticky">
-              <h2 className="tracking-wide font-semibold font-primary 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left text-center 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl mx-auto mb-2 text-xl">
+              <h2 className="tracking-wide font-bold font-primary 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl">
                 Our <span className="text-[#0076DF]">Professional</span>{" "}
                 {""}
                 Team Members
               </h2>
-              <Paragraph className="font-primary w-full 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left text-center">
+              <Paragraph className="font-primary w-full 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left text-center mt-5 tracking-wide">
                 We are a multidisciplinary digital team driven by innovation and
                 results. Our expertise spans web and app development, UI/UX
                 design, digital marketing, SEO, and social media
@@ -102,7 +102,7 @@ export default function OurTeam() {
                 {/* Content */}
                 <div className="xl:p-6 flex justify-between lg:p-4 md:p-4 sm:p-4 p-2">
                   <div>
-                    <h3 className="font-medium font-primary tracking-wide">{member.name}</h3>
+                    <h3 className="font-bold font-primary tracking-wide">{member.name}</h3>
                     <Paragraph className="font-primary">{member.role}</Paragraph>
                   </div>
                   <div className="flex gap-x-3">

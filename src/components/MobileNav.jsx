@@ -89,7 +89,7 @@ export default function MobileNav() {
         </div>
       ) : showSearch ? (
         <div className="w-full">
-          <div className="flex border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 h-8 rounded-full w-full">
+          <div className="flex border overflow-hidden focus:outline focus:outline-[#0076DF] transition-all duration-200 h-8 rounded-full sm:w-xl sm:mx-auto w-full">
             <motion.input
               title="Search Blogs"
               layoutId="blog-search"
@@ -111,7 +111,7 @@ export default function MobileNav() {
           </div>
         </div>
       ) : (
-        <nav className="w-full flex justify-center items-center gap-x-5 flex-wrap">
+        <nav className="w-full flex justify-center items-center gap-x-15 flex-wrap">
           <button
             onClick={() => scrollTo("services")}
             className={`text-base font-normal font-primary cursor-pointer block ${
@@ -119,8 +119,8 @@ export default function MobileNav() {
             }`}
             title="Services"
           >
-            <span className="block">&#128295;</span>
-            Services
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-toolbox-icon lucide-toolbox"><path d="M16 12v4"/><path d="M16 6a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 22 12v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 .586-1.414l4-4A2 2 0 0 1 8 6z"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 14h20"/><path d="M8 12v4"/></svg>
+           
           </button>
           <button
             onClick={() => scrollTo("about")}
@@ -129,8 +129,7 @@ export default function MobileNav() {
             }`}
             title="About"
           >
-            <span className="block">&#128522;</span>
-            About
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-pen-icon lucide-user-round-pen"><path d="M2 21a8 8 0 0 1 10.821-7.487"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/><circle cx="10" cy="8" r="5"/></svg>
           </button>
           <button
             onClick={() => scrollTo("portfolios")}
@@ -139,8 +138,8 @@ export default function MobileNav() {
             }`}
             title="Portfolios"
           >
-            <span className="mx-auto block">&#127912;</span>
-            Portfolios
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-vertical-icon lucide-gallery-vertical"><path d="M3 2h18"/><rect width="18" height="12" x="3" y="6" rx="2"/><path d="M3 22h18"/></svg>
+           
           </button>
           <button
             onClick={() => scrollTo("blogs")}
@@ -149,8 +148,7 @@ export default function MobileNav() {
             }`}
             title="Blogs"
           >
-            <span className="mx-auto block">&#128240;</span>
-            Blogs
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-logs-icon lucide-logs"><path d="M3 5h1"/><path d="M3 12h1"/><path d="M3 19h1"/><path d="M8 5h1"/><path d="M8 12h1"/><path d="M8 19h1"/><path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/></svg>
           </button>
           <button
             onClick={() => scrollTo("contact")}
@@ -159,8 +157,7 @@ export default function MobileNav() {
             }`}
             title="Contact"
           >
-            <span className="block mx-auto">&#128222;</span>
-            Contact
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-user-round-icon lucide-square-user-round"><path d="M18 21a6 6 0 0 0-12 0"/><circle cx="12" cy="11" r="4"/><rect width="18" height="18" x="3" y="3" rx="2"/></svg>
           </button>
         </nav>
       )}

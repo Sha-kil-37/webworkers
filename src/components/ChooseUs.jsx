@@ -39,20 +39,20 @@ export default function ChooseUs() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="2xl:py-15 xl:py-15  overflow-hidden lg:py-15 md:py-15 sm:py-15"
+      className="2xl:py-20 xl:py-20 overflow-hidden lg:py-10 md:py-10 sm:py-8"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:mx-auto sm:px-8 px-4">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center text-xl tracking-wide">
+        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl">
           All The <span className="text-[#0076DF]">Benefits</span> You Gain By
           Working With Us
         </h2>
-        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-2">
+        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide">
           We build results-driven digital solutions—from web and app development
           to UI/UX, SEO, and digital marketing—powered by custom software, AI
           integration, and strategic business consultation to help businesses
           stay ahead.
         </Paragraph>
-        <div className="2xl:grid 2xl:grid-cols-4 xl:grid xl:grid-cols-4 lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 md:gap-x-10 sm:mt-5 sm:grid sm:grid-cols-2 sm:gap-x-10 mt-5">
+        <div className="2xl:grid 2xl:grid-cols-4 xl:grid xl:grid-cols-4 lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 md:gap-x-10 sm:grid sm:grid-cols-2 sm:gap-x-10 mt-10">
           {features.map((item, i) => {
             const Icon = item.icon;
             //
@@ -66,7 +66,7 @@ export default function ChooseUs() {
                 className="xl:p-4 lg:p-4 md:p-6 sm:p-6 mb-4"
               >
                 <Icon className="2xl:h-13 2xl:w-13 xl:h-13 xl:w-13 lg:w-12 lg:h-12 md:h-10 md:w-10 sm:h-10 sm:w-10 mx-auto h-8 w-8" />
-                <Paragraph className="font-primary text-center mt-2 font-medium 2xl:font-semibold xl:font-semibold lg:font-semibold md:font-semibold sm:font-medium text-[#0076DF] text-lg">
+                <Paragraph className="font-primary text-center mt-2 font-medium 2xl:font-semibold xl:font-semibold lg:font-semibold md:font-semibold sm:font-medium text-[#0076DF] text-lg tracking-wide">
                   {item.title}
                 </Paragraph>
               </motion.div>

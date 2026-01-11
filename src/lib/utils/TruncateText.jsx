@@ -13,7 +13,7 @@ const TruncateText = ({ text, limit, className }) => {
     return words.slice(0, limit).join(" ") + " ....";
   }, [text, limit]);
 
-  return <p className={className}>“{truncatedText}”</p>;
+  return <p className={className}><span className="font-bold">“</span> {truncatedText} <span className="font-bold">”</span></p>;
 };
 
 export default TruncateText;

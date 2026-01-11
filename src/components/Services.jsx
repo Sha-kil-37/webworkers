@@ -62,13 +62,13 @@ export default function Services() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       id="services"
-      className="2xl:py-15 xl:py-15 lg:py-15 md:py-15 sm:py-15 py-7"
+      className="2xl:py-20 xl:py-20 lg:py-15 md:py-15 sm:py-8 py-15"
     >
       <div className="2xl:w-6xl xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-4 mx-auto w-full">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-semibold font-primary text-center text-xl tracking-wide">
+        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto mb-2 text-2xl">
           Meet Our <span className="text-[#0076DF]">Services</span>
         </h2>
-        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-2">
+        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-lg w-full mt-3 tracking-wide">
           Our services are built to drive measurable growth. From high-quality
           web and app development to intuitive UI/UX design, SEO, digital
           marketing, and social media strategy, we cover every stage of your
@@ -89,10 +89,11 @@ export default function Services() {
               whileHover={{ y: -8 }}
               className={`relative 2xl:rounded-2xl xl:rounded-2xl lg:rounded-2xl md:rounded-2xl sm:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5 md:p-4 sm:p-4 p-4 rounded-2xl mb-2`}
             >
-              <h3 className="tracking-wide font-semibold font-primary">
+              <h3 className="tracking-wide font-bold font-primary">
                 {service.title}
               </h3>
-              <Paragraph className="font-primary">
+              <hr className="text-[#F3F4F4] my-2" />
+              <Paragraph className="font-primary tracking-wide">
                 {service.desc}
               </Paragraph>
             </motion.div>

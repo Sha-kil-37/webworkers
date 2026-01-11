@@ -72,13 +72,13 @@ const Testimonials = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="relative 2xl:py-15 xl:py-15 lg:py-15 md:py-15 sm:py-15 py-7"
+      className="relative 2xl:py-15 xl:py-15 lg:py-10 md:py-10 sm:py-10 py-10"
     >
-      <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden md:px-8 md:mx-auto md:overflow-hidden sm:px-8 sm:mx-auto">
-        <h2 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-xl font-semibold font-primary text-center tracking-wide">
+      <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden md:px-8 md:mx-auto md:overflow-hidden sm:px-8 sm:mx-auto px-4">
+        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl">
           What does our <span className="text-[#0076DF]">client</span> say ?
         </h2>
-        <Paragraph className="font-primary tracking-wide text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full">
+        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide">
           Our clients trust us because we deliver results, not just services.
           From web development and UI/UX design to digital marketing, SEO, and
           social media, we build strong digital identities through smart,
@@ -100,7 +100,7 @@ const Testimonials = () => {
               />
               <div className="xl:flex xl:justify-between xl:items-center xl:mt-3 lg:flex lg:justify-between lg:items-center lg:mt-2 md:flex md:mt-2 md:justify-between md:items-center sm:flex sm:justify-between sm:items-center sm:mt-2">
                 <div>
-                  <Paragraph className="font-secondary tracking-wide ">
+                  <Paragraph className="font-secondary tracking-wide">
                     {item.name}
                   </Paragraph>
                   <Paragraph className="font-secondary tracking-wide lg:tracking-wide">

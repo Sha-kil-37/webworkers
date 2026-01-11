@@ -7,8 +7,8 @@
   /* colors */
 
   /* font family */
-  --font-primary:  "Comfortaa", sans-serif;
-  --font-secondary: "Josefin Sans", sans-serif;
+  --font-primary:   "Google Sans", sans-serif;
+  --font-secondary: "Noto Serif", serif;
 }
 
 @layer components {
