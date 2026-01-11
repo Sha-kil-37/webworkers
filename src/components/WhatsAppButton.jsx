@@ -17,7 +17,7 @@ export default function WhatsAppButton() {
       className="fixed bottom-15 right-3 z-30"
       aria-label="Chat on WhatsApp"
     >
-      <div className="relative flex items-center justify-center 2xl:w-9 xl:w-9 lg:w-9 md:w-9 sm:w-8 2xl:h-9 xl:h-9 lg:h-9 md:h-9 sm:h-8 h-8 w-8 rounded-full bg-green-500 shadow-lg hover:scale-105 transition-all duration-200 ease-in-out">
+      <div className="relative flex items-center justify-center 2xl:w-10 xl:w-10 lg:w-10 md:w-10 sm:w-10 2xl:h-10 xl:h-10 lg:h-10 md:h-10 sm:h-10 h-10 w-10 rounded-full bg-green-500 shadow-lg hover:scale-105 transition-all duration-200 ease-in-out">
         {/* Pulse animation */}
         <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping" />
 

@@ -69,7 +69,7 @@ export default function MobileNav() {
   console.log(showSearch);
   //
   return (
-    <aside className="2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  dark:bg-black shadow sm:justify-center flex justify-center fixed bottom-0 left-0 bg-white py-2 px-4">
+    <aside className="2xl:hidden xl:hidden lg:hidden md:hidden sm:flex sm:bottom-0 sm:left-0 sm:py-2 sm:fixed w-full z-20  dark:bg-black shadow sm:justify-center flex justify-center fixed bottom-0 left-0 bg-white py-3 px-4">
       {showProjectFilters ? (
         <div className="flex flex-wrap gap-x-3 justify-center w-full">
           {categories.map((cat) => (
