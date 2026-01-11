@@ -22,17 +22,17 @@ export default function OurTeam() {
     },
     {
       name: "Sabbir Shovo",
-      role: "UI/UX Designer",
-      image: "https://i.pravatar.cc/300?img=32",
+      role: "Project Manager",
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1768158084/agency/team/sabbir_watz3p.png",
       socials: {
-        linkedin: "https://www.linkedin.com/in/nh-anik/",
+        linkedin: "https://www.linkedin.com/in/sabbir-khan-shovo/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         discord: "#",
-        facebook: "https://www.facebook.com/NHANIK11",
+        facebook: "https://www.facebook.com/sabbirshovo.net",
       },
     },
     {
       name: "Rakibul Islam",
-      role: "digital marketer specialist",
+      role: "Digital Marketing Specialist",
       image:
         "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767114313/agency/team/rakibul_qighom.png",
       socials: {
@@ -42,13 +42,13 @@ export default function OurTeam() {
       },
     },
     {
-      name: "Inni Akter",
+      name: "MohamMohammad Sohag",
       role: "It Specalist",
       image: "https://i.pravatar.cc/300?img=45",
       socials: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/sohagdewan786/",
         discord: "#",
-        facebook: "#",
+        facebook: "https://www.facebook.com/sohagdewan780",
       },
     },
   ];
