@@ -87,7 +87,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className={`relative 2xl:rounded-2xl xl:rounded-2xl lg:rounded-2xl md:rounded-2xl sm:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5 md:p-4 sm:p-4 p-4 rounded-2xl mb-2`}
+              className={`relative 2xl:rounded-2xl xl:rounded-2xl lg:rounded-2xl md:rounded-2xl sm:rounded-2xl overflow-hidden shadow ${service.className} xl:p-6 lg:p-5 md:p-4 sm:p-4 p-4 rounded-2xl block mb-2`}
             >
               <h3 className="tracking-wide font-bold font-primary">
                 {service.title}

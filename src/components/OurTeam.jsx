@@ -88,7 +88,7 @@ export default function OurTeam() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="group rounded-2xl overflow-hidden xl:mb-4 shadow lg:mb-4 md:mb-4 sm:mb-4 mb-2"
+                className="group rounded-2xl overflow-hidden xl:mb-4 shadow lg:mb-4 md:mb-4 sm:mb-4 mb-3 block"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden">
