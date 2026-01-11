@@ -90,13 +90,13 @@ export default function Navbar() {
         scrolled ? "bg-white dark:bg-black shadow" : "bg-transparent"
       }`}
     >
-      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between sm:px-8 flex justify-between items-center md:mx-auto md:px-8 px-4 2xl:py-4 xl:py-4 lg:py-4 md:py-3 sm:py-3 py-2 gap-x-6">
+      <nav className="xl:w-6xl lg:w-5xl lg:mx-auto xl:mx-auto xl:flex xl:items-center xl:justify-between lg:flex lg:items-center lg:justify-between md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between sm:px-8 flex justify-between items-center md:mx-auto md:px-8 px-4 2xl:py-4 xl:py-4 lg:py-4 md:py-3 sm:py-3 py-3 gap-x-6">
         {/* Logo */}
         <motion.h3
           onClick={() => handleNavigate("home")}
           layoutId="site-logo"
           title="Home"
-          className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-lg 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide font-normal tracking-wide"
+          className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-xl text-xl 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide font-normal tracking-wide"
         >
           Agency
         </motion.h3>
@@ -206,7 +206,7 @@ export default function Navbar() {
           </div>
         )}
         {/*  */}
-        <DarkModeToggle className="flex justify-center items-center p-1 rounded-full transition-all duration-300 hover:bg-[#F3F4F4] 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl cursor-pointer text-2xl" />
+        <DarkModeToggle className="flex justify-center items-center p-1 rounded-full transition-all duration-300 hover:bg-[#F3F4F4] 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-3xl cursor-pointer text-3xl" />
       </nav>
     </header>
   );
