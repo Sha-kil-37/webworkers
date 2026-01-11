@@ -44,10 +44,10 @@ export default function OurTeam() {
     {
       name: "MohamMohammad Sohag",
       role: "It Specalist",
-      image: "https://i.pravatar.cc/300?img=45",
+      image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1768160902/agency/team/sohag_xgcizb.png",
       socials: {
         linkedin: "https://www.linkedin.com/in/sohagdewan786/",
-        discord: "#",
+        discord: "https://discord.gg/437667958375055360",
         facebook: "https://www.facebook.com/sohagdewan780",
       },
     },

@@ -146,7 +146,7 @@ export default function Blogs() {
   const handleLoadMoreBlogs = () => {
     setVisibleCount((prev) => prev + 3); // Load 3 more each click
   };
-  console.log(showSearch);
+  // console.log(showSearch);
 
   // Render component
   return (
