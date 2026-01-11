@@ -21,7 +21,7 @@ export default function OurTeam() {
       },
     },
     {
-      name: "NH Anik",
+      name: "Sabbir Shovo",
       role: "UI/UX Designer",
       image: "https://i.pravatar.cc/300?img=32",
       socials: {

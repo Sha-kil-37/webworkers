@@ -147,7 +147,7 @@ export default function Navbar() {
         {/*  */}
         {/* Desktop Menu */}
         {showProjectFilters ? null : showSearch ? null : (
-          <div className="2xl:flex xl:flex xl:items-center lg:flex lg:items-center md:flex sm:hidden hidden">
+          <div className="2xl:flex xl:flex  items-center lg:flex lg:items-center md:flex sm:hidden hidden gap-x-2">
             <button
               onClick={() => handleNavigate("home")}
               className={`tracking-wide font-primary font-medium cursor-pointer px-2 py-1 ${
