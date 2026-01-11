@@ -31,7 +31,7 @@ const Row = ({ reverse = false }) => (
         <img
           key={i}
           src={logo}
-          className="2xl:h-14 xl:h-14 lg:h-12 md:h-12 sm:h-10 opacity-80 h-6"
+          className="2xl:h-14 xl:h-14 lg:h-12 md:h-12 sm:h-12 opacity-80 h-10"
         />
       ))}
     </motion.div>
