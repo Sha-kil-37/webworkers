@@ -96,7 +96,7 @@ export default function Navbar() {
           onClick={() => handleNavigate("home")}
           layoutId="site-logo"
           title="Home"
-          className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-base 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide font-normal tracking-wide"
+          className="2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-lg 2xl:font-bold xl:font-bold lg:font-bold md:font-bold sm:font-bold cursor-pointer font-primary 2xl:tracking-wide xl:tracking-wide lg:tracking-wide md:tracking-wide sm:tracking-wide font-normal tracking-wide"
         >
           Agency
         </motion.h3>
@@ -206,7 +206,7 @@ export default function Navbar() {
           </div>
         )}
         {/*  */}
-        <DarkModeToggle className="flex justify-center items-center p-1 rounded-full transition-all duration-300 hover:bg-[#F3F4F4] 2xl:text-2xl xl:text-2xl lg:text-xl md:text-xl sm:text-xl cursor-pointer text-xl" />
+        <DarkModeToggle className="flex justify-center items-center p-1 rounded-full transition-all duration-300 hover:bg-[#F3F4F4] 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl cursor-pointer text-2xl" />
       </nav>
     </header>
   );
