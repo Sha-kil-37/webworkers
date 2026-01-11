@@ -93,10 +93,10 @@ export default function Projects() {
       className="xl:py-20 2xl:py-20 lg:py-20 md:py-15 sm:py-8"
     >
       <div className="xl:w-6xl xl:mx-auto relative lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:mx-auto sm:px-8 px-4">
-        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto mb-2 text-2xl">
+        <h2 className="tracking-wide font-bold font-primary 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto mb-2 text-2xl 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           Our <span className="text-[#0076DF]">Portfolios</span>
         </h2>
-        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide">
+        <Paragraph className="font-primary mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           Every project we deliver is built for innovation and scalability. We
           provide web development, digital marketing, SEO, social media
           marketing, UI/UX design, and app development—backed by business

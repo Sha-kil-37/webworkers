@@ -75,10 +75,10 @@ const Testimonials = () => {
       className="relative 2xl:py-15 xl:py-15 lg:py-10 md:py-10 sm:py-10 py-10"
     >
       <div className="xl:w-6xl xl:mx-auto overflow-hidden lg:w-5xl lg:mx-auto lg:overflow-hidden md:px-8 md:mx-auto md:overflow-hidden sm:px-8 sm:mx-auto px-4">
-        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl">
+        <h2 className="tracking-wide font-bold font-primary 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           What does our <span className="text-[#0076DF]">client</span> say ?
         </h2>
-        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide">
+        <Paragraph className="font-primary  mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           Our clients trust us because we deliver results, not just services.
           From web development and UI/UX design to digital marketing, SEO, and
           social media, we build strong digital identities through smart,

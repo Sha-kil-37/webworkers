@@ -159,14 +159,14 @@ export default function Blogs() {
       className="2xl:py-20 xl:py-20 lg:py-15 md:py-15 sm:py-10 py-10"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-4">
-        <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-x-10 md:gap-10 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 sm:gap-x-6">
+        <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-x-10 md:gap-10 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 sm:gap-x-4">
           {/* Left sticky column */}
           <aside className="md:col-span-1 xl:border-r 2xl:border-r lg:border-r  border-[#F5F5F7] md:border-r sm:border-r">
             <div className="2xl:sticky 2xl:top-18 xl:sticky xl:top-18 lg:sticky lg:top-18 md:top-18 md:sticky sm:top-18 sm:sticky">
-              <h2 className="tracking-wide font-bold font-primary 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto mb-2 text-2xl">
+              <h2 className="tracking-wide font-bold font-primary 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto mb-2 text-2xl">
                 Read Our <span className="text-[#0076DF]">Blogs</span>
               </h2>
-              <Paragraph className="font-primary w-full mt-3 2xl:text-left xl:text-left lg:left-left md:text-left sm:text-left text-center tracking-wide">
+              <Paragraph className="font-primary w-full mt-3 2xl:text-left xl:text-left lg:left-left md:text-left sm:text-left tracking-wide">
                 Our blog is a knowledge hub where technology, creativity, and
                 strategy come together. We share practical insights on web
                 development, digital marketing, SEO, social media marketing,
@@ -253,7 +253,7 @@ export default function Blogs() {
               <div className="flex justify-center 2xl:mt-10 xl:mt-10 lg:mt-8 md:mt-8 sm:mt-6 mt-5">
                 <button
                   onClick={handleLoadMoreBlogs}
-                  className="rounded-3xl border font-primary block mt-5 mx-auto px-4 py-2 font-bold border-[#F3F4F4] cursor-pointer hover:border-[#CBCBCB] transition duration-200"
+                  className="rounded-3xl border font-primary block mt-5 mx-auto 2xl:px-4 xl:px-4 lg:px-4 md:px-3 sm:px-3 px-2  2xl:py-2 xl:py-2 lg:py-2 md:py-1 sm:py-1 py-1 font-bold border-[#F3F4F4] cursor-pointer hover:border-[#CBCBCB] transition duration-200"
                 >
                   More blogs
                 </button>

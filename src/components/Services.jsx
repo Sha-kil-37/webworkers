@@ -65,10 +65,10 @@ export default function Services() {
       className="2xl:py-20 xl:py-20 lg:py-15 md:py-15 sm:py-8 py-15"
     >
       <div className="2xl:w-6xl xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-4 mx-auto w-full">
-        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto mb-2 text-2xl">
+        <h2 className="tracking-wide font-bold font-primary 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto mb-2 text-2xl 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           Meet Our <span className="text-[#0076DF]">Services</span>
         </h2>
-        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-lg w-full mt-3 tracking-wide">
+        <Paragraph className="font-primary mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-lg w-full mt-3 tracking-wide 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           Our services are built to drive measurable growth. From high-quality
           web and app development to intuitive UI/UX design, SEO, digital
           marketing, and social media strategy, we cover every stage of your

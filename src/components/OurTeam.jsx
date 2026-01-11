@@ -63,15 +63,15 @@ export default function OurTeam() {
       className="xl:py-20 lg:py-16 md:py-16 sm:py-8 py-7"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 sm:mx-auto px-4">
-        <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-x-10 md:gap-10 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 sm:gap-x-6">
+        <div className="xl:grid xl:grid-cols-2 xl:gap-12 lg:grid lg:grid-cols-2 lg:gap-x-10 md:gap-10 md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 sm:gap-x-4">
           <aside className="md:col-span-1 xl:border-r lg:border-r md:border-r border-[#F5F5F7] sm:border-r">
             <div className="2xl:sticky 2xl:top-18 xl:sticky xl:top-18 lg:sticky lg:top-18 md:top-18 md:sticky sm:top-18 sm:sticky">
-              <h2 className="tracking-wide font-bold font-primary 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl">
-                Our <span className="text-[#0076DF]">Professional</span>{" "}
-                {""}
+              <h2 className="tracking-wide font-bold font-primary 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl">
+                Our <span className="text-[#0076DF]">Professional</span>
+                
                 Team Members
               </h2>
-              <Paragraph className="font-primary w-full 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left text-center mt-5 tracking-wide">
+              <Paragraph className="font-primary w-full 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left  mt-5 tracking-wide">
                 We are a multidisciplinary digital team driven by innovation and
                 results. Our expertise spans web and app development, UI/UX
                 design, digital marketing, SEO, and social media
@@ -84,7 +84,7 @@ export default function OurTeam() {
             </div>
           </aside>
           {/* Right scrollable column */}
-          <main className="2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0  mt-5">
+          <main className="2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0  mt-10">
             {teamMembers.map((member, index) => (
               <div
                 key={index}

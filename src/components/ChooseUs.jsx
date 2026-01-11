@@ -42,11 +42,11 @@ export default function ChooseUs() {
       className="2xl:py-20 xl:py-20 overflow-hidden lg:py-10 md:py-10 sm:py-8"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:mx-auto sm:px-8 px-4">
-        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl">
+        <h2 className="tracking-wide font-bold font-primary 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl  2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           All The <span className="text-[#0076DF]">Benefits</span> You Gain By
           Working With Us
         </h2>
-        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide">
+        <Paragraph className="font-primary mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide  2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           We build results-driven digital solutions—from web and app development
           to UI/UX, SEO, and digital marketing—powered by custom software, AI
           integration, and strategic business consultation to help businesses
@@ -66,7 +66,7 @@ export default function ChooseUs() {
                 className="xl:p-4 lg:p-4 md:p-6 sm:p-6 mb-4"
               >
                 <Icon className="2xl:h-13 2xl:w-13 xl:h-13 xl:w-13 lg:w-12 lg:h-12 md:h-10 md:w-10 sm:h-10 sm:w-10 mx-auto h-8 w-8" />
-                <Paragraph className="font-primary text-center mt-2 font-medium 2xl:font-semibold xl:font-semibold lg:font-semibold md:font-semibold sm:font-medium text-[#0076DF] text-lg tracking-wide">
+                <Paragraph className="font-primary text-center mt-2 2xl:font-semibold xl:font-semibold lg:font-semibold md:font-semibold sm:font-medium text-[#0076DF] tracking-wide">
                   {item.title}
                 </Paragraph>
               </motion.div>

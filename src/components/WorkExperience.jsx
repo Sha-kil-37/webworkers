@@ -59,10 +59,10 @@ export default function WorkExperience() {
       className="2xl:py-30 xl:py-30 lg:py-20 md:py-15 sm:py-10 py-10"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 sm:px-8 px-4">
-        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto  text-2xl">
+        <h2 className="tracking-wide font-bold font-primary 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           Work <span className="text-[#0076DF]">Experience</span> With
         </h2>
-        <Paragraph className="font-primary mx-auto text-center mt-5 xl:w-3xl tracking-wide lg:w-3xl md:w-2xl">
+        <Paragraph className="font-primary mx-auto  mt-5 xl:w-3xl tracking-wide lg:w-3xl md:w-2xl 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           We collaborate with businesses to deliver Web & App Development, UI/UX
           Design, SEO, Digital Marketing, Social Media Marketing, Custom
           Software, Business Consultation, and AI Integration solutions that

@@ -48,18 +48,18 @@ export default function FAQ() {
       className="2xl:py-20 xl:py-20 lg:py-20 md:py-20 sm:py-8"
     >
       <div className="xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:px-8 md:mx-auto sm:px-8 sm:mx-auto px-4">
-        <h2 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl">
+        <h2 className="tracking-wide font-bold font-primary 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl mx-auto text-2xl 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           How Can I <span className="text-[#0076DF]">Help</span> You ?
         </h2>
-        <Paragraph className="font-primary text-center mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide">
+        <Paragraph className="font-primary  mx-auto 2xl:w-3xl xl:w-3xl lg:w-2xl md:w-xl sm:w-xl w-full mt-3 tracking-wide 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center text-left">
           We provide end-to-end digital solutions that help businesses grow
           smarter and faster—combining high-performance web and app development,
           intuitive UI/UX design, data-driven digital marketing, SEO, social
           media marketing, custom software, business consultation, and AI
           integration to keep your brand competitive.
         </Paragraph>
-        {/*  */}
-        <div className="xl:grid xl:grid-cols-2 xl:gap-x-12 xl:items-center lg:items-center xl:mt-10 lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-x-10 md:mt-10 md:grid md:grid-cols-2 md:gap-x-10 sm:grid sm:mt-10">
+     
+        <div className="xl:grid xl:grid-cols-2 xl:gap-x-12 xl:items-center lg:items-center xl:mt-10 lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-x-10 md:mt-10 md:grid md:grid-cols-2 md:gap-x-10 sm:grid sm:mt-10 mt-5">
           <div className="relative w-full h-full">
             <div className="bg-gray-100 absolute bottom-0 right-0 h-[50%] w-[50%] z-10 flex justify-center items-center">
               <div className="sm:px-2">

@@ -10,7 +10,7 @@ export default function Banner() {
   return (
     <motion.section
       id="home"
-      className="relative overflow-hidden 2xl:pt-50 2xl:pb-10 xl:pt-50 xl:pb-10 lg:pt-50 lg:pb-10 md:pt-45 md:pb-12 sm:pt-40 sm:pb-10 pt-20"
+      className="relative overflow-hidden 2xl:pt-50 2xl:pb-10 xl:pt-50 xl:pb-10 lg:pt-50 lg:pb-10 md:pt-45 md:pb-12 sm:pt-40 sm:pb-10 pt-25"
     >
       <div className="relative xl:w-6xl xl:mx-auto lg:w-5xl lg:mx-auto md:mx-auto md:px-8 sm:px-8 px-4">
         <TextFlip

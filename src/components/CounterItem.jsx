@@ -46,7 +46,7 @@ const CounterItem = ({ end, label, duration = 2000 }) => {
       <h3 className="tracking-wide font-bold font-primary text-center 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl text-2xl text-[#0076DF]">
         {count}+
       </h3>
-      <Paragraph className="text-center font-bold font-primary">
+      <Paragraph className="text-center 2xl:font-bold xl:font-bold lg:font-bold md:font-semibold sm:font-semibold font-normal font-primary">
         {label}
       </Paragraph>
     </div>
