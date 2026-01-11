@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router";
 import NotFound from "./components/NotFound";
 import Test from "./components/Test";
-import { Fragment, lazy, Suspense } from "react";
+import {  lazy, Suspense } from "react";
 import Loading from "./components/Loading";
 import Banner from "./components/Banner";
 import WorkExperience from "./components/WorkExperience";
@@ -20,6 +20,7 @@ const MainLayout = lazy(() => import("./layout/MainLayout"));
 import AnalyticsTracker from "./lib/utils/AnalyticsTracker";
 import TermsAndPrivacy from "./components/TermsAndPrivacy";
 import ContactSuccess from "./components/ContactSuccess";
+import SmoothScroll from "./lib/utils/SmoothScroll";
 //
 function App() {
   AnalyticsTracker();
@@ -33,7 +34,7 @@ function App() {
         element={
           <Suspense fallback={<Loading />}>
             <MainLayout>
-              <Fragment>
+              <SmoothScroll>
                 <Banner />
                 <WorkExperience />
                 <OurSuccess />
@@ -45,7 +46,7 @@ function App() {
                 <Blogs />
                 <FAQ />
                 <Contact />
-              </Fragment>
+              </SmoothScroll>
             </MainLayout>
           </Suspense>
         }

@@ -13,7 +13,7 @@ export default function Footer() {
   };
   //
   return (
-    <footer className="pt-15 pb-15 sm:pb-15">
+    <footer className="pt-15 2xl:pb-0 xl:pb-0 lg:pb-0 md:pb-0 sm:pb-10 pb-14">
       <div className="xl:w-6xl mx-auto lg:w-5xl md:px-8 md:mx-auto sm:px-6 sm:mx-auto px-4">
         {/* Grid */}
         <div className="xl:grid xl:gap-12 xl:grid-cols-4 lg:grid lg:gap-10 lg:grid-cols-4 md:grid md:gap-10 md:grid-cols-2 sm:grid sm:gap-8 sm:grid-cols-2">
