@@ -37,7 +37,7 @@ export default function OurTeam() {
         "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767114313/agency/team/rakibul_qighom.png",
       socials: {
         linkedin: "https://www.linkedin.com/in/rakibul-islam-4610953a5/",
-        discord: "#",
+        discord: "https://discord.gg/989966919975194674",
         facebook: "https://www.facebook.com/share/16cJQXJZwV/",
       },
     },
