@@ -26,7 +26,7 @@ export default function OurTeam() {
       image: "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1768158084/agency/team/sabbir_watz3p.png",
       socials: {
         linkedin: "https://www.linkedin.com/in/sabbir-khan-shovo/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        discord: "#",
+        discord: "https://discord.gg/1420788964641603706",
         facebook: "https://www.facebook.com/sabbirshovo.net",
       },
     },
@@ -37,7 +37,7 @@ export default function OurTeam() {
         "https://res.cloudinary.com/dmbkgbtqj/image/upload/v1767114313/agency/team/rakibul_qighom.png",
       socials: {
         linkedin: "https://www.linkedin.com/in/rakibul-islam-4610953a5/",
-        discord: "https://discord.gg/989966919975194674",
+        discord: "https://discord.gg/1420788964641603706",
         facebook: "https://www.facebook.com/share/16cJQXJZwV/",
       },
     },
@@ -106,24 +106,24 @@ export default function OurTeam() {
                     <Paragraph className="font-primary">{member.role}</Paragraph>
                   </div>
                   <div className="flex gap-x-3">
-                    <Link target="_blank" to={member.socials.linkedin}>
+                    <a target="_blank" href={member.socials.linkedin}>
                       <FaLinkedinIn
                         className="text-xl text-[#0072B1]"
                         title="LinkedinIn"
                       />
-                    </Link>
-                    <Link target="_blank" to={member.socials.discord}>
+                    </a>
+                    <a target="_blank" href={member.socials.discord}>
                       <FaDiscord
                         className="text-xl text-[#7289da]"
                         title="Discord"
                       />
-                    </Link>
-                    <Link target="_blank" to={member.socials.facebook}>
+                    </a>
+                    <a target="_blank" href={member.socials.facebook}>
                       <FaFacebook
                         className="text-xl text-[#1877F2]"
                         title="facebook"
                       />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

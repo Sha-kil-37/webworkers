@@ -134,52 +134,52 @@ export default function Footer() {
             <h3 className="mb-2 font-semibold font-primary tracking-wide">
               Say Hello
             </h3>
-            <Link
+            <a
               title="Mail"
-              to="mailto:sakildevmern@gmail.com"
+              href="mailto:sakildevmern@gmail.com"
               target="_blank"
               className="hover:text-[#0076DF] duration-200 transition-all block font-primary tracking-wide"
             >
               sakildevmern@gmail.com
-            </Link>
-            <Link
+            </a>
+            <a
               title="Call"
-              to="tel:+8801581049601"
+              href="tel:+8801581049601"
               target="_blank"
               className="hover:text-[#0076DF] duration-200 transition-all block font-primary tracking-wide"
             >
               +880 1581049601
-            </Link>
+            </a>
 
             {/* Social */}
             <div className="flex gap-4 mt-5">
-              <Link
+              <a
                 className="p-2 shadow bg-white"
                 title="Linkedin"
-                to="https://www.linkedin.com/in/shakil-ahmed-aba241317/"
+                href="https://www.linkedin.com/in/shakil-ahmed-aba241317/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn className="text-[#0072B1]" />
-              </Link>
-              <Link
+              </a>
+              <a
                 title="Facebook"
-                to="https://www.facebook.com/shak.sakil.96"
+                href="https://www.facebook.com/shak.sakil.96"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 shadow bg-white"
               >
                 <FaFacebookF className="text-[#1877F2]" />
-              </Link>
-              <Link
+              </a>
+              <a
                 title="Discord"
-                to="https://discord.com/users/1420788964641603706"
+                href="https://discord.com/users/1420788964641603706"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 shadow bg-white"
               >
                 <FaDiscord className="text-[#7289da]" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
