@@ -31,3 +31,6 @@ How can I see the total number of words that can be written in my form message i
 <!--  -->
 I want my project menus to appear in the navbar with animations like the blog search input when I scroll down my project section.
 সার্চ ফিল্টারটি আমি বাটন ক্লিক এর মাধ্যমে করতে চাই। যা এখন ইনপুট অন চেঞ্জের মাধ্যমে সম্পন্ন হচ্ছে
+
+<!--  -->
+<!-- আমি আমার vite রিয়েক্ট এজেন্সি পোর্টফলি ওয়েবসাইটে একটি হোয়াটসঅ্যাপ বাটন রেখেছি যেখানে ক্লিক করলে ইউজার কে হোয়াটসঅ্যাপে সেন্ড মেসেজ অপশনে নিয়ে যাবে কিন্তু আমি যখন আমার ওয়েবসাইটটি vercel এ deploy করে live করেছি তখন আমার whatsapp বাটনে ক্লিক করলে whatsapp page দেখাচ্ছে -->

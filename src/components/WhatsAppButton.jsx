@@ -1,29 +1,30 @@
-import { Link } from "react-router";
-const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
 import { FaWhatsapp } from "react-icons/fa";
-//
+const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+// 
 export default function WhatsAppButton() {
   const message = "Hello, I would like to discuss a project.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     message
   )}`;
-
+// 
+// console.log(whatsappNumber , message)
+// 
   return (
-    <Link
-    title="WhatsApp"
-      to={whatsappUrl}
+    <a
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-15 right-3 z-30"
+      title="WhatsApp"
       aria-label="Chat on WhatsApp"
+      className="fixed bottom-15 right-3 z-30"
     >
-      <div className="relative flex items-center justify-center 2xl:w-10 xl:w-10 lg:w-10 md:w-10 sm:w-10 2xl:h-10 xl:h-10 lg:h-10 md:h-10 sm:h-10 h-10 w-10 rounded-full bg-green-500 shadow-lg hover:scale-105 transition-all duration-200 ease-in-out">
+      <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-green-500 shadow-lg hover:scale-105 transition-all duration-200 ease-in-out">
         {/* Pulse animation */}
         <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping" />
 
         {/* Icon */}
-        <FaWhatsapp className="relative text-white 2xl:text-2xl xl:text-2xl lg:text-xl md:text-xl sm:text-lg text-base" />
+        <FaWhatsapp className="relative text-white text-xl" />
       </div>
-    </Link>
+    </a>
   );
 }
