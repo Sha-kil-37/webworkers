@@ -107,7 +107,7 @@ const Testimonials = () => {
                     {item.role}
                   </Paragraph>
                 </div>
-                <div>
+                <div className="flex justify-between">
                   <Paragraph className="text-center font-secondary">
                     {item.rating}
                   </Paragraph>
