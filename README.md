@@ -35,4 +35,4 @@ I want my project menus to appear in the navbar with animations like the blog se
 <!--  -->
 I have placed a WhatsApp button on my Vite React Agency Portfolio website where clicking on it will take the user to the send message option on WhatsApp but when I deployed my website to Vercel and made it live, clicking on my WhatsApp button shows the WhatsApp page.
 <!--  -->
-  
+How can I make my project live on Google, so that people can find my website through Google search?
