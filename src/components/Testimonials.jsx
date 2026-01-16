@@ -84,15 +84,9 @@ const Testimonials = () => {
           social media, we build strong digital identities through smart,
           growth-driven solutions.
         </Paragraph>
-        <div
-          ref={trackRef}
-          className="flex mt-5 w-max py-3"
-        >
+        <div ref={trackRef} className="flex mt-5 w-max py-3">
           {[...reviews, ...reviews].map((item, index) => (
-            <div
-              key={index}
-              className="w-[250px] shadow mx-2 p-4 rounded-2xl"
-            >
+            <div key={index} className="w-[250px] shadow mx-2 p-4 rounded-2xl">
               <TruncateText
                 className="sm:font-normal font-medium font-secondary tracking-wide"
                 text={item.review}
@@ -107,7 +101,7 @@ const Testimonials = () => {
                     {item.role}
                   </Paragraph>
                 </div>
-                <div className="flex justify-between">
+                <div className="mt-2 flex justify-between 2xl:block xl:block lg:block md:block sm:block">
                   <Paragraph className="text-center font-secondary">
                     {item.rating}
                   </Paragraph>
