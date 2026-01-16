@@ -10,13 +10,13 @@ export default defineConfig({
     react(),
     tailwindcss(),
     sitemap({
-      hostname: "https://your-vercel-domain.vercel.app", // Replace with your actual Vercel domain or custom domain
-      routes: ["/", "/terms&privacy", "/contact-success", "/test"],
+      hostname: "https://webworkers-wine.vercel.app/", // Replace with your actual Vercel domain or custom domain
+      routes: ["/", "/terms&privacy", "/contact-success"],
     }),
   ],
   server: {
-    // proxy: {
-    //   '/api': import.meta.env.VITE_API_URL
-    // }
+    proxy: {
+      "/api": "https://webworkers-wine.vercel.app/",
+    },
   },
 });

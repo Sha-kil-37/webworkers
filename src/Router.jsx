@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router";
 import NotFound from "./components/NotFound";
-import Test from "./components/Test";
 import {  lazy, Suspense } from "react";
 import Loading from "./components/Loading";
 import Banner from "./components/Banner";
@@ -82,7 +81,7 @@ function App() {
         }
       ></Route>
       <Route path="/contact-success" element={<ContactSuccess />} />
-      <Route path="/test" element={<Test />}></Route>
+      
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
