@@ -19,7 +19,6 @@ const MainLayout = lazy(() => import("./layout/MainLayout"));
 import AnalyticsTracker from "./lib/utils/AnalyticsTracker";
 import TermsAndPrivacy from "./components/TermsAndPrivacy";
 import ContactSuccess from "./components/ContactSuccess";
-import SmoothScroll from "./lib/utils/SmoothScroll";
 //
 function App() {
   AnalyticsTracker();
@@ -33,7 +32,7 @@ function App() {
         element={
           <Suspense fallback={<Loading />}>
             <MainLayout>
-              <SmoothScroll>
+             
                 <Banner />
                 <WorkExperience />
                 <OurSuccess />
@@ -45,7 +44,7 @@ function App() {
                 <Blogs />
                 <FAQ />
                 <Contact />
-              </SmoothScroll>
+             
             </MainLayout>
           </Suspense>
         }
